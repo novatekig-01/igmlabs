@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview mobile da IGM</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; height: 100%;
+    font-family: -apple-system, 'Segoe UI', Inter, sans-serif;
+    background: #161513;
+    color: #f2f0ec;
+  }
+  body { display: flex; flex-direction: column; }
+
+  .toolbar {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    padding: 14px 22px;
+    background: #100f0d;
+    border-bottom: 1px solid #2c2a26;
+  }
+  .toolbar label { font-size: 13px; color: #a39d90; display: flex; align-items: center; gap: 8px; }
+  select, button {
+    background: #211f1c; color: #f2f0ec; border: 1px solid #3a3733;
+    border-radius: 8px; padding: 9px 14px; font-size: 14px; cursor: pointer;
+  }
+  select:hover, button:hover { border-color: #d4a44f; }
+  button.active { background: #d4a44f; color: #14100a; border-color: #d4a44f; font-weight: 600; }
+
+  .dims {
+    margin-left: auto;
+    font-size: 13px; color: #a39d90;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stage {
+    flex: 1;
+    display: flex; align-items: flex-start; justify-content: center;
+    overflow: auto;
+    padding: 40px 24px;
+  }
+
+  .device-frame {
+    background: #0a0a0a;
+    border-radius: 46px;
+    padding: 14px;
+    box-shadow: 0 40px 90px -20px rgba(0,0,0,0.6), 0 0 0 1px #2c2a26;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .device-frame.desktop { border-radius: 14px; padding: 8px; }
+
+  .device-frame iframe {
+    display: block;
+    border: none;
+    background: #030302;
+  }
+
+  .notch {
+    position: relative;
+  }
+  .notch::before {
+    content: '';
+    position: absolute;
+    top: 14px; left: 50%; transform: translateX(-50%);
+    width: 90px; height: 22px;
+    background: #0a0a0a;
+    border-radius: 0 0 16px 16px;
+    z-index: 2;
+  }
+</style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <label>Aparelho:
+      <select id="deviceSelect"></select>
+    </label>
+    <button id="rotateBtn">↻ Girar</button>
+    <span class="dims" id="dimsLabel"></span>
+  </div>
+
+  <div class="stage">
+    <div class="device-frame notch" id="frame">
+      <iframe id="preview" src="index.html"></iframe>
+    </div>
+  </div>
+
+<script>
+  const devices = [
+    { name: 'iPhone SE',              w: 375, h: 667, type: 'phone' },
+    { name: 'iPhone 13 / 14',         w: 390, h: 844, type: 'phone' },
+    { name: 'iPhone 14 Pro Max / 15', w: 430, h: 932, type: 'phone' },
+    { name: 'Samsung Galaxy S22',     w: 360, h: 800, type: 'phone' },
+    { name: 'Samsung Galaxy S23 Ultra', w: 412, h: 915, type: 'phone' },
+    { name: 'Google Pixel 7/8',       w: 412, h: 915, type: 'phone' },
+    { name: 'iPad Mini',              w: 768, h: 1024, type: 'tablet' },
+    { name: 'iPad Air / Pro 11"',     w: 834, h: 1194, type: 'tablet' },
+    { name: 'Notebook pequeno',       w: 1280, h: 800, type: 'desktop' },
+    { name: 'Desktop 1440p',          w: 1440, h: 900, type: 'desktop' },
+  ];
+
+  const select = document.getElementById('deviceSelect');
+  devices.forEach((d, i) => {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = `${d.name} (${d.w}×${d.h})`;
+    select.appendChild(opt);
+  });
+  select.value = 1; // iPhone 13/14 como padrão
+
+  let rotated = false;
+  const frame = document.getElementById('frame');
+  const iframe = document.getElementById('preview');
+  const dimsLabel = document.getElementById('dimsLabel');
+  const rotateBtn = document.getElementById('rotateBtn');
+
+  function render() {
+    const d = devices[select.value];
+    const w = rotated ? d.h : d.w;
+    const h = rotated ? d.w : d.h;
+
+    iframe.style.width = w + 'px';
+    iframe.style.height = h + 'px';
+    dimsLabel.textContent = `${w} × ${h}px`;
+
+    frame.classList.toggle('desktop', d.type === 'desktop');
+    frame.classList.toggle('notch', d.type === 'phone' && !rotated);
+  }
+
+  select.addEventListener('change', render);
+  rotateBtn.addEventListener('click', () => { rotated = !rotated; render(); });
+
+  render();
+</script>
+</body>
+</html>

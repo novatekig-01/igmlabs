@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IGM. Tecnologia que impulsiona o seu negócio</title>
+<meta name="description" content="A IGM cria soluções de tecnologia sob medida, como desenvolvimento, atendimento com IA, automação e presença digital, pra autônomos e empresas de qualquer tamanho.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="preloader" aria-hidden="true">
+  <canvas id="preloader-particles"></canvas>
+  <img src="assets/logo.png" alt="" class="preloader-logo">
+</div>
+
+<div class="grain"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <canvas id="headerWave" class="header-wave"></canvas>
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="IGM" class="brand-mark">
+      <span class="brand-word">IGM</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#solucoes">Soluções</a>
+      <a href="#processo">Como trabalhamos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <span data-magnetic><a href="#contato" class="btn btn-ghost btn-small">Fale com a gente</a></span>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="net" class="hero-canvas"></canvas>
+    <div class="hero-glow"></div>
+
+    <div class="container hero-inner">
+      <p class="eyebrow reveal">◆ Tecnologia a seu favor</p>
+      <h1 class="hero-title">
+        <span class="line-mask"><span class="line-inner">Menos <span class="strike">complicação.</span></span></span><br>
+        <span class="line-mask"><span class="line-inner">Mais resultado <span class="text-gold">pro seu negócio.</span></span></span>
+      </h1>
+      <p class="hero-sub reveal">
+        Você traz o problema. A gente entende o cenário, pensa na melhor
+        solução e coloca a tecnologia para trabalhar a seu favor.
+      </p>
+      <div class="hero-actions reveal">
+        <span data-magnetic class="btn-glow-wrap"><a href="#contato" class="btn btn-gold">Vamos conversar <span class="arrow">→</span></a></span>
+        <a href="#solucoes" class="btn btn-ghost">Ver soluções</a>
+      </div>
+    </div>
+
+    <a href="#solucoes" class="scroll-hint">
+      <span class="scroll-hint-inner reveal">
+        <span class="scroll-dot"></span>
+        <span>Role pra explorar</span>
+      </span>
+    </a>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee-section">
+    <div class="marquee-fade">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>Desenvolvimento sob medida</span><span class="marquee-sep">/</span>
+          <span>Atendimento com IA</span><span class="marquee-sep">/</span>
+          <span>Dados &amp; automação</span><span class="marquee-sep">/</span>
+          <span>Presença digital</span><span class="marquee-sep">/</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span>Desenvolvimento sob medida</span><span class="marquee-sep">/</span>
+          <span>Atendimento com IA</span><span class="marquee-sep">/</span>
+          <span>Dados &amp; automação</span><span class="marquee-sep">/</span>
+          <span>Presença digital</span><span class="marquee-sep">/</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUÇÕES -->
+  <section class="section" id="solucoes">
+    <div class="container">
+      <p class="eyebrow reveal">◆ Nossas soluções</p>
+      <h2 class="section-title reveal">Soluções pra cada etapa <span class="text-gold">do seu negócio.</span></h2>
+
+      <div class="grid grid-4">
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 4L3 12L8 20M16 4L21 12L16 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Desenvolvimento sob medida</h3>
+          <p>Sites, sistemas e automações construídos de forma exclusiva pra sua necessidade, não em pacote genérico.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3C7 3 3 6.6 3 11c0 2.4 1.2 4.6 3.2 6.1L5.5 21l4-1.9c.8.2 1.6.3 2.5.3 5 0 9-3.6 9-8s-4-8.4-9-8.4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Atendimento com IA</h3>
+          <p>Resposta rápida pro seu cliente, mesmo quando você tá ocupado tocando o resto do negócio.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 19V10M12 19V5M20 19v-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Dados &amp; automação</h3>
+          <p>A tarefa repetitiva roda sozinha, sem você precisar lembrar de fazer todo dia.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.3 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.3-3.6-8.5S9.6 5.8 12 3.5z" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <h3>Presença digital</h3>
+          <p>SEO, Google Ads e Google Meu Negócio pra quem já te procura, te achar primeiro.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACTO -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="impact-grid">
+        <div class="impact-text reveal">
+          <p class="eyebrow">◆ Tecnologia que gera resultado</p>
+          <h2 class="section-title">Impacto que dá <span class="text-gold">pra sentir na prática.</span></h2>
+          <p class="body-text">Sem promessa vazia. A gente pensa em eficiência, crescimento e segurança
+            de um jeito que você consegue perceber no dia a dia do negócio.</p>
+        </div>
+
+        <div class="impact-card reveal">
+          <div class="impact-card-inner">
+            <div class="impact-col">
+              <div class="impact-col-head">
+                <span class="impact-icon">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 10-13h-7l1-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                </span>
+                <h4>+ eficiência</h4>
+              </div>
+              <p>Automação e integração que reduzem custo operacional.</p>
+            </div>
+            <div class="impact-col">
+              <div class="impact-col-head">
+                <span class="impact-icon">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M12 5l-6 6M12 5l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <h4>+ crescimento</h4>
+              </div>
+              <p>Soluções que acompanham a evolução do seu negócio.</p>
+            </div>
+            <div class="impact-col">
+              <div class="impact-col-head">
+                <span class="impact-icon">
+                  <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="11" width="14" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11" stroke="currentColor" stroke-width="1.5"/></svg>
+                </span>
+                <h4>+ segurança</h4>
+              </div>
+              <p>Confiabilidade pra você focar no que realmente importa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="section timeline-section" id="processo">
+    <div class="timeline-pin-wrap" id="timelinePinWrap">
+      <div class="timeline-sticky">
+        <div class="container timeline-heading">
+          <p class="eyebrow reveal">◆ Como a gente trabalha</p>
+          <h2 class="section-title reveal">Do problema à solução, <span class="text-gold">sem mistério.</span></h2>
+        </div>
+
+        <div class="timeline-track-wrap">
+          <div class="timeline-track" id="timelineTrack">
+            <article class="timeline-step">
+              <span class="step-num">01</span>
+              <h4>Conversa</h4>
+              <p>Entendemos o que tá travando o seu negócio hoje.</p>
+            </article>
+            <article class="timeline-step">
+              <span class="step-num">02</span>
+              <h4>Diagnóstico</h4>
+              <p>Mapeamos onde a tecnologia resolve de verdade.</p>
+            </article>
+            <article class="timeline-step">
+              <span class="step-num">03</span>
+              <h4>Proposta</h4>
+              <p>Escopo claro, prazo claro, preço claro.</p>
+            </article>
+            <article class="timeline-step">
+              <span class="step-num">04</span>
+              <h4>Entrega</h4>
+              <p>Construímos e acompanhamos até funcionar do jeito certo.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="timeline-progress" aria-hidden="true">
+          <div class="timeline-progress-fill" id="timelineProgressFill"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section section-alt" id="sobre">
+    <div class="container about-grid">
+      <div class="about-text reveal">
+        <p class="eyebrow">◆ Sobre a IGM</p>
+        <h2 class="section-title">Tecnologia com propósito. <span class="text-gold">Sem papo de guru.</span></h2>
+        <p class="body-text">
+          A IGM nasceu pra tirar a tecnologia do papo bonito e colocar ela pra trabalhar de verdade.
+          Atendemos desde autônomo até empresa grande. O que muda é o tamanho do problema,
+          não o cuidado com a solução.
+        </p>
+        <a href="#time" class="link-arrow">Conhecer a equipe <span class="arrow">→</span></a>
+      </div>
+      <div class="about-visual reveal">
+        <img src="assets/logo.png" alt="IGM" class="about-logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- TIME -->
+  <section class="section" id="time">
+    <div class="container">
+      <p class="eyebrow reveal">◆ Quem tá por trás</p>
+      <h2 class="section-title reveal">Três sócios, <span class="text-gold">uma missão.</span></h2>
+
+      <div class="grid grid-3">
+        <article class="person reveal">
+          <div class="person-avatar">I</div>
+          <h4>Isaac</h4>
+          <span class="person-role">Comercial &amp; Atendimento</span>
+        </article>
+        <article class="person reveal">
+          <div class="person-avatar">M</div>
+          <h4>Matheus</h4>
+          <span class="person-role">Comercial &amp; Atendimento</span>
+        </article>
+        <article class="person reveal">
+          <div class="person-avatar">G</div>
+          <h4>Gabriel</h4>
+          <span class="person-role">Tecnologia</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final" id="contato">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner reveal">
+      <h2 class="cta-title">Bora conversar <span class="text-gold">sobre o seu negócio?</span></h2>
+      <p class="cta-sub">Sem compromisso, sem enrolação. Conta o que tá travando e a gente te fala se dá pra resolver.</p>
+      <span data-magnetic class="btn-glow-wrap"><a href="mailto:contato@igm.tech" class="btn btn-gold btn-large">Fale com a gente <span class="arrow">→</span></a></span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="IGM" class="brand-mark">
+      <p>Tecnologia que impulsiona<br>o seu negócio.</p>
+    </div>
+
+    <div class="footer-col">
+      <span class="footer-title">Navegação</span>
+      <a href="#solucoes">Soluções</a>
+      <a href="#processo">Como trabalhamos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </div>
+
+    <div class="footer-col">
+      <span class="footer-title">Contato</span>
+      <a href="mailto:contato@igm.tech">contato@igm.tech</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 IGM. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
