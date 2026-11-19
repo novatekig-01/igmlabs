@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa dos Pets | Clínica Veterinária no Jardim Botânico, Brasília</title>
+<meta name="description" content="Casa dos Pets: clínica veterinária no Jardim Botânico, Brasília. Aqui seu pet se sente em casa. Nota 4,7 no Google com 282 avaliações. Agende pelo WhatsApp.">
+<!-- Site de demonstração: não indexar no Google até a clínica aprovar -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2b1840">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: "casa" como tema. Hero com a casinha do cão e do gato; roxo-ameixa com tangerina; cards arredondados; fases da vida do pet. */
+:root{
+  --plum:#2b1840; --plum-2:#45296a; --orange:#ff7a3d; --orange-d:#e5622a; --peach:#ffe6d6; --lilac:#eee8f8;
+  --paper:#fffaf5; --ink:#24162f; --muted:#685d72; --line:#efe4dc; --white:#fff;
+  --display:"Fredoka",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --sans:"Nunito",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --radius:26px; --header:78px;
+  --shadow:0 24px 60px rgba(43,24,64,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:10px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:700;color:var(--plum-2);background:var(--lilac);padding:7px 14px;border-radius:999px}
+.pill svg{width:16px;height:16px}
+.hl{color:var(--orange-d)}
+section[id]{scroll-margin-top:var(--header)}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:1.05rem;line-height:1.2;white-space:nowrap;transition:transform .2s,box-shadow .2s,background .2s,color .2s,border-color .2s;border:2px solid transparent;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-orange{background:var(--orange);color:#fff;box-shadow:0 12px 26px rgba(255,122,61,.35)}
+.btn-orange:hover{background:var(--orange-d);transform:translateY(-2px)}
+.btn-plum{background:var(--plum);color:#fff}
+.btn-plum:hover{background:var(--plum-2);transform:translateY(-2px)}
+.btn-line{border-color:var(--plum);color:var(--plum)}
+.btn-line:hover{background:var(--plum);color:#fff}
+.btn-white{background:#fff;color:var(--plum)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.2)}
+.btn-sm{padding:11px 20px;font-size:.95rem}
+
+/* Faixa de demonstração */
+.demo{background:var(--plum);color:#dcd2ea;font-size:.76rem;text-align:center;padding:7px 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Cabeçalho */
+header{position:sticky;top:0;z-index:50;background:rgba(255,250,245,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 8px 30px rgba(43,24,64,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header)}
+.logo{display:flex;align-items:center;gap:12px;flex:none}
+.logo-mark{width:44px;height:44px;border-radius:14px;background:var(--orange);display:grid;place-items:center;color:#fff;flex:none}
+.logo-mark svg{width:26px;height:26px}
+.logo-text{display:flex;flex-direction:column;line-height:1.05}
+.logo-name{font-family:var(--display);font-weight:700;font-size:1.35rem;color:var(--plum);white-space:nowrap}
+.logo-sub{font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px;white-space:nowrap}
+.menu{display:flex;gap:4px;list-style:none;font-size:.96rem;font-weight:600;color:var(--muted)}
+.menu a{display:block;padding:8px 14px;border-radius:999px;transition:color .2s,background .2s}
+.menu a:hover{color:var(--plum);background:var(--lilac)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:46px;height:46px;border-radius:14px;border:1px solid var(--line);background:#fff;cursor:pointer;place-items:center;color:var(--plum)}
+.burger svg{width:22px;height:22px}
+
+/* Hero */
+.hero{background:radial-gradient(600px 420px at 85% 30%,var(--peach),transparent 70%),radial-gradient(500px 380px at 0% 100%,var(--lilac),transparent 70%),var(--paper)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center;padding-top:72px;padding-bottom:90px}
+.hero h1{font-size:clamp(2.7rem,5.4vw,4.8rem);margin:20px 0 22px;color:var(--plum)}
+.lead{font-size:1.18rem;color:var(--muted);max-width:520px;margin-bottom:34px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;align-items:center;gap:14px;margin-top:36px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px 18px;width:fit-content;max-width:100%}
+.proof-score{font-family:var(--display);font-weight:700;font-size:2.1rem;line-height:1;color:var(--plum)}
+.stars{color:#f5a623;letter-spacing:2px;font-size:1rem;line-height:1}
+.proof small{display:block;color:var(--muted);font-size:.9rem;margin-top:3px}
+.house{position:relative}
+.house svg{width:100%;max-width:520px;height:auto;margin:0 auto}
+.house-tag{position:absolute;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 16px;box-shadow:0 14px 32px rgba(43,24,64,.12);font-family:var(--display);font-weight:600;font-size:.98rem;white-space:nowrap}
+.house-tag small{display:block;font-family:var(--sans);font-weight:600;font-size:.78rem;color:var(--muted)}
+.house-tag i{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--peach);color:var(--orange-d);font-style:normal}
+.house-tag i svg{width:18px;height:18px}
+.tag-1{left:0;top:18%}
+.tag-2{right:2%;bottom:-34px}
+
+/* Faixa */
+.facts{background:var(--plum);color:#fff}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:26px 22px;display:flex;align-items:center;gap:14px}
+.fact+.fact{border-left:1px solid rgba(255,255,255,.12)}
+.fact-ico{flex:none;width:44px;height:44px;border-radius:14px;background:rgba(255,255,255,.1);color:var(--orange);display:grid;place-items:center}
+.fact-ico svg{width:22px;height:22px}
+.fact-txt b{display:block;font-family:var(--display);font-weight:600;font-size:1.2rem;line-height:1.2}
+.fact-txt span{display:block;font-size:.86rem;color:#c8bcd8}
+
+/* Seções */
+section{padding:110px 0}
+.head{max-width:680px;margin-bottom:54px}
+.head h2{font-size:clamp(2.2rem,3.8vw,3.3rem);margin:16px 0 14px;color:var(--plum)}
+.head p{color:var(--muted);font-size:1.08rem}
+.head-center{text-align:center;margin-left:auto;margin-right:auto}
+
+/* Serviços */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(43,24,64,.10);border-color:transparent}
+.ico{width:58px;height:58px;border-radius:18px;background:var(--peach);display:grid;place-items:center;margin-bottom:22px;color:var(--orange-d);transition:background .25s,color .25s}
+.ico svg{width:30px;height:30px}
+.svc:nth-child(even) .ico{background:var(--lilac);color:var(--plum-2)}
+.svc:hover .ico{background:var(--orange);color:#fff}
+.svc h3{font-size:1.4rem;margin-bottom:8px;color:var(--plum)}
+.svc p{color:var(--muted);font-size:.97rem}
+
+/* Fases da vida */
+.life{background:var(--lilac)}
+.stages{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.stage{position:relative;background:#fff;border-radius:var(--radius);padding:34px 30px;overflow:hidden}
+.stage-age{display:inline-block;font-family:var(--display);font-weight:600;font-size:.9rem;color:#fff;background:var(--plum);padding:5px 12px;border-radius:999px;margin-bottom:18px}
+.stage:nth-child(2) .stage-age{background:var(--orange-d)}
+.stage:nth-child(3) .stage-age{background:var(--plum-2)}
+.stage h3{font-size:1.65rem;color:var(--plum);margin-bottom:10px}
+.stage p{color:var(--muted);font-size:.97rem;margin-bottom:16px}
+.stage ul{list-style:none;display:grid;gap:8px}
+.stage li{display:flex;gap:10px;align-items:center;font-weight:600;font-size:.95rem}
+.stage li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--orange)}
+.stage-paw{position:absolute;right:-14px;top:-14px;width:96px;height:96px;color:var(--lilac)}
+
+/* Como agendar */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:52px;height:52px;border-radius:16px;background:var(--orange);color:#fff;font-family:var(--display);font-weight:700;font-size:1.4rem;margin-bottom:20px}
+.step h3{font-size:1.35rem;color:var(--plum);margin-bottom:8px}
+.step p{color:var(--muted);font-size:.97rem}
+
+/* CTA */
+.band{padding:0 0 110px}
+.band-box{position:relative;overflow:hidden;background:var(--plum);color:#fff;border-radius:34px;padding:64px;display:grid;grid-template-columns:minmax(0,1.3fr) auto;gap:40px;align-items:center}
+.band-box::before{content:"";position:absolute;right:-60px;top:-80px;width:280px;height:280px;border-radius:50%;background:var(--orange);opacity:.25}
+.band-box h2{font-size:clamp(2.1rem,3.6vw,3rem);margin-bottom:12px;position:relative}
+.band-box p{color:#d6cbe5;font-size:1.06rem;max-width:560px;position:relative}
+.band-actions{display:flex;flex-direction:column;gap:10px;align-items:center;position:relative}
+.band-actions small{color:#d6cbe5;font-weight:600}
+
+/* Dúvidas */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
+.faq-side{position:sticky;top:calc(var(--header) + 32px)}
+.faq-side .head{margin-bottom:26px}
+.faq{display:grid;gap:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:20px}
+details[open]{border-color:var(--orange)}
+summary{cursor:pointer;font-family:var(--display);font-weight:600;font-size:1.15rem;color:var(--plum);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 22px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:32px;height:32px;border-radius:50%;background:var(--peach);color:var(--orange-d);display:grid;place-items:center;font-size:1.3rem;line-height:1;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding:0 22px 22px;margin-top:-4px}
+
+/* Contato */
+.contact{background:var(--peach)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:60px;align-items:stretch}
+.contact h2{font-size:clamp(2.2rem,3.6vw,3.1rem);margin:16px 0 14px;color:var(--plum)}
+.contact-lead{color:var(--muted);margin-bottom:28px;max-width:440px}
+.info{list-style:none;display:grid;gap:12px;margin-bottom:30px}
+.info a{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px 18px;transition:border-color .2s}
+.info a:hover{border-color:var(--orange)}
+.info-ico{flex:none;width:46px;height:46px;border-radius:14px;background:var(--lilac);color:var(--plum-2);display:grid;place-items:center}
+.info-ico svg{width:22px;height:22px}
+.info-txt b{display:block;font-family:var(--display);font-weight:600;font-size:1.08rem;line-height:1.3;color:var(--plum)}
+.info-txt span{display:block;color:var(--muted);font-size:.93rem;line-height:1.45}
+
+.map{position:relative;border-radius:28px;min-height:480px;overflow:hidden;border:1px solid var(--line);background:#f3eef7;box-shadow:var(--shadow);isolation:isolate}
+.map-art{position:absolute;inset:0;display:block;z-index:0}
+.map-art svg{width:100%;height:100%}
+.map-pin{position:absolute;left:50%;top:38%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none}
+.map-pin-label{background:#fff;border-radius:999px;padding:8px 14px;font-family:var(--display);font-weight:600;font-size:.98rem;color:var(--plum);box-shadow:0 8px 24px rgba(43,24,64,.16);white-space:nowrap}
+.map-pin-mark{position:relative;width:46px;height:46px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--orange);box-shadow:0 10px 24px rgba(255,122,61,.4);display:grid;place-items:center}
+.map-pin-mark::after{content:"";width:16px;height:16px;border-radius:50%;background:#fff}
+.map-pin-pulse{position:absolute;left:50%;top:calc(100% + 4px);width:18px;height:8px;margin-left:-9px;border-radius:50%;background:rgba(255,122,61,.3)}
+.map-pin-pulse::after{content:"";position:absolute;inset:-14px -22px;border-radius:50%;border:2px solid rgba(255,122,61,.4);animation:ping 2.4s infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.4);opacity:0}}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1;opacity:0;transition:opacity .5s}
+.map.map-live iframe{opacity:1}
+.map-card{position:absolute;z-index:2;left:20px;right:20px;bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:14px 16px;flex-wrap:wrap;background:#fff;border-radius:20px;padding:18px 20px;box-shadow:0 14px 36px rgba(43,24,64,.18)}
+.map-card b{display:block;font-family:var(--display);font-weight:600;font-size:1.1rem;line-height:1.3;color:var(--plum)}
+.map-card span{display:block;color:var(--muted);font-size:.88rem}
+.map-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Rodapé */
+footer{background:var(--ink);color:#c8bcd8;font-size:.92rem;padding:64px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:48px}
+footer .logo-name{color:#fff}
+footer .logo-sub{color:#a596b8}
+.foot-about{margin-top:18px;max-width:340px}
+footer h4{font-family:var(--display);font-size:1rem;font-weight:600;color:var(--orange);margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding:22px 0 26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-size:.8rem;color:#958aa3}
+
+/* Botão flutuante */
+.float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:0;height:62px;padding:0 15px;border-radius:999px;background:#25d366;color:#fff;font-family:var(--display);font-weight:600;box-shadow:0 10px 30px rgba(37,211,102,.45);animation:pulse 2.4s infinite;transition:gap .3s,padding .3s}
+.float svg{width:32px;height:32px;fill:#fff;flex:none}
+.float-label{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .35s}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media(hover:hover) and (min-width:901px){
+  .float:hover{gap:10px;padding:0 22px 0 16px}
+  .float:hover .float-label{max-width:200px}
+}
+
+/* Animação de entrada */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.js .reveal.in{opacity:1;transform:none}
+
+@media(min-width:1500px){.wrap{max-width:1280px}body{font-size:17px}}
+@media(max-width:1180px){.menu a{padding:8px 10px}}
+@media(max-width:1060px){
+  .facts-grid{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){border-left:0}
+  .fact:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}
+  .band-box{grid-template-columns:1fr;padding:46px}
+  .band-actions{align-items:flex-start}
+  .stages{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  :root{--header:70px}
+  .burger{display:grid}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 20px 16px;box-shadow:0 20px 30px rgba(43,24,64,.08);font-size:1rem;display:none}
+  header.open .menu{display:flex}
+  .menu a{padding:14px 4px;border-radius:0;border-bottom:1px solid var(--line)}
+  .menu li:last-child a{border-bottom:0}
+  .menu a:hover{background:none}
+  .hero-grid,.contact-grid,.faq-grid{grid-template-columns:1fr;gap:44px}
+  .hero-grid{padding-top:48px;padding-bottom:70px}
+  .grid3,.steps{grid-template-columns:1fr 1fr}
+  section{padding:76px 0}
+  .band{padding:0 0 76px}
+  .faq-side{position:static}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .logo-mark{width:40px;height:40px}
+  .logo-name{font-size:1.2rem}
+  .logo-sub{font-size:.58rem;letter-spacing:.1em}
+  .nav{gap:12px}
+  .nav-actions .btn{display:none}
+  .demo-more{display:none}
+  .hero h1{font-size:2.7rem}
+  .lead{font-size:1.05rem}
+  .cta .btn{width:100%}
+  .house-tag{position:static;margin-top:10px;white-space:normal}
+  .house{display:flex;flex-direction:column}
+  .fact{padding:18px 14px;flex-direction:column;align-items:flex-start;gap:10px}
+  .grid3,.steps{grid-template-columns:1fr}
+  .svc,.step,.stage{padding:26px}
+  .band-box{padding:34px 22px;border-radius:26px}
+  .band-actions,.band-actions .btn{width:100%}
+  summary{font-size:1.05rem;padding:18px}
+  details p{padding:0 18px 18px}
+  .map-actions{width:100%}
+  .map-actions .btn{flex:1 1 100%}
+  .map-pin{top:34%}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .float{right:16px;bottom:16px;height:58px;padding:0 13px}
+  .float svg{width:30px;height:30px}
+  footer{padding-bottom:70px}
+}
+@media(prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .float,.map-pin-pulse::after{animation:none}
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- Ícones reutilizados -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 12 0 12 12 0 0 0 1.6 17.9L0 24l6.3-1.6A12 12 0 0 0 12 24a12 12 0 0 0 8.5-20.5zM12 22a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22zm5.5-7.5c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-.9 1.1-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6a.6.6 0 0 0 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.5 14.5 0 0 0 5.6 5c2 .8 2.8.9 3.8.7a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s-7-5.8-7-11.5a7 7 0 0 1 14 0c0 5.7-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.6"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></g></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M12 17.2s-3-1.8-3-3.8a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 2-3 3.8-3 3.8z"/></g></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><g fill="currentColor"><ellipse cx="6.5" cy="10" rx="2" ry="2.6"/><ellipse cx="10" cy="6.2" rx="2" ry="2.7"/><ellipse cx="14.2" cy="6.2" rx="2" ry="2.7"/><ellipse cx="17.6" cy="10" rx="2" ry="2.6"/><path d="M12 11.5c-3 0-6 3.8-6 6.2 0 1.6 1.3 2.3 2.7 2.3 1.4 0 2.1-.8 3.3-.8s1.9.8 3.3.8c1.4 0 2.7-.7 2.7-2.3 0-2.4-3-6.2-6-6.2z"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L3 9.4l6.2-.9z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração)<span class="demo-more"> · desenvolvida como exemplo para a Casa dos Pets</span></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Casa dos Pets, início">
+      <span class="logo-mark" aria-hidden="true"><svg><use href="#i-house"/></svg></span>
+      <span class="logo-text"><span class="logo-name">Casa dos Pets</span><span class="logo-sub">Clínica Veterinária</span></span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul class="menu" id="menu">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#fases">Cada fase</a></li>
+        <li><a href="#agendar">Como agendar</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-orange btn-sm" href="https://wa.me/5561998590777" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title" style="padding:0">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="pill"><svg aria-hidden="true"><use href="#i-paw"/></svg>Clínica veterinária · Jardim Botânico</span>
+      <h1 id="hero-title">Aqui, seu pet se sente <span class="hl">em casa</span>.</h1>
+      <p class="lead">Atendimento veterinário com carinho, calma e atenção para cães e gatos, no Jardim Botânico, em Brasília.</p>
+      <div class="cta">
+        <a class="btn btn-orange" href="https://wa.me/5561998590777" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn btn-line" href="#servicos">Ver serviços</a>
+      </div>
+      <div class="proof">
+        <span class="proof-score">4,7</span>
+        <div><span class="stars" aria-hidden="true">★★★★★</span><small><b>282 avaliações</b> de tutores no Google</small></div>
+      </div>
+    </div>
+
+    <div class="house reveal" aria-hidden="true">
+      <svg viewBox="0 0 520 470">
+        <ellipse cx="260" cy="440" rx="210" ry="18" fill="#2b1840" opacity=".08"/>
+        <rect x="330" y="70" width="44" height="80" rx="8" fill="#45296a"/>
+        <path d="M352 66c-6-14 8-18 2-32" fill="none" stroke="#c8bcd8" stroke-width="5" stroke-linecap="round"/>
+        <path d="M60 210 260 50l200 160" fill="none" stroke="#2b1840" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M95 195 260 64l165 131v230a10 10 0 0 1-10 10H105a10 10 0 0 1-10-10z" fill="#fff"/>
+        <path d="M95 195 260 64l165 131v230a10 10 0 0 1-10 10H105a10 10 0 0 1-10-10z" fill="none" stroke="#efe4dc" stroke-width="3"/>
+        <circle cx="260" cy="160" r="30" fill="#ffe6d6"/>
+        <path d="M260 178s-14-8.5-14-18a7.5 7.5 0 0 1 14-3.7 7.5 7.5 0 0 1 14 3.7c0 9.5-14 18-14 18z" fill="#ff7a3d"/>
+        <rect x="95" y="372" width="330" height="63" fill="#ffe6d6"/>
+        <!-- cachorro -->
+        <g>
+          <path d="M150 300c-22-6-34 18-24 40 6 13 18 12 22 4z" fill="#a0603a"/>
+          <path d="M262 300c22-6 34 18 24 40-6 13-18 12-22 4z" fill="#a0603a"/>
+          <ellipse cx="206" cy="330" rx="62" ry="58" fill="#e8a46e"/>
+          <ellipse cx="206" cy="356" rx="34" ry="26" fill="#fbe1c8"/>
+          <circle cx="184" cy="322" r="7" fill="#24162f"/>
+          <circle cx="228" cy="322" r="7" fill="#24162f"/>
+          <circle cx="186.5" cy="319.5" r="2.2" fill="#fff"/>
+          <circle cx="230.5" cy="319.5" r="2.2" fill="#fff"/>
+          <ellipse cx="206" cy="345" rx="10" ry="7" fill="#24162f"/>
+          <path d="M206 352v8M196 362c5 5 15 5 20 0" fill="none" stroke="#24162f" stroke-width="3" stroke-linecap="round"/>
+          <path d="M202 366c0 8 8 8 8 0" fill="#ff7a3d"/>
+          <rect x="166" y="380" width="80" height="12" rx="6" fill="#45296a"/>
+          <circle cx="206" cy="398" r="8" fill="#f5a623"/>
+        </g>
+        <!-- gato -->
+        <g>
+          <path d="M292 300l-6-40 30 22z" fill="#6b6377"/>
+          <path d="M366 300l6-40-30 22z" fill="#6b6377"/>
+          <path d="M296 296l-3-24 16 13z" fill="#ffc4c4"/>
+          <path d="M362 296l3-24-16 13z" fill="#ffc4c4"/>
+          <ellipse cx="329" cy="330" rx="50" ry="46" fill="#8a8297"/>
+          <path d="M310 380c-30 10-30 52 19 52s49-42 19-52z" fill="#8a8297"/>
+          <ellipse cx="312" cy="324" rx="6" ry="8" fill="#c9e86b"/>
+          <ellipse cx="346" cy="324" rx="6" ry="8" fill="#c9e86b"/>
+          <rect x="310" y="319" width="4" height="11" rx="2" fill="#24162f"/>
+          <rect x="344" y="319" width="4" height="11" rx="2" fill="#24162f"/>
+          <path d="M324 340h10l-5 6z" fill="#ff9aa2"/>
+          <path d="M329 346c-3 6-10 6-12 2M329 346c3 6 10 6 12 2" fill="none" stroke="#24162f" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M296 340h-22M296 346l-20 5M362 340h22M362 346l20 5" stroke="#e7e2ee" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+        <g fill="#ff7a3d" opacity=".9"><circle cx="455" cy="300" r="6"/><circle cx="470" cy="285" r="4"/><circle cx="62" cy="330" r="5"/></g>
+      </svg>
+      <div class="house-tag tag-1"><i><svg><use href="#i-star"/></svg></i><span>Nota 4,7<small>282 avaliações no Google</small></span></div>
+      <div class="house-tag tag-2"><i><svg><use href="#i-heart"/></svg></i><span>Cães e gatos<small>atendidos com carinho</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA -->
+<div class="facts">
+  <div class="wrap facts-grid">
+    <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="fact-txt"><b>Nota 4,7</b><span>no Google</span></span></div>
+    <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><span class="fact-txt"><b>282 avaliações</b><span>de tutores satisfeitos</span></span></div>
+    <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span class="fact-txt"><b>Jardim Botânico</b><span>Brasília-DF</span></span></div>
+    <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-chat"/></svg></span><span class="fact-txt"><b>WhatsApp</b><span>(61) 99859-0777</span></span></div>
+  </div>
+</div>
+
+<!-- SERVIÇOS
+     Lista provisória de serviços comuns em clínica veterinária: confirmar com a clínica. -->
+<section id="servicos" aria-labelledby="serv-title">
+  <div class="wrap">
+    <div class="head head-center reveal">
+      <span class="pill"><svg aria-hidden="true"><use href="#i-paw"/></svg>Serviços</span>
+      <h2 id="serv-title">Tudo o que o seu pet precisa, num lugar só</h2>
+      <p>Da primeira vacina ao check-up de rotina, com atendimento calmo e explicação clara para o tutor.</p>
+    </div>
+    <div class="grid3">
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4v5a4 4 0 0 0 8 0V4"/><path d="M9 13v2a5 5 0 0 0 10 0v-2"/><circle cx="19" cy="11" r="2"/></svg></div>
+        <h3>Consultas</h3>
+        <p>Avaliação completa do seu cão ou gato, com tempo para ouvir o tutor e explicar cada passo.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l4 4M19 5l-9.5 9.5M8 12l4 4M6.5 13.5l-3 3 4 4 3-3M14 8l2 2"/></svg></div>
+        <h3>Vacinação</h3>
+        <p>Calendário de vacinas organizado para filhotes e reforços anuais para adultos.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/></svg></div>
+        <h3>Exames</h3>
+        <p>Exames para diagnóstico e acompanhamento, pedidos conforme a necessidade do seu pet.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12l2.2 2.2 4.3-4.4"/></svg></div>
+        <h3>Check-up preventivo</h3>
+        <p>Consultas de rotina para encontrar problemas cedo e manter o seu pet saudável por mais tempo.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l7-7M14.5 9.5 19 5M13 4l7 7M11 6l7 7-4 4-7-7z"/></svg></div>
+        <h3>Castração e cirurgias</h3>
+        <p>Procedimentos planejados com cuidado, orientação antes e depois e acompanhamento da recuperação.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-house"/></svg></div>
+        <h3>Orientação ao tutor</h3>
+        <p>Dúvidas sobre alimentação, comportamento e cuidados em casa respondidas com paciência.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FASES DA VIDA -->
+<section class="life" id="fases" aria-labelledby="fases-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="pill" style="background:#fff"><svg aria-hidden="true"><use href="#i-paw"/></svg>Cada fase da vida</span>
+      <h2 id="fases-title">Do primeiro dia em casa até a melhor idade</h2>
+      <p>Cada fase pede um cuidado diferente. A gente acompanha o seu pet em todas elas.</p>
+    </div>
+    <div class="stages">
+      <article class="stage reveal">
+        <svg class="stage-paw" aria-hidden="true"><use href="#i-paw"/></svg>
+        <span class="stage-age">Filhotes</span>
+        <h3>Começo com o pé direito</h3>
+        <p>Os primeiros meses definem a saúde para a vida toda.</p>
+        <ul><li>Calendário de vacinas</li><li>Vermifugação</li><li>Orientação de alimentação</li></ul>
+      </article>
+      <article class="stage reveal">
+        <svg class="stage-paw" aria-hidden="true"><use href="#i-paw"/></svg>
+        <span class="stage-age">Adultos</span>
+        <h3>Saúde em dia</h3>
+        <p>Prevenir é mais simples (e mais barato) do que tratar.</p>
+        <ul><li>Check-up de rotina</li><li>Reforço das vacinas</li><li>Castração</li></ul>
+      </article>
+      <article class="stage reveal">
+        <svg class="stage-paw" aria-hidden="true"><use href="#i-paw"/></svg>
+        <span class="stage-age">Idosos</span>
+        <h3>Mais atenção, mais conforto</h3>
+        <p>Pets mais velhos precisam de um olhar mais frequente.</p>
+        <ul><li>Consultas mais próximas</li><li>Exames de acompanhamento</li><li>Cuidado com o bem-estar</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- COMO AGENDAR -->
+<section id="agendar" aria-labelledby="agendar-title">
+  <div class="wrap">
+    <div class="head head-center reveal">
+      <span class="pill"><svg aria-hidden="true"><use href="#i-paw"/></svg>Como agendar</span>
+      <h2 id="agendar-title">Marcar a consulta é rapidinho</h2>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><h3>Chame no WhatsApp</h3><p>Conte um pouco sobre o seu pet e o motivo da consulta.</p></li>
+      <li class="step reveal"><h3>Escolha o horário</h3><p>A equipe confirma o melhor dia e horário para você.</p></li>
+      <li class="step reveal"><h3>Venha pra casa</h3><p>Traga seu pet e a carteirinha de vacinas, se tiver. O resto é com a gente.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="band">
+  <div class="wrap">
+    <div class="band-box reveal">
+      <div>
+        <h2>Seu pet merece ser bem cuidado.</h2>
+        <p>Agende uma consulta na Casa dos Pets, no Jardim Botânico. É só chamar no WhatsApp.</p>
+      </div>
+      <div class="band-actions">
+        <a class="btn btn-white" href="https://wa.me/5561998590777" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+        <small>(61) 99859-0777</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DÚVIDAS -->
+<section id="duvidas" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="faq-side reveal">
+      <div class="head">
+        <span class="pill"><svg aria-hidden="true"><use href="#i-paw"/></svg>Dúvidas</span>
+        <h2 id="faq-title">Perguntas dos tutores</h2>
+        <p>Não achou a sua? Pergunte direto para a equipe.</p>
+      </div>
+      <a class="btn btn-line btn-sm" href="https://wa.me/5561998590777" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Perguntar no WhatsApp</a>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Preciso agendar antes de ir?</summary><p>Recomendamos agendar pelo WhatsApp. Assim o seu pet é atendido no horário combinado, com mais calma e menos espera.</p></details>
+      <details><summary>Com que frequência devo levar meu pet ao veterinário?</summary><p>Para cães e gatos adultos, o ideal é pelo menos um check-up por ano. Filhotes e pets idosos costumam precisar de consultas mais frequentes. O veterinário indica o melhor intervalo para o seu.</p></details>
+      <details><summary>Quando meu filhote deve tomar as vacinas?</summary><p>As vacinas começam nas primeiras semanas de vida e seguem um calendário com doses de reforço. Na consulta, o veterinário monta o calendário certo para o seu filhote.</p></details>
+      <details><summary>O que levo na primeira consulta?</summary><p>A carteirinha de vacinação, se tiver, exames anteriores e a lista de remédios que o pet usa. E, claro, as suas dúvidas.</p></details>
+      <details><summary>Onde fica a clínica?</summary><p>No Setor Habitacional Jardim Botânico, Brasília-DF. Veja o mapa e o botão "Como chegar" logo abaixo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact" id="contato" aria-labelledby="contato-title">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="pill" style="background:#fff"><svg aria-hidden="true"><use href="#i-paw"/></svg>Contato</span>
+      <h2 id="contato-title">Vem conhecer a nossa casa</h2>
+      <p class="contact-lead">Estamos no Jardim Botânico, em Brasília. Agende pelo WhatsApp e venha com o seu pet.</p>
+      <ul class="info">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Casa%20dos%20Pets%20Cl%C3%ADnica%20veterin%C3%A1ria&amp;query_place_id=ChIJYf4VonohWpMRK5--eUHZz3I" target="_blank" rel="noopener"><span class="info-ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span class="info-txt"><b>Endereço</b><span>Setor Habitacional Jardim Botânico · Brasília-DF</span></span></a></li>
+        <li><a href="https://wa.me/5561998590777" target="_blank" rel="noopener"><span class="info-ico"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><span class="info-txt"><b>WhatsApp</b><span>(61) 99859-0777</span></span></a></li>
+        <li><a href="https://www.instagram.com/c.v.casa_dos_pets/" target="_blank" rel="noopener"><span class="info-ico"><svg aria-hidden="true"><use href="#i-ig"/></svg></span><span class="info-txt"><b>Instagram</b><span>@c.v.casa_dos_pets</span></span></a></li>
+      </ul>
+      <a class="btn btn-orange" href="https://wa.me/5561998590777" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta</a>
+    </div>
+    <div class="map reveal" id="mapa" data-embed="https://maps.google.com/maps?q=Casa%20dos%20Pets%20Cl%C3%ADnica%20veterin%C3%A1ria%2C%20Jardim%20Bot%C3%A2nico%2C%20Bras%C3%ADlia%20-%20DF&amp;z=16&amp;output=embed">
+      <!-- Mapa ilustrado: fica por baixo do Google Maps e continua visível se ele não puder carregar. -->
+      <a class="map-art" href="https://www.google.com/maps/search/?api=1&amp;query=Casa%20dos%20Pets%20Cl%C3%ADnica%20veterin%C3%A1ria&amp;query_place_id=ChIJYf4VonohWpMRK5--eUHZz3I" target="_blank" rel="noopener" aria-label="Abrir a localização da Casa dos Pets no Google Maps">
+        <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="600" height="460" fill="#f3eef7"/>
+          <g fill="#dcecd8"><circle cx="90" cy="90" r="110"/><circle cx="540" cy="400" r="120"/><rect x="420" y="20" width="160" height="100" rx="20"/></g>
+          <g fill="#e9e1f2"><rect x="230" y="30" width="140" height="80" rx="12"/><rect x="40" y="220" width="120" height="80" rx="12"/><rect x="240" y="200" width="130" height="80" rx="12"/><rect x="430" y="200" width="150" height="80" rx="12"/><rect x="60" y="360" width="150" height="80" rx="12"/></g>
+          <g fill="none" stroke="#fff" stroke-linecap="round">
+            <path d="M-20 160C150 150 400 175 620 150" stroke-width="16"/>
+            <path d="M-20 330H620" stroke-width="12"/>
+            <path d="M205 -20C195 150 215 300 200 480" stroke-width="14"/>
+            <path d="M405 -20V480" stroke-width="12"/>
+          </g>
+          <path d="M-20 260C200 245 400 270 620 255" fill="none" stroke="#ffd9c2" stroke-width="26"/>
+          <path d="M-20 260C200 245 400 270 620 255" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="12 12"/>
+        </svg>
+        <span class="map-pin"><span class="map-pin-label">Casa dos Pets</span><span class="map-pin-mark"></span><span class="map-pin-pulse"></span></span>
+      </a>
+      <div class="map-card">
+        <div><b>Casa dos Pets · Jardim Botânico</b><span>Brasília-DF</span></div>
+        <div class="map-actions">
+          <a class="btn btn-line btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Casa%20dos%20Pets%20Cl%C3%ADnica%20veterin%C3%A1ria&amp;query_place_id=ChIJYf4VonohWpMRK5--eUHZz3I" target="_blank" rel="noopener">Ver no Google Maps</a>
+          <a class="btn btn-plum btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Casa%20dos%20Pets%20Cl%C3%ADnica%20veterin%C3%A1ria&amp;destination_place_id=ChIJYf4VonohWpMRK5--eUHZz3I" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"><svg><use href="#i-house"/></svg></span><span class="logo-text"><span class="logo-name">Casa dos Pets</span><span class="logo-sub">Clínica Veterinária</span></span></a>
+      <p class="foot-about">Atendimento veterinário com carinho para cães e gatos, no Jardim Botânico, em Brasília. Aqui, seu pet se sente em casa.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#fases">Cada fase</a></li>
+        <li><a href="#agendar">Como agendar</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Casa%20dos%20Pets%20Cl%C3%ADnica%20veterin%C3%A1ria&amp;query_place_id=ChIJYf4VonohWpMRK5--eUHZz3I" target="_blank" rel="noopener">Jardim Botânico · Brasília-DF</a></li>
+        <li><a href="https://wa.me/5561998590777" target="_blank" rel="noopener">(61) 99859-0777</a></li>
+        <li><a href="https://www.instagram.com/c.v.casa_dos_pets/" target="_blank" rel="noopener">@c.v.casa_dos_pets</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-bottom">
+    <span>© Casa dos Pets · Jardim Botânico, Brasília-DF</span>
+    <span>Site de demonstração · serviços, fotos e dados do responsável técnico (CRMV) a confirmar</span>
+  </div></div>
+</footer>
+
+<a class="float" aria-label="Agendar pelo WhatsApp" href="https://wa.me/5561998590777" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="float-label">Agendar pelo WhatsApp</span></a>
+
+<script>
+(function(){
+  // Animação de entrada
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  // Sombra no cabeçalho ao rolar
+  var header=document.getElementById('header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Menu mobile
+  var burger=document.getElementById('burger');
+  function setMenu(open){header.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')}
+  burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  // Google Maps por cima do mapa ilustrado; se for bloqueado (CSP), o ilustrado continua.
+  var map=document.getElementById('mapa');
+  if(map&&map.dataset.embed){
+    var failed=false,fr=document.createElement('iframe');
+    function fail(){failed=true;map.classList.remove('map-live');if(fr.parentNode)fr.parentNode.removeChild(fr)}
+    document.addEventListener('securitypolicyviolation',function(e){if(/google\./.test(e.blockedURI||''))fail()});
+    fr.title='Mapa: Casa dos Pets, Jardim Botânico, Brasília';
+    fr.loading='lazy';
+    fr.referrerPolicy='no-referrer-when-downgrade';
+    fr.addEventListener('load',function(){setTimeout(function(){if(!failed)map.classList.add('map-live')},400)});
+    fr.src=map.dataset.embed;
+    map.insertBefore(fr,map.querySelector('.map-card'));
+  }
+})();
+</script>
+</body>
+</html>
