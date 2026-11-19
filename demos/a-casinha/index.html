@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Casinha Clínica Veterinária | Lago Sul, Brasília</title>
+<meta name="description" content="A Casinha Clínica Veterinária: atendimento para cães e gatos no comércio da QI 7 do Lago Sul, Brasília. Nota 4,8 no Google com 176 avaliações. Agende pelo WhatsApp.">
+<!-- Site de demonstração: não indexar no Google até a clínica aprovar -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f3d4c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: "casinha" de cachorro como símbolo. Coral com azul-petróleo; serviços em lista de duas colunas; checklist da primeira visita. */
+:root{
+  --ink:#0f3d4c; --ink-2:#1b5567; --coral:#ff6f5e; --coral-d:#e8543f; --blush:#fff0ec; --mint:#e1f2ee; --cream:#fffaf7;
+  --muted:#5a6d73; --line:#ecdfd9; --white:#fff;
+  --display:"Young Serif",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --radius:22px; --header:78px;
+  --shadow:0 24px 60px rgba(15,61,76,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:10px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-d)}
+.kicker::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--coral)}
+.coral{color:var(--coral-d)}
+section[id]{scroll-margin-top:var(--header)}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:16px;font-weight:800;font-size:1rem;line-height:1.2;white-space:nowrap;transition:transform .2s,box-shadow .2s,background .2s,color .2s,border-color .2s;border:2px solid transparent;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-coral{background:var(--coral);color:#fff;box-shadow:0 12px 26px rgba(255,111,94,.32)}
+.btn-coral:hover{background:var(--coral-d);transform:translateY(-2px)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--ink-2);transform:translateY(-2px)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.2)}
+.btn-sm{padding:11px 18px;font-size:.92rem;border-radius:13px}
+
+/* Faixa de demonstração */
+.demo{background:var(--ink);color:#c8dde3;font-size:.76rem;text-align:center;padding:7px 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Cabeçalho */
+header{position:sticky;top:0;z-index:50;background:rgba(255,250,247,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 8px 30px rgba(15,61,76,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header)}
+.logo{display:flex;align-items:center;gap:12px;flex:none}
+.logo-mark{width:46px;height:46px;border-radius:50%;background:var(--blush);display:grid;place-items:center;color:var(--coral-d);flex:none;border:2px solid var(--coral)}
+.logo-mark svg{width:26px;height:26px}
+.logo-text{display:flex;flex-direction:column;line-height:1.05}
+.logo-name{font-family:var(--display);font-size:1.45rem;color:var(--ink);white-space:nowrap}
+.logo-sub{font-size:.64rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px;white-space:nowrap}
+.menu{display:flex;gap:4px;list-style:none;font-size:.95rem;font-weight:600;color:var(--muted)}
+.menu a{display:block;padding:8px 14px;border-radius:12px;transition:color .2s,background .2s}
+.menu a:hover{color:var(--ink);background:var(--mint)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:46px;height:46px;border-radius:14px;border:1px solid var(--line);background:#fff;cursor:pointer;place-items:center;color:var(--ink)}
+.burger svg{width:22px;height:22px}
+
+/* Hero */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;padding-top:70px;padding-bottom:90px}
+.hero h1{font-size:clamp(2.6rem,5vw,4.4rem);margin:20px 0 22px}
+.lead{font-size:1.16rem;color:var(--muted);max-width:520px;margin-bottom:32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:36px}
+.proof div{display:flex;flex-direction:column}
+.proof b{font-family:var(--display);font-size:2rem;font-weight:400;line-height:1}
+.proof span{font-size:.88rem;color:var(--muted);margin-top:6px}
+.stars{color:#f2a51a;letter-spacing:2px;font-size:.95rem}
+.art{position:relative;aspect-ratio:1/0.92;max-width:100%}
+.art-blob{position:absolute;inset:6% 4% 4% 8%;background:var(--blush);border-radius:46% 54% 50% 50%/52% 46% 54% 48%}
+.art svg{position:relative;width:100%;height:100%}
+.art-badge{position:absolute;left:0;top:8%;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 16px;box-shadow:0 14px 30px rgba(15,61,76,.12);font-weight:800;font-size:.95rem;white-space:nowrap}
+.art-badge small{display:block;font-weight:600;font-size:.78rem;color:var(--muted)}
+.art-badge .stars{display:block;font-size:.85rem;margin-bottom:2px}
+
+/* Faixa */
+.facts{background:var(--ink);color:#fff}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:26px 22px}
+.fact+.fact{border-left:1px solid rgba(255,255,255,.12)}
+.fact b{display:block;font-family:var(--display);font-weight:400;font-size:1.35rem;line-height:1.2}
+.fact span{display:block;font-size:.86rem;color:#a9c6cf;margin-top:2px}
+
+/* Seções */
+section{padding:110px 0}
+.head{max-width:680px;margin-bottom:54px}
+.head h2{font-size:clamp(2.1rem,3.6vw,3.1rem);margin:16px 0 14px}
+.head p{color:var(--muted);font-size:1.06rem}
+
+/* Jeito A Casinha */
+.ways{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.way{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.way-ico{width:52px;height:52px;border-radius:16px;background:var(--mint);color:var(--ink);display:grid;place-items:center;margin-bottom:18px}
+.way-ico svg{width:26px;height:26px}
+.way:nth-child(even) .way-ico{background:var(--blush);color:var(--coral-d)}
+.way h3{font-size:1.3rem;margin-bottom:8px}
+.way p{color:var(--muted);font-size:.95rem}
+
+/* Serviços */
+.services{background:var(--mint)}
+.svc-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:70px;align-items:start}
+.svc-side{position:sticky;top:calc(var(--header) + 32px)}
+.svc-side .head{margin-bottom:28px}
+.svc-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.svc{background:#fff;border-radius:var(--radius);padding:24px;display:flex;gap:16px;align-items:flex-start;transition:transform .2s,box-shadow .2s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,61,76,.10)}
+.svc-ico{flex:none;width:46px;height:46px;border-radius:14px;background:var(--blush);color:var(--coral-d);display:grid;place-items:center}
+.svc-ico svg{width:24px;height:24px}
+.svc-txt h3{font-size:1.2rem;margin-bottom:4px}
+.svc-txt p{color:var(--muted);font-size:.93rem;line-height:1.55}
+
+/* Primeira visita */
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:70px;align-items:center}
+.checklist{list-style:none;background:#fff;border:1px solid var(--line);border-radius:28px;padding:16px 28px;box-shadow:var(--shadow)}
+.checklist li{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px dashed var(--line)}
+.checklist li:last-child{border-bottom:0}
+.box{flex:none;width:28px;height:28px;border-radius:9px;border:2px solid var(--coral);display:grid;place-items:center;color:var(--coral-d);margin-top:2px}
+.box svg{width:15px;height:15px}
+.chk-txt b{display:block;font-size:1.02rem;color:var(--ink)}
+.chk-txt span{display:block;color:var(--muted);font-size:.93rem}
+.steps{list-style:none;display:grid;gap:14px;margin-top:30px;counter-reset:s}
+.step{display:flex;gap:16px;align-items:center}
+.step::before{counter-increment:s;content:counter(s);flex:none;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:800}
+.step b{display:block;font-size:1rem;color:var(--ink)}
+.step span span{display:block;color:var(--muted);font-size:.92rem}
+
+/* CTA */
+.band{background:var(--coral);color:#fff;padding:90px 0;position:relative;overflow:hidden}
+.band::after{content:"";position:absolute;right:-60px;bottom:-100px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.12)}
+.band-grid{display:grid;grid-template-columns:minmax(0,1.3fr) auto;gap:40px;align-items:center;position:relative;z-index:1}
+.band h2{font-size:clamp(2.1rem,3.6vw,3rem);margin-bottom:12px}
+.band p{color:#fff3ef;font-size:1.06rem;max-width:560px}
+.band-actions{display:flex;flex-direction:column;gap:10px;align-items:center}
+.band-actions small{font-weight:700;color:#fff3ef}
+
+/* Dúvidas */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
+.faq-side{position:sticky;top:calc(var(--header) + 32px)}
+.faq-side .head{margin-bottom:26px}
+.faq{border-top:2px solid var(--ink)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--display);font-size:1.25rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 4px;transition:color .2s}
+summary:hover{color:var(--coral-d)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:32px;height:32px;border-radius:10px;background:var(--blush);color:var(--coral-d);display:grid;place-items:center;font-family:var(--sans);font-weight:800;font-size:1.2rem;line-height:1;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding:0 4px 24px;max-width:620px}
+
+/* Contato */
+.contact{background:var(--blush)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:60px;align-items:stretch}
+.contact h2{font-size:clamp(2.1rem,3.6vw,3.1rem);margin:16px 0 14px}
+.contact-lead{color:var(--muted);margin-bottom:28px;max-width:440px}
+.info{list-style:none;display:grid;gap:12px;margin-bottom:30px}
+.info a{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;transition:border-color .2s}
+.info a:hover{border-color:var(--coral)}
+.info-ico{flex:none;width:46px;height:46px;border-radius:14px;background:var(--mint);color:var(--ink);display:grid;place-items:center}
+.info-ico svg{width:22px;height:22px}
+.info-txt b{display:block;font-family:var(--display);font-weight:400;font-size:1.12rem;line-height:1.3}
+.info-txt span{display:block;color:var(--muted);font-size:.93rem;line-height:1.45}
+
+.map{position:relative;border-radius:26px;min-height:480px;overflow:hidden;border:1px solid var(--line);background:#eef4f2;box-shadow:var(--shadow);isolation:isolate}
+.map-art{position:absolute;inset:0;display:block;z-index:0}
+.map-art svg{width:100%;height:100%}
+.map-pin{position:absolute;left:50%;top:38%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none}
+.map-pin-label{background:#fff;border-radius:12px;padding:8px 14px;font-family:var(--display);font-size:1rem;box-shadow:0 8px 24px rgba(15,61,76,.16);white-space:nowrap}
+.map-pin-mark{position:relative;width:46px;height:46px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--coral);box-shadow:0 10px 24px rgba(255,111,94,.4);display:grid;place-items:center}
+.map-pin-mark::after{content:"";width:16px;height:16px;border-radius:50%;background:#fff}
+.map-pin-pulse{position:absolute;left:50%;top:calc(100% + 4px);width:18px;height:8px;margin-left:-9px;border-radius:50%;background:rgba(255,111,94,.3)}
+.map-pin-pulse::after{content:"";position:absolute;inset:-14px -22px;border-radius:50%;border:2px solid rgba(255,111,94,.4);animation:ping 2.4s infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.4);opacity:0}}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1;opacity:0;transition:opacity .5s}
+.map.map-live iframe{opacity:1}
+.map-card{position:absolute;z-index:2;left:20px;right:20px;bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:14px 16px;flex-wrap:wrap;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 14px 36px rgba(15,61,76,.18)}
+.map-card b{display:block;font-family:var(--display);font-weight:400;font-size:1.12rem;line-height:1.3}
+.map-card span{display:block;color:var(--muted);font-size:.88rem}
+.map-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Rodapé */
+footer{background:var(--ink);color:#a9c6cf;font-size:.92rem;padding:64px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:48px}
+footer .logo-name{color:#fff}
+footer .logo-sub{color:#87a9b3}
+footer .logo-mark{background:transparent}
+.foot-about{margin-top:18px;max-width:340px}
+footer h4{font-family:var(--display);font-size:1.1rem;font-weight:400;color:#fff;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding:22px 0 26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-size:.8rem;color:#80a1ab}
+
+/* Botão flutuante */
+.float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:0;height:62px;padding:0 15px;border-radius:999px;background:#25d366;color:#fff;font-weight:800;box-shadow:0 10px 30px rgba(37,211,102,.45);animation:pulse 2.4s infinite;transition:gap .3s,padding .3s}
+.float svg{width:32px;height:32px;fill:#fff;flex:none}
+.float-label{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .35s}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media(hover:hover) and (min-width:901px){
+  .float:hover{gap:10px;padding:0 22px 0 16px}
+  .float:hover .float-label{max-width:200px}
+}
+
+/* Animação de entrada */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.js .reveal.in{opacity:1;transform:none}
+
+@media(min-width:1500px){.wrap{max-width:1280px}body{font-size:17px}}
+@media(max-width:1180px){.menu a{padding:8px 10px}.ways{grid-template-columns:1fr 1fr}}
+@media(max-width:1060px){
+  .facts-grid{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){border-left:0}
+  .fact:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}
+  .band-grid{grid-template-columns:1fr}
+  .band-actions{align-items:flex-start}
+  .svc-list{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  :root{--header:70px}
+  .burger{display:grid}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--cream);border-bottom:1px solid var(--line);padding:8px 20px 16px;box-shadow:0 20px 30px rgba(15,61,76,.08);font-size:1rem;display:none}
+  header.open .menu{display:flex}
+  .menu a{padding:14px 4px;border-radius:0;border-bottom:1px solid var(--line)}
+  .menu li:last-child a{border-bottom:0}
+  .menu a:hover{background:none}
+  .hero-grid,.svc-grid,.visit-grid,.contact-grid,.faq-grid{grid-template-columns:1fr;gap:44px}
+  .hero-grid{padding-top:48px;padding-bottom:70px}
+  .svc-side,.faq-side{position:static}
+  section{padding:76px 0}
+  .band{padding:70px 0}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .logo-mark{width:40px;height:40px}
+  .logo-mark svg{width:22px;height:22px}
+  .logo-name{font-size:1.2rem}
+  .logo-sub{font-size:.56rem;letter-spacing:.1em}
+  .nav{gap:12px}
+  .nav-actions .btn{display:none}
+  .demo-more{display:none}
+  .hero h1{font-size:2.55rem}
+  .lead{font-size:1.04rem}
+  .cta .btn{width:100%}
+  .art-badge{left:0;top:0}
+  .fact{padding:18px 14px}
+  .fact b{font-size:1.12rem}
+  .ways{grid-template-columns:1fr}
+  .way{padding:24px}
+  .checklist{padding:8px 20px}
+  .band-actions,.band-actions .btn{width:100%}
+  summary{font-size:1.08rem;padding:20px 0}
+  details p{padding:0 0 20px}
+  .map-actions{width:100%}
+  .map-actions .btn{flex:1 1 100%}
+  .map-pin{top:34%}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .float{right:16px;bottom:16px;height:58px;padding:0 13px}
+  .float svg{width:30px;height:30px}
+  footer{padding-bottom:70px}
+}
+@media(prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .float,.map-pin-pulse::after{animation:none}
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- Ícones reutilizados -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 12 0 12 12 0 0 0 1.6 17.9L0 24l6.3-1.6A12 12 0 0 0 12 24a12 12 0 0 0 8.5-20.5zM12 22a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22zm5.5-7.5c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-.9 1.1-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6a.6.6 0 0 0 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.5 14.5 0 0 0 5.6 5c2 .8 2.8.9 3.8.7a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s-7-5.8-7-11.5a7 7 0 0 1 14 0c0 5.7-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.6"/></g></symbol>
+  <symbol id="i-doghouse" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 11.5 12 4l9.5 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-4a2.5 2.5 0 0 1 5 0v4"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></symbol>
+  <symbol id="i-talk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></g></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-13.5 15-14-.5 10-6 15-14 15"/><path d="M5 19c3-4 6-7 10-9"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração)<span class="demo-more"> · desenvolvida como exemplo para A Casinha Clínica Veterinária</span></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="A Casinha Clínica Veterinária, início">
+      <span class="logo-mark" aria-hidden="true"><svg><use href="#i-doghouse"/></svg></span>
+      <span class="logo-text"><span class="logo-name">A Casinha</span><span class="logo-sub">Clínica Veterinária · Lago Sul</span></span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul class="menu" id="menu">
+        <li><a href="#jeito">Nosso jeito</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#primeira-visita">Primeira visita</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-coral btn-sm" href="https://wa.me/5561991685158" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title" style="padding:0">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="kicker">Clínica veterinária no Lago Sul</span>
+      <h1 id="hero-title">O cantinho de saúde do seu pet, <span class="coral">pertinho de casa</span>.</h1>
+      <p class="lead">Atendimento veterinário próximo e carinhoso para cães e gatos, no comércio local da QI 7 do Lago Sul.</p>
+      <div class="cta">
+        <a class="btn btn-coral" href="https://wa.me/5561991685158" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn btn-line" href="#servicos">Ver serviços</a>
+      </div>
+      <div class="proof">
+        <div><b>4,8 <span class="stars" aria-hidden="true">★★★★★</span></b><span>nota no Google</span></div>
+        <div><b>176</b><span>avaliações de tutores</span></div>
+        <div><b>QI 7</b><span>Lago Sul</span></div>
+      </div>
+    </div>
+
+    <div class="art reveal" aria-hidden="true">
+      <span class="art-blob"></span>
+      <svg viewBox="0 0 500 460">
+        <ellipse cx="250" cy="425" rx="190" ry="16" fill="#0f3d4c" opacity=".1"/>
+        <!-- casinha -->
+        <path d="M110 230 250 120l140 110v185a8 8 0 0 1-8 8H118a8 8 0 0 1-8-8z" fill="#ff6f5e"/>
+        <path d="M110 230 250 120l140 110" fill="none" stroke="#0f3d4c" stroke-width="0"/>
+        <path d="M84 238 250 108l166 130" fill="none" stroke="#0f3d4c" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+        <g stroke="#e8543f" stroke-width="3" opacity=".7"><path d="M118 280H382M118 330H382M118 380H382"/></g>
+        <path d="M185 423V325a65 65 0 0 1 130 0v98z" fill="#0f3d4c"/>
+        <rect x="186" y="198" width="128" height="38" rx="10" fill="#fff"/>
+        <text x="250" y="223" text-anchor="middle" font-family="Young Serif, Georgia, serif" font-size="17" fill="#0f3d4c">A Casinha</text>
+        <!-- cachorro espiando -->
+        <path d="M206 330c-16-2-24 18-16 34 5 9 14 8 17 2z" fill="#7a4b2d"/>
+        <path d="M294 330c16-2 24 18 16 34-5 9-14 8-17 2z" fill="#7a4b2d"/>
+        <ellipse cx="250" cy="360" rx="50" ry="46" fill="#d9925a"/>
+        <ellipse cx="250" cy="380" rx="28" ry="21" fill="#f6d6b8"/>
+        <circle cx="232" cy="352" r="6" fill="#0f3d4c"/><circle cx="268" cy="352" r="6" fill="#0f3d4c"/>
+        <circle cx="234" cy="350" r="2" fill="#fff"/><circle cx="270" cy="350" r="2" fill="#fff"/>
+        <ellipse cx="250" cy="371" rx="9" ry="6" fill="#0f3d4c"/>
+        <path d="M250 377v6M242 386c4 4 12 4 16 0" fill="none" stroke="#0f3d4c" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M200 412c0-18 22-24 50-24s50 6 50 24v11H200z" fill="#d9925a"/>
+        <ellipse cx="225" cy="420" rx="16" ry="8" fill="#f6d6b8"/><ellipse cx="275" cy="420" rx="16" ry="8" fill="#f6d6b8"/>
+        <!-- gato no telhado -->
+        <g transform="translate(300 96)">
+          <path d="M20 62c-6-30 8-46 30-46s36 16 30 46z" fill="#2e3a40"/>
+          <path d="M28 26l-4-24 18 14zM72 26l4-24-18 14z" fill="#2e3a40"/>
+          <ellipse cx="40" cy="36" rx="5" ry="6.5" fill="#f4d35e"/><ellipse cx="60" cy="36" rx="5" ry="6.5" fill="#f4d35e"/>
+          <rect x="38.6" y="31" width="2.8" height="10" rx="1.4" fill="#0f3d4c"/><rect x="58.6" y="31" width="2.8" height="10" rx="1.4" fill="#0f3d4c"/>
+          <path d="M46 46h8l-4 5z" fill="#ff9e95"/>
+          <path d="M80 56c22 2 26 20 14 26" fill="none" stroke="#2e3a40" stroke-width="7" stroke-linecap="round"/>
+        </g>
+        <!-- osso e coração -->
+        <g transform="translate(40 330) rotate(-18)"><rect x="8" y="6" width="44" height="12" rx="6" fill="#fff"/><circle cx="8" cy="6" r="8" fill="#fff"/><circle cx="8" cy="18" r="8" fill="#fff"/><circle cx="52" cy="6" r="8" fill="#fff"/><circle cx="52" cy="18" r="8" fill="#fff"/></g>
+        <path d="M430 300s-14-8.5-14-18a7.5 7.5 0 0 1 14-3.7 7.5 7.5 0 0 1 14 3.7c0 9.5-14 18-14 18z" fill="#ff6f5e"/>
+      </svg>
+      <div class="art-badge"><span class="stars">★★★★★</span>4,8 no Google<small>176 avaliações</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA -->
+<div class="facts">
+  <div class="wrap facts-grid">
+    <div class="fact"><b>4,8 no Google</b><span>176 avaliações de tutores</span></div>
+    <div class="fact"><b>Cães e gatos</b><span>atendimento clínico</span></div>
+    <div class="fact"><b>Lago Sul</b><span>SHIS QI 7, Bloco E, Loja 12</span></div>
+    <div class="fact"><b>WhatsApp</b><span>(61) 99168-5158</span></div>
+  </div>
+</div>
+
+<!-- NOSSO JEITO -->
+<section id="jeito" aria-labelledby="jeito-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker">Nosso jeito</span>
+      <h2 id="jeito-title">Uma clínica de bairro, com <span class="coral">cuidado de família</span></h2>
+      <p>Pertinho de casa para você, tranquila para o seu pet.</p>
+    </div>
+    <div class="ways">
+      <div class="way reveal"><span class="way-ico"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><h3>Atendimento próximo</h3><p>Cada pet é recebido com calma, pelo nome, sem pressa.</p></div>
+      <div class="way reveal"><span class="way-ico"><svg aria-hidden="true"><use href="#i-talk"/></svg></span><h3>Explicação clara</h3><p>Você entende o diagnóstico, o tratamento e os cuidados em casa.</p></div>
+      <div class="way reveal"><span class="way-ico"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span><h3>Ambiente tranquilo</h3><p>Um espaço pensado para o seu pet ficar mais à vontade.</p></div>
+      <div class="way reveal"><span class="way-ico"><svg aria-hidden="true"><use href="#i-chat"/></svg></span><h3>Pelo WhatsApp</h3><p>Agende e tire dúvidas direto com a clínica, de onde estiver.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS
+     Lista provisória de serviços comuns em clínica veterinária: confirmar com a clínica. -->
+<section class="services" id="servicos" aria-labelledby="serv-title">
+  <div class="wrap svc-grid">
+    <div class="svc-side reveal">
+      <div class="head">
+        <span class="kicker">Serviços</span>
+        <h2 id="serv-title">Do check-up ao tratamento</h2>
+        <p>Tudo o que o seu cão ou gato precisa para viver com saúde, em um só lugar.</p>
+      </div>
+      <a class="btn btn-ink" href="https://wa.me/5561991685158" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta</a>
+    </div>
+    <ul class="svc-list">
+      <li class="svc reveal"><span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4v5a4 4 0 0 0 8 0V4"/><path d="M9 13v2a5 5 0 0 0 10 0v-2"/><circle cx="19" cy="11" r="2"/></svg></span><span class="svc-txt"><h3>Consultas</h3><p>Avaliação completa e conversa sem pressa com o tutor.</p></span></li>
+      <li class="svc reveal"><span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l4 4M19 5l-9.5 9.5M8 12l4 4M6.5 13.5l-3 3 4 4 3-3M14 8l2 2"/></svg></span><span class="svc-txt"><h3>Vacinas</h3><p>Calendário para filhotes e reforço anual para adultos.</p></span></li>
+      <li class="svc reveal"><span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/></svg></span><span class="svc-txt"><h3>Exames</h3><p>Pedidos conforme a necessidade, para diagnóstico e acompanhamento.</p></span></li>
+      <li class="svc reveal"><span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12l2.2 2.2 4.3-4.4"/></svg></span><span class="svc-txt"><h3>Check-up</h3><p>Consultas de rotina para prevenir e encontrar problemas cedo.</p></span></li>
+      <li class="svc reveal"><span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l7-7M14.5 9.5 19 5M13 4l7 7M11 6l7 7-4 4-7-7z"/></svg></span><span class="svc-txt"><h3>Castração e cirurgias</h3><p>Com orientação antes e depois e acompanhamento da recuperação.</p></span></li>
+      <li class="svc reveal"><span class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg></span><span class="svc-txt"><h3>Pets idosos</h3><p>Acompanhamento mais próximo para mais conforto na melhor idade.</p></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PRIMEIRA VISITA -->
+<section id="primeira-visita" aria-labelledby="visita-title">
+  <div class="wrap visit-grid">
+    <div class="reveal">
+      <span class="kicker">Primeira visita</span>
+      <h2 id="visita-title" style="font-size:clamp(2.1rem,3.6vw,3.1rem);margin:16px 0 14px">Vai trazer seu pet pela primeira vez?</h2>
+      <p style="color:var(--muted);font-size:1.06rem">É simples. Siga estes passos e separe o que está na lista ao lado.</p>
+      <ol class="steps">
+        <li class="step"><span><b>Chame no WhatsApp</b><span>Conte o motivo da consulta e escolha o horário.</span></span></li>
+        <li class="step"><span><b>Separe os documentos</b><span>Use a lista ao lado para não esquecer nada.</span></span></li>
+        <li class="step"><span><b>Venha até a QI 7</b><span>No comércio local do Lago Sul, Bloco E, Loja 12.</span></span></li>
+      </ol>
+    </div>
+    <ul class="checklist reveal" aria-label="O que levar na primeira consulta">
+      <li><span class="box"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span class="chk-txt"><b>Carteirinha de vacinação</b><span>Se o seu pet já tiver uma.</span></span></li>
+      <li><span class="box"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span class="chk-txt"><b>Exames e receitas anteriores</b><span>Ajudam a entender o histórico.</span></span></li>
+      <li><span class="box"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span class="chk-txt"><b>Lista de remédios em uso</b><span>Com nome e dose, se possível.</span></span></li>
+      <li><span class="box"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span class="chk-txt"><b>Caixa de transporte (gatos)</b><span>Deixa o gato mais seguro e calmo no trajeto.</span></span></li>
+      <li><span class="box"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span class="chk-txt"><b>Coleira e guia (cães)</b><span>Para a chegada e a espera serem tranquilas.</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="band" aria-labelledby="band-title">
+  <div class="wrap band-grid reveal">
+    <div>
+      <h2 id="band-title">Seu pet merece esse cuidado.</h2>
+      <p>Agende uma consulta n'A Casinha, no Lago Sul. É só chamar no WhatsApp.</p>
+    </div>
+    <div class="band-actions">
+      <a class="btn btn-white" href="https://wa.me/5561991685158" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+      <small>(61) 99168-5158</small>
+    </div>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section id="duvidas" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div class="faq-side reveal">
+      <div class="head">
+        <span class="kicker">Dúvidas</span>
+        <h2 id="faq-title">Perguntas dos tutores</h2>
+        <p>Não achou a sua? Pergunte direto para a equipe.</p>
+      </div>
+      <a class="btn btn-line btn-sm" href="https://wa.me/5561991685158" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Perguntar no WhatsApp</a>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Preciso agendar antes de ir?</summary><p>Recomendamos agendar pelo WhatsApp. Assim o seu pet é atendido com mais calma e você espera menos.</p></details>
+      <details><summary>Com que frequência levo meu pet ao veterinário?</summary><p>Para cães e gatos adultos, o ideal é pelo menos um check-up por ano. Filhotes e pets idosos costumam precisar de consultas mais frequentes. O veterinário indica o intervalo certo para o seu.</p></details>
+      <details><summary>Meu gato fica muito estressado. E agora?</summary><p>É comum. Use a caixa de transporte, cubra com um pano leve no caminho e avise a equipe no agendamento. A gente organiza o atendimento para ser o mais tranquilo possível.</p></details>
+      <details><summary>Preciso de jejum para exames?</summary><p>Alguns exames de sangue pedem jejum. Ao agendar, pergunte à equipe, que passa as orientações certas para o exame do seu pet.</p></details>
+      <details><summary>Onde fica a clínica?</summary><p>No comércio local da SHIS QI 7, Bloco E, Loja 12, Lago Sul, Brasília-DF.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact" id="contato" aria-labelledby="contato-title">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="kicker">Contato</span>
+      <h2 id="contato-title">Venha nos visitar</h2>
+      <p class="contact-lead">Estamos no comércio local da QI 7 do Lago Sul. Agende pelo WhatsApp e venha com o seu pet.</p>
+      <ul class="info">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=A%20Casinha%20Cl%C3%ADnica%20Veterin%C3%A1ria&amp;query_place_id=ChIJheEsbHklWpMR2bpqb9wvkqM" target="_blank" rel="noopener"><span class="info-ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span class="info-txt"><b>Endereço</b><span>SHIS QI 7, Bloco E, Loja 12 · Lago Sul, Brasília-DF</span></span></a></li>
+        <li><a href="https://wa.me/5561991685158" target="_blank" rel="noopener"><span class="info-ico"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><span class="info-txt"><b>WhatsApp</b><span>(61) 99168-5158</span></span></a></li>
+      </ul>
+      <a class="btn btn-coral" href="https://wa.me/5561991685158" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar consulta</a>
+    </div>
+    <div class="map reveal" id="mapa" data-embed="https://maps.google.com/maps?q=A%20Casinha%20Cl%C3%ADnica%20Veterin%C3%A1ria%2C%20SHIS%20QI%207%2C%20Lago%20Sul%2C%20Bras%C3%ADlia%20-%20DF&amp;z=17&amp;output=embed">
+      <!-- Mapa ilustrado: fica por baixo do Google Maps e continua visível se ele não puder carregar. -->
+      <a class="map-art" href="https://www.google.com/maps/search/?api=1&amp;query=A%20Casinha%20Cl%C3%ADnica%20Veterin%C3%A1ria&amp;query_place_id=ChIJheEsbHklWpMR2bpqb9wvkqM" target="_blank" rel="noopener" aria-label="Abrir a localização d'A Casinha no Google Maps">
+        <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="600" height="460" fill="#eef4f2"/>
+          <path d="M-20 400C150 360 300 420 620 380V480H-20z" fill="#cfe5ee"/>
+          <g fill="#d9ead6"><circle cx="520" cy="80" r="100"/><circle cx="80" cy="120" r="70"/></g>
+          <g fill="#e6ece9"><rect x="230" y="30" width="140" height="80" rx="12"/><rect x="40" y="220" width="120" height="70" rx="12"/><rect x="240" y="200" width="130" height="80" rx="12"/><rect x="430" y="200" width="150" height="80" rx="12"/></g>
+          <g fill="none" stroke="#fff" stroke-linecap="round">
+            <path d="M-20 160H620" stroke-width="16"/>
+            <path d="M-20 320C200 310 400 330 620 315" stroke-width="12"/>
+            <path d="M205 -20V380" stroke-width="14"/>
+            <path d="M405 -20V380" stroke-width="12"/>
+          </g>
+        </svg>
+        <span class="map-pin"><span class="map-pin-label">A Casinha</span><span class="map-pin-mark"></span><span class="map-pin-pulse"></span></span>
+      </a>
+      <div class="map-card">
+        <div><b>SHIS QI 7 · Bloco E, Loja 12</b><span>Lago Sul, Brasília-DF</span></div>
+        <div class="map-actions">
+          <a class="btn btn-line btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=A%20Casinha%20Cl%C3%ADnica%20Veterin%C3%A1ria&amp;query_place_id=ChIJheEsbHklWpMR2bpqb9wvkqM" target="_blank" rel="noopener">Ver no Google Maps</a>
+          <a class="btn btn-ink btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=A%20Casinha%20Cl%C3%ADnica%20Veterin%C3%A1ria&amp;destination_place_id=ChIJheEsbHklWpMR2bpqb9wvkqM" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"><svg><use href="#i-doghouse"/></svg></span><span class="logo-text"><span class="logo-name">A Casinha</span><span class="logo-sub">Clínica Veterinária · Lago Sul</span></span></a>
+      <p class="foot-about">Atendimento veterinário próximo e carinhoso para cães e gatos, no comércio local da QI 7 do Lago Sul.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#jeito">Nosso jeito</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#primeira-visita">Primeira visita</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=A%20Casinha%20Cl%C3%ADnica%20Veterin%C3%A1ria&amp;query_place_id=ChIJheEsbHklWpMR2bpqb9wvkqM" target="_blank" rel="noopener">SHIS QI 7, Bloco E, Loja 12<br>Lago Sul · Brasília-DF</a></li>
+        <li><a href="https://wa.me/5561991685158" target="_blank" rel="noopener">(61) 99168-5158</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-bottom">
+    <span>© A Casinha Clínica Veterinária · Lago Sul, Brasília-DF</span>
+    <span>Site de demonstração · serviços, fotos e dados do responsável técnico (CRMV) a confirmar</span>
+  </div></div>
+</footer>
+
+<a class="float" aria-label="Agendar pelo WhatsApp" href="https://wa.me/5561991685158" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="float-label">Agendar pelo WhatsApp</span></a>
+
+<script>
+(function(){
+  // Animação de entrada
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  // Sombra no cabeçalho ao rolar
+  var header=document.getElementById('header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Menu mobile
+  var burger=document.getElementById('burger');
+  function setMenu(open){header.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')}
+  burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  // Google Maps por cima do mapa ilustrado; se for bloqueado (CSP), o ilustrado continua.
+  var map=document.getElementById('mapa');
+  if(map&&map.dataset.embed){
+    var failed=false,fr=document.createElement('iframe');
+    function fail(){failed=true;map.classList.remove('map-live');if(fr.parentNode)fr.parentNode.removeChild(fr)}
+    document.addEventListener('securitypolicyviolation',function(e){if(/google\./.test(e.blockedURI||''))fail()});
+    fr.title='Mapa: A Casinha Clínica Veterinária, Lago Sul, Brasília';
+    fr.loading='lazy';
+    fr.referrerPolicy='no-referrer-when-downgrade';
+    fr.addEventListener('load',function(){setTimeout(function(){if(!failed)map.classList.add('map-live')},400)});
+    fr.src=map.dataset.embed;
+    map.insertBefore(fr,map.querySelector('.map-card'));
+  }
+})();
+</script>
+</body>
+</html>
