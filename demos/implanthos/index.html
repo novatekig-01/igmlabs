@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clínica Implanthos | Implantes Dentários na Asa Norte, Brasília</title>
+<meta name="description" content="Clínica Implanthos: implantes dentários e reabilitação oral no Centro Empresarial Norte, Asa Norte, Brasília. Nota 4,7 no Google. Agende sua avaliação pelo WhatsApp.">
+<!-- Site de demonstração: não indexar no Google até a clínica aprovar -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#5e1c37">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+/* Layout: hero dividido com o diagrama do implante; seções alternando branco e rosado; linha do tempo do tratamento em etapas numeradas. */
+:root{
+  --wine:#5e1c37; --wine-2:#84294f; --ink:#22161b; --blush:#fbf4f6; --rose:#f3e2e8; --steel:#8a96a3;
+  --muted:#6d5a62; --line:#eddfe4; --white:#fff;
+  --display:"DM Serif Display",Georgia,"Times New Roman",serif;
+  --sans:"DM Sans",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --radius:20px; --header:76px;
+  --shadow:0 24px 60px rgba(34,22,27,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--wine-2);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;letter-spacing:-.01em;text-wrap:balance}
+h1 em,h2 em{font-style:italic;color:var(--wine-2)}
+p{text-wrap:pretty}
+.kicker{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--wine-2)}
+section[id]{scroll-margin-top:var(--header)}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:1rem;line-height:1.2;white-space:nowrap;transition:transform .25s,box-shadow .25s,background .25s,color .25s,border-color .25s;border:1.5px solid transparent;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--wine);color:#fff;box-shadow:0 12px 28px rgba(94,28,55,.28)}
+.btn-main:hover{background:var(--wine-2);transform:translateY(-2px);box-shadow:0 16px 34px rgba(94,28,55,.36)}
+.btn-line{border-color:var(--wine);color:var(--wine);background:transparent}
+.btn-line:hover{background:var(--wine);color:#fff}
+.btn-light{background:#fff;color:var(--wine)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.2)}
+.btn-sm{padding:11px 20px;font-size:.9rem}
+
+/* Faixa de demonstração */
+.demo{background:var(--ink);color:#e3d3d9;font-size:.76rem;text-align:center;padding:7px 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Cabeçalho */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 8px 30px rgba(34,22,27,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header)}
+.logo{display:flex;align-items:center;gap:12px;flex:none}
+.logo-mark{width:42px;height:42px;border-radius:50%;background:var(--wine);display:grid;place-items:center;color:#fff;flex:none}
+.logo-mark svg{width:20px;height:24px}
+.logo-text{display:flex;flex-direction:column;line-height:1.05}
+.logo-name{font-family:var(--display);font-size:1.4rem;color:var(--ink);white-space:nowrap}
+.logo-sub{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:4px;white-space:nowrap}
+.menu{display:flex;gap:4px;list-style:none;font-size:.94rem;font-weight:500;color:var(--muted)}
+.menu a{display:block;padding:8px 14px;border-radius:999px;transition:color .2s,background .2s}
+.menu a:hover{color:var(--wine);background:var(--blush)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;place-items:center;color:var(--wine)}
+.burger svg{width:22px;height:22px}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--blush),#fff 85%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:64px;align-items:center;padding-top:80px;padding-bottom:90px}
+.hero h1{font-size:clamp(2.5rem,4.8vw,4.2rem);margin:18px 0 22px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:530px;margin-bottom:34px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:38px;padding-top:26px;border-top:1px solid var(--line);max-width:540px}
+.proof div{display:flex;flex-direction:column}
+.proof b{font-family:var(--display);font-size:1.8rem;font-weight:400;line-height:1.1}
+.proof span{font-size:.86rem;color:var(--muted)}
+.stars{color:#d9a21b;letter-spacing:2px;font-size:.95rem}
+
+.diagram{position:relative;background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px 26px 24px;box-shadow:var(--shadow)}
+.diagram-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
+.diagram-head h2{font-size:1.35rem}
+.diagram-head span{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
+.diagram svg{width:100%;height:auto}
+.diagram svg text{font-family:var(--sans);font-size:15px;font-weight:600;fill:var(--ink)}
+.diagram svg text.sub{font-size:12px;font-weight:500;fill:var(--muted)}
+.diagram-note{font-size:.88rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:6px}
+
+/* Faixa de informações */
+.facts{border-block:1px solid var(--line)}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{display:flex;align-items:center;gap:14px;padding:26px 22px}
+.fact+.fact{border-left:1px solid var(--line)}
+.fact-ico{flex:none;width:44px;height:44px;border-radius:50%;background:var(--rose);color:var(--wine);display:grid;place-items:center}
+.fact-ico svg{width:21px;height:21px}
+.fact-txt b{display:block;font-size:1rem;line-height:1.3}
+.fact-txt span{display:block;font-size:.86rem;color:var(--muted);line-height:1.4}
+
+/* Seções */
+section{padding:110px 0}
+.head{max-width:680px;margin-bottom:54px}
+.head h2{font-size:clamp(2.1rem,3.6vw,3rem);margin:14px 0 14px}
+.head p{color:var(--muted);font-size:1.06rem}
+.head-split{max-width:none;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:60px;align-items:end}
+.head-split p{margin-bottom:8px}
+
+/* Você se identifica? */
+.signs{background:var(--blush)}
+.signs-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:72px;align-items:center}
+.signs h2{font-size:clamp(2.1rem,3.4vw,2.9rem);margin:14px 0 18px}
+.signs-lead{color:var(--muted);font-size:1.05rem;margin-bottom:28px}
+.sign-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sign{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.sign .sign-q{font-family:var(--display);color:var(--ink);font-size:1.3rem;line-height:1.2;margin-bottom:8px}
+.sign p{color:var(--muted);font-size:.93rem}
+.sign-mark{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--rose);color:var(--wine);margin-bottom:14px}
+.sign-mark svg{width:15px;height:15px}
+
+/* Tratamentos */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(94,28,55,.10);border-color:transparent}
+.ico{width:56px;height:56px;border-radius:16px;background:var(--rose);display:grid;place-items:center;margin-bottom:22px;color:var(--wine);transition:background .3s,color .3s}
+.ico svg{width:28px;height:28px}
+.svc:hover .ico{background:var(--wine);color:#fff}
+.svc h3{font-size:1.45rem;margin-bottom:10px}
+.svc p{color:var(--muted);font-size:.95rem}
+
+/* Etapas do tratamento */
+.journey{background:var(--ink);color:#fff}
+.journey .kicker{color:#e7a8bf}
+.journey .head p{color:#c7b5bc}
+.timeline{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s;border-top:1px solid rgba(255,255,255,.14)}
+.tl{position:relative;padding:34px 30px 34px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.tl:nth-child(3n+2),.tl:nth-child(3n){padding-left:30px;border-left:1px solid rgba(255,255,255,.14)}
+.tl::before{counter-increment:s;content:"Etapa " counter(s);display:block;font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e7a8bf;margin-bottom:14px}
+.tl h3{font-size:1.5rem;margin-bottom:8px}
+.tl p{color:#c7b5bc;font-size:.95rem}
+
+/* CTA */
+.band{background:linear-gradient(135deg,var(--wine),var(--wine-2));color:#fff;padding:84px 0}
+.band-grid{display:grid;grid-template-columns:minmax(0,1.3fr) auto;gap:40px;align-items:center}
+.band h2{font-size:clamp(2rem,3.4vw,2.9rem);margin-bottom:12px}
+.band p{color:#f1d6df;font-size:1.05rem;max-width:560px}
+.band-actions{display:flex;flex-direction:column;gap:10px;align-items:center}
+.band-actions small{color:#f1d6df;font-size:.86rem}
+
+/* Dúvidas */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
+.faq-side{position:sticky;top:calc(var(--header) + 32px)}
+.faq-side .head{margin-bottom:26px}
+.faq-help{background:var(--blush);border-radius:var(--radius);padding:24px}
+.faq-help b{display:block;font-family:var(--display);font-weight:400;font-size:1.3rem;margin-bottom:4px}
+.faq-help p{color:var(--muted);font-size:.93rem;margin-bottom:16px}
+.faq{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--display);font-size:1.3rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 4px;transition:color .2s}
+summary:hover{color:var(--wine)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:none;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235e1c37' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/15px no-repeat;transition:transform .3s,background-color .3s}
+details[open] summary::after{transform:rotate(45deg);background-color:var(--rose)}
+details p{color:var(--muted);padding:0 4px 24px;max-width:620px}
+
+/* Contato */
+.contact{background:var(--blush)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:60px;align-items:stretch}
+.contact h2{font-size:clamp(2.1rem,3.4vw,2.9rem);margin:14px 0 14px}
+.contact-lead{color:var(--muted);margin-bottom:28px;max-width:440px}
+.info{list-style:none;display:grid;gap:12px;margin-bottom:30px}
+.info a{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;transition:border-color .2s,box-shadow .2s}
+.info a:hover{border-color:var(--wine);box-shadow:0 10px 30px rgba(94,28,55,.08)}
+
+.map{position:relative;border-radius:26px;min-height:480px;overflow:hidden;border:1px solid var(--line);background:#f4eef0;box-shadow:var(--shadow);isolation:isolate}
+.map-art{position:absolute;inset:0;display:block;z-index:0}
+.map-art svg{width:100%;height:100%}
+.map-pin{position:absolute;left:50%;top:38%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none}
+.map-pin-label{background:#fff;border-radius:999px;padding:8px 14px;font-weight:700;font-size:.9rem;box-shadow:0 8px 24px rgba(34,22,27,.16);white-space:nowrap}
+.map-pin-mark{position:relative;width:44px;height:44px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--wine);box-shadow:0 10px 24px rgba(94,28,55,.35);display:grid;place-items:center}
+.map-pin-mark::after{content:"";width:15px;height:15px;border-radius:50%;background:#fff}
+.map-pin-pulse{position:absolute;left:50%;top:calc(100% + 4px);width:18px;height:8px;margin-left:-9px;border-radius:50%;background:rgba(94,28,55,.25)}
+.map-pin-pulse::after{content:"";position:absolute;inset:-14px -22px;border-radius:50%;border:2px solid rgba(94,28,55,.35);animation:ping 2.4s infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.4);opacity:0}}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1;opacity:0;transition:opacity .5s}
+.map.map-live iframe{opacity:1}
+.map-card{position:absolute;z-index:2;left:20px;right:20px;bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:14px 16px;flex-wrap:wrap;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 14px 36px rgba(34,22,27,.18)}
+.map-card b{display:block;font-size:1.02rem;line-height:1.3}
+.map-card span{display:block;color:var(--muted);font-size:.88rem}
+.map-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Rodapé */
+footer{background:var(--ink);color:#c7b5bc;font-size:.9rem;padding:64px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:48px}
+footer .logo-name{color:#fff}
+footer .logo-sub{color:#a8949c}
+footer .logo-mark{background:var(--wine-2)}
+.foot-about{margin-top:18px;max-width:340px}
+footer h4{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:#e7a8bf;font-weight:700;margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding:22px 0 26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-size:.8rem;color:#a8949c}
+
+/* Botão flutuante */
+.float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:0;height:62px;padding:0 15px;border-radius:999px;background:#25d366;color:#fff;font-weight:700;box-shadow:0 10px 30px rgba(37,211,102,.45);animation:pulse 2.4s infinite;transition:gap .3s,padding .3s}
+.float svg{width:32px;height:32px;fill:#fff;flex:none}
+.float-label{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .35s}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media(hover:hover) and (min-width:901px){
+  .float:hover{gap:10px;padding:0 22px 0 16px}
+  .float:hover .float-label{max-width:200px}
+}
+
+/* Animação de entrada */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.js .reveal.in{opacity:1;transform:none}
+
+@media(min-width:1500px){.wrap{max-width:1280px}body{font-size:17px}}
+@media(max-width:1180px){.menu a{padding:8px 10px}}
+@media(max-width:1060px){
+  .facts-grid{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){border-left:0}
+  .fact:nth-child(n+3){border-top:1px solid var(--line)}
+  .band-grid{grid-template-columns:1fr}
+  .band-actions{align-items:flex-start}
+}
+@media(max-width:900px){
+  :root{--header:68px}
+  .burger{display:grid}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:8px 20px 16px;box-shadow:0 20px 30px rgba(34,22,27,.08);font-size:1rem;display:none}
+  header.open .menu{display:flex}
+  .menu a{padding:14px 4px;border-radius:0;border-bottom:1px solid var(--line)}
+  .menu li:last-child a{border-bottom:0}
+  .menu a:hover{background:none}
+  .hero-grid,.signs-grid,.contact-grid,.faq-grid,.head-split{grid-template-columns:1fr;gap:48px}
+  .head-split{gap:0}
+  .hero-grid{padding-top:48px;padding-bottom:64px}
+  .grid3{grid-template-columns:1fr 1fr}
+  .timeline{grid-template-columns:1fr 1fr}
+  .tl,.tl:nth-child(3n+2),.tl:nth-child(3n){padding:30px 24px 30px 0;border-left:0}
+  .tl:nth-child(2n){padding-left:24px;border-left:1px solid rgba(255,255,255,.14)}
+  section{padding:76px 0}
+  .band{padding:64px 0}
+  .faq-side{position:static}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .logo-mark{width:38px;height:38px}
+  .logo-name{font-size:1.2rem}
+  .logo-sub{font-size:.56rem;letter-spacing:.14em}
+  .nav{gap:12px}
+  .nav-actions .btn{display:none}
+  .demo-more{display:none}
+  .hero h1{font-size:2.5rem}
+  .lead{font-size:1.04rem}
+  .cta .btn{width:100%}
+  .diagram{padding:22px 16px 18px}
+  .diagram-head{flex-direction:column;gap:2px}
+  .fact{padding:18px 14px;gap:10px;flex-direction:column;align-items:flex-start}
+  .grid3,.sign-list,.timeline{grid-template-columns:1fr}
+  .tl,.tl:nth-child(2n){padding:26px 0;border-left:0}
+  .svc{padding:26px}
+  .band-actions,.band-actions .btn{width:100%}
+  summary{font-size:1.12rem;padding:20px 0}
+  details p{padding:0 0 20px}
+  .map-actions{width:100%}
+  .map-actions .btn{flex:1 1 100%}
+  .map-pin{top:34%}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .float{right:16px;bottom:16px;height:58px;padding:0 13px}
+  .float svg{width:30px;height:30px}
+  footer{padding-bottom:70px}
+}
+@media(prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .float,.map-pin-pulse::after{animation:none}
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- Ícones reutilizados -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 12 0 12 12 0 0 0 1.6 17.9L0 24l6.3-1.6A12 12 0 0 0 12 24a12 12 0 0 0 8.5-20.5zM12 22a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22zm5.5-7.5c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-.9 1.1-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6a.6.6 0 0 0 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.5 14.5 0 0 0 5.6 5c2 .8 2.8.9 3.8.7a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s-7-5.8-7-11.5a7 7 0 0 1 14 0c0 5.7-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.6"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M12 3.2l2.7 5.5 6 .9-4.4 4.2 1 6-5.3-2.8-5.3 2.8 1-6-4.4-4.2 6-.9z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M9 7.5h2M13 7.5h2M9 11h2M13 11h2M9 14.5h2M13 14.5h2M10.5 20.5v-3h3v3"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-implant" viewBox="0 0 20 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9C3.4 6.5 3.6 3.6 5.6 2.4c1.4-.9 3.4-.4 4.4-.4s3-.5 4.4.4c2 1.2 2.2 4.1 1.6 6.6z"/><path d="M8 9v2h4V9M7.5 11h5l-.6 9.5c-.2 1.3-3.6 1.3-3.8 0z"/><path d="M7.7 14l4.6-.8M7.9 17l4.2-.7"/></g></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração)<span class="demo-more"> · desenvolvida como exemplo para a Clínica Implanthos</span></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Clínica Implanthos, início">
+      <span class="logo-mark" aria-hidden="true"><svg><use href="#i-implant"/></svg></span>
+      <span class="logo-text"><span class="logo-name">Implanthos</span><span class="logo-sub">Implantes dentários · Asa Norte</span></span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul class="menu" id="menu">
+        <li><a href="#para-voce">Para você</a></li>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#etapas">Etapas</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-main btn-sm" href="https://wa.me/5561991225571" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title" style="padding:0">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="kicker">Implantes dentários · Asa Norte, Brasília</span>
+      <h1 id="hero-title">Volte a sorrir e a mastigar <em>com segurança</em>.</h1>
+      <p class="lead">Implantes e reabilitação oral com planejamento individual, para devolver função, conforto e estética a quem perdeu um ou mais dentes.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="https://wa.me/5561991225571" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn btn-line" href="#etapas">Como funciona o implante</a>
+      </div>
+      <div class="proof">
+        <div><b>4,7 <span class="stars" aria-hidden="true">★★★★★</span></b><span>nota no Google</span></div>
+        <div><b>61</b><span>avaliações de pacientes</span></div>
+        <div><b>Asa Norte</b><span>Centro Empresarial Norte</span></div>
+      </div>
+    </div>
+
+    <figure class="diagram reveal" aria-labelledby="diagram-title">
+      <div class="diagram-head"><h2 id="diagram-title">Como é um implante</h2><span>3 partes</span></div>
+      <svg viewBox="0 0 420 350" role="img" aria-label="Desenho de um implante dentário: a coroa por cima da gengiva, o pilar que conecta e o implante de titânio dentro do osso.">
+        <defs>
+          <linearGradient id="ti" x1="0" x2="1"><stop offset="0" stop-color="#7f8b97"/><stop offset=".5" stop-color="#d6dce2"/><stop offset="1" stop-color="#8f9ba6"/></linearGradient>
+          <pattern id="bone" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f6eee9"/><circle cx="4" cy="4" r="1.6" fill="#ead9cf"/><circle cx="11" cy="10" r="1.2" fill="#ead9cf"/></pattern>
+        </defs>
+        <rect x="30" y="196" width="220" height="140" rx="18" fill="url(#bone)"/>
+        <path d="M118 180H162L156 298Q140 330 124 298Z" fill="url(#ti)"/>
+        <g stroke="#6f7a85" stroke-width="3" stroke-linecap="round">
+          <path d="M118 197L162 191"/><path d="M119 211L161 205"/><path d="M120 225L160 219"/><path d="M121 239L159 233"/>
+          <path d="M121 253L159 247"/><path d="M122 267L158 261"/><path d="M123 281L157 275"/><path d="M124 295L156 289"/>
+        </g>
+        <rect x="126" y="146" width="28" height="36" rx="4" fill="#b8c0c8"/>
+        <path d="M30 168Q140 142 250 168V206H30Z" fill="#f0c9d4" opacity=".9"/>
+        <path d="M92 152C82 112 80 72 102 52C122 36 158 36 178 52C200 72 198 112 188 152Z" fill="#fff" stroke="#e5d2d9" stroke-width="2.5"/>
+        <path d="M112 62C120 56 132 54 140 56" fill="none" stroke="#efe3e7" stroke-width="5" stroke-linecap="round"/>
+        <g stroke="#5e1c37" stroke-width="1.5" fill="#5e1c37">
+          <path d="M190 96H254"/><circle cx="190" cy="96" r="3"/>
+          <path d="M156 166H254"/><circle cx="156" cy="166" r="3"/>
+          <path d="M160 250H254"/><circle cx="160" cy="250" r="3"/>
+        </g>
+        <text x="262" y="92">Coroa</text><text class="sub" x="262" y="110">o dente que aparece</text>
+        <text x="262" y="162">Pilar</text><text class="sub" x="262" y="180">conecta as partes</text>
+        <text x="262" y="246">Implante</text><text class="sub" x="262" y="264">pino de titânio no osso</text>
+      </svg>
+      <figcaption class="diagram-note">O implante substitui a raiz do dente. Por cima dele vai a coroa, feita para combinar com o seu sorriso.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- INFORMAÇÕES -->
+<div class="facts">
+  <div class="wrap facts-grid reveal">
+    <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="fact-txt"><b>Nota 4,7 no Google</b><span>61 avaliações de pacientes</span></span></div>
+    <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-building"/></svg></span><span class="fact-txt"><b>Centro Empresarial Norte</b><span>Bloco A, Sala 334 · Asa Norte</span></span></div>
+    <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-chat"/></svg></span><span class="fact-txt"><b>Agendamento pelo WhatsApp</b><span>(61) 99122-5571</span></span></div>
+    <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span class="fact-txt"><b>Avaliação com planejamento</b><span>antes de qualquer decisão</span></span></div>
+  </div>
+</div>
+
+<!-- VOCÊ SE IDENTIFICA? -->
+<section class="signs" id="para-voce" aria-labelledby="signs-title">
+  <div class="wrap signs-grid">
+    <div class="reveal">
+      <span class="kicker">Para você</span>
+      <h2 id="signs-title">Você se identifica com <em>alguma dessas situações</em>?</h2>
+      <p class="signs-lead">Perder dentes muda a forma de comer, falar e sorrir. O implante é uma das formas de recuperar isso, e a avaliação mostra se ele é indicado para o seu caso.</p>
+      <a class="btn btn-main" href="https://wa.me/5561991225571" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Quero uma avaliação</a>
+    </div>
+    <ul class="sign-list reveal">
+      <li class="sign"><span class="sign-mark"><svg aria-hidden="true"><use href="#i-check"/></svg></span><p class="sign-q">Perdi um dente</p><p>Um espaço no sorriso, na frente ou no fundo da boca, que incomoda na hora de mastigar ou de sorrir.</p></li>
+      <li class="sign"><span class="sign-mark"><svg aria-hidden="true"><use href="#i-check"/></svg></span><p class="sign-q">Minha prótese se mexe</p><p>A dentadura ou a ponte móvel sai do lugar, machuca ou atrapalha a fala.</p></li>
+      <li class="sign"><span class="sign-mark"><svg aria-hidden="true"><use href="#i-check"/></svg></span><p class="sign-q">Evito alguns alimentos</p><p>Carnes, frutas mais duras e pães ficaram difíceis de mastigar.</p></li>
+      <li class="sign"><span class="sign-mark"><svg aria-hidden="true"><use href="#i-check"/></svg></span><p class="sign-q">Escondo o sorriso</p><p>Fotos e conversas ficaram desconfortáveis por causa dos dentes que faltam.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- TRATAMENTOS
+     Lista provisória de tratamentos comuns em clínicas de implante: confirmar com a clínica. -->
+<section id="tratamentos" aria-labelledby="trat-title">
+  <div class="wrap">
+    <div class="head head-split reveal">
+      <div>
+        <span class="kicker">Tratamentos</span>
+        <h2 id="trat-title">Do implante unitário à reabilitação completa</h2>
+      </div>
+      <p>Cada caso começa por uma avaliação. A partir dela, o dentista indica o tratamento, o número de implantes e o tipo de prótese mais adequados para você.</p>
+    </div>
+    <div class="grid3">
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 20 24" aria-hidden="true"><use href="#i-implant"/></svg></div>
+        <h3>Implante unitário</h3>
+        <p>Repõe um dente perdido sem desgastar os dentes vizinhos, com uma coroa fixa por cima.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5c0-2 1.3-3.5 3-3.5s2.2 1 3 1 1.4-1 3-1 2.2 1 3 1 1.4-1 3-1 3 1.5 3 3.5"/><path d="M3 9.5h18v2H3z"/><path d="M7 11.5v6M12 11.5v6M17 11.5v6"/><path d="M6 17.5h2M11 17.5h2M16 17.5h2"/></svg></div>
+        <h3>Prótese sobre implantes</h3>
+        <p>Para quem perdeu vários dentes: poucos implantes podem sustentar uma prótese fixa de vários dentes.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10c2.5-3.5 5.5-5 9-5s6.5 1.5 9 5"/><path d="M3 10c2.5 2 5.5 3 9 3s6.5-1 9-3"/><path d="M6 13v5M10 13.8V20M14 13.8V20M18 13v5"/></svg></div>
+        <h3>Protocolo</h3>
+        <p>Prótese fixa de uma arcada inteira, apoiada em implantes, para quem usa dentadura ou perdeu todos os dentes.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="16" height="11" rx="3"/><path d="M8 13h.01M12 15h.01M16 13h.01M10 17.5h.01M14 17.5h.01" stroke-width="2.4"/><path d="M12 3v4M10 5h4"/></svg></div>
+        <h3>Enxerto ósseo</h3>
+        <p>Quando falta osso para receber o implante, o enxerto pode recuperar a base necessária.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5C5.5 3.5 4 5.4 4 8c0 2 .7 3.3 1.2 4.8.5 1.6.8 7.2 2.8 7.2 1.6 0 1.6-5 4-5s2.4 5 4 5c2 0 2.3-5.6 2.8-7.2C19.3 11.3 20 10 20 8c0-2.6-1.5-4.5-4-4.5-1.6 0-2.6.8-4 .8s-2.4-.8-4-.8z"/><path d="M8 8.5c1.2-.8 2.5-1 4-1"/></svg></div>
+        <h3>Coroas e próteses</h3>
+        <p>Coroas e próteses feitas para combinar com a cor e o formato dos seus dentes.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3.5h6a1 1 0 0 1 1 1V6a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1z"/><path d="M8 5H6.5A1.5 1.5 0 0 0 5 6.5v13A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 17.5 5H16"/><path d="M8.5 12h7M8.5 16h4.5"/></svg></div>
+        <h3>Avaliação e planejamento</h3>
+        <p>Consulta com exames de imagem para entender seu caso e montar um plano claro, etapa por etapa.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ETAPAS -->
+<section class="journey" id="etapas" aria-labelledby="etapas-title">
+  <div class="wrap">
+    <div class="head head-split reveal">
+      <div>
+        <span class="kicker">Etapas do tratamento</span>
+        <h2 id="etapas-title">Como funciona, do primeiro contato ao dente novo</h2>
+      </div>
+      <p>O implante é feito em fases. O prazo de cada uma depende do seu caso e é explicado na avaliação.</p>
+    </div>
+    <ol class="timeline reveal">
+      <li class="tl"><h3>Contato</h3><p>Você chama no WhatsApp e agenda o melhor dia e horário para a avaliação.</p></li>
+      <li class="tl"><h3>Avaliação e exames</h3><p>O dentista examina sua boca e pede os exames de imagem para medir o osso.</p></li>
+      <li class="tl"><h3>Planejamento</h3><p>Você conhece o plano: quantos implantes, tipo de prótese e as fases do tratamento.</p></li>
+      <li class="tl"><h3>Instalação do implante</h3><p>Procedimento feito no consultório, com anestesia local.</p></li>
+      <li class="tl"><h3>Cicatrização</h3><p>O osso se integra ao implante. Nessa fase, uma prótese provisória pode ser indicada.</p></li>
+      <li class="tl"><h3>Prótese definitiva</h3><p>A coroa ou a prótese final é instalada, e você recebe as orientações de cuidado.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="band" aria-labelledby="band-title">
+  <div class="wrap band-grid reveal">
+    <div>
+      <h2 id="band-title">O primeiro passo é uma conversa.</h2>
+      <p>Agende sua avaliação na Implanthos e entenda, com calma, qual é o melhor caminho para o seu sorriso.</p>
+    </div>
+    <div class="band-actions">
+      <a class="btn btn-light" href="https://wa.me/5561991225571" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+      <small>(61) 99122-5571</small>
+    </div>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section id="duvidas" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div class="faq-side reveal">
+      <div class="head">
+        <span class="kicker">Dúvidas frequentes</span>
+        <h2 id="faq-title">O que os pacientes mais perguntam</h2>
+      </div>
+      <div class="faq-help">
+        <b>Ficou alguma dúvida?</b>
+        <p>Pergunte direto para a clínica pelo WhatsApp.</p>
+        <a class="btn btn-line btn-sm" href="https://wa.me/5561991225571" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Perguntar no WhatsApp</a>
+      </div>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Colocar implante dói?</summary><p>O procedimento é feito com anestesia local. Depois, é normal sentir algum desconforto por alguns dias, e o dentista passa as orientações e a medicação para esse período.</p></details>
+      <details><summary>Quanto tempo leva o tratamento?</summary><p>Depende de cada caso: do número de implantes, da qualidade do osso e da necessidade de enxerto. Na avaliação, você recebe uma estimativa de prazo para cada etapa.</p></details>
+      <details><summary>Qualquer pessoa pode colocar implante?</summary><p>A indicação depende da avaliação da sua saúde geral e da quantidade de osso. Quando falta osso, o enxerto pode tornar o implante possível.</p></details>
+      <details><summary>O implante precisa de cuidados?</summary><p>Sim. Escovação, fio dental e consultas de manutenção, como nos dentes naturais, ajudam a manter o implante saudável por muitos anos.</p></details>
+      <details><summary>Como agendo a avaliação?</summary><p>É só chamar no WhatsApp (61) 99122-5571 e escolher o melhor dia e horário.</p></details>
+      <details><summary>Onde fica a clínica?</summary><p>Centro Empresarial Norte, Bloco A, Sala 334, Asa Norte, Brasília-DF.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact" id="contato" aria-labelledby="contato-title">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="kicker">Contato</span>
+      <h2 id="contato-title">Vamos agendar sua avaliação?</h2>
+      <p class="contact-lead">Estamos no Centro Empresarial Norte, na Asa Norte. Atendimento com hora marcada.</p>
+      <ul class="info">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Clinica%20Implanthos&amp;query_place_id=ChIJJTMaufk6WpMR5nMkcR5Qljo" target="_blank" rel="noopener"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span class="fact-txt"><b>Endereço</b><span>Centro Empresarial Norte, Bloco A, Sala 334 · Asa Norte, Brasília-DF</span></span></a></li>
+        <li><a href="https://wa.me/5561991225571" target="_blank" rel="noopener"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><span class="fact-txt"><b>WhatsApp</b><span>(61) 99122-5571</span></span></a></li>
+      </ul>
+      <a class="btn btn-main" href="https://wa.me/5561991225571" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação</a>
+    </div>
+    <div class="map reveal" id="mapa" data-embed="https://maps.google.com/maps?q=Clinica%20Implanthos%2C%20Centro%20Empresarial%20Norte%2C%20Asa%20Norte%2C%20Bras%C3%ADlia%20-%20DF&amp;z=17&amp;output=embed">
+      <!-- Mapa ilustrado: fica por baixo do Google Maps e continua visível se ele não puder carregar. -->
+      <a class="map-art" href="https://www.google.com/maps/search/?api=1&amp;query=Clinica%20Implanthos&amp;query_place_id=ChIJJTMaufk6WpMR5nMkcR5Qljo" target="_blank" rel="noopener" aria-label="Abrir a localização da Clínica Implanthos no Google Maps">
+        <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="600" height="460" fill="#f4eef0"/>
+          <g fill="#e1ead9"><circle cx="520" cy="400" r="120"/><rect x="20" y="20" width="150" height="100" rx="18"/></g>
+          <g fill="#ebe1e5"><rect x="230" y="30" width="150" height="80" rx="10"/><rect x="40" y="190" width="120" height="80" rx="10"/><rect x="230" y="190" width="150" height="90" rx="10"/><rect x="440" y="30" width="140" height="90" rx="10"/><rect x="40" y="350" width="140" height="90" rx="10"/></g>
+          <g fill="none" stroke="#fff" stroke-linecap="round">
+            <path d="M-20 150L620 135" stroke-width="16"/>
+            <path d="M-20 320L620 300" stroke-width="12"/>
+            <path d="M200 -20L195 480" stroke-width="14"/>
+            <path d="M410 -20L420 480" stroke-width="12"/>
+          </g>
+          <path d="M-20 240C200 250 400 225 620 240" fill="none" stroke="#efd9e0" stroke-width="26"/>
+          <path d="M-20 240C200 250 400 225 620 240" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="12 12"/>
+        </svg>
+        <span class="map-pin"><span class="map-pin-label">Clínica Implanthos</span><span class="map-pin-mark"></span><span class="map-pin-pulse"></span></span>
+      </a>
+      <div class="map-card">
+        <div><b>Centro Empresarial Norte · Bloco A, Sala 334</b><span>Asa Norte, Brasília-DF</span></div>
+        <div class="map-actions">
+          <a class="btn btn-line btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Clinica%20Implanthos&amp;query_place_id=ChIJJTMaufk6WpMR5nMkcR5Qljo" target="_blank" rel="noopener">Ver no Google Maps</a>
+          <a class="btn btn-main btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Clinica%20Implanthos&amp;destination_place_id=ChIJJTMaufk6WpMR5nMkcR5Qljo" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"><svg><use href="#i-implant"/></svg></span><span class="logo-text"><span class="logo-name">Implanthos</span><span class="logo-sub">Implantes dentários · Asa Norte</span></span></a>
+      <p class="foot-about">Implantes dentários e reabilitação oral com planejamento individual, no Centro Empresarial Norte, Asa Norte.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#para-voce">Para você</a></li>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#etapas">Etapas</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Clinica%20Implanthos&amp;query_place_id=ChIJJTMaufk6WpMR5nMkcR5Qljo" target="_blank" rel="noopener">Centro Empresarial Norte, Bloco A, Sala 334<br>Asa Norte · Brasília-DF</a></li>
+        <li><a href="https://wa.me/5561991225571" target="_blank" rel="noopener">(61) 99122-5571</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-bottom">
+    <span>© Clínica Implanthos · Asa Norte, Brasília-DF</span>
+    <span>Site de demonstração · tratamentos, fotos e dados do responsável técnico (CRO) a confirmar</span>
+  </div></div>
+</footer>
+
+<a class="float" aria-label="Agendar pelo WhatsApp" href="https://wa.me/5561991225571" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="float-label">Agendar pelo WhatsApp</span></a>
+
+<script>
+(function(){
+  // Animação de entrada
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  // Sombra no cabeçalho ao rolar
+  var header=document.getElementById('header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Menu mobile
+  var burger=document.getElementById('burger');
+  function setMenu(open){header.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')}
+  burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  // Google Maps por cima do mapa ilustrado; se for bloqueado (CSP), o ilustrado continua.
+  var map=document.getElementById('mapa');
+  if(map&&map.dataset.embed){
+    var failed=false,fr=document.createElement('iframe');
+    function fail(){failed=true;map.classList.remove('map-live');if(fr.parentNode)fr.parentNode.removeChild(fr)}
+    document.addEventListener('securitypolicyviolation',function(e){if(/google\./.test(e.blockedURI||''))fail()});
+    fr.title='Mapa: Clínica Implanthos, Centro Empresarial Norte, Asa Norte, Brasília';
+    fr.loading='lazy';
+    fr.referrerPolicy='no-referrer-when-downgrade';
+    fr.addEventListener('load',function(){setTimeout(function(){if(!failed)map.classList.add('map-live')},400)});
+    fr.src=map.dataset.embed;
+    map.insertBefore(fr,map.querySelector('.map-card'));
+  }
+})();
+</script>
+</body>
+</html>
