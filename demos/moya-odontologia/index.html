@@ -167,11 +167,24 @@ details p{color:var(--muted);padding:0 4px 24px;max-width:620px}
 .info .stat-txt{display:block}
 .info .stat-txt b{display:block;font-family:var(--serif);font-size:1.08rem;font-weight:500;line-height:1.3;color:var(--ink)}
 .info .stat-txt span{display:block;color:var(--muted);font-size:.94rem;line-height:1.45}
-.map{position:relative;border-radius:28px;min-height:460px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,var(--mint),#fff);box-shadow:var(--shadow)}
-.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.map-card{position:absolute;left:20px;right:20px;bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 14px 36px rgba(15,42,46,.18)}
+.map{position:relative;border-radius:28px;min-height:460px;overflow:hidden;border:1px solid var(--line);background:#e8f0ee;box-shadow:var(--shadow);isolation:isolate}
+.map-art{position:absolute;inset:0;display:block;z-index:0}
+.map-art svg{width:100%;height:100%}
+.map-pin{position:absolute;left:50%;top:36%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none}
+.map-pin-label{background:#fff;border-radius:999px;padding:8px 14px;font-family:var(--serif);font-size:.98rem;color:var(--ink);box-shadow:0 8px 24px rgba(15,42,46,.16);white-space:nowrap}
+.map-pin-mark{position:relative;width:46px;height:46px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:linear-gradient(135deg,var(--teal),var(--teal-2));box-shadow:0 10px 24px rgba(14,90,96,.35);display:grid;place-items:center}
+.map-pin-mark::after{content:"";width:16px;height:16px;border-radius:50%;background:#fff}
+.map-pin-pulse{position:absolute;left:50%;top:calc(100% + 4px);width:18px;height:8px;margin-left:-9px;border-radius:50%;background:rgba(14,90,96,.25)}
+.map-pin-pulse::after{content:"";position:absolute;inset:-14px -22px;border-radius:50%;border:2px solid rgba(14,90,96,.35);animation:ping 2.4s infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.4);opacity:0}}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1;opacity:0;transition:opacity .5s}
+.map.map-live iframe{opacity:1}
+.map-card{position:absolute;z-index:2;left:20px;right:20px;bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:14px 16px;flex-wrap:wrap;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 14px 36px rgba(15,42,46,.18)}
 .map-card b{display:block;font-family:var(--serif);font-weight:500;font-size:1.1rem;line-height:1.3}
 .map-card span{display:block;color:var(--muted);font-size:.9rem}
+.map-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-2);transform:translateY(-2px)}
 
 /* Rodapé */
 footer{background:var(--ink);color:#9db3b4;font-size:.9rem;padding:64px 0 0}
@@ -238,7 +251,7 @@ footer ul a:hover{color:#fff}
   .faq-side{position:static}
   .foot-grid{grid-template-columns:1fr 1fr}
   .foot-brand{grid-column:1/-1}
-  .map{min-height:380px}
+  .map{min-height:460px}
 }
 @media(max-width:600px){
   .logo-mark{width:38px;height:38px;font-size:1.1rem}
@@ -258,13 +271,16 @@ footer ul a:hover{color:#fff}
   .vals{grid-template-columns:1fr}
   summary{font-size:1.08rem;padding:20px 0}
   details p{padding:0 0 20px}
-  .map-card .btn{width:100%}
+  .map-actions{width:100%}
+  .map-actions .btn{flex:1 1 100%}
+  .map-pin{top:38%}
   .foot-grid{grid-template-columns:1fr;gap:32px}
   .float{right:16px;bottom:16px;height:58px;padding:0 13px}
   .float svg{width:30px;height:30px}
   footer{padding-bottom:70px}
 }
 @media(prefers-reduced-motion:reduce){
+  .map-pin-pulse::after{animation:none}
   .js .reveal{opacity:1;transform:none;transition:none}
   .float{animation:none}
   html{scroll-behavior:auto}
@@ -491,11 +507,31 @@ footer ul a:hover{color:#fff}
       </ul>
       <a class="btn btn-wa" href="https://wa.me/5561993712437?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação</a>
     </div>
-    <div class="map reveal">
-      <iframe title="Mapa: Clínica Moya, CLN 305, Asa Norte, Brasília" src="https://maps.google.com/maps?q=Cl%C3%ADnica%20Moya%2C%20CLN%20305%2C%20Asa%20Norte%2C%20Bras%C3%ADlia%20-%20DF&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map reveal" id="mapa" data-embed="https://maps.google.com/maps?q=Cl%C3%ADnica%20Moya%2C%20CLN%20305%2C%20Asa%20Norte%2C%20Bras%C3%ADlia%20-%20DF&amp;z=17&amp;output=embed">
+      <!-- Mapa ilustrado: aparece sempre e fica por baixo do Google Maps.
+           Se o Google Maps não puder carregar (sem internet ou bloqueado), ele continua visível. -->
+      <a class="map-art" href="https://www.google.com/maps/search/?api=1&amp;query=CL%C3%8DNICA%20MOYA&amp;query_place_id=ChIJR-KLvYM5WpMRU7fGwsIKWPs" target="_blank" rel="noopener" aria-label="Abrir a localização da Clínica Moya no Google Maps">
+        <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="600" height="460" fill="#e8f0ee"/>
+          <g fill="#d3e7dc"><path d="M-20 330C70 290 140 300 200 340S330 380 360 470H-20z"/><circle cx="520" cy="70" r="80"/><rect x="250" y="150" width="90" height="60" rx="14"/></g>
+          <g fill="#dfe9e7"><rect x="20" y="20" width="110" height="90" rx="10"/><rect x="210" y="10" width="170" height="70" rx="10"/><rect x="40" y="180" width="90" height="60" rx="10"/><rect x="460" y="180" width="130" height="80" rx="10"/><rect x="420" y="330" width="170" height="110" rx="10"/></g>
+          <g fill="none" stroke="#fff" stroke-linecap="round">
+            <path d="M-20 140L620 100" stroke-width="16"/>
+            <path d="M-20 270L620 230" stroke-width="12"/>
+            <path d="M160 -20L200 480" stroke-width="14"/>
+            <path d="M410 -20L440 480" stroke-width="12"/>
+          </g>
+          <path d="M-20 400C150 350 320 330 620 300" fill="none" stroke="#f1dfc0" stroke-width="28"/>
+          <path d="M-20 400C150 350 320 330 620 300" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="12 12"/>
+        </svg>
+        <span class="map-pin"><span class="map-pin-label">Clínica Moya</span><span class="map-pin-mark"></span><span class="map-pin-pulse"></span></span>
+      </a>
       <div class="map-card">
         <div><b>Asa Norte · CLN 305</b><span>Sala 207/208 · Brasília-DF</span></div>
-        <a class="btn btn-line btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=CL%C3%8DNICA%20MOYA&amp;destination_place_id=ChIJR-KLvYM5WpMRU7fGwsIKWPs" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+        <div class="map-actions">
+          <a class="btn btn-line btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=CL%C3%8DNICA%20MOYA&amp;query_place_id=ChIJR-KLvYM5WpMRU7fGwsIKWPs" target="_blank" rel="noopener">Ver no Google Maps</a>
+          <a class="btn btn-teal btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=CL%C3%8DNICA%20MOYA&amp;destination_place_id=ChIJR-KLvYM5WpMRU7fGwsIKWPs" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+        </div>
       </div>
     </div>
   </div>
@@ -555,6 +591,21 @@ footer ul a:hover{color:#fff}
   burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
   document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  // Google Maps embutido: carrega por cima do mapa ilustrado.
+  // Se o navegador/visualizador bloquear (regra de segurança CSP), o mapa ilustrado continua.
+  var map=document.getElementById('mapa');
+  if(map&&map.dataset.embed){
+    var failed=false,fr=document.createElement('iframe');
+    function fail(){failed=true;map.classList.remove('map-live');if(fr.parentNode)fr.parentNode.removeChild(fr)}
+    document.addEventListener('securitypolicyviolation',function(e){if(/google\./.test(e.blockedURI||''))fail()});
+    fr.title='Mapa: Clínica Moya, CLN 305, Asa Norte, Brasília';
+    fr.loading='lazy';
+    fr.referrerPolicy='no-referrer-when-downgrade';
+    fr.addEventListener('load',function(){setTimeout(function(){if(!failed)map.classList.add('map-live')},400)});
+    fr.src=map.dataset.embed;
+    map.insertBefore(fr,map.querySelector('.map-card'));
+  }
 })();
 </script>
 </body>
