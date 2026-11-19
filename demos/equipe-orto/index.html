@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equipe Orto | Ortodontia no Conjunto Nacional, Brasília</title>
+<meta name="description" content="Equipe Orto: ortodontia e cuidados com o sorriso no Shopping Conjunto Nacional, Torre Amarela, centro de Brasília. Nota 5,0 no Google. Agende sua avaliação pelo WhatsApp.">
+<!-- Site de demonstração: não indexar no Google até a clínica aprovar -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#173a2f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: verde-escuro com amarelo (a Torre Amarela do Conjunto Nacional). Hero com placa de "como nos encontrar"; seções com blocos de cor sólida. */
+:root{
+  --green:#173a2f; --green-2:#24533f; --sun:#f3b62b; --sun-l:#fde9b3; --paper:#fbf8ef; --mint:#e6efe9;
+  --ink:#14211c; --muted:#56655e; --line:#e3e6dd; --white:#fff;
+  --display:"Bricolage Grotesque",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --sans:"Figtree",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --radius:18px; --header:76px;
+  --shadow:0 24px 60px rgba(20,33,28,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;letter-spacing:-.03em;text-wrap:balance}
+p{text-wrap:pretty}
+.label{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);background:var(--sun-l);padding:6px 12px;border-radius:8px}
+.mark{background:linear-gradient(transparent 62%,var(--sun) 62%,var(--sun) 92%,transparent 92%);padding:0 .06em}
+section[id]{scroll-margin-top:var(--header)}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:12px;font-weight:700;font-size:1rem;line-height:1.2;white-space:nowrap;transition:transform .2s,box-shadow .2s,background .2s,color .2s,border-color .2s;border:2px solid transparent;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-sun{background:var(--sun);color:var(--ink);box-shadow:0 6px 0 #c48e12}
+.btn-sun:hover{transform:translateY(2px);box-shadow:0 4px 0 #c48e12}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 6px 0 #0d241c}
+.btn-green:hover{transform:translateY(2px);box-shadow:0 4px 0 #0d241c}
+.btn-ghost{border-color:var(--green);color:var(--green);background:transparent}
+.btn-ghost:hover{background:var(--green);color:#fff}
+.btn-sm{padding:11px 18px;font-size:.92rem;border-radius:10px}
+
+/* Faixa de demonstração */
+.demo{background:var(--ink);color:#c9d6cf;font-size:.76rem;text-align:center;padding:7px 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Cabeçalho */
+header{position:sticky;top:0;z-index:50;background:rgba(251,248,239,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 8px 30px rgba(20,33,28,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header)}
+.logo{display:flex;align-items:center;gap:10px;flex:none}
+.logo-mark{display:flex;align-items:center;justify-content:center;height:40px;padding:0 10px;border-radius:10px;background:var(--green);color:var(--sun);font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:-.02em}
+.logo-name{font-family:var(--display);font-weight:800;font-size:1.3rem;letter-spacing:-.03em;white-space:nowrap}
+.logo-name span{color:var(--green-2)}
+.menu{display:flex;gap:4px;list-style:none;font-size:.95rem;font-weight:500;color:var(--muted)}
+.menu a{display:block;padding:8px 14px;border-radius:10px;transition:color .2s,background .2s}
+.menu a:hover{color:var(--green);background:var(--mint)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:#fff;cursor:pointer;place-items:center;color:var(--green)}
+.burger svg{width:22px;height:22px}
+
+/* Hero */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center;padding-top:76px;padding-bottom:96px}
+.hero h1{font-size:clamp(2.6rem,5.2vw,4.6rem);margin:20px 0 22px}
+.lead{font-size:1.16rem;color:var(--muted);max-width:520px;margin-bottom:34px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.proof{display:flex;align-items:center;gap:14px;margin-top:36px}
+.proof-score{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1;color:var(--green)}
+.stars{color:var(--sun);letter-spacing:2px;font-size:1.05rem;line-height:1}
+.proof small{display:block;color:var(--muted);font-size:.9rem;margin-top:4px}
+
+.sign{position:relative;background:var(--green);color:#fff;border-radius:26px;padding:34px;box-shadow:var(--shadow);overflow:hidden}
+.sign::before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:var(--sun);opacity:.16}
+.sign-title{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sun);margin-bottom:18px;position:relative}
+.floors{list-style:none;display:grid;gap:10px;position:relative}
+.floor{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 16px}
+.floor .floor-n{flex:none;min-width:44px;height:44px;padding:0 8px;border-radius:10px;display:grid;place-items:center;color:inherit;background:rgba(255,255,255,.1);font-family:var(--display);font-weight:800;font-size:1.05rem}
+.floor-txt b{display:block;font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:-.01em;line-height:1.2}
+.floor-txt span{display:block;font-size:.86rem;color:#bcd1c6}
+.floor.here{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.floor.here .floor-n{background:var(--ink);color:var(--sun)}
+.floor.here .floor-txt span{color:#5a4511}
+.sign-foot{position:relative;display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px;font-size:.86rem;color:#bcd1c6;flex-wrap:wrap}
+.sign-foot a{color:var(--sun);font-weight:700}
+
+/* Faixa */
+.facts{background:var(--sun)}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:24px 22px}
+.fact+.fact{border-left:2px solid rgba(20,33,28,.12)}
+.fact b{display:block;font-family:var(--display);font-weight:800;font-size:1.3rem;letter-spacing:-.02em;line-height:1.2}
+.fact span{display:block;font-size:.88rem;color:#5a4511}
+
+/* Seções */
+section{padding:110px 0}
+.head{max-width:680px;margin-bottom:54px}
+.head h2{font-size:clamp(2.2rem,3.8vw,3.3rem);margin:16px 0 14px}
+.head p{color:var(--muted);font-size:1.06rem}
+.head-split{max-width:none;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:60px;align-items:end}
+.head-split p{margin-bottom:8px}
+
+/* Tratamentos */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.svc:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(23,58,47,.10);border-color:transparent}
+.ico{width:54px;height:54px;border-radius:14px;background:var(--mint);display:grid;place-items:center;margin-bottom:20px;color:var(--green);transition:background .25s}
+.ico svg{width:28px;height:28px}
+.svc:hover .ico{background:var(--sun)}
+.svc h3{font-size:1.32rem;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:.96rem}
+
+/* Por que */
+.why{background:var(--green);color:#fff}
+.why .label{background:var(--sun);color:var(--ink)}
+.why .head p{color:#bcd1c6}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.why-card{border-radius:var(--radius);padding:28px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.why-card:first-child{background:var(--sun);color:var(--ink);border-color:var(--sun)}
+.why-card:first-child p{color:#5a4511}
+.why-ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.1);margin-bottom:18px}
+.why-card:first-child .why-ico{background:rgba(20,33,28,.1)}
+.why-ico svg{width:24px;height:24px}
+.why-card h3{font-size:1.25rem;margin-bottom:8px}
+.why-card p{color:#bcd1c6;font-size:.95rem}
+
+/* Como funciona */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px 28px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:48px;height:48px;border-radius:12px;background:var(--sun);font-family:var(--display);font-weight:800;font-size:1.3rem;margin-bottom:18px}
+.step h3{font-size:1.25rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* CTA */
+.band{padding:0 0 110px}
+.band-box{background:var(--sun);border-radius:28px;padding:60px;display:grid;grid-template-columns:minmax(0,1.3fr) auto;gap:40px;align-items:center;position:relative;overflow:hidden}
+.band-box::after{content:"";position:absolute;right:-80px;bottom:-120px;width:300px;height:300px;border-radius:50%;border:28px solid rgba(20,33,28,.08)}
+.band-box h2{font-size:clamp(2rem,3.4vw,2.9rem);margin-bottom:12px;position:relative}
+.band-box p{color:#5a4511;font-size:1.06rem;max-width:560px;position:relative}
+.band-actions{display:flex;flex-direction:column;gap:10px;align-items:center;position:relative;z-index:1}
+.band-actions small{font-weight:600;color:#5a4511}
+
+/* Dúvidas */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
+.faq-side{position:sticky;top:calc(var(--header) + 32px)}
+.faq-side .head{margin-bottom:26px}
+.faq{display:grid;gap:10px}
+details{background:#fff;border:1px solid var(--line);border-radius:14px}
+details[open]{border-color:var(--green)}
+summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.12rem;letter-spacing:-.01em;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 22px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:8px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:1.2rem;font-weight:700;line-height:1;transition:transform .3s,background .3s}
+details[open] summary::after{transform:rotate(45deg);background:var(--sun)}
+details p{color:var(--muted);padding:0 22px 22px;margin-top:-4px}
+
+/* Contato */
+.contact{background:var(--mint)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:60px;align-items:stretch}
+.contact h2{font-size:clamp(2.2rem,3.6vw,3.1rem);margin:16px 0 14px}
+.contact-lead{color:var(--muted);margin-bottom:28px;max-width:440px}
+.info{list-style:none;display:grid;gap:12px;margin-bottom:30px}
+.info a{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;transition:border-color .2s}
+.info a:hover{border-color:var(--green)}
+.info-ico{flex:none;width:44px;height:44px;border-radius:12px;background:var(--sun-l);color:var(--green);display:grid;place-items:center}
+.info-ico svg{width:22px;height:22px}
+.info-txt b{display:block;font-family:var(--display);font-weight:700;font-size:1.05rem;line-height:1.3}
+.info-txt span{display:block;color:var(--muted);font-size:.92rem;line-height:1.45}
+
+.map{position:relative;border-radius:24px;min-height:480px;overflow:hidden;border:1px solid var(--line);background:#eef1ea;box-shadow:var(--shadow);isolation:isolate}
+.map-art{position:absolute;inset:0;display:block;z-index:0}
+.map-art svg{width:100%;height:100%}
+.map-pin{position:absolute;left:50%;top:38%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none}
+.map-pin-label{background:#fff;border-radius:10px;padding:8px 14px;font-family:var(--display);font-weight:700;font-size:.95rem;box-shadow:0 8px 24px rgba(20,33,28,.16);white-space:nowrap}
+.map-pin-mark{position:relative;width:44px;height:44px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--green);box-shadow:0 10px 24px rgba(23,58,47,.35);display:grid;place-items:center}
+.map-pin-mark::after{content:"";width:15px;height:15px;border-radius:50%;background:var(--sun)}
+.map-pin-pulse{position:absolute;left:50%;top:calc(100% + 4px);width:18px;height:8px;margin-left:-9px;border-radius:50%;background:rgba(23,58,47,.25)}
+.map-pin-pulse::after{content:"";position:absolute;inset:-14px -22px;border-radius:50%;border:2px solid rgba(23,58,47,.35);animation:ping 2.4s infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.4);opacity:0}}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1;opacity:0;transition:opacity .5s}
+.map.map-live iframe{opacity:1}
+.map-card{position:absolute;z-index:2;left:20px;right:20px;bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:14px 16px;flex-wrap:wrap;background:#fff;border-radius:16px;padding:18px 20px;box-shadow:0 14px 36px rgba(20,33,28,.18)}
+.map-card b{display:block;font-family:var(--display);font-weight:700;font-size:1.05rem;line-height:1.3}
+.map-card span{display:block;color:var(--muted);font-size:.88rem}
+.map-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Rodapé */
+footer{background:var(--ink);color:#b5c2bb;font-size:.9rem;padding:64px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:48px}
+footer .logo-name{color:#fff}
+footer .logo-name span{color:var(--sun)}
+.foot-about{margin-top:18px;max-width:340px}
+footer h4{font-family:var(--display);font-size:.9rem;font-weight:700;color:var(--sun);margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding:22px 0 26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-size:.8rem;color:#8a9a92}
+
+/* Botão flutuante */
+.float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:0;height:62px;padding:0 15px;border-radius:999px;background:#25d366;color:#fff;font-weight:700;box-shadow:0 10px 30px rgba(37,211,102,.45);animation:pulse 2.4s infinite;transition:gap .3s,padding .3s}
+.float svg{width:32px;height:32px;fill:#fff;flex:none}
+.float-label{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .35s}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media(hover:hover) and (min-width:901px){
+  .float:hover{gap:10px;padding:0 22px 0 16px}
+  .float:hover .float-label{max-width:200px}
+}
+
+/* Animação de entrada */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.js .reveal.in{opacity:1;transform:none}
+
+@media(min-width:1500px){.wrap{max-width:1280px}body{font-size:17px}}
+@media(max-width:1180px){.menu a{padding:8px 10px}.why-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:1060px){
+  .facts-grid{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){border-left:0}
+  .fact:nth-child(n+3){border-top:2px solid rgba(20,33,28,.12)}
+  .band-box{grid-template-columns:1fr;padding:44px}
+  .band-actions{align-items:flex-start}
+}
+@media(max-width:900px){
+  :root{--header:68px}
+  .burger{display:grid}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 20px 16px;box-shadow:0 20px 30px rgba(20,33,28,.08);font-size:1rem;display:none}
+  header.open .menu{display:flex}
+  .menu a{padding:14px 4px;border-radius:0;border-bottom:1px solid var(--line)}
+  .menu li:last-child a{border-bottom:0}
+  .menu a:hover{background:none}
+  .hero-grid,.contact-grid,.faq-grid,.head-split{grid-template-columns:1fr;gap:44px}
+  .head-split{gap:0}
+  .hero-grid{padding-top:48px;padding-bottom:72px}
+  .grid3,.steps{grid-template-columns:1fr 1fr}
+  section{padding:76px 0}
+  .band{padding:0 0 76px}
+  .faq-side{position:static}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .logo-mark{height:36px;font-size:.95rem}
+  .logo-name{font-size:1.15rem}
+  .nav{gap:12px}
+  .nav-actions .btn{display:none}
+  .demo-more{display:none}
+  .hero h1{font-size:2.6rem}
+  .lead{font-size:1.04rem}
+  .cta .btn{width:100%}
+  .sign{padding:24px 18px}
+  .floor{padding:12px}
+  .fact{padding:18px 14px}
+  .fact b{font-size:1.1rem}
+  .grid3,.steps,.why-grid{grid-template-columns:1fr}
+  .svc,.step,.why-card{padding:24px}
+  .band-box{padding:32px 22px;border-radius:22px}
+  .band-actions,.band-actions .btn{width:100%}
+  summary{font-size:1.02rem;padding:18px}
+  details p{padding:0 18px 18px}
+  .map-actions{width:100%}
+  .map-actions .btn{flex:1 1 100%}
+  .map-pin{top:34%}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .float{right:16px;bottom:16px;height:58px;padding:0 13px}
+  .float svg{width:30px;height:30px}
+  footer{padding-bottom:70px}
+}
+@media(prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .float,.map-pin-pulse::after{animation:none}
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- Ícones reutilizados -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 12 0 12 12 0 0 0 1.6 17.9L0 24l6.3-1.6A12 12 0 0 0 12 24a12 12 0 0 0 8.5-20.5zM12 22a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22zm5.5-7.5c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-.9 1.1-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6a.6.6 0 0 0 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.5 14.5 0 0 0 5.6 5c2 .8 2.8.9 3.8.7a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s-7-5.8-7-11.5a7 7 0 0 1 14 0c0 5.7-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.6"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></g></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4M8.5 14.5l2.3 2.3 4.7-4.6"/></g></symbol>
+  <symbol id="i-bus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3.5" width="14" height="14" rx="3"/><path d="M5 11h14M8.5 20.5v-3M15.5 20.5v-3"/><path d="M8.5 14.5h.01M15.5 14.5h.01" stroke-width="2.6"/></g></symbol>
+  <symbol id="i-team" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c.6-3.3 3-5.2 6-5.2s5.4 1.9 6 5.2"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.4c2.3.2 4 1.8 4.5 4.6"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração)<span class="demo-more"> · desenvolvida como exemplo para a Equipe Orto</span></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Equipe Orto, início">
+      <span class="logo-mark" aria-hidden="true">EO</span>
+      <span class="logo-name">Equipe <span>Orto</span></span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul class="menu" id="menu">
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#por-que">Por que a Equipe Orto</a></li>
+        <li><a href="#como">Como funciona</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-green btn-sm" href="https://wa.me/5561986664125" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title" style="padding:0">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="label">Ortodontia · Conjunto Nacional</span>
+      <h1 id="hero-title">Seu sorriso alinhado, <span class="mark">no centro de Brasília</span>.</h1>
+      <p class="lead">Aparelhos ortodônticos e cuidado com o sorriso no Shopping Conjunto Nacional, com uma equipe que acompanha você da avaliação até a contenção.</p>
+      <div class="cta">
+        <a class="btn btn-sun" href="https://wa.me/5561986664125" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn btn-ghost" href="#tratamentos">Ver tratamentos</a>
+      </div>
+      <div class="proof">
+        <span class="proof-score">5,0</span>
+        <div><span class="stars" aria-hidden="true">★★★★★</span><small>Nota no Google · 15 avaliações de pacientes</small></div>
+      </div>
+    </div>
+
+    <aside class="sign reveal" aria-labelledby="sign-title">
+      <p class="sign-title" id="sign-title">Como nos encontrar</p>
+      <ol class="floors">
+        <li class="floor"><span class="floor-n">1</span><span class="floor-txt"><b>Shopping Conjunto Nacional</b><span>Setor de Diversões Norte · centro de Brasília</span></span></li>
+        <li class="floor"><span class="floor-n">2</span><span class="floor-txt"><b>Torre Amarela</b><span>a torre comercial do shopping</span></span></li>
+        <li class="floor"><span class="floor-n">3º</span><span class="floor-txt"><b>3º andar</b><span>na Torre Amarela</span></span></li>
+        <li class="floor here"><span class="floor-n">3090</span><span class="floor-txt"><b>Sala 3090 · Equipe Orto</b><span>chegou! Atendimento com hora marcada</span></span></li>
+      </ol>
+      <div class="sign-foot"><span>Pertinho da Rodoviária do Plano Piloto</span><a href="#contato">Ver no mapa →</a></div>
+    </aside>
+  </div>
+</section>
+
+<!-- FAIXA -->
+<div class="facts">
+  <div class="wrap facts-grid">
+    <div class="fact"><b>Nota 5,0</b><span>15 avaliações no Google</span></div>
+    <div class="fact"><b>Conjunto Nacional</b><span>Torre Amarela, Sala 3090</span></div>
+    <div class="fact"><b>Hora marcada</b><span>sem espera e sem pressa</span></div>
+    <div class="fact"><b>WhatsApp</b><span>(61) 98666-4125</span></div>
+  </div>
+</div>
+
+<!-- TRATAMENTOS
+     Lista provisória de tratamentos comuns em ortodontia: confirmar com a clínica. -->
+<section id="tratamentos" aria-labelledby="trat-title">
+  <div class="wrap">
+    <div class="head head-split reveal">
+      <div>
+        <span class="label">Tratamentos</span>
+        <h2 id="trat-title">Um aparelho para cada sorriso e cada rotina</h2>
+      </div>
+      <p>Na avaliação, a equipe mostra as opções indicadas para o seu caso e explica prazos, cuidados e manutenções antes de começar.</p>
+    </div>
+    <div class="grid3">
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18"/><rect x="4.5" y="9.5" width="4" height="5" rx="1"/><rect x="10" y="9.5" width="4" height="5" rx="1"/><rect x="15.5" y="9.5" width="4" height="5" rx="1"/></svg></div>
+        <h3>Aparelho fixo</h3>
+        <p>O tratamento mais versátil, indicado para a maioria dos casos de dentes tortos, separados ou apinhados.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18" stroke-dasharray="2 2.5"/><rect x="4.5" y="9.5" width="4" height="5" rx="1.6"/><rect x="10" y="9.5" width="4" height="5" rx="1.6"/><rect x="15.5" y="9.5" width="4" height="5" rx="1.6"/></svg></div>
+        <h3>Aparelho estético</h3>
+        <p>Braquetes transparentes ou da cor do dente, para um tratamento mais discreto no dia a dia.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9c0-2 1.6-3.5 3.5-3.5 1.2 0 1.8.6 2.5.6s1.3-.6 2-.6 1.3.6 2 .6 1.3-.6 2.5-.6C18.4 5.5 20 7 20 9c0 3.5-1.5 9.5-3.5 9.5S14 15 12 15s-2.5 3.5-4.5 3.5S4 12.5 4 9z" stroke-dasharray="3 2"/></svg></div>
+        <h3>Alinhadores</h3>
+        <p>Placas transparentes e removíveis, trocadas por etapas, para quem busca praticidade.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/></svg></div>
+        <h3>Ortodontia infantil</h3>
+        <p>Acompanhamento do crescimento e correções no momento certo, ainda na infância.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/><path d="M7 9V6.5M12 9V6M17 9V6.5M7 15v2.5M12 15v3M17 15v2.5"/></svg></div>
+        <h3>Correção da mordida</h3>
+        <p>Tratamento de mordida cruzada, aberta ou profunda, para mastigar e falar com mais conforto.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12l2.2 2.2 4.3-4.4"/></svg></div>
+        <h3>Manutenção e contenção</h3>
+        <p>Consultas de manutenção durante o tratamento e contenção no final, para o resultado durar.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE -->
+<section class="why" id="por-que" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="label">Por que a Equipe Orto</span>
+      <h2 id="why-title">Tratamento sério, sem complicar a sua rotina</h2>
+      <p>O aparelho dura meses. Por isso, chegar fácil, ser atendido no horário e ter quem acompanhe faz toda a diferença.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><span class="why-ico"><svg aria-hidden="true"><use href="#i-bus"/></svg></span><h3>Fácil de chegar</h3><p>No Conjunto Nacional, no centro de Brasília, perto da Rodoviária do Plano Piloto.</p></div>
+      <div class="why-card reveal"><span class="why-ico"><svg aria-hidden="true"><use href="#i-cal"/></svg></span><h3>Hora marcada</h3><p>Consultas e manutenções agendadas, para você não perder tempo esperando.</p></div>
+      <div class="why-card reveal"><span class="why-ico"><svg aria-hidden="true"><use href="#i-team"/></svg></span><h3>Acompanhamento</h3><p>Uma equipe que conhece o seu caso e acompanha cada fase do tratamento.</p></div>
+      <div class="why-card reveal"><span class="why-ico"><svg aria-hidden="true"><use href="#i-chat"/></svg></span><h3>Pelo WhatsApp</h3><p>Agende, remarque e tire dúvidas direto com a clínica, sem complicação.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como" aria-labelledby="como-title">
+  <div class="wrap">
+    <div class="head head-split reveal">
+      <div>
+        <span class="label">Como funciona</span>
+        <h2 id="como-title">Começar é simples</h2>
+      </div>
+      <p>Em três passos você sai da dúvida e entra no tratamento, sabendo exatamente o que esperar.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><h3>Chame no WhatsApp</h3><p>Escolha o melhor dia e horário para a sua avaliação ortodôntica.</p></li>
+      <li class="step reveal"><h3>Faça a avaliação</h3><p>A equipe examina seu sorriso e explica as opções, os prazos e os cuidados.</p></li>
+      <li class="step reveal"><h3>Comece o tratamento</h3><p>Instalação do aparelho e manutenções com hora marcada até o resultado final.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="band">
+  <div class="wrap">
+    <div class="band-box reveal">
+      <div>
+        <h2>Bora alinhar esse sorriso?</h2>
+        <p>Agende sua avaliação na Equipe Orto, no Conjunto Nacional. É só chamar no WhatsApp.</p>
+      </div>
+      <div class="band-actions">
+        <a class="btn btn-green" href="https://wa.me/5561986664125" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+        <small>(61) 98666-4125</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DÚVIDAS -->
+<section id="duvidas" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="faq-side reveal">
+      <div class="head">
+        <span class="label">Dúvidas</span>
+        <h2 id="faq-title">Perguntas frequentes</h2>
+        <p>Não achou a sua? Pergunte direto para a equipe.</p>
+      </div>
+      <a class="btn btn-ghost btn-sm" href="https://wa.me/5561986664125" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Perguntar no WhatsApp</a>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Quanto tempo dura o tratamento?</summary><p>Depende de cada caso. Na avaliação, a equipe analisa o seu sorriso e passa uma estimativa de prazo antes de você começar.</p></details>
+      <details><summary>Usar aparelho dói?</summary><p>É comum sentir um leve desconforto nos primeiros dias e depois das manutenções, enquanto os dentes se ajustam. Costuma passar rápido.</p></details>
+      <details><summary>Adulto pode usar aparelho?</summary><p>Sim. Com dentes e gengivas saudáveis, dá para alinhar o sorriso em qualquer idade.</p></details>
+      <details><summary>De quanto em quanto tempo são as manutenções?</summary><p>A frequência é definida pela equipe de acordo com o tipo de aparelho e a fase do tratamento. Tudo com hora marcada.</p></details>
+      <details><summary>Onde exatamente fica a clínica?</summary><p>No Shopping Conjunto Nacional, Torre Amarela, 3º andar, Sala 3090, no centro de Brasília (SDN/SHCN).</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact" id="contato" aria-labelledby="contato-title">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="label">Contato</span>
+      <h2 id="contato-title">Vamos marcar sua avaliação?</h2>
+      <p class="contact-lead">Estamos no Conjunto Nacional, Torre Amarela, 3º andar. Atendimento com hora marcada.</p>
+      <ul class="info">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Equipe%20Orto&amp;query_place_id=ChIJKw3XrV07WpMR6Dg3-INPW4U" target="_blank" rel="noopener"><span class="info-ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span class="info-txt"><b>Endereço</b><span>Shopping Conjunto Nacional, Torre Amarela, 3º andar, Sala 3090 · Brasília-DF</span></span></a></li>
+        <li><a href="https://wa.me/5561986664125" target="_blank" rel="noopener"><span class="info-ico"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><span class="info-txt"><b>WhatsApp</b><span>(61) 98666-4125</span></span></a></li>
+        <li><a href="https://www.instagram.com/equipeorto/" target="_blank" rel="noopener"><span class="info-ico"><svg aria-hidden="true"><use href="#i-ig"/></svg></span><span class="info-txt"><b>Instagram</b><span>@equipeorto</span></span></a></li>
+      </ul>
+      <a class="btn btn-sun" href="https://wa.me/5561986664125" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação</a>
+    </div>
+    <div class="map reveal" id="mapa" data-embed="https://maps.google.com/maps?q=Equipe%20Orto%2C%20Shopping%20Conjunto%20Nacional%2C%20Bras%C3%ADlia%20-%20DF&amp;z=17&amp;output=embed">
+      <!-- Mapa ilustrado: fica por baixo do Google Maps e continua visível se ele não puder carregar. -->
+      <a class="map-art" href="https://www.google.com/maps/search/?api=1&amp;query=Equipe%20Orto&amp;query_place_id=ChIJKw3XrV07WpMR6Dg3-INPW4U" target="_blank" rel="noopener" aria-label="Abrir a localização da Equipe Orto no Google Maps">
+        <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="600" height="460" fill="#eef1ea"/>
+          <g fill="#dbe8d6"><circle cx="530" cy="70" r="100"/><rect x="20" y="340" width="170" height="100" rx="18"/></g>
+          <g fill="#e2e6dc"><rect x="30" y="30" width="140" height="80" rx="10"/><rect x="230" y="20" width="150" height="80" rx="10"/><rect x="40" y="190" width="120" height="80" rx="10"/><rect x="440" y="200" width="140" height="80" rx="10"/><rect x="440" y="340" width="140" height="100" rx="10"/></g>
+          <rect x="240" y="170" width="130" height="100" rx="12" fill="#fde9b3"/>
+          <g fill="none" stroke="#fff" stroke-linecap="round">
+            <path d="M-20 140H620" stroke-width="16"/>
+            <path d="M-20 310H620" stroke-width="12"/>
+            <path d="M200 -20V480" stroke-width="14"/>
+            <path d="M410 -20V480" stroke-width="12"/>
+          </g>
+          <path d="M-20 370C200 360 400 385 620 365" fill="none" stroke="#f6dc94" stroke-width="26"/>
+          <path d="M-20 370C200 360 400 385 620 365" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="12 12"/>
+        </svg>
+        <span class="map-pin"><span class="map-pin-label">Equipe Orto · Sala 3090</span><span class="map-pin-mark"></span><span class="map-pin-pulse"></span></span>
+      </a>
+      <div class="map-card">
+        <div><b>Conjunto Nacional · Torre Amarela</b><span>3º andar, Sala 3090 · Brasília-DF</span></div>
+        <div class="map-actions">
+          <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Equipe%20Orto&amp;query_place_id=ChIJKw3XrV07WpMR6Dg3-INPW4U" target="_blank" rel="noopener">Ver no Google Maps</a>
+          <a class="btn btn-green btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Equipe%20Orto&amp;destination_place_id=ChIJKw3XrV07WpMR6Dg3-INPW4U" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true">EO</span><span class="logo-name">Equipe <span>Orto</span></span></a>
+      <p class="foot-about">Ortodontia com acompanhamento e hora marcada, no Shopping Conjunto Nacional, centro de Brasília.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#por-que">Por que a Equipe Orto</a></li>
+        <li><a href="#como">Como funciona</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Equipe%20Orto&amp;query_place_id=ChIJKw3XrV07WpMR6Dg3-INPW4U" target="_blank" rel="noopener">Conjunto Nacional, Torre Amarela<br>3º andar, Sala 3090</a></li>
+        <li><a href="https://wa.me/5561986664125" target="_blank" rel="noopener">(61) 98666-4125</a></li>
+        <li><a href="https://www.instagram.com/equipeorto/" target="_blank" rel="noopener">@equipeorto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-bottom">
+    <span>© Equipe Orto · Brasília-DF</span>
+    <span>Site de demonstração · tratamentos, fotos e dados do responsável técnico (CRO) a confirmar</span>
+  </div></div>
+</footer>
+
+<a class="float" aria-label="Agendar pelo WhatsApp" href="https://wa.me/5561986664125" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="float-label">Agendar pelo WhatsApp</span></a>
+
+<script>
+(function(){
+  // Animação de entrada
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  // Sombra no cabeçalho ao rolar
+  var header=document.getElementById('header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Menu mobile
+  var burger=document.getElementById('burger');
+  function setMenu(open){header.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')}
+  burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  // Google Maps por cima do mapa ilustrado; se for bloqueado (CSP), o ilustrado continua.
+  var map=document.getElementById('mapa');
+  if(map&&map.dataset.embed){
+    var failed=false,fr=document.createElement('iframe');
+    function fail(){failed=true;map.classList.remove('map-live');if(fr.parentNode)fr.parentNode.removeChild(fr)}
+    document.addEventListener('securitypolicyviolation',function(e){if(/google\./.test(e.blockedURI||''))fail()});
+    fr.title='Mapa: Equipe Orto, Shopping Conjunto Nacional, Brasília';
+    fr.loading='lazy';
+    fr.referrerPolicy='no-referrer-when-downgrade';
+    fr.addEventListener('load',function(){setTimeout(function(){if(!failed)map.classList.add('map-live')},400)});
+    fr.src=map.dataset.embed;
+    map.insertBefore(fr,map.querySelector('.map-card'));
+  }
+})();
+</script>
+</body>
+</html>
