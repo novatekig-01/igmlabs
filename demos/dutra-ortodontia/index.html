@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dutra Ortodontia | Ortodontista na Asa Norte, Brasília</title>
+<meta name="description" content="Dutra Ortodontia: aparelhos ortodônticos e alinhamento dental no Liberty Mall, Asa Norte, Brasília. Nota 5,0 no Google. Agende sua avaliação pelo WhatsApp.">
+<!-- Site de demonstração: não indexar no Google até a clínica aprovar -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f1f3d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f1f3d; --navy-2:#1a2f57; --blue:#2c52d6; --blue-2:#4c74f0; --sky:#eaf0ff; --sky-2:#f5f8ff;
+  --gold:#f5b301; --white:#fff; --muted:#5d6b82; --line:#e3e8f3;
+  --font:"Plus Jakarta Sans",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --radius:22px; --header:76px;
+  --shadow:0 24px 60px rgba(15,31,61,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--navy);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--blue-2);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.025em;text-wrap:balance}
+p{text-wrap:pretty}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:var(--sky);padding:7px 14px;border-radius:999px}
+.tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue)}
+section[id]{scroll-margin-top:var(--header)}
+.hl{color:var(--blue)}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:14px;font-weight:700;font-size:1rem;line-height:1.2;white-space:nowrap;transition:transform .25s,box-shadow .25s,background .25s,color .25s,border-color .25s;border:1.5px solid transparent;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:linear-gradient(135deg,var(--blue),var(--blue-2));color:#fff;box-shadow:0 12px 28px rgba(44,82,214,.32)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(44,82,214,.42)}
+.btn-outline{border-color:var(--line);color:var(--navy);background:#fff}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.2)}
+.btn-sm{padding:11px 18px;font-size:.9rem;border-radius:12px}
+
+/* Faixa de demonstração */
+.demo{background:var(--navy);color:#c9d4ea;font-size:.76rem;text-align:center;padding:7px 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Cabeçalho */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 8px 30px rgba(15,31,61,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header)}
+.logo{display:flex;align-items:center;gap:12px;flex:none}
+.logo-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--blue-2));display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.2rem;flex:none;box-shadow:0 8px 18px rgba(44,82,214,.3)}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-name{font-weight:800;font-size:1.18rem;letter-spacing:-.02em;white-space:nowrap}
+.logo-sub{font-size:.64rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px;white-space:nowrap}
+.menu{display:flex;gap:4px;list-style:none;font-size:.93rem;font-weight:500;color:var(--muted)}
+.menu a{display:block;padding:8px 14px;border-radius:10px;transition:color .2s,background .2s}
+.menu a:hover{color:var(--blue);background:var(--sky-2)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:#fff;cursor:pointer;place-items:center;color:var(--navy)}
+.burger svg{width:22px;height:22px}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(700px 500px at 90% 10%,rgba(76,116,240,.16),transparent 60%),radial-gradient(500px 400px at 0% 100%,rgba(76,116,240,.08),transparent 60%),var(--sky-2)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center;padding-top:80px;padding-bottom:140px}
+.hero h1{font-size:clamp(2.2rem,3.7vw,3.3rem);margin:22px 0 20px}
+.lead{font-size:1.14rem;color:var(--muted);max-width:540px;margin-bottom:34px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;align-items:center;gap:14px;margin-top:34px}
+.proof-g{width:44px;height:44px;border-radius:12px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-weight:800;color:var(--blue);font-size:1.1rem}
+.stars{color:var(--gold);letter-spacing:2px;font-size:1rem;line-height:1}
+.proof small{display:block;color:var(--muted);font-size:.88rem;margin-top:3px}
+.proof b{color:var(--navy)}
+
+.hero-visual{position:relative}
+.smile-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:28px;padding:34px 30px 30px;box-shadow:var(--shadow)}
+.smile-card h2{font-size:1.15rem;font-weight:700;letter-spacing:-.01em;margin-bottom:4px}
+.smile-card p{color:var(--muted);font-size:.92rem;margin-bottom:18px}
+.smile{background:linear-gradient(180deg,var(--sky),#fff);border-radius:20px;padding:26px 14px 18px}
+.smile svg{width:100%;height:auto}
+.smile-legend{display:flex;justify-content:center;gap:18px;margin-top:12px;font-size:.78rem;color:var(--muted);font-weight:600}
+.smile-legend i{display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--blue);margin-right:6px;vertical-align:-1px}
+.smile-legend i.w{height:3px;border-radius:2px;width:16px;vertical-align:2px;background:var(--navy-2)}
+.chip{position:absolute;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 16px;box-shadow:0 16px 36px rgba(15,31,61,.12);font-size:.86rem;font-weight:600;white-space:nowrap}
+.chip small{display:block;font-weight:500;color:var(--muted);font-size:.76rem}
+.chip-ico{width:34px;height:34px;border-radius:10px;background:var(--sky);color:var(--blue);display:grid;place-items:center;flex:none}
+.chip-ico svg{width:18px;height:18px}
+.chip-1{top:-46px;right:-18px}
+.chip-2{bottom:-24px;left:-22px}
+
+/* Destaques */
+.stats{position:relative;z-index:2;margin-top:-64px}
+.stats-card{display:grid;grid-template-columns:repeat(4,1fr);background:var(--navy);color:#fff;border-radius:var(--radius);box-shadow:0 30px 60px rgba(15,31,61,.25);overflow:hidden}
+.stat{padding:28px 26px}
+.stat+.stat{border-left:1px solid rgba(255,255,255,.1)}
+.stat b{display:block;font-size:1.6rem;font-weight:800;letter-spacing:-.02em;line-height:1.15;white-space:nowrap}
+.stat span{display:block;font-size:.86rem;color:#aebbd6;margin-top:4px;line-height:1.4}
+.stat .stars{font-size:.9rem;margin-left:6px;vertical-align:4px}
+
+/* Seções */
+section{padding:110px 0}
+.head{max-width:680px;margin-bottom:54px}
+.head h2{font-size:clamp(2rem,3.4vw,2.8rem);margin:16px 0 14px}
+.head p{color:var(--muted);font-size:1.06rem}
+.head-split{max-width:none;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:60px;align-items:end}
+.head-split p{margin-bottom:6px}
+
+/* Tratamentos */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(44,82,214,.12);border-color:transparent}
+.ico{width:54px;height:54px;border-radius:15px;background:var(--sky);display:grid;place-items:center;margin-bottom:22px;color:var(--blue);transition:background .3s,color .3s}
+.ico svg{width:28px;height:28px}
+.svc:hover .ico{background:var(--blue);color:#fff}
+.svc h3{font-size:1.22rem;font-weight:700;letter-spacing:-.015em;margin-bottom:10px}
+.svc p{color:var(--muted);font-size:.95rem}
+
+/* Por que alinhar */
+.why{background:var(--sky-2)}
+.why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+.why h2{font-size:clamp(2rem,3.2vw,2.7rem);margin:16px 0 18px}
+.why-lead{color:var(--muted);font-size:1.05rem;margin-bottom:28px}
+.benefits{list-style:none;display:grid;gap:14px}
+.benefit{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.benefit .chip-ico{width:42px;height:42px;border-radius:12px}
+.benefit .chip-ico svg{width:22px;height:22px}
+.benefit-txt b{display:block;font-size:1.02rem;margin-bottom:2px}
+.benefit-txt span{display:block;color:var(--muted);font-size:.93rem;line-height:1.5}
+.ages{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.age{border-radius:var(--radius);padding:30px;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.age h3{font-size:1.35rem;margin-bottom:6px}
+.age p{font-size:.93rem}
+.age-1{background:linear-gradient(160deg,var(--blue),var(--blue-2));color:#fff}
+.age-1 p{color:#dbe4ff}
+.age-2{background:var(--navy);color:#fff}
+.age-2 p{color:#aebbd6}
+.age-3{grid-column:1/-1;background:#fff;border:1px solid var(--line);min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.age-3 b{font-size:1.1rem;display:block}
+.age-3 span span{color:var(--muted);font-size:.93rem}
+.age-num{position:absolute;top:22px;left:28px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.age::after{content:"";position:absolute;right:-50px;top:-50px;width:170px;height:170px;border-radius:50%;border:1px solid rgba(255,255,255,.18);box-shadow:0 0 0 30px rgba(255,255,255,.04)}
+.age-3::after{display:none}
+
+/* Como funciona */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;list-style:none;counter-reset:s}
+.step{position:relative;padding:30px 26px;border-radius:var(--radius);background:#fff;border:1px solid var(--line)}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--navy);color:#fff;font-weight:800;margin-bottom:20px}
+.step::after{content:"";position:absolute;top:52px;left:84px;right:-12px;height:2px;background:repeating-linear-gradient(90deg,var(--blue-2) 0 6px,transparent 6px 12px);opacity:.35}
+.step:last-child::after{display:none}
+.step h3{font-size:1.12rem;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.93rem}
+
+/* CTA */
+.band{padding:0 0 110px}
+.band-box{position:relative;overflow:hidden;border-radius:30px;background:radial-gradient(600px 300px at 85% 0%,rgba(76,116,240,.55),transparent 65%),var(--navy);color:#fff;padding:64px;display:grid;grid-template-columns:minmax(0,1.3fr) auto;gap:40px;align-items:center}
+.band-box h2{font-size:clamp(1.9rem,3.2vw,2.6rem);margin-bottom:12px}
+.band-box p{color:#c3cee6;font-size:1.05rem;max-width:560px}
+.band-actions{display:flex;flex-direction:column;gap:12px;align-items:stretch}
+.band-actions small{color:#aebbd6;text-align:center;font-size:.85rem}
+
+/* Dúvidas */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
+.faq-side{position:sticky;top:calc(var(--header) + 32px)}
+.faq-side .head{margin-bottom:26px}
+.faq-help{background:var(--sky-2);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.faq-help b{display:block;font-size:1.05rem;margin-bottom:4px}
+.faq-help p{color:var(--muted);font-size:.93rem;margin-bottom:16px}
+.faq{display:grid;gap:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:18px;transition:border-color .2s,box-shadow .2s}
+details[open]{border-color:rgba(44,82,214,.35);box-shadow:0 14px 34px rgba(44,82,214,.08)}
+summary{cursor:pointer;font-weight:700;font-size:1.04rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 22px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:none;width:30px;height:30px;border-radius:9px;background:var(--sky) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c52d6' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/14px no-repeat;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding:0 22px 22px;margin-top:-4px}
+
+/* Contato */
+.contact{background:var(--sky-2)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:60px;align-items:stretch}
+.contact h2{font-size:clamp(2rem,3.2vw,2.7rem);margin:16px 0 14px}
+.contact-lead{color:var(--muted);margin-bottom:28px;max-width:440px}
+.info{list-style:none;display:grid;gap:12px;margin-bottom:30px}
+.info a{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;transition:border-color .2s,box-shadow .2s}
+.info a:hover{border-color:var(--blue);box-shadow:0 10px 30px rgba(44,82,214,.08)}
+.info .chip-ico{width:44px;height:44px;border-radius:12px}
+.info .chip-ico svg{width:22px;height:22px}
+.info-txt b{display:block;font-size:1rem;line-height:1.3}
+.info-txt span{display:block;color:var(--muted);font-size:.92rem;line-height:1.45}
+
+.map{position:relative;border-radius:26px;min-height:480px;overflow:hidden;border:1px solid var(--line);background:#eef2fa;box-shadow:var(--shadow);isolation:isolate}
+.map-art{position:absolute;inset:0;display:block;z-index:0}
+.map-art svg{width:100%;height:100%}
+.map-pin{position:absolute;left:50%;top:38%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none}
+.map-pin-label{background:#fff;border-radius:999px;padding:8px 14px;font-weight:700;font-size:.9rem;box-shadow:0 8px 24px rgba(15,31,61,.16);white-space:nowrap}
+.map-pin-mark{position:relative;width:44px;height:44px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:linear-gradient(135deg,var(--blue),var(--blue-2));box-shadow:0 10px 24px rgba(44,82,214,.35);display:grid;place-items:center}
+.map-pin-mark::after{content:"";width:15px;height:15px;border-radius:50%;background:#fff}
+.map-pin-pulse{position:absolute;left:50%;top:calc(100% + 4px);width:18px;height:8px;margin-left:-9px;border-radius:50%;background:rgba(44,82,214,.25)}
+.map-pin-pulse::after{content:"";position:absolute;inset:-14px -22px;border-radius:50%;border:2px solid rgba(44,82,214,.35);animation:ping 2.4s infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.4);opacity:0}}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1;opacity:0;transition:opacity .5s}
+.map.map-live iframe{opacity:1}
+.map-card{position:absolute;z-index:2;left:20px;right:20px;bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:14px 16px;flex-wrap:wrap;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 14px 36px rgba(15,31,61,.18)}
+.map-card b{display:block;font-size:1.02rem;line-height:1.3}
+.map-card span{display:block;color:var(--muted);font-size:.88rem}
+.map-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Rodapé */
+footer{background:var(--navy);color:#aebbd6;font-size:.9rem;padding:64px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:48px}
+footer .logo-name{color:#fff}
+footer .logo-sub{color:#8b9abb}
+.foot-about{margin-top:18px;max-width:340px}
+footer h4{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;font-weight:700;margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding:22px 0 26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-size:.8rem;color:#8b9abb}
+
+/* Botão flutuante */
+.float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:0;height:62px;padding:0 15px;border-radius:999px;background:#25d366;color:#fff;font-weight:700;box-shadow:0 10px 30px rgba(37,211,102,.45);animation:pulse 2.4s infinite;transition:gap .3s,padding .3s}
+.float svg{width:32px;height:32px;fill:#fff;flex:none}
+.float-label{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .35s}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media(hover:hover) and (min-width:901px){
+  .float:hover{gap:10px;padding:0 22px 0 16px}
+  .float:hover .float-label{max-width:200px}
+}
+
+/* Animação de entrada */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.js .reveal.in{opacity:1;transform:none}
+
+/* Telas grandes */
+@media(min-width:1500px){.wrap{max-width:1280px}body{font-size:17px}}
+
+/* Notebooks menores */
+@media(max-width:1180px){
+  .menu a{padding:8px 10px}
+  .chip-1{right:0}.chip-2{left:0}
+  .steps{grid-template-columns:1fr 1fr}
+  .step::after{display:none}
+}
+@media(max-width:1060px){
+  .stats-card{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}
+  .band-box{grid-template-columns:1fr;padding:48px}
+  .band-actions{flex-direction:row;flex-wrap:wrap;align-items:center}
+}
+
+/* Tablet e celular */
+@media(max-width:900px){
+  :root{--header:68px}
+  .burger{display:grid}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:8px 20px 16px;box-shadow:0 20px 30px rgba(15,31,61,.08);font-size:1rem;display:none}
+  header.open .menu{display:flex}
+  .menu a{padding:14px 4px;border-radius:0;border-bottom:1px solid var(--line)}
+  .menu li:last-child a{border-bottom:0}
+  .menu a:hover{background:none}
+  .hero-grid,.why-grid,.contact-grid,.faq-grid,.head-split{grid-template-columns:1fr;gap:48px}
+  .head-split{gap:0}
+  .hero-grid{padding-top:48px;padding-bottom:120px}
+  .grid3{grid-template-columns:1fr 1fr}
+  section{padding:76px 0}
+  .band{padding:0 0 76px}
+  .faq-side{position:static}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .logo-mark{width:38px;height:38px;font-size:1.05rem;border-radius:11px}
+  .logo-name{font-size:1.05rem}
+  .logo-sub{font-size:.58rem;letter-spacing:.12em}
+  .nav{gap:12px}
+  .nav-actions .btn{display:none}
+  .demo-more{display:none}
+  .hero h1{font-size:2.25rem}
+  .lead{font-size:1.04rem}
+  .cta .btn{width:100%}
+  .smile-card{padding:24px 18px 20px}
+  .chip{position:static;margin-top:12px;white-space:normal}
+  .hero-visual{display:flex;flex-direction:column}
+  .chip-1{order:-1;margin:0 0 12px}
+  .stats{margin-top:-60px}
+  .stat{padding:20px 16px}
+  .stat b{font-size:1.25rem;white-space:normal}
+  .stat .stars{display:block;margin:4px 0 0}
+  .grid3,.steps,.ages{grid-template-columns:1fr}
+  .svc,.step{padding:26px}
+  .age{min-height:180px}
+  .band-box{padding:36px 24px;border-radius:24px}
+  .band-actions .btn{width:100%}
+  summary{font-size:.98rem;padding:18px}
+  details p{padding:0 18px 18px}
+  .map{min-height:480px}
+  .map-actions{width:100%}
+  .map-actions .btn{flex:1 1 100%}
+  .map-pin{top:34%}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .float{right:16px;bottom:16px;height:58px;padding:0 13px}
+  .float svg{width:30px;height:30px}
+  footer{padding-bottom:70px}
+}
+@media(prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .float,.map-pin-pulse::after{animation:none}
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- Ícones reutilizados -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 12 0 12 12 0 0 0 1.6 17.9L0 24l6.3-1.6A12 12 0 0 0 12 24a12 12 0 0 0 8.5-20.5zM12 22a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22zm5.5-7.5c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-.9 1.1-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6a.6.6 0 0 0 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.5 14.5 0 0 0 5.6 5c2 .8 2.8.9 3.8.7a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s-7-5.8-7-11.5a7 7 0 0 1 14 0c0 5.7-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.6"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></g></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4M8.5 14.5l2.3 2.3 4.7-4.6"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L3 9.4l6.2-.9z"/></symbol>
+  <symbol id="i-smile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14c1 1.5 2.4 2.3 4 2.3s3-.8 4-2.3M9 9.5h.01M15 9.5h.01"/></g></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></symbol>
+  <symbol id="i-bite" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16"/><path d="M7 9V6.5M12 9V6M17 9V6.5M7 15v2.5M12 15v3M17 15v2.5"/></g></symbol>
+  <symbol id="i-brush" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l9-9M13 11l4.5-4.5a2.1 2.1 0 0 1 3 3L16 14"/><path d="M15 8l1 1M17 10l1 1"/></g></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração)<span class="demo-more"> · desenvolvida como exemplo para a Dutra Ortodontia</span></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Dutra Ortodontia, início">
+      <span class="logo-mark" aria-hidden="true">D</span>
+      <span class="logo-text"><span class="logo-name">Dutra Ortodontia</span><span class="logo-sub">Asa Norte · Brasília</span></span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul class="menu" id="menu">
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#para-quem">Para quem</a></li>
+        <li><a href="#como">Como funciona</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-sm" href="https://wa.me/5561993335173" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title" style="padding:0">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="tag">Ortodontia · Liberty Mall, Asa Norte</span>
+      <h1 id="hero-title">Seu sorriso <span class="hl">alinhado</span>, com acompanhamento de perto.</h1>
+      <p class="lead">Aparelhos ortodônticos para crianças, adolescentes e adultos, com plano de tratamento individual e manutenções organizadas por hora marcada.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://wa.me/5561993335173" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn btn-outline" href="#tratamentos">Conhecer tratamentos</a>
+      </div>
+      <div class="proof">
+        <span class="proof-g" aria-hidden="true">G</span>
+        <div><span class="stars" aria-hidden="true">★★★★★</span><small><b>5,0 no Google</b> · 41 avaliações de pacientes</small></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="smile-card">
+        <h2>Alinhamento planejado, passo a passo</h2>
+        <p>Cada ajuste é pensado para o seu caso, do primeiro dia até a contenção.</p>
+        <div class="smile" aria-hidden="true">
+          <svg viewBox="0 0 400 190">
+            <path d="M28 40C110 8 290 8 372 40V74C290 52 110 52 28 74z" fill="#c9d6fb"/>
+            <g fill="#fff" stroke="#d3dcf2" stroke-width="2">
+              <rect x="42" y="50" width="30" height="58" rx="13"/>
+              <rect x="76" y="48" width="34" height="68" rx="14"/>
+              <rect x="114" y="46" width="36" height="74" rx="15"/>
+              <rect x="154" y="44" width="44" height="82" rx="17"/>
+              <rect x="202" y="44" width="44" height="82" rx="17"/>
+              <rect x="250" y="46" width="36" height="74" rx="15"/>
+              <rect x="290" y="48" width="34" height="68" rx="14"/>
+              <rect x="328" y="50" width="30" height="58" rx="13"/>
+            </g>
+            <path d="M57 82C120 92 170 96 200 96S280 92 343 82" fill="none" stroke="#1a2f57" stroke-width="3" stroke-linecap="round"/>
+            <g fill="#2c52d6">
+              <rect x="50" y="76" width="14" height="13" rx="3.5"/>
+              <rect x="86" y="81" width="14" height="13" rx="3.5"/>
+              <rect x="125" y="86" width="14" height="13" rx="3.5"/>
+              <rect x="169" y="89" width="14" height="13" rx="3.5"/>
+              <rect x="217" y="89" width="14" height="13" rx="3.5"/>
+              <rect x="261" y="86" width="14" height="13" rx="3.5"/>
+              <rect x="300" y="81" width="14" height="13" rx="3.5"/>
+              <rect x="336" y="76" width="14" height="13" rx="3.5"/>
+            </g>
+            <g fill="#2c52d6" opacity=".18"><circle cx="200" cy="165" r="6"/><circle cx="180" cy="165" r="4"/><circle cx="220" cy="165" r="4"/></g>
+          </svg>
+          <div class="smile-legend"><span><i></i>Braquetes</span><span><i class="w"></i>Fio ortodôntico</span></div>
+        </div>
+      </div>
+      <div class="chip chip-1"><span class="chip-ico"><svg aria-hidden="true"><use href="#i-star"/></svg></span><span>Nota 5,0<small>41 avaliações no Google</small></span></div>
+      <div class="chip chip-2"><span class="chip-ico"><svg aria-hidden="true"><use href="#i-cal"/></svg></span><span>Atendimento com hora marcada<small>Liberty Mall · Torre B</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTAQUES -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-card reveal">
+      <div class="stat"><b>5,0<span class="stars" aria-hidden="true">★★★★★</span></b><span>nota no Google</span></div>
+      <div class="stat"><b>41</b><span>avaliações de pacientes</span></div>
+      <div class="stat"><b>Asa Norte</b><span>Liberty Mall, Torre B, Sala 328</span></div>
+      <div class="stat"><b>WhatsApp</b><span>agendamento direto com a clínica</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- TRATAMENTOS
+     Lista provisória de tratamentos comuns em ortodontia: confirmar com a clínica. -->
+<section id="tratamentos" aria-labelledby="trat-title">
+  <div class="wrap">
+    <div class="head head-split reveal">
+      <div>
+        <span class="tag">Tratamentos</span>
+        <h2 id="trat-title">Opções para cada tipo de sorriso e de rotina</h2>
+      </div>
+      <p>Na avaliação, você conhece as alternativas indicadas para o seu caso e entende prazos, cuidados e manutenções antes de começar.</p>
+    </div>
+    <div class="grid3">
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18"/><rect x="4.5" y="9.5" width="4" height="5" rx="1"/><rect x="10" y="9.5" width="4" height="5" rx="1"/><rect x="15.5" y="9.5" width="4" height="5" rx="1"/></svg></div>
+        <h3>Aparelho fixo metálico</h3>
+        <p>O tratamento clássico e versátil, indicado para a maioria dos casos de dentes tortos, espaçados ou apinhados.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18" stroke-dasharray="2 2.5"/><rect x="4.5" y="9.5" width="4" height="5" rx="1.6"/><rect x="10" y="9.5" width="4" height="5" rx="1.6"/><rect x="15.5" y="9.5" width="4" height="5" rx="1.6"/><path d="M18 4l.6 1.4L20 6l-1.4.6L18 8l-.6-1.4L16 6l1.4-.6z"/></svg></div>
+        <h3>Aparelho estético</h3>
+        <p>Braquetes transparentes ou da cor do dente, mais discretos no dia a dia, com a mesma eficiência do fixo.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9c0-2 1.6-3.5 3.5-3.5 1.2 0 1.8.6 2.5.6s1.3-.6 2-.6 1.3.6 2 .6 1.3-.6 2.5-.6C18.4 5.5 20 7 20 9c0 3.5-1.5 9.5-3.5 9.5S14 15 12 15s-2.5 3.5-4.5 3.5S4 12.5 4 9z" stroke-dasharray="3 2"/></svg></div>
+        <h3>Alinhadores transparentes</h3>
+        <p>Placas removíveis e quase invisíveis, trocadas em etapas, para quem busca praticidade e discrição.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/></svg></div>
+        <h3>Ortodontia infantil</h3>
+        <p>Acompanhamento do crescimento e correções precoces que podem simplificar tratamentos no futuro.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg aria-hidden="true"><use href="#i-bite"/></svg></div>
+        <h3>Correção da mordida</h3>
+        <p>Tratamento de mordida cruzada, aberta ou profunda, melhorando mastigação, fala e conforto.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12l2.2 2.2 4.3-4.4"/></svg></div>
+        <h3>Contenção e manutenção</h3>
+        <p>Depois do alinhamento, a contenção mantém o resultado. As manutenções garantem que tudo evolua como planejado.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="why" id="para-quem" aria-labelledby="why-title">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <span class="tag">Por que alinhar</span>
+      <h2 id="why-title">Mais do que estética: saúde para o sorriso inteiro</h2>
+      <p class="why-lead">Dentes alinhados facilitam a higiene, distribuem melhor a força da mastigação e deixam você mais à vontade para sorrir.</p>
+      <ul class="benefits">
+        <li class="benefit"><span class="chip-ico"><svg aria-hidden="true"><use href="#i-brush"/></svg></span><span class="benefit-txt"><b>Higiene mais fácil</b><span>Escovar e passar fio dental fica mais simples quando os dentes estão bem posicionados.</span></span></li>
+        <li class="benefit"><span class="chip-ico"><svg aria-hidden="true"><use href="#i-bite"/></svg></span><span class="benefit-txt"><b>Mordida equilibrada</b><span>Uma mordida correta ajuda na mastigação e reduz desgastes desnecessários.</span></span></li>
+        <li class="benefit"><span class="chip-ico"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><span class="benefit-txt"><b>Mais confiança</b><span>Sorrir em fotos, reuniões e encontros sem pensar duas vezes.</span></span></li>
+      </ul>
+    </div>
+    <div class="ages reveal">
+      <div class="age age-1"><span class="age-num">Crianças e adolescentes</span><h3>Na fase certa</h3><p>Acompanhar o crescimento permite corrigir problemas cedo, no momento mais favorável.</p></div>
+      <div class="age age-2"><span class="age-num">Adultos</span><h3>Nunca é tarde</h3><p>Com dentes e gengivas saudáveis, é possível alinhar o sorriso em qualquer idade.</p></div>
+      <div class="age age-3"><span><b>Não sabe qual é o seu caso?</b><span>A avaliação esclarece tudo antes de qualquer decisão.</span></span><a class="btn btn-primary btn-sm" href="https://wa.me/5561993335173" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como" aria-labelledby="como-title">
+  <div class="wrap">
+    <div class="head head-split reveal">
+      <div>
+        <span class="tag">Como funciona</span>
+        <h2 id="como-title">Do primeiro contato ao sorriso alinhado</h2>
+      </div>
+      <p>Um caminho claro, para você saber exatamente o que acontece em cada fase do tratamento.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><h3>Chame no WhatsApp</h3><p>Escolha o melhor dia e horário para a sua avaliação ortodôntica.</p></li>
+      <li class="step reveal"><h3>Avaliação</h3><p>O ortodontista examina seu caso e indica os exames necessários para o planejamento.</p></li>
+      <li class="step reveal"><h3>Plano de tratamento</h3><p>Você conhece as opções, o tempo estimado e como serão as manutenções.</p></li>
+      <li class="step reveal"><h3>Acompanhamento</h3><p>Manutenções com hora marcada até o resultado final e a fase de contenção.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="band">
+  <div class="wrap">
+    <div class="band-box reveal">
+      <div>
+        <h2>Pronto para começar a alinhar o seu sorriso?</h2>
+        <p>Fale com a Dutra Ortodontia pelo WhatsApp e agende sua avaliação no Liberty Mall, na Asa Norte.</p>
+      </div>
+      <div class="band-actions">
+        <a class="btn btn-white" href="https://wa.me/5561993335173" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+        <small>(61) 99333-5173</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DÚVIDAS -->
+<section id="duvidas" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="faq-side reveal">
+      <div class="head">
+        <span class="tag">Dúvidas frequentes</span>
+        <h2 id="faq-title">O que os pacientes mais perguntam</h2>
+      </div>
+      <div class="faq-help">
+        <b>Ficou alguma dúvida?</b>
+        <p>Pergunte direto para a clínica pelo WhatsApp.</p>
+        <a class="btn btn-outline btn-sm" href="https://wa.me/5561993335173" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Perguntar no WhatsApp</a>
+      </div>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Quanto tempo dura o tratamento?</summary><p>Depende de cada caso. Na avaliação, o ortodontista analisa seu sorriso e informa uma estimativa de prazo antes de você começar.</p></details>
+      <details><summary>Usar aparelho dói?</summary><p>É comum sentir um leve desconforto nos primeiros dias e após as manutenções, enquanto os dentes se adaptam. Isso costuma passar rapidamente.</p></details>
+      <details><summary>Adulto pode usar aparelho?</summary><p>Sim. Com dentes e gengivas saudáveis, o tratamento ortodôntico pode ser feito em qualquer idade.</p></details>
+      <details><summary>Com que frequência são as manutenções?</summary><p>A periodicidade é definida pelo ortodontista conforme o tipo de aparelho e a fase do tratamento. Tudo é agendado com hora marcada.</p></details>
+      <details><summary>Como agendo a avaliação?</summary><p>É só chamar no WhatsApp (61) 99333-5173 e escolher o melhor dia e horário.</p></details>
+      <details><summary>Onde fica a clínica?</summary><p>SCN, Liberty Mall, Torre B, Sala 328, Asa Norte, Brasília-DF, CEP 70712-903.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact" id="contato" aria-labelledby="contato-title">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="tag">Contato</span>
+      <h2 id="contato-title">Vamos agendar sua avaliação?</h2>
+      <p class="contact-lead">Estamos no Liberty Mall, no Setor Comercial Norte, Asa Norte. Atendimento com hora marcada.</p>
+      <ul class="info">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Dutra%20Ortodontia&amp;query_place_id=ChIJaZDBp_06WpMRBXcRXdq2GPA" target="_blank" rel="noopener"><span class="chip-ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span class="info-txt"><b>Endereço</b><span>SCN, Liberty Mall, Torre B, Sala 328 · Asa Norte, Brasília-DF</span></span></a></li>
+        <li><a href="https://wa.me/5561993335173" target="_blank" rel="noopener"><span class="chip-ico"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><span class="info-txt"><b>WhatsApp</b><span>(61) 99333-5173</span></span></a></li>
+        <li><a href="https://www.instagram.com/ortodontiadutra/" target="_blank" rel="noopener"><span class="chip-ico"><svg aria-hidden="true"><use href="#i-ig"/></svg></span><span class="info-txt"><b>Instagram</b><span>@ortodontiadutra</span></span></a></li>
+      </ul>
+      <a class="btn btn-primary" href="https://wa.me/5561993335173" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação</a>
+    </div>
+    <div class="map reveal" id="mapa" data-embed="https://maps.google.com/maps?q=Dutra%20Ortodontia%2C%20Liberty%20Mall%2C%20Asa%20Norte%2C%20Bras%C3%ADlia%20-%20DF&amp;z=17&amp;output=embed">
+      <!-- Mapa ilustrado: fica por baixo do Google Maps e continua visível se ele não puder carregar. -->
+      <a class="map-art" href="https://www.google.com/maps/search/?api=1&amp;query=Dutra%20Ortodontia&amp;query_place_id=ChIJaZDBp_06WpMRBXcRXdq2GPA" target="_blank" rel="noopener" aria-label="Abrir a localização da Dutra Ortodontia no Google Maps">
+        <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="600" height="460" fill="#eef2fa"/>
+          <g fill="#dbe8dc"><circle cx="90" cy="380" r="110"/><rect x="430" y="20" width="150" height="110" rx="18"/></g>
+          <g fill="#e2e8f5"><rect x="30" y="30" width="140" height="80" rx="10"/><rect x="230" y="30" width="140" height="70" rx="10"/><rect x="230" y="170" width="140" height="90" rx="10"/><rect x="440" y="200" width="140" height="80" rx="10"/><rect x="440" y="340" width="140" height="100" rx="10"/></g>
+          <g fill="none" stroke="#fff" stroke-linecap="round">
+            <path d="M-20 140H620" stroke-width="16"/>
+            <path d="M-20 300H620" stroke-width="12"/>
+            <path d="M200 -20V480" stroke-width="14"/>
+            <path d="M405 -20V480" stroke-width="12"/>
+          </g>
+          <path d="M-20 225C200 215 400 235 620 220" fill="none" stroke="#d5defa" stroke-width="26"/>
+          <path d="M-20 225C200 215 400 235 620 220" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="12 12"/>
+        </svg>
+        <span class="map-pin"><span class="map-pin-label">Dutra Ortodontia</span><span class="map-pin-mark"></span><span class="map-pin-pulse"></span></span>
+      </a>
+      <div class="map-card">
+        <div><b>Liberty Mall · Torre B, Sala 328</b><span>SCN · Asa Norte, Brasília-DF</span></div>
+        <div class="map-actions">
+          <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Dutra%20Ortodontia&amp;query_place_id=ChIJaZDBp_06WpMRBXcRXdq2GPA" target="_blank" rel="noopener">Ver no Google Maps</a>
+          <a class="btn btn-primary btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Dutra%20Ortodontia&amp;destination_place_id=ChIJaZDBp_06WpMRBXcRXdq2GPA" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true">D</span><span class="logo-text"><span class="logo-name">Dutra Ortodontia</span><span class="logo-sub">Asa Norte · Brasília</span></span></a>
+      <p class="foot-about">Ortodontia com plano de tratamento individual e atendimento com hora marcada, no Liberty Mall, Asa Norte.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#para-quem">Para quem</a></li>
+        <li><a href="#como">Como funciona</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Dutra%20Ortodontia&amp;query_place_id=ChIJaZDBp_06WpMRBXcRXdq2GPA" target="_blank" rel="noopener">SCN, Liberty Mall, Torre B, Sala 328<br>Asa Norte · Brasília-DF</a></li>
+        <li><a href="https://wa.me/5561993335173" target="_blank" rel="noopener">(61) 99333-5173</a></li>
+        <li><a href="https://www.instagram.com/ortodontiadutra/" target="_blank" rel="noopener">@ortodontiadutra</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-bottom">
+    <span>© Dutra Ortodontia · Asa Norte, Brasília-DF</span>
+    <span>Site de demonstração · tratamentos, fotos e dados do responsável técnico (CRO) a confirmar</span>
+  </div></div>
+</footer>
+
+<a class="float" aria-label="Agendar pelo WhatsApp" href="https://wa.me/5561993335173" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="float-label">Agendar pelo WhatsApp</span></a>
+
+<script>
+(function(){
+  // Animação de entrada
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  // Sombra no cabeçalho ao rolar
+  var header=document.getElementById('header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Menu mobile
+  var burger=document.getElementById('burger');
+  function setMenu(open){header.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')}
+  burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  // Google Maps por cima do mapa ilustrado; se for bloqueado (CSP), o ilustrado continua.
+  var map=document.getElementById('mapa');
+  if(map&&map.dataset.embed){
+    var failed=false,fr=document.createElement('iframe');
+    function fail(){failed=true;map.classList.remove('map-live');if(fr.parentNode)fr.parentNode.removeChild(fr)}
+    document.addEventListener('securitypolicyviolation',function(e){if(/google\./.test(e.blockedURI||''))fail()});
+    fr.title='Mapa: Dutra Ortodontia, Liberty Mall, Asa Norte, Brasília';
+    fr.loading='lazy';
+    fr.referrerPolicy='no-referrer-when-downgrade';
+    fr.addEventListener('load',function(){setTimeout(function(){if(!failed)map.classList.add('map-live')},400)});
+    fr.src=map.dataset.embed;
+    map.insertBefore(fr,map.querySelector('.map-card'));
+  }
+})();
+</script>
+</body>
+</html>
