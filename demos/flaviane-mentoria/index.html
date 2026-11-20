@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mentoria Flaviane Siqueira | Micropigmentação Natural e Remoção a Laser</title>
+<meta name="description" content="Mentoria da Flaviane Siqueira para profissionais da beleza: sobrancelhas naturais fio a fio, correção e remoção de micropigmentação antiga e posicionamento no Instagram.">
+<!-- Site de demonstração: não indexar no Google até a profissional aprovar -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1f1a1d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: mentoria de micropigmentação. Hero com o desenho técnico da sobrancelha (mapeamento + fios); mauve, pó de arroz e grafite; serifada de moda + sans geométrica. */
+:root{
+  --ink:#1f1a1d; --ink-2:#2e262b; --mauve:#8a5a6b; --mauve-d:#6e4455; --powder:#f6eef0; --nude:#ecdcd5;
+  --champ:#c4a27a; --paper:#fcf8f7; --muted:#6c5f64; --line:#eadfe0; --white:#fff;
+  --display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Outfit",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --radius:20px; --header:78px;
+  --shadow:0 24px 60px rgba(31,26,29,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased}
+img,svg,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--mauve);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em;text-wrap:balance}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--mauve)}
+p{text-wrap:pretty}
+.over{display:inline-flex;align-items:center;gap:12px;font-size:.74rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--mauve-d)}
+.over::before{content:"";width:26px;height:1px;background:var(--champ)}
+section[id]{scroll-margin-top:var(--header)}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;border-radius:999px;font-family:var(--sans);font-weight:500;font-size:.98rem;letter-spacing:.02em;line-height:1.2;white-space:nowrap;transition:transform .2s,box-shadow .2s,background .2s,color .2s,border-color .2s;border:1px solid transparent;cursor:pointer}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--mauve-d);transform:translateY(-2px);box-shadow:0 14px 30px rgba(31,26,29,.22)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.btn-ghost-light{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost-light:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn-sm{padding:11px 20px;font-size:.9rem}
+
+/* Faixa de demonstração */
+.demo{background:var(--ink);color:#d9cdd2;font-size:.74rem;letter-spacing:.03em;text-align:center;padding:7px 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Cabeçalho */
+header{position:sticky;top:0;z-index:50;background:rgba(252,248,247,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 8px 30px rgba(31,26,29,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header)}
+.logo{display:flex;flex-direction:column;line-height:1;flex:none}
+.logo-name{font-family:var(--display);font-weight:600;font-size:1.65rem;color:var(--ink);white-space:nowrap}
+.logo-name em{font-style:italic;font-weight:500;color:var(--mauve)}
+.logo-sub{font-size:.6rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-top:5px;white-space:nowrap}
+.menu{display:flex;gap:4px;list-style:none;font-size:.93rem;color:var(--muted)}
+.menu a{display:block;padding:8px 14px;white-space:nowrap;transition:color .2s}
+.menu a:hover{color:var(--mauve-d)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;place-items:center;color:var(--ink)}
+.burger svg{width:22px;height:22px}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--powder),var(--paper) 90%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:60px;align-items:center;padding-top:80px;padding-bottom:96px}
+.hero h1{font-size:clamp(2.8rem,5.4vw,5rem);margin:22px 0 24px}
+.lead{font-size:1.14rem;font-weight:300;color:var(--muted);max-width:540px;margin-bottom:36px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;flex-wrap:wrap;gap:14px 34px;margin-top:40px;padding-top:26px;border-top:1px solid var(--line);max-width:540px}
+.proof div{display:flex;flex-direction:column}
+.proof b{font-family:var(--display);font-weight:600;font-size:2.1rem;line-height:1}
+.proof span{font-size:.84rem;color:var(--muted);margin-top:6px}
+
+.sketch{position:relative;background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px 28px 24px;box-shadow:var(--shadow)}
+.sketch-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
+.sketch-head h2{font-size:1.55rem}
+.sketch-head span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--champ);font-weight:500}
+.sketch svg{width:100%;height:auto}
+.sketch svg text{font-family:var(--sans);font-size:13px;font-weight:500;fill:var(--mauve-d);letter-spacing:.06em}
+.fio{fill:none;stroke:var(--ink-2);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:40;stroke-dashoffset:0}
+.js .sketch.in .fio{animation:draw .5s both;animation-delay:var(--d)}
+.js .sketch:not(.in) .fio{stroke-dashoffset:40}
+@keyframes draw{from{stroke-dashoffset:40}to{stroke-dashoffset:0}}
+.sketch-note{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.86rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:4px}
+.sketch-note b{color:var(--ink);font-weight:500}
+
+/* Faixa */
+.marquee{background:var(--ink);color:#fff;overflow:hidden}
+.marquee-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 40px;padding:22px 20px;font-family:var(--display);font-size:1.35rem;font-style:italic}
+.marquee-row span{display:inline-flex;align-items:center;gap:40px}
+.marquee-row span+span::before{content:"✦";font-style:normal;font-size:.8rem;color:var(--champ)}
+
+/* Seções */
+section{padding:120px 0}
+.head{max-width:700px;margin-bottom:56px}
+.head h2{font-size:clamp(2.3rem,4vw,3.5rem);margin:18px 0 16px}
+.head p{color:var(--muted);font-size:1.06rem;font-weight:300}
+.head-split{max-width:none;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:60px;align-items:end}
+.head-split p{margin-bottom:8px}
+
+/* Para quem é */
+.who{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.who-card{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+.who-n{flex:none;width:48px;height:48px;border-radius:50%;border:1px solid var(--champ);display:grid;place-items:center;font-family:var(--display);font-style:italic;font-size:1.4rem;color:var(--mauve-d)}
+.who-card h3{font-size:1.5rem;margin-bottom:6px}
+.who-card p{color:var(--muted);font-size:.97rem;font-weight:300}
+
+/* Pilares */
+.pillars-sec{background:var(--ink);color:#fff}
+.pillars-sec .over{color:var(--champ)}
+.pillars-sec .head p{color:#bfb1b7}
+.pillars-sec h2 em{color:#d9a9bb}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(255,255,255,.14)}
+.pillar{padding:36px 28px 10px 0}
+.pillar+.pillar{padding-left:28px;border-left:1px solid rgba(255,255,255,.14)}
+.pillar-ico{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.07);color:#d9a9bb;display:grid;place-items:center;margin-bottom:22px}
+.pillar-ico svg{width:24px;height:24px}
+.pillar h3{font-size:1.55rem;margin-bottom:10px}
+.pillar p{color:#bfb1b7;font-size:.96rem;font-weight:300}
+
+/* Como funciona */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{background:var(--powder);border-radius:var(--radius);padding:30px 26px}
+.step::before{counter-increment:s;content:"0" counter(s);display:block;font-family:var(--display);font-style:italic;font-size:2.6rem;line-height:1;color:var(--mauve);margin-bottom:16px}
+.step h3{font-size:1.4rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.95rem;font-weight:300}
+.steps-note{margin-top:22px;font-size:.9rem;color:var(--muted)}
+
+/* Sobre */
+.about{background:var(--nude)}
+.about-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:80px;align-items:center}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:220px 220px 26px 26px;overflow:hidden;background:radial-gradient(400px 320px at 50% 20%,rgba(255,255,255,.4),transparent 70%),linear-gradient(170deg,var(--mauve),var(--ink));display:grid;place-items:center}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portrait-mono{font-family:var(--display);font-style:italic;font-size:clamp(6rem,12vw,9.5rem);color:rgba(255,255,255,.18);line-height:1}
+.portrait-tag{position:absolute;left:20px;right:20px;bottom:20px;background:#fff;border-radius:16px;padding:16px 18px;font-size:.9rem;color:var(--muted)}
+.portrait-tag b{display:block;font-family:var(--display);font-weight:600;font-size:1.25rem;color:var(--ink);line-height:1.2}
+.about h2{font-size:clamp(2.3rem,4vw,3.4rem);margin:18px 0 20px}
+.about p{color:var(--muted);font-size:1.05rem;font-weight:300;margin-bottom:16px}
+.about .quote{font-weight:500;font-family:var(--display);font-style:italic;font-size:1.8rem;line-height:1.25;color:var(--mauve-d);border-left:2px solid var(--champ);padding-left:20px;margin:26px 0}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.tags span{font-size:.86rem;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px}
+
+/* CTA */
+.band{background:radial-gradient(700px 360px at 80% 0%,rgba(217,169,187,.28),transparent 70%),var(--ink);color:#fff;text-align:center;padding:120px 0}
+.band .over{color:var(--champ)}
+.band .over::after{content:"";width:26px;height:1px;background:var(--champ)}
+.band h2{font-size:clamp(2.4rem,4.4vw,3.8rem);max-width:820px;margin:20px auto 18px}
+.band h2 em{color:#d9a9bb}
+.band p{color:#bfb1b7;max-width:560px;margin:0 auto 36px;font-size:1.06rem;font-weight:300}
+.band .cta{justify-content:center}
+
+/* Dúvidas */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px;align-items:start}
+.faq-side{position:sticky;top:calc(var(--header) + 32px)}
+.faq-side .head{margin-bottom:28px}
+.faq{border-top:1px solid var(--ink)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--display);font-weight:600;font-size:1.45rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;transition:color .2s}
+summary:hover{color:var(--mauve-d)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;font-family:var(--sans);font-weight:300;font-size:1.7rem;line-height:1;color:var(--mauve);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);font-weight:300;padding:0 0 26px;max-width:620px}
+
+/* Rodapé */
+footer{background:var(--paper);border-top:1px solid var(--line);font-size:.9rem;color:var(--muted);padding:56px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:44px}
+.foot-about{margin-top:16px;max-width:360px;font-weight:300}
+footer h4{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);font-weight:500;margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:var(--mauve-d)}
+.foot-bottom{border-top:1px solid var(--line);padding:22px 0 26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-size:.78rem}
+
+/* Botão flutuante */
+.float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;height:56px;padding:0 22px 0 18px;border-radius:999px;background:var(--ink);color:#fff;font-weight:500;font-size:.95rem;box-shadow:0 12px 30px rgba(31,26,29,.3);transition:transform .2s,background .2s}
+.float:hover{transform:translateY(-2px);background:var(--mauve-d)}
+.float svg{width:22px;height:22px;flex:none}
+
+/* Animação de entrada */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.js .reveal.in{opacity:1;transform:none}
+
+@media(min-width:1500px){.wrap{max-width:1280px}body{font-size:17px}}
+@media(max-width:1180px){.menu a{padding:8px 10px}.pillars{grid-template-columns:1fr 1fr}.pillar:nth-child(3){padding-left:0;border-left:0}.pillar:nth-child(n+3){border-top:1px solid rgba(255,255,255,.14);margin-top:10px}.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+  :root{--header:70px}
+  .burger{display:grid}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 20px 16px;box-shadow:0 20px 30px rgba(31,26,29,.08);font-size:1rem;display:none}
+  header.open .menu{display:flex}
+  .menu a{padding:14px 4px;border-bottom:1px solid var(--line)}
+  .menu li:last-child a{border-bottom:0}
+  .hero-grid,.about-grid,.faq-grid,.head-split{grid-template-columns:1fr;gap:48px}
+  .head-split{gap:0}
+  .hero-grid{padding-top:52px;padding-bottom:72px}
+  .who{grid-template-columns:1fr}
+  section{padding:80px 0}
+  .band{padding:84px 0}
+  .faq-side{position:static}
+  .portrait{max-width:420px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .logo-name{font-size:1.4rem}
+  .logo-sub{font-size:.54rem;letter-spacing:.18em}
+  .nav{gap:12px}
+  .nav-actions .btn{display:none}
+  .demo-more{display:none}
+  .hero h1{font-size:2.75rem}
+  .lead{font-size:1.04rem}
+  .cta .btn{width:100%}
+  .sketch{padding:22px 16px 18px}
+  .sketch-head{flex-direction:column;gap:2px}
+  .marquee-row{font-size:1.1rem;gap:6px 18px}
+  .marquee-row span{gap:18px}
+  .who-card{padding:24px;flex-direction:column;gap:14px}
+  .pillars{grid-template-columns:1fr}
+  .pillar,.pillar+.pillar{padding:28px 0 18px;border-left:0;border-top:1px solid rgba(255,255,255,.14);margin-top:0}
+  .pillar:first-child{border-top:0}
+  .steps{grid-template-columns:1fr}
+  summary{font-size:1.22rem;padding:20px 0}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .float{right:16px;bottom:16px;height:52px;padding:0 18px 0 14px;font-size:.9rem}
+  footer{padding-bottom:70px}
+}
+@media(prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .js .sketch .fio{animation:none;stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- Ícones reutilizados -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-msg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/></symbol>
+  <symbol id="i-brow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 14c4-5 11-7 18-4"/><path d="M5 13l1-3M8 11.5l1.2-3M11 10.6l1.3-2.8M14 10.2l1.6-2.4M17 10.3l2-1.8"/></g></symbol>
+  <symbol id="i-laser" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l7-7"/><path d="M11 13l2-2 4 4-2 2z"/><path d="M15 5V3M19 9h2M17.8 6.2l1.4-1.4"/></g></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></g></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração)<span class="demo-more"> · desenvolvida como exemplo para Flaviane Siqueira</span></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Mentoria Flaviane Siqueira, início">
+      <span class="logo-name">Flaviane <em>Siqueira</em></span>
+      <span class="logo-sub">Mentoria · Micropigmentação natural</span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul class="menu" id="menu">
+        <li><a href="#para-quem">Para quem é</a></li>
+        <li><a href="#pilares">Pilares</a></li>
+        <li><a href="#como">Como funciona</a></li>
+        <li><a href="#sobre">A mentora</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ink btn-sm" href="https://linktr.ee/flavianesiqueira" target="_blank" rel="noopener">Conhecer a mentoria</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title" style="padding:0">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="over">Mentoria para profissionais da beleza</span>
+      <h1 id="hero-title">Sobrancelhas naturais e remoção a laser, <em>com quem faz isso todos os dias</em>.</h1>
+      <p class="lead">A mentoria da Flaviane Siqueira é para micropigmentadoras e profissionais da beleza que querem resultados naturais, segurança técnica e um posicionamento que atrai as clientes certas.</p>
+      <div class="cta">
+        <a class="btn btn-ink" href="https://linktr.ee/flavianesiqueira" target="_blank" rel="noopener">Quero conhecer a mentoria<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="https://ig.me/m/flaviane_siqueira" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-msg"/></svg>Falar com a Flaviane</a>
+      </div>
+      <div class="proof">
+        <div><b>15,6 mil</b><span>seguidoras e seguidores no Instagram</span></div>
+        <div><b>+1.000</b><span>conteúdos sobre micropigmentação</span></div>
+      </div>
+    </div>
+
+    <figure class="sketch reveal" aria-labelledby="sketch-title">
+      <div class="sketch-head"><h2 id="sketch-title">Fio a fio, com método</h2><span>Mapeamento</span></div>
+      <svg viewBox="0 0 520 330" role="img" aria-label="Desenho técnico de uma sobrancelha fio a fio, com as linhas de mapeamento do início, do arco e da cauda.">
+        <g fill="none" stroke="#c4a27a" stroke-width="1.2" stroke-dasharray="5 6">
+          <path d="M112 312L66 120"/>
+          <path d="M112 312L322 62"/>
+          <path d="M112 312L476 128"/>
+        </g>
+        <circle cx="112" cy="312" r="5" fill="#c4a27a"/>
+        <path d="M150 262C200 222 300 214 380 242C320 276 220 282 150 262Z" fill="none" stroke="#d9c6cc" stroke-width="1.6"/>
+        <circle cx="262" cy="248" r="20" fill="#f6eef0" stroke="#d9c6cc" stroke-width="1.6"/>
+        <circle cx="262" cy="248" r="8" fill="#6e4455" opacity=".5"/>
+        <g>
+<path class="fio" style="--d:0ms;opacity:0.58" d="M64.7 172.0Q71.7 154.2 72.7 135.2"/>
+<path class="fio" style="--d:14ms;opacity:0.78" d="M72.2 176.6Q79.1 160.8 80.1 143.6"/>
+<path class="fio" style="--d:28ms;opacity:0.59" d="M75.3 177.7Q82.3 161.9 83.5 144.8"/>
+<path class="fio" style="--d:42ms;opacity:0.65" d="M86.0 187.5Q93.4 171.9 94.9 154.7"/>
+<path class="fio" style="--d:56ms;opacity:0.73" d="M91.6 189.1Q99.6 172.4 101.8 154.0"/>
+<path class="fio" style="--d:70ms;opacity:0.68" d="M81.5 159.3Q90.0 142.0 92.8 123.0"/>
+<path class="fio" style="--d:84ms;opacity:0.92" d="M83.7 160.9Q91.8 145.3 94.2 127.9"/>
+<path class="fio" style="--d:98ms;opacity:0.72" d="M94.3 173.2Q103.0 156.9 105.9 138.6"/>
+<path class="fio" style="--d:112ms;opacity:0.64" d="M90.9 155.4Q99.2 141.0 102.0 124.5"/>
+<path class="fio" style="--d:126ms;opacity:0.81" d="M100.0 164.5Q108.9 149.6 112.1 132.6"/>
+<path class="fio" style="--d:140ms;opacity:0.86" d="M100.9 159.4Q110.5 143.3 114.5 125.0"/>
+<path class="fio" style="--d:154ms;opacity:0.94" d="M107.6 166.1Q117.1 151.0 121.0 133.6"/>
+<path class="fio" style="--d:168ms;opacity:0.6" d="M108.4 155.4Q118.7 139.4 123.5 120.9"/>
+<path class="fio" style="--d:182ms;opacity:0.77" d="M117.3 168.0Q126.7 154.3 130.7 138.3"/>
+<path class="fio" style="--d:196ms;opacity:0.81" d="M118.5 164.2Q128.8 149.1 133.7 131.4"/>
+<path class="fio" style="--d:210ms;opacity:0.82" d="M119.7 151.3Q130.3 136.8 135.5 119.6"/>
+<path class="fio" style="--d:224ms;opacity:0.98" d="M124.1 154.2Q135.1 139.5 140.7 122.0"/>
+<path class="fio" style="--d:238ms;opacity:0.87" d="M129.8 158.8Q139.8 146.3 144.6 131.1"/>
+<path class="fio" style="--d:252ms;opacity:0.68" d="M137.6 166.3Q148.9 152.1 154.9 135.1"/>
+<path class="fio" style="--d:266ms;opacity:0.76" d="M136.6 155.9Q146.8 144.0 151.9 129.2"/>
+<path class="fio" style="--d:280ms;opacity:0.9" d="M133.3 139.2Q143.8 127.5 149.0 112.6"/>
+<path class="fio" style="--d:294ms;opacity:0.94" d="M138.3 141.5Q149.4 129.1 155.4 113.6"/>
+<path class="fio" style="--d:308ms;opacity:0.95" d="M143.9 145.8Q155.4 133.2 161.9 117.4"/>
+<path class="fio" style="--d:322ms;opacity:0.74" d="M153.8 154.9Q165.1 143.4 171.4 128.6"/>
+<path class="fio" style="--d:336ms;opacity:0.62" d="M156.2 154.5Q168.8 141.5 176.3 125.1"/>
+<path class="fio" style="--d:350ms;opacity:0.77" d="M153.1 135.7Q164.5 124.7 171.0 110.2"/>
+<path class="fio" style="--d:364ms;opacity:0.74" d="M158.3 134.8Q169.5 124.7 175.9 111.0"/>
+<path class="fio" style="--d:378ms;opacity:0.86" d="M164.1 141.9Q177.1 129.7 185.3 113.9"/>
+<path class="fio" style="--d:392ms;opacity:0.57" d="M168.6 141.8Q181.3 130.6 189.2 115.7"/>
+<path class="fio" style="--d:406ms;opacity:0.91" d="M174.7 144.4Q187.9 133.1 196.5 117.9"/>
+<path class="fio" style="--d:420ms;opacity:0.84" d="M173.9 133.8Q185.7 124.4 192.9 111.1"/>
+<path class="fio" style="--d:434ms;opacity:0.62" d="M174.2 124.4Q186.3 114.9 193.8 101.6"/>
+<path class="fio" style="--d:448ms;opacity:0.62" d="M178.9 122.7Q190.6 114.1 197.9 101.4"/>
+<path class="fio" style="--d:462ms;opacity:0.94" d="M184.2 129.8Q196.1 121.3 203.5 108.7"/>
+<path class="fio" style="--d:476ms;opacity:0.71" d="M188.3 122.9Q200.7 114.3 208.8 101.5"/>
+<path class="fio" style="--d:490ms;opacity:1.0" d="M191.3 121.5Q205.0 111.8 214.5 97.9"/>
+<path class="fio" style="--d:504ms;opacity:0.6" d="M197.7 129.4Q209.9 121.6 217.9 109.5"/>
+<path class="fio" style="--d:518ms;opacity:0.62" d="M199.9 123.2Q213.8 114.1 223.6 100.6"/>
+<path class="fio" style="--d:532ms;opacity:0.62" d="M206.6 139.1Q219.9 130.8 229.1 118.1"/>
+<path class="fio" style="--d:546ms;opacity:0.99" d="M207.3 115.7Q220.7 107.7 230.1 95.4"/>
+<path class="fio" style="--d:560ms;opacity:0.72" d="M215.5 130.4Q228.4 123.4 237.3 111.8"/>
+<path class="fio" style="--d:574ms;opacity:0.9" d="M217.6 131.8Q231.1 124.3 240.7 112.3"/>
+<path class="fio" style="--d:588ms;opacity:0.99" d="M219.7 118.2Q233.9 110.5 244.3 98.2"/>
+<path class="fio" style="--d:602ms;opacity:0.88" d="M227.6 130.4Q241.9 123.1 252.6 111.1"/>
+<path class="fio" style="--d:616ms;opacity:0.56" d="M228.5 123.5Q241.8 117.2 251.4 106.1"/>
+<path class="fio" style="--d:630ms;opacity:0.86" d="M231.1 117.6Q244.1 111.7 253.6 101.0"/>
+<path class="fio" style="--d:644ms;opacity:0.99" d="M238.7 120.3Q253.5 113.7 264.8 102.1"/>
+<path class="fio" style="--d:658ms;opacity:0.65" d="M242.6 118.0Q255.6 112.8 265.2 102.7"/>
+<path class="fio" style="--d:672ms;opacity:0.96" d="M243.8 114.3Q257.8 108.6 268.5 97.9"/>
+<path class="fio" style="--d:686ms;opacity:0.91" d="M250.7 119.5Q264.8 114.1 275.7 103.7"/>
+<path class="fio" style="--d:700ms;opacity:0.9" d="M252.7 123.1Q267.4 117.4 279.0 106.7"/>
+<path class="fio" style="--d:714ms;opacity:0.91" d="M258.7 118.6Q271.5 114.5 281.4 105.2"/>
+<path class="fio" style="--d:728ms;opacity:0.73" d="M261.9 124.9Q276.8 119.8 288.8 109.5"/>
+<path class="fio" style="--d:742ms;opacity:0.63" d="M266.4 127.3Q280.7 122.9 292.0 113.2"/>
+<path class="fio" style="--d:756ms;opacity:0.91" d="M268.8 111.3Q283.5 106.8 295.5 97.1"/>
+<path class="fio" style="--d:770ms;opacity:0.85" d="M273.6 124.3Q288.6 120.0 300.8 110.3"/>
+<path class="fio" style="--d:784ms;opacity:0.56" d="M278.3 118.6Q290.9 115.8 301.0 107.5"/>
+<path class="fio" style="--d:798ms;opacity:0.97" d="M284.6 120.3Q298.3 117.3 309.5 108.8"/>
+<path class="fio" style="--d:812ms;opacity:0.64" d="M287.1 124.3Q301.5 121.0 313.5 112.3"/>
+<path class="fio" style="--d:826ms;opacity:0.81" d="M290.7 113.7Q303.6 111.4 314.0 103.6"/>
+<path class="fio" style="--d:840ms;opacity:0.96" d="M295.0 116.0Q307.5 114.0 317.7 106.5"/>
+<path class="fio" style="--d:854ms;opacity:0.96" d="M299.7 116.7Q313.3 114.5 324.8 106.8"/>
+<path class="fio" style="--d:868ms;opacity:0.79" d="M303.9 124.7Q317.3 122.8 328.6 115.4"/>
+<path class="fio" style="--d:882ms;opacity:0.63" d="M309.4 109.7Q322.5 108.2 333.7 101.0"/>
+<path class="fio" style="--d:896ms;opacity:0.76" d="M311.1 122.8Q323.5 121.7 333.9 114.9"/>
+<path class="fio" style="--d:910ms;opacity:0.78" d="M318.3 119.1Q331.0 118.2 341.9 111.6"/>
+<path class="fio" style="--d:924ms;opacity:0.8" d="M321.7 122.9Q333.7 122.4 344.0 116.2"/>
+<path class="fio" style="--d:938ms;opacity:0.78" d="M325.8 115.3Q339.7 116.7 352.8 112.0"/>
+<path class="fio" style="--d:952ms;opacity:0.75" d="M330.5 123.2Q344.6 124.9 358.2 120.6"/>
+<path class="fio" style="--d:966ms;opacity:0.86" d="M335.6 119.9Q348.4 122.0 360.7 118.2"/>
+<path class="fio" style="--d:980ms;opacity:0.97" d="M339.5 120.7Q352.0 123.2 364.2 119.6"/>
+<path class="fio" style="--d:994ms;opacity:0.67" d="M344.1 126.2Q357.8 128.9 371.4 125.7"/>
+<path class="fio" style="--d:1008ms;opacity:0.61" d="M347.9 127.5Q361.2 130.6 374.5 127.7"/>
+<path class="fio" style="--d:1022ms;opacity:0.66" d="M352.0 121.2Q362.8 124.5 373.8 121.7"/>
+<path class="fio" style="--d:1036ms;opacity:0.95" d="M355.8 124.9Q368.6 128.5 381.7 126.1"/>
+<path class="fio" style="--d:1050ms;opacity:0.61" d="M360.5 126.3Q372.7 130.2 385.4 128.1"/>
+<path class="fio" style="--d:1064ms;opacity:0.98" d="M367.0 130.5Q377.7 134.7 388.9 133.0"/>
+<path class="fio" style="--d:1078ms;opacity:0.92" d="M371.1 125.4Q383.9 130.0 397.4 128.7"/>
+<path class="fio" style="--d:1092ms;opacity:0.7" d="M375.0 125.6Q386.2 130.2 398.3 129.0"/>
+<path class="fio" style="--d:1106ms;opacity:0.56" d="M380.1 125.4Q391.7 130.5 404.3 129.6"/>
+<path class="fio" style="--d:1120ms;opacity:0.7" d="M385.7 128.2Q394.9 133.2 405.4 132.3"/>
+<path class="fio" style="--d:1134ms;opacity:0.99" d="M390.4 130.3Q399.6 135.5 410.1 134.8"/>
+<path class="fio" style="--d:1148ms;opacity:0.67" d="M394.4 136.1Q403.4 141.6 413.9 141.2"/>
+<path class="fio" style="--d:1162ms;opacity:0.61" d="M396.8 134.7Q406.2 140.4 417.2 140.3"/>
+<path class="fio" style="--d:1176ms;opacity:0.67" d="M402.6 137.6Q413.2 144.0 425.6 144.7"/>
+<path class="fio" style="--d:1190ms;opacity:0.87" d="M406.3 138.7Q416.0 145.0 427.6 145.6"/>
+<path class="fio" style="--d:1204ms;opacity:0.74" d="M413.2 132.7Q423.1 139.4 434.9 140.4"/>
+<path class="fio" style="--d:1218ms;opacity:0.91" d="M415.4 141.4Q424.8 148.2 436.4 149.4"/>
+<path class="fio" style="--d:1232ms;opacity:0.94" d="M420.5 142.3Q428.1 148.6 437.9 149.4"/>
+<path class="fio" style="--d:1246ms;opacity:0.97" d="M428.1 140.7Q436.7 147.8 447.7 149.4"/>
+<path class="fio" style="--d:1260ms;opacity:0.66" d="M432.7 140.8Q441.0 148.1 451.8 149.9"/>
+<path class="fio" style="--d:1274ms;opacity:0.64" d="M436.8 142.8Q443.6 149.5 453.0 150.8"/>
+<path class="fio" style="--d:1288ms;opacity:0.68" d="M442.1 146.0Q450.4 153.8 461.5 156.4"/>
+<path class="fio" style="--d:1302ms;opacity:0.56" d="M447.9 147.7Q454.8 155.1 464.7 157.3"/>
+<path class="fio" style="--d:1316ms;opacity:0.8" d="M452.2 148.7Q459.8 156.7 470.5 159.6"/>
+        </g>
+        <circle cx="66" cy="120" r="4" fill="#6e4455"/><circle cx="322" cy="62" r="4" fill="#6e4455"/><circle cx="476" cy="128" r="4" fill="#6e4455"/>
+        <text x="20" y="108">INÍCIO</text>
+        <text x="334" y="56">ARCO</text>
+        <text x="440" y="112">CAUDA</text>
+      </svg>
+      <figcaption class="sketch-note"><span><b>Fios realistas</b> desenhados um a um</span><span>no formato do rosto de cada cliente</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FAIXA -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-row"><span>Sobrancelhas naturais</span><span>Fios realistas</span><span>Remoção a laser</span><span>Correção de micro antiga</span><span>Posicionamento</span></div>
+</div>
+
+<!-- PARA QUEM É -->
+<section id="para-quem" aria-labelledby="quem-title">
+  <div class="wrap">
+    <div class="head head-split reveal">
+      <div>
+        <span class="over">Para quem é</span>
+        <h2 id="quem-title">A mentoria é para você que <em>quer ir além do básico</em></h2>
+      </div>
+      <p>Se você se reconhece em pelo menos uma destas situações, vale conversar com a Flaviane.</p>
+    </div>
+    <div class="who">
+      <article class="who-card reveal"><span class="who-n" aria-hidden="true">i</span><div><h3>Quer resultados mais naturais</h3><p>Você já faz micropigmentação, mas quer fios que pareçam de verdade e clientes que saiam encantadas.</p></div></article>
+      <article class="who-card reveal"><span class="who-n" aria-hidden="true">ii</span><div><h3>Recebe clientes com micro antiga</h3><p>Chegam pedidos de correção e remoção, e você quer ter segurança para orientar e resolver esses casos.</p></div></article>
+      <article class="who-card reveal"><span class="who-n" aria-hidden="true">iii</span><div><h3>Está começando na área</h3><p>Você quer construir uma base sólida desde o início, aprendendo com quem já trilhou o caminho.</p></div></article>
+      <article class="who-card reveal"><span class="who-n" aria-hidden="true">iv</span><div><h3>Quer se posicionar melhor</h3><p>Você sabe fazer, mas sente que o seu Instagram e o seu atendimento ainda não mostram o seu valor.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- PILARES
+     Pilares baseados no que a Flaviane mostra no Instagram: confirmar o conteúdo exato da mentoria com ela. -->
+<section class="pillars-sec" id="pilares" aria-labelledby="pilares-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="over">O que você desenvolve</span>
+      <h2 id="pilares-title">Quatro pilares de uma <em>profissional completa</em></h2>
+      <p>Técnica, segurança, atendimento e posicionamento: o que a Flaviane aplica na própria rotina e compartilha na mentoria.</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar"><span class="pillar-ico"><svg aria-hidden="true"><use href="#i-brow"/></svg></span><h3>Fios realistas</h3><p>Mapeamento, desenho e técnica para sobrancelhas naturais, respeitando o rosto de cada cliente.</p></div>
+      <div class="pillar"><span class="pillar-ico"><svg aria-hidden="true"><use href="#i-laser"/></svg></span><h3>Micro antiga</h3><p>Como avaliar, orientar e conduzir casos de correção e remoção a laser com segurança.</p></div>
+      <div class="pillar"><span class="pillar-ico"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><h3>Experiência da cliente</h3><p>Atendimento do primeiro contato ao pós, para gerar confiança, retorno e indicação.</p></div>
+      <div class="pillar"><span class="pillar-ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><h3>Posicionamento</h3><p>Como mostrar o seu trabalho no Instagram e atrair clientes que valorizam um resultado natural.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como" aria-labelledby="como-title">
+  <div class="wrap">
+    <div class="head head-split reveal">
+      <div>
+        <span class="over">Como funciona</span>
+        <h2 id="como-title">Um acompanhamento <em>feito para o seu momento</em></h2>
+      </div>
+      <p>Cada profissional chega com uma história. A mentoria parte de onde você está.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><h3>Conversa inicial</h3><p>Você conta a sua experiência, os seus desafios e onde quer chegar.</p></li>
+      <li class="step reveal"><h3>Plano de evolução</h3><p>Juntas, vocês definem as prioridades: técnica, remoção, atendimento ou posicionamento.</p></li>
+      <li class="step reveal"><h3>Prática com orientação</h3><p>Você aplica o que aprende, com o olhar de quem já fez isso milhares de vezes.</p></li>
+      <li class="step reveal"><h3>Ajuste e evolução</h3><p>Feedback dos seus trabalhos e ajustes até você se sentir segura.</p></li>
+    </ol>
+    <p class="steps-note reveal">Formato, duração e investimento são apresentados diretamente pela Flaviane.</p>
+  </div>
+</section>
+
+<!-- SOBRE (sem fotos: aguardando autorização) -->
+<section class="about" id="sobre" aria-labelledby="sobre-title">
+  <div class="wrap about-grid">
+    <div class="portrait reveal">
+      <!-- Para usar uma foto real, descomente e troque o arquivo:
+      <img src="flaviane.jpg" alt="Flaviane Siqueira" loading="lazy"> -->
+      <span class="portrait-mono" aria-hidden="true">FS</span>
+      <div class="portrait-tag"><b>Flaviane Siqueira</b>Micropigmentação natural e remoção a laser</div>
+    </div>
+    <div class="reveal">
+      <span class="over">Sobre a mentora</span>
+      <h2 id="sobre-title">Quem vai te <em>acompanhar</em></h2>
+      <p>Flaviane Siqueira é especialista em micropigmentação natural e remoção a laser. No dia a dia, ela atende clientes que buscam sobrancelhas realistas e mulheres que querem se livrar de uma micropigmentação antiga.</p>
+      <p>Hoje, mais de 15 mil pessoas acompanham o trabalho dela no Instagram. Na mentoria, ela compartilha com outras profissionais o que aprendeu na prática.</p>
+      <p class="quote">“Sua micro antiga tem solução.”</p>
+      <div class="tags"><span>Fios realistas</span><span>Remoção a laser</span><span>Sobrancelhas naturais</span><span>Mentora de profissionais da beleza</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="band" aria-labelledby="band-title">
+  <div class="wrap reveal">
+    <span class="over">Próximo passo</span>
+    <h2 id="band-title">Pronta para levar o seu trabalho a <em>outro nível</em>?</h2>
+    <p>Conheça os detalhes da mentoria e converse com a Flaviane para saber se é o momento certo para você.</p>
+    <div class="cta">
+      <a class="btn btn-light" href="https://linktr.ee/flavianesiqueira" target="_blank" rel="noopener">Quero conhecer a mentoria<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost-light" href="https://ig.me/m/flaviane_siqueira" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-msg"/></svg>Mandar mensagem</a>
+    </div>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section id="duvidas" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div class="faq-side reveal">
+      <div class="head">
+        <span class="over">Dúvidas</span>
+        <h2 id="faq-title">Antes de entrar</h2>
+        <p>Ficou alguma pergunta? Mande uma mensagem para a Flaviane no Instagram.</p>
+      </div>
+      <a class="btn btn-line btn-sm" href="https://ig.me/m/flaviane_siqueira" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-msg"/></svg>Perguntar no Instagram</a>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Para quem é a mentoria?</summary><p>Para micropigmentadoras e profissionais da beleza que querem evoluir na técnica de sobrancelhas naturais, entender a correção e a remoção de micropigmentação antiga e se posicionar melhor.</p></details>
+      <details><summary>Preciso já atuar com micropigmentação?</summary><p>Converse com a Flaviane: ela vai entender o seu momento e dizer se a mentoria faz sentido agora para você.</p></details>
+      <details><summary>A mentoria é online ou presencial?</summary><p>Formato, duração e investimento são apresentados diretamente pela Flaviane. Clique em "Quero conhecer a mentoria" para ver os detalhes.</p></details>
+      <details><summary>Como faço para participar?</summary><p>Acesse o link da mentoria ou mande uma mensagem para a Flaviane no Instagram (@flaviane_siqueira).</p></details>
+      <details><summary>A Flaviane também atende clientes?</summary><p>Sim. Ela atende clientes que querem sobrancelhas naturais e remoção a laser de micropigmentação antiga. O agendamento também é feito pelo link do perfil.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top"><span class="logo-name">Flaviane <em>Siqueira</em></span><span class="logo-sub">Mentoria · Micropigmentação natural</span></a>
+      <p class="foot-about">Micropigmentação natural, remoção a laser e mentoria para profissionais da beleza.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#para-quem">Para quem é</a></li>
+        <li><a href="#pilares">O que você desenvolve</a></li>
+        <li><a href="#como">Como funciona</a></li>
+        <li><a href="#sobre">Sobre a Flaviane</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/flaviane_siqueira/" target="_blank" rel="noopener">Instagram @flaviane_siqueira</a></li>
+        <li><a href="https://linktr.ee/flavianesiqueira" target="_blank" rel="noopener">linktr.ee/flavianesiqueira</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-bottom">
+    <span>© Flaviane Siqueira</span>
+    <span>Site de demonstração · conteúdo da mentoria, fotos e valores a confirmar</span>
+  </div></div>
+</footer>
+
+<a class="float" href="https://ig.me/m/flaviane_siqueira" target="_blank" rel="noopener" aria-label="Falar com a Flaviane no Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg>Falar com a Flaviane</a>
+
+<script>
+(function(){
+  // Animação de entrada (o desenho da sobrancelha é "desenhado" fio a fio ao aparecer)
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  // Sombra no cabeçalho ao rolar
+  var header=document.getElementById('header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Menu mobile
+  var burger=document.getElementById('burger');
+  function setMenu(open){header.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')}
+  burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+})();
+</script>
+</body>
+</html>
