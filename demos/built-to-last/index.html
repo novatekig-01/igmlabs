@@ -1,0 +1,1081 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Built To Last · Tatuagem em Brasília</title>
+<meta name="description" content="Built To Last: estúdio de tatuagem em Brasília, com unidades no Guará II e na Asa Sul. Tradicional, neo tradicional, blackwork e colorido. Portfólio, artistas e loja oficial.">
+<!-- Site de demonstração: não indexar no Google até o estúdio aprovar -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#07090d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700&family=Mr+Dafoe&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#07090d;--ink2:#0c1017;--ink3:#121822;--ink4:#1a2230;
+  --line:rgba(233,238,245,.09);--line2:rgba(233,238,245,.16);
+  --txt:#e9eef5;--mut:#8f9aab;--mut2:#5f6a7b;
+  --neon:#4dff8f;--neon-d:#1fd46a;--volt:#3eaaff;--volt-d:#1b7fe0;
+  --paper:#efe6d4;--paper2:#e4d6bd;--paper-ink:#1b1712;--paper-mut:#6d6352;
+  --red:#d33a2c;--gold:#e7b23b;--navy:#16244a;--teal:#1d8d7b;--leaf:#2f8a4f;
+  --head:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;
+  --body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --script:"Mr Dafoe","Brush Script MT",cursive;
+  --mono:"Space Mono",ui-monospace,Menlo,monospace;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--txt);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--neon);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 32px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* demo bar */
+.demo{background:#000;color:#7d8798;font-size:.72rem;letter-spacing:.04em;text-align:center;padding:7px 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(7,9,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.logo{display:flex;flex-direction:column;line-height:.86;font-family:var(--head);text-transform:uppercase}
+.logo b{font-weight:800;font-size:1.45rem;letter-spacing:.06em;color:#eafff1;text-shadow:0 0 6px var(--neon),0 0 16px rgba(77,255,143,.55)}
+.logo i{font-style:normal;font-weight:700;font-size:.78rem;letter-spacing:.2em;color:#e6f4ff;text-shadow:0 0 6px var(--volt),0 0 14px rgba(62,170,255,.6)}
+#menu{display:flex;align-items:center;gap:30px;list-style:none}
+#menu a{font-size:.9rem;font-weight:600;color:#c9d1dd;transition:color .2s}
+#menu a:hover{color:#fff}
+.nav-r{display:flex;align-items:center;gap:10px}
+.bag-btn{position:relative;display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 16px;border:1px solid var(--line2);border-radius:999px;font-size:.86rem;font-weight:700;transition:border-color .2s,background .2s}
+.bag-btn:hover{border-color:var(--neon);background:rgba(77,255,143,.06)}
+.bag-btn svg{width:18px;height:18px}
+.bag-count{min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--neon);color:#04140a;font-size:.72rem;font-weight:800;display:inline-grid;place-items:center}
+.bag-count.bump{animation:bump .45s}
+@keyframes bump{40%{transform:scale(1.35)}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:.95rem;letter-spacing:.01em;transition:transform .2s,box-shadow .25s,background .2s,border-color .2s;white-space:nowrap}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-neon{background:var(--neon);color:#04140a;box-shadow:0 0 0 rgba(77,255,143,0)}
+.btn-neon:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(77,255,143,.32)}
+.btn-volt{background:var(--volt);color:#03111f}
+.btn-volt:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(62,170,255,.32)}
+.btn-ghost{border:1px solid var(--line2);color:var(--txt)}
+.btn-ghost:hover{border-color:#fff;transform:translateY(-2px)}
+.btn-sm{height:42px;padding:0 18px;font-size:.86rem}
+.nav .btn{height:42px;padding:0 18px;font-size:.86rem}
+#burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line2);place-items:center}
+#burger span{display:block;width:18px;height:2px;background:#fff;position:relative;transition:background .2s}
+#burger span::before,#burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:#fff;transition:transform .25s}
+#burger span::before{top:-6px}#burger span::after{top:6px}
+header.open #burger span{background:transparent}
+header.open #burger span::before{transform:translateY(6px) rotate(45deg)}
+header.open #burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* type */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--neon)}
+.eyebrow::before{content:"";width:22px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--head);text-transform:uppercase;font-weight:800;line-height:.92;letter-spacing:.005em}
+h2{font-size:clamp(2.5rem,5.4vw,4.6rem)}
+.script{font-family:var(--script);text-transform:none;font-weight:400;letter-spacing:0;white-space:nowrap}
+h2{text-wrap:balance}
+.lead{color:var(--mut);font-size:1.06rem;max-width:56ch}
+.sec{padding:120px 0;position:relative}
+.sec-head{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;margin-bottom:56px}
+.sec-head h2{margin-top:16px}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;isolation:isolate;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background-color:#0e131b;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='132' height='64'%3E%3Crect width='132' height='64' fill='%230a0e14'/%3E%3Cg fill='%23161d29'%3E%3Crect x='2' y='2' width='62' height='28' rx='2'/%3E%3Crect x='68' y='2' width='62' height='28' rx='2'/%3E%3Crect x='-31' y='34' width='62' height='28' rx='2'/%3E%3Crect x='35' y='34' width='62' height='28' rx='2'/%3E%3Crect x='101' y='34' width='62' height='28' rx='2'/%3E%3C/g%3E%3Cg fill='%231d2636' opacity='.55'%3E%3Crect x='6' y='5' width='30' height='6' rx='3'/%3E%3Crect x='74' y='5' width='22' height='6' rx='3'/%3E%3Crect x='40' y='37' width='26' height='6' rx='3'/%3E%3C/g%3E%3C/svg%3E")}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(60% 70% at 74% 42%,rgba(77,255,143,.13),transparent 60%),
+  radial-gradient(40% 50% at 78% 62%,rgba(62,170,255,.12),transparent 60%),
+  linear-gradient(90deg,var(--ink) 8%,rgba(7,9,13,.9) 38%,rgba(7,9,13,.35) 70%,rgba(7,9,13,.55)),
+  linear-gradient(0deg,var(--ink),transparent 30%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;min-height:calc(100vh - 100px);max-height:960px;padding-top:56px;padding-bottom:72px}
+.hero h1{font-size:clamp(3.4rem,7.4vw,7.2rem);margin:22px 0 24px}
+.hero h1 .script{display:inline-block;font-size:1.18em;line-height:.7;color:#eafff1;text-shadow:0 0 8px var(--neon),0 0 22px rgba(77,255,143,.7),0 0 56px rgba(77,255,143,.35);transform:rotate(-4deg) translateY(.06em);padding:0 .08em}
+.hero .lead{font-size:1.12rem;color:#aeb8c7}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.stats{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:0;margin-top:48px;border-top:1px solid var(--line);padding-top:24px}
+.stat{padding-right:28px;margin-right:28px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0;margin-right:0;padding-right:0}
+.stat b{display:block;font-family:var(--head);font-size:2.1rem;font-weight:800;line-height:1;color:#fff}
+.stat b small{font-size:.55em;color:var(--gold);margin-left:2px}
+.stat span{font-size:.78rem;color:var(--mut);letter-spacing:.02em}
+
+.sign-wrap{position:relative;justify-self:center;width:100%;max-width:560px}
+.sign{width:100%;height:auto;overflow:visible}
+.sign .chain{stroke:#3a4352;stroke-width:2;fill:none}
+.sign .plate{fill:rgba(7,9,13,.35);stroke:rgba(255,255,255,.06)}
+.sign .bolt{fill:#2a3241}
+.tube-g{fill:none;stroke:#d9ffe7;stroke-width:3.2;filter:url(#glowG)}
+.tube-b{fill:none;stroke:#dcefff;stroke-width:2.4;filter:url(#glowB)}
+.sign text{font-family:var(--head);font-weight:800;text-transform:uppercase}
+.sign .t1{font-size:96px;letter-spacing:4px}
+.sign .t2{font-size:44px;letter-spacing:9px;font-weight:700}
+.js .sign .on-g{animation:ignite 2.6s steps(1) .3s both}
+.js .sign .on-b{animation:ignite 2.6s steps(1) .9s both}
+.sign .flick{animation:flick 7s infinite 4s}
+@keyframes ignite{0%{opacity:.08}8%{opacity:1}12%{opacity:.15}18%{opacity:1}24%{opacity:.3}30%,100%{opacity:1}}
+@keyframes flick{0%,91%,100%{opacity:1}92%{opacity:.35}93%{opacity:1}95%{opacity:.5}96%{opacity:1}}
+.sign-cap{display:flex;justify-content:space-between;gap:12px;margin-top:18px;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut2)}
+.sign-cap span:last-child{color:var(--mut)}
+
+/* marquee */
+.marquee{border-bottom:1px solid var(--line);background:var(--ink2);overflow:hidden;padding:20px 0}
+.mq-track{display:flex;width:max-content;animation:mq 38s linear infinite}
+.mq-track span{display:inline-flex;align-items:center;gap:30px;padding-right:30px;font-family:var(--head);font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:800;text-transform:uppercase;color:#cdd5e1;white-space:nowrap}
+.mq-track span em{font-style:normal;color:transparent;-webkit-text-stroke:1px #4a5566}
+.mq-track i{width:9px;height:9px;border-radius:50%;background:var(--neon);box-shadow:0 0 10px var(--neon);display:inline-block}
+.mq-track i.b{background:var(--volt);box-shadow:0 0 10px var(--volt)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* PORTFOLIO (paper flash wall) */
+.flashwall{background:var(--paper);color:var(--paper-ink);position:relative}
+.flashwall::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .18 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+.flashwall .eyebrow{color:var(--red)}
+.flashwall .lead{color:var(--paper-mut)}
+.flashwall h2 .script{color:var(--red);font-size:1.1em;line-height:.6}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{height:40px;padding:0 18px;border-radius:999px;border:1.5px solid rgba(27,23,18,.22);font-size:.85rem;font-weight:700;color:var(--paper-ink);transition:background .2s,color .2s,border-color .2s}
+.chip:hover{border-color:var(--paper-ink)}
+.chip[aria-pressed="true"]{background:var(--paper-ink);color:var(--paper);border-color:var(--paper-ink)}
+.flash-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:34px;position:relative}
+.flash{position:relative;background:#f7f1e4;border:1.5px solid rgba(27,23,18,.14);border-radius:6px;padding:18px 18px 16px;text-align:left;box-shadow:0 1px 0 rgba(0,0,0,.04),0 18px 30px -22px rgba(60,40,10,.5);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,opacity .35s;display:flex;flex-direction:column}
+.flash:nth-child(4n+1){transform:rotate(-.8deg)}.flash:nth-child(4n+2){transform:rotate(.6deg)}.flash:nth-child(4n+3){transform:rotate(-.4deg)}.flash:nth-child(4n){transform:rotate(.9deg)}
+.flash:hover{transform:rotate(0) translateY(-6px);box-shadow:0 1px 0 rgba(0,0,0,.04),0 28px 40px -22px rgba(60,40,10,.6)}
+.flash::before{content:"";position:absolute;top:-9px;left:50%;width:58px;height:20px;margin-left:-29px;background:rgba(230,214,170,.75);border:1px solid rgba(160,140,90,.25);transform:rotate(-3deg)}
+.flash .art{aspect-ratio:1;width:100%;background:radial-gradient(circle at 50% 45%,#fffaf0,#f3ead7 70%);border-radius:3px;display:grid;place-items:center;overflow:hidden}
+.flash .art svg{width:86%;height:86%}
+.flash h3{font-size:1.5rem;margin-top:14px;font-weight:800}
+.flash p{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--paper-mut);margin-top:6px}
+.flash .n{position:absolute;top:26px;right:26px;font-family:var(--mono);font-size:.66rem;color:var(--paper-mut)}
+.flash.hide{display:none}
+.flash-note{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:44px;padding-top:24px;border-top:1.5px dashed rgba(27,23,18,.22);font-size:.88rem;color:var(--paper-mut)}
+.flash-note a{font-weight:700;color:var(--paper-ink);border-bottom:2px solid var(--red)}
+
+/* art strokes */
+.k{stroke:#15120e;stroke-width:5;stroke-linejoin:round;stroke-linecap:round}
+.kf{stroke:#15120e;stroke-width:3.2;stroke-linecap:round;fill:none}
+
+/* dialog */
+dialog{border:0;padding:0;background:transparent;max-width:min(920px,calc(100vw - 32px));width:100%;margin:auto;color:var(--paper-ink)}
+dialog::backdrop{background:rgba(4,6,9,.78);backdrop-filter:blur(6px)}
+.dlg{display:grid;grid-template-columns:1fr 1fr;background:var(--paper);border-radius:10px;overflow:hidden;position:relative}
+.dlg .art{background:radial-gradient(circle at 50% 45%,#fffaf0,#efe3c9 75%);display:grid;place-items:center;aspect-ratio:1}
+.dlg .art svg{width:78%;height:78%}
+.dlg-body{padding:44px 40px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.dlg-body .eyebrow{color:var(--red)}
+.dlg-body h3{font-size:3rem}
+.dlg-body p{color:var(--paper-mut)}
+.dlg-body .btn{align-self:flex-start;margin-top:10px}
+.dlg-x{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:var(--paper-ink);color:var(--paper);display:grid;place-items:center;font-size:1.3rem;line-height:1}
+
+/* ARTISTS */
+.artists{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.artist{background:linear-gradient(180deg,var(--ink3),var(--ink2));border:1px solid var(--line);border-radius:var(--r);padding:30px 26px 26px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.artist:hover{border-color:rgba(77,255,143,.35);transform:translateY(-4px)}
+.artist::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(77,255,143,.12),transparent 70%)}
+.artist:nth-child(even)::after{background:radial-gradient(circle,rgba(62,170,255,.14),transparent 70%)}
+.mono{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;font-family:var(--head);font-size:2.2rem;font-weight:800;color:#eafff1;border:2px solid var(--neon);box-shadow:0 0 14px rgba(77,255,143,.45),inset 0 0 14px rgba(77,255,143,.3);text-shadow:0 0 10px var(--neon)}
+.artist:nth-child(even) .mono{border-color:var(--volt);color:#e6f4ff;box-shadow:0 0 14px rgba(62,170,255,.45),inset 0 0 14px rgba(62,170,255,.3);text-shadow:0 0 10px var(--volt)}
+.artist h3{font-size:2rem;margin-top:26px}
+.artist p{color:var(--mut);font-size:.9rem;margin-top:8px;min-height:3.2em}
+.artist .row{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap}
+.artist .row a{flex:1;min-width:0}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.88rem;color:var(--txt);border-bottom:1px solid var(--line2);padding-bottom:3px;transition:border-color .2s,color .2s}
+.link-arrow:hover{color:var(--neon);border-color:var(--neon)}
+
+/* SHOP */
+.shop{background:radial-gradient(70% 60% at 85% 0%,rgba(62,170,255,.08),transparent 60%),var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.shop .eyebrow{color:var(--volt)}
+.shop-tools{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.tabs{display:flex;gap:6px;padding:5px;border:1px solid var(--line);border-radius:999px;background:var(--ink)}
+.tab{height:38px;padding:0 18px;border-radius:999px;font-size:.84rem;font-weight:700;color:var(--mut);transition:background .2s,color .2s}
+.tab[aria-pressed="true"]{background:var(--txt);color:var(--ink)}
+.ship{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut2)}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.prod{background:var(--ink3);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
+.prod:hover{border-color:var(--line2);transform:translateY(-4px)}
+.prod.hide{display:none}
+.prod-art{position:relative;aspect-ratio:5/4;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#1e2736,#121822 70%);overflow:hidden}
+.prod-art svg{width:78%;height:86%;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.prod:hover .prod-art svg{transform:scale(1.04) rotate(-1deg)}
+.tag{position:absolute;top:16px;left:16px;height:26px;padding:0 10px;border-radius:999px;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;display:inline-flex;align-items:center;background:rgba(7,9,13,.7);border:1px solid var(--line2);color:#cfd7e3}
+.tag.hot{background:var(--neon);color:#04140a;border-color:var(--neon)}
+.prod-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.prod-body h3{font-size:1.55rem;line-height:1}
+.prod-body .by{font-size:.84rem;color:var(--mut)}
+.sizes{display:flex;flex-wrap:wrap;gap:6px}
+.sz{min-width:40px;height:34px;padding:0 10px;border:1px solid var(--line2);border-radius:8px;font-family:var(--mono);font-size:.76rem;font-weight:700;color:#cfd7e3;transition:background .15s,color .15s,border-color .15s}
+.sz:hover{border-color:#fff}
+.sz[aria-pressed="true"]{background:var(--volt);border-color:var(--volt);color:#03111f}
+.prod-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:auto;padding-top:8px}
+.price{font-family:var(--head);font-size:1.9rem;font-weight:800;line-height:1}
+.price small{font-size:.55em;color:var(--mut);margin-right:3px}
+.add{height:44px;padding:0 18px;border-radius:999px;background:var(--txt);color:var(--ink);font-weight:800;font-size:.84rem;display:inline-flex;align-items:center;gap:8px;transition:background .2s,transform .2s}
+.add:hover{background:var(--neon);transform:translateY(-2px)}
+.add svg{width:16px;height:16px}
+.add.done{background:var(--neon)}
+.hint{font-size:.76rem;color:#ff8f84;min-height:1em;margin-top:-4px}
+
+/* GIFT */
+.gift{margin-top:64px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center;padding:48px;border-radius:24px;border:1px solid rgba(77,255,143,.22);background:radial-gradient(80% 120% at 0% 0%,rgba(77,255,143,.1),transparent 55%),linear-gradient(135deg,#0f1a17,#0c1017 60%)}
+.gift h3{font-size:clamp(2.2rem,4vw,3.4rem)}
+.gift h3 .script{color:var(--neon);text-shadow:0 0 14px rgba(77,255,143,.55);font-size:1.12em}
+.gift p{color:var(--mut);margin-top:14px;max-width:44ch}
+.tickets{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ticket{position:relative;border-radius:16px;padding:24px 22px 22px;background:var(--paper);color:var(--paper-ink);display:flex;flex-direction:column;gap:6px;overflow:hidden;--notch:var(--ink2)}
+.ticket::before,.ticket::after{content:"";position:absolute;top:58%;width:26px;height:26px;border-radius:50%;background:#0d1416}
+.ticket::before{left:-13px}.ticket::after{right:-13px}
+.ticket .perf{position:absolute;left:18px;right:18px;top:calc(58% + 13px);border-top:2px dashed rgba(27,23,18,.25)}
+.ticket .k1{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.ticket .k2{font-family:var(--head);font-size:2rem;font-weight:800;text-transform:uppercase;line-height:.95}
+.ticket .k3{font-size:.82rem;color:var(--paper-mut)}
+.ticket .tfoot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:34px}
+.ticket .price{color:var(--paper-ink)}
+.ticket .price small{color:var(--paper-mut)}
+.ticket .add{background:var(--paper-ink);color:var(--paper)}
+.ticket .add:hover{background:var(--red);color:#fff}
+.ticket .add.done{background:var(--leaf);color:#fff}
+.ticket .stamp{position:absolute;right:16px;top:16px;width:52px;height:52px;opacity:.9}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);counter-reset:s}
+.step{padding:34px 28px 10px 0;border-right:1px solid var(--line);margin-right:28px}
+.step:last-child{border-right:0;margin-right:0}
+.step .num{font-family:var(--head);font-size:3.6rem;font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:1.2px #3c4757}
+.step:hover .num{-webkit-text-stroke-color:var(--neon);text-shadow:0 0 18px rgba(77,255,143,.35)}
+.step h3{font-size:1.6rem;margin-top:16px}
+.step p{color:var(--mut);font-size:.92rem;margin-top:10px}
+.hours{margin-top:56px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding:24px 28px;border:1px solid var(--line);border-radius:var(--r);background:var(--ink2)}
+.hours .dot{width:12px;height:12px;border-radius:50%;background:var(--neon);box-shadow:0 0 0 6px rgba(77,255,143,.12),0 0 16px var(--neon);flex:none}
+.hours b{font-family:var(--head);font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em}
+.hours span{color:var(--mut)}
+
+/* UNITS */
+.units{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.unit{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--ink2)}
+.unit-top{position:relative;height:190px;display:grid;place-items:center;background-color:#0e131b;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='42'%3E%3Crect width='88' height='42' fill='%230a0e14'/%3E%3Cg fill='%23151c27'%3E%3Crect x='1' y='1' width='42' height='18' rx='2'/%3E%3Crect x='45' y='1' width='42' height='18' rx='2'/%3E%3Crect x='-21' y='22' width='42' height='18' rx='2'/%3E%3Crect x='23' y='22' width='42' height='18' rx='2'/%3E%3Crect x='67' y='22' width='42' height='18' rx='2'/%3E%3C/g%3E%3C/svg%3E")}
+.unit-top::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 50% 50%,transparent,rgba(7,9,13,.75))}
+.unit-name{position:relative;z-index:1;font-family:var(--head);font-weight:800;text-transform:uppercase;font-size:clamp(3rem,5vw,4.4rem);letter-spacing:.04em;color:#eafff1;text-shadow:0 0 8px var(--neon),0 0 24px rgba(77,255,143,.65),0 0 60px rgba(77,255,143,.3)}
+.unit:nth-child(2) .unit-name{color:#e6f4ff;text-shadow:0 0 8px var(--volt),0 0 24px rgba(62,170,255,.7),0 0 60px rgba(62,170,255,.3)}
+.unit-body{padding:28px 28px 30px}
+.unit-body .eyebrow{color:var(--mut)}
+.unit-body .eyebrow::before{background:var(--mut2)}
+.unit-tel{font-family:var(--head);font-size:2.2rem;font-weight:800;margin:12px 0 4px;letter-spacing:.02em}
+.unit-body p{color:var(--mut);font-size:.92rem}
+.unit-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+
+/* PROOF */
+.proof{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:22px;margin-top:22px}
+.pcard{color:var(--txt);border:1px solid var(--line);border-radius:22px;padding:32px;background:var(--ink2);display:flex;flex-direction:column;gap:10px;transition:border-color .3s}
+.pcard:hover{border-color:var(--line2)}
+.pcard .big{font-family:var(--body);font-weight:700;font-size:3.6rem;line-height:1;letter-spacing:-.03em}
+.pcard .stars{display:flex;gap:4px;color:var(--gold)}
+.pcard .stars svg{width:20px;height:20px}
+.pcard span{color:var(--mut);font-size:.92rem}
+.pcard .link-arrow{margin-top:auto;align-self:flex-start}
+
+/* FINAL */
+.final{position:relative;overflow:hidden;text-align:center;padding:140px 0;border-top:1px solid var(--line);isolation:isolate}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(50% 60% at 50% 50%,rgba(77,255,143,.12),transparent 70%),radial-gradient(40% 50% at 50% 70%,rgba(62,170,255,.1),transparent 70%)}
+.final h2{font-size:clamp(3rem,8vw,7rem)}
+.final h2 .script{display:block;font-size:1.05em;line-height:.9;color:#eafff1;text-shadow:0 0 8px var(--neon),0 0 26px rgba(77,255,143,.7),0 0 60px rgba(77,255,143,.3)}
+.final p{color:var(--mut);margin:22px auto 0;max-width:52ch}
+.final-cta{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:38px}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:64px 0 40px;background:var(--ink)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot-about{color:var(--mut);font-size:.9rem;margin-top:16px;max-width:34ch}
+footer h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut2);font-weight:400;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer ul a{font-size:.92rem;color:#c9d1dd}
+footer ul a:hover{color:var(--neon)}
+.foot-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:52px;padding-top:24px;border-top:1px solid var(--line);font-size:.78rem;color:var(--mut2)}
+
+/* floating */
+.float{position:fixed;right:22px;bottom:22px;z-index:60;display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 22px 0 18px;border-radius:999px;background:var(--neon);color:#04140a;font-weight:800;font-size:.92rem;box-shadow:0 10px 30px rgba(77,255,143,.35),0 0 0 1px rgba(255,255,255,.15) inset;transition:transform .2s}
+.float:hover{transform:translateY(-3px)}
+.js .float{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}
+.js .float.show{opacity:1;transform:none;pointer-events:auto}
+.float svg{width:22px;height:22px}
+
+/* bag drawer */
+.scrim{position:fixed;inset:0;z-index:80;background:rgba(4,6,9,.6);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .3s}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:90;width:min(440px,100vw);background:var(--ink2);border-left:1px solid var(--line2);transform:translateX(102%);transition:transform .4s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.dr-head{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid var(--line)}
+.dr-head h3{font-size:2rem}
+.dr-x{width:42px;height:42px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;font-size:1.2rem}
+.dr-list{flex:1;overflow:auto;padding:8px 24px;list-style:none}
+.dr-item{display:grid;grid-template-columns:56px 1fr auto;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.dr-thumb{width:56px;height:56px;border-radius:10px;background:var(--ink4);display:grid;place-items:center}
+.dr-thumb svg{width:80%;height:80%}
+.dr-item b{display:block;font-size:.9rem;line-height:1.3}
+.dr-item small{color:var(--mut);font-size:.76rem}
+.qty{display:inline-flex;align-items:center;gap:2px;margin-top:6px;border:1px solid var(--line2);border-radius:8px}
+.qty button{width:28px;height:28px;font-weight:700}
+.qty span{min-width:22px;text-align:center;font-family:var(--mono);font-size:.8rem}
+.dr-price{font-family:var(--head);font-size:1.3rem;font-weight:800;text-align:right}
+.dr-rm{display:block;margin-top:4px;font-size:.72rem;color:var(--mut2);text-decoration:underline;margin-left:auto}
+.dr-empty{padding:60px 0;text-align:center;color:var(--mut)}
+.dr-empty b{display:block;font-family:var(--head);font-size:1.8rem;text-transform:uppercase;color:var(--txt);margin-bottom:6px}
+.dr-foot{padding:22px 24px 26px;border-top:1px solid var(--line);background:var(--ink)}
+.dr-total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.dr-total span{color:var(--mut)}
+.dr-total b{font-family:var(--head);font-size:2.2rem;font-weight:800}
+.dr-note{font-size:.76rem;color:var(--mut2);margin-bottom:16px}
+.dr-foot .btn{width:100%}
+.dr-foot .btn[aria-disabled="true"]{opacity:.4;pointer-events:none}
+
+.toast{position:fixed;left:50%;bottom:96px;z-index:95;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--txt);color:var(--ink);padding:12px 18px;border-radius:999px;font-size:.86rem;font-weight:700;transition:opacity .3s,transform .3s;white-space:nowrap}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* responsive */
+@media(max-width:1100px){
+  .flash-grid{grid-template-columns:repeat(3,1fr)}
+  .artists{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,auto);row-gap:22px}
+  .stat:nth-child(2){border-right:0;margin-right:0;padding-right:0}
+}
+@media(max-width:960px){
+  #menu{position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(7,9,13,.98);border-bottom:1px solid var(--line);padding:8px 16px 18px;display:none}
+  #menu a{display:block;padding:14px 4px;font-size:1.05rem;border-bottom:1px solid var(--line)}
+  header.open #menu{display:flex}
+  #burger{display:grid}
+  .nav .btn-neon{display:none}
+  .hero-grid{grid-template-columns:1fr;min-height:0;max-height:none;padding-top:36px;gap:20px}
+  .sign-wrap{order:-1;max-width:460px}
+  .sec-head{grid-template-columns:1fr;gap:20px}
+  .products{grid-template-columns:repeat(2,1fr)}
+  .gift{grid-template-columns:1fr;padding:36px}
+  .steps{grid-template-columns:1fr 1fr}
+  .step:nth-child(2){border-right:0;margin-right:0}
+  .step:nth-child(n+3){border-top:1px solid var(--line)}
+  .proof{grid-template-columns:1fr 1fr}
+  .proof .pcard:first-child{grid-column:1/-1}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .dlg{grid-template-columns:1fr}
+  .dlg .art{aspect-ratio:16/11}
+  .dlg-body{padding:28px 24px 30px}
+  .dlg-body h3{font-size:2.4rem}
+}
+@media(max-width:640px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav{height:64px}
+  #menu{top:64px}
+  .bag-btn .lbl{display:none}
+  .bag-btn{padding:0 12px}
+  .sec{padding:84px 0}
+  .sec-head{margin-bottom:36px}
+  .hero h1{font-size:clamp(3rem,15vw,4.4rem)}
+  .hero .lead{font-size:1rem}
+  .hero-cta .btn{flex:1 1 100%}
+  .stats{margin-top:36px;column-gap:0}
+  .stat{padding-right:18px;margin-right:18px}
+  .stat b{font-size:1.8rem}
+  .sign-cap{font-size:.6rem}
+  .flash-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .flash{padding:12px 12px 12px}
+  .flash h3{font-size:1.2rem;margin-top:10px}
+  .flash p{font-size:.6rem}
+  .flash .n{display:none}
+  .flash::before{width:44px;margin-left:-22px}
+  .filters{gap:6px}
+  .chip{height:36px;padding:0 13px;font-size:.78rem}
+  .artists{grid-template-columns:1fr}
+  .products{grid-template-columns:1fr}
+  .tabs{width:100%;display:grid;grid-template-columns:1fr 1fr;border-radius:20px}
+  .tab{padding:0 10px;white-space:nowrap}
+  .gift{padding:26px 18px;margin-top:44px}
+  .tickets{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .step{border-right:0;margin-right:0;padding-right:0;border-top:1px solid var(--line)}
+  .step:first-child{border-top:0}
+  .hours{padding:20px}
+  .units{grid-template-columns:1fr}
+  .unit-top{height:150px}
+  .unit-body{padding:22px 20px 24px}
+  .unit-btns .btn{flex:1 1 auto}
+  .proof{grid-template-columns:1fr}
+  .pcard{padding:26px}
+  .final{padding:100px 0}
+  .final-cta .btn{flex:1 1 100%}
+  .foot-grid{grid-template-columns:1fr;gap:30px}
+  .float{right:16px;bottom:16px;height:52px;padding:0 18px 0 15px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .mq-track,.sign .flick,.js .sign .on-g,.js .sign .on-b{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="glowG" x="-30%" y="-60%" width="160%" height="220%">
+      <feMorphology in="SourceGraphic" operator="dilate" radius="1.2" result="thick"/>
+      <feFlood flood-color="#4dff8f" result="c"/><feComposite in="c" in2="thick" operator="in" result="col"/>
+      <feGaussianBlur in="col" stdDeviation="4" result="b1"/><feGaussianBlur in="col" stdDeviation="14" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="col"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowB" x="-30%" y="-80%" width="160%" height="260%">
+      <feMorphology in="SourceGraphic" operator="dilate" radius="1" result="thick"/>
+      <feFlood flood-color="#3eaaff" result="c"/><feComposite in="c" in2="thick" operator="in" result="col"/>
+      <feGaussianBlur in="col" stdDeviation="3.5" result="b1"/><feGaussianBlur in="col" stdDeviation="12" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="col"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.05-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 0 1-1.44-5.03c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.9.99 6.67 2.77a9.37 9.37 0 0 1 2.77 6.68c0 5.2-4.24 9.44-9.46 9.44zm8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.6 23.6l6-1.57a11.33 11.33 0 0 0 5.44 1.38h.01c6.26 0 11.36-5.1 11.37-11.36 0-3.03-1.18-5.89-3.33-8.03z"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8zM9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 3.5h3.5l1.7 4.3-2.2 1.4a11 11 0 0 0 6.8 6.8l1.4-2.2 4.3 1.7V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+
+    <!-- ===== FLASH ART (200x200) ===== -->
+    <symbol id="f-peacock" viewBox="0 0 200 200">
+      <path class="k" fill="#1d8d7b" d="M102 14C152 44 166 118 101 182 36 118 50 44 102 14z"/>
+      <path class="kf" d="M101 182C99 140 100 90 102 20"/>
+      <g class="kf" stroke-width="2.6">
+        <path d="M100 168l-26-30M100 156l-34-30M101 144l-40-28M101 168l26-30M101 156l34-30M101 144l40-28"/>
+        <path d="M102 40l-16-14M102 40l16-14M102 52l-26-14M102 52l26-14"/>
+      </g>
+      <ellipse class="k" cx="101" cy="82" rx="33" ry="40" fill="#e7b23b"/>
+      <ellipse class="k" cx="101" cy="84" rx="23" ry="29" fill="#2f8a4f"/>
+      <ellipse class="k" cx="101" cy="87" rx="14" ry="18" fill="#2350c9"/>
+      <ellipse cx="101" cy="90" rx="6.5" ry="8.5" fill="#15120e"/>
+      <ellipse cx="96" cy="78" rx="3" ry="5" fill="#fff" opacity=".85"/>
+    </symbol>
+
+    <symbol id="f-lighthouse" viewBox="0 0 200 200">
+      <path class="kf" stroke-width="3" d="M24 46c6-12 22-12 26 0 8-8 22-2 20 8H24zM134 30c5-10 19-10 22 0 7-6 19-1 17 7h-39z"/>
+      <path class="kf" stroke-width="3" d="M40 82l7-5 7 5M150 70l6-4 6 4M60 100l5-4 5 4"/>
+      <path fill="#15120e" d="M100 56L18 84v14zM100 56l82 28v14z" opacity=".9"/>
+      <path fill="#f7f1e4" d="M100 56L26 84h10zM100 56l74 28h-10zM100 56L22 91v4zM100 56l78 35v4z"/>
+      <path class="k" fill="#f7f1e4" d="M78 172l8-104h28l8 104z"/>
+      <path fill="#15120e" d="M84.2 96h31.6l1.4 18H82.8zM81.6 130h36.8l1.4 18H80.2z"/>
+      <path class="k" fill="#15120e" d="M84 52h32v16H84z"/>
+      <path class="k" fill="#f7f1e4" d="M88 55h24v10H88z"/>
+      <path class="k" fill="#15120e" d="M80 52l20-20 20 20z"/>
+      <path class="k" d="M100 32v-8"/>
+      <path class="k" fill="#15120e" d="M10 176c14-16 26-16 40 0 14-16 26-16 40 0 14-16 26-16 40 0 14-16 26-16 40 0 6-6 10-8 16-8v24H6v-20z"/>
+      <path stroke="#f7f1e4" stroke-width="2.6" fill="none" stroke-linecap="round" d="M22 182c6-5 12-5 18 0M62 182c6-5 12-5 18 0M102 182c6-5 12-5 18 0M142 182c6-5 12-5 18 0"/>
+    </symbol>
+
+    <symbol id="f-snake" viewBox="0 0 200 200">
+      <path class="k" fill="#c9ccd2" d="M100 64l12 8-12 120-12-120z"/>
+      <path class="kf" stroke-width="2.4" d="M100 74v104"/>
+      <path class="k" fill="#e7b23b" d="M66 56h68v12H66z"/>
+      <path class="k" fill="#7a3b1e" d="M92 18h16v38H92z"/>
+      <path class="kf" stroke-width="2.4" d="M92 28h16M92 38h16M92 48h16"/>
+      <circle class="k" cx="100" cy="14" r="8" fill="#e7b23b"/>
+      <path fill="none" stroke="#15120e" stroke-width="22" stroke-linecap="round" d="M136 170c-20 14-62 10-60-10 2-22 54-16 52-40-2-22-56-14-54-38 1-14 16-20 30-20"/>
+      <path fill="none" stroke="#2f8a4f" stroke-width="12" stroke-linecap="round" d="M136 170c-20 14-62 10-60-10 2-22 54-16 52-40-2-22-56-14-54-38 1-14 16-20 30-20"/>
+      <path fill="none" stroke="#e7b23b" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round" d="M134 170c-20 12-56 9-55-9 2-20 52-15 51-41-2-21-54-14-53-37 1-12 14-18 27-18"/>
+      <path class="k" fill="#2f8a4f" d="M104 62c10-10 30-10 34 0 3 8-6 14-18 14-10 0-20-6-16-14z"/>
+      <circle cx="124" cy="66" r="3.6" fill="#e7b23b" stroke="#15120e" stroke-width="2"/>
+      <path stroke="#d33a2c" stroke-width="3" fill="none" stroke-linecap="round" d="M138 66h14l5-5M152 66l5 5"/>
+    </symbol>
+
+    <symbol id="f-rose" viewBox="0 0 200 200">
+      <path class="k" fill="#2f8a4f" d="M98 128C66 128 40 150 26 176c30 4 60-12 72-48z"/>
+      <path class="k" fill="#2f8a4f" d="M104 126c30-6 56 6 72 28-28 10-58 0-72-28z"/>
+      <path class="kf" stroke-width="2.6" d="M94 134c-20 10-38 24-56 38M110 130c20 2 40 10 56 22"/>
+      <path class="k" fill="#d33a2c" d="M56 92c-4-34 26-56 46-50 24-8 52 12 46 48-2 34-28 50-46 48-22 2-44-14-46-46z"/>
+      <path class="k" fill="#e5483a" d="M74 76c4-16 22-22 30-18 14-4 28 8 24 26-2 16-14 22-26 22-16 0-30-12-28-30z"/>
+      <path class="kf" d="M100 68c16 0 20 22 4 26-12 3-16-10-6-13 6-1 8 4 5 6"/>
+      <path class="kf" d="M62 102c10 18 28 26 48 24M124 112c10-6 16-16 16-28M70 72c-6 6-8 14-6 22"/>
+      <path fill="#fff" opacity=".7" d="M84 60c6-6 14-8 20-6-8 2-14 6-18 12z"/>
+    </symbol>
+
+    <symbol id="f-swallow" viewBox="0 0 200 200">
+      <path class="k" fill="#16244a" d="M94 126l-18 58 24-38 24 38-18-58z"/>
+      <path class="k" fill="#16244a" d="M94 86C68 66 38 62 8 72c26 12 50 28 86 36z"/>
+      <path class="k" fill="#16244a" d="M106 86c26-20 56-24 86-14-26 12-50 28-86 36z"/>
+      <path stroke="#2e66d8" stroke-width="4" fill="none" stroke-linecap="round" d="M26 74c20 0 44 8 62 20M174 74c-20 0-44 8-62 20"/>
+      <path class="k" fill="#16244a" d="M100 64c16 10 18 44 0 70-18-26-16-60 0-70z"/>
+      <path class="k" fill="#e7b23b" d="M100 74c9 8 10 26 0 42-10-16-9-34 0-42z"/>
+      <path fill="#d33a2c" d="M100 80c5 5 6 15 0 24-6-9-5-19 0-24z"/>
+      <circle class="k" cx="100" cy="56" r="13" fill="#16244a"/>
+      <path class="k" fill="#e7b23b" d="M96 44l4-10 4 10z"/>
+      <circle cx="94" cy="54" r="2.6" fill="#fff"/><circle cx="106" cy="54" r="2.6" fill="#fff"/>
+    </symbol>
+
+    <symbol id="f-skull" viewBox="0 0 200 200">
+      <path class="k" fill="#d33a2c" d="M150 82c16 2 26 12 30 26-12-4-22-4-30 2z"/>
+      <path class="k" fill="#d33a2c" d="M150 86c10 12 12 30 4 44-6-10-12-16-20-18z"/>
+      <path class="k" fill="#f3ead7" d="M54 100c-6-48 98-48 92 0 0 20-12 26-12 38H66c0-12-12-18-12-38z"/>
+      <path class="k" fill="#d33a2c" d="M50 84c26-26 74-26 100 0l-4 18c-24-18-68-18-92 0z"/>
+      <g fill="#f7f1e4"><circle cx="72" cy="78" r="3"/><circle cx="92" cy="70" r="3"/><circle cx="112" cy="70" r="3"/><circle cx="132" cy="78" r="3"/><circle cx="82" cy="88" r="2.4"/><circle cx="102" cy="80" r="2.4"/><circle cx="122" cy="88" r="2.4"/></g>
+      <path class="k" fill="#15120e" d="M66 112c4-10 26-10 28 2 0 10-24 12-28-2zM106 114c2-12 24-12 28-2-4 14-28 12-28 2z"/>
+      <path class="k" fill="#15120e" d="M100 122l-7 12h14z"/>
+      <path class="k" fill="#f3ead7" d="M70 138h60v20c-6 8-54 8-60 0z"/>
+      <path class="kf" stroke-width="2.8" d="M80 138v20M90 138v22M100 138v22M110 138v22M120 138v20M70 148h60"/>
+      <circle cx="78" cy="113" r="3" fill="#e7b23b"/><circle cx="122" cy="113" r="3" fill="#e7b23b"/>
+    </symbol>
+
+    <symbol id="f-anchor" viewBox="0 0 200 200">
+      <circle class="k" cx="100" cy="30" r="14" fill="none" style="stroke-width:7"/>
+      <path class="k" fill="#16244a" d="M93 42h14v118h-14z"/>
+      <path class="k" fill="#16244a" d="M64 54h72v12H64z"/>
+      <path class="k" fill="none" style="stroke-width:14" d="M38 128c8 30 36 44 62 44s54-14 62-44"/>
+      <path fill="none" stroke="#2e66d8" stroke-width="6" stroke-linecap="round" d="M38 128c8 30 36 44 62 44s54-14 62-44"/>
+      <path class="k" fill="#16244a" d="M26 134l14-24 14 22zM174 134l-14-24-14 22z"/>
+      <path class="k" fill="#d33a2c" d="M14 92l20-8v28l-20 8 8-14z"/>
+      <path class="k" fill="#d33a2c" d="M186 92l-20-8v28l20 8-8-14z"/>
+      <path class="k" fill="#f7f1e4" d="M30 82c46-8 94-8 140 0v32c-46-8-94-8-140 0z"/>
+      <text x="100" y="105" text-anchor="middle" font-family="Mr Dafoe, cursive" font-size="25" fill="#15120e">Built to Last</text>
+    </symbol>
+
+    <symbol id="f-wave" viewBox="0 0 200 200">
+      <path class="k" fill="#2350c9" d="M14 180c0-70 44-128 112-128 40 0 62 28 54 54-6 20-30 26-44 14-12-10-6-30 10-28-4-12-20-18-36-12-34 12-46 56-44 100z"/>
+      <path class="k" fill="#7fb2ff" d="M66 180c-2-40 10-72 34-90-20 24-26 56-22 90z"/>
+      <path class="kf" stroke-width="2.8" d="M40 150c4-34 22-66 54-82M30 168c2-40 22-80 64-100"/>
+      <g class="k" fill="#f7f1e4">
+        <circle cx="128" cy="54" r="7"/><circle cx="146" cy="58" r="7"/><circle cx="162" cy="66" r="7"/><circle cx="174" cy="80" r="6"/><circle cx="110" cy="56" r="6"/>
+      </g>
+      <g fill="#f7f1e4" stroke="#15120e" stroke-width="2.4"><circle cx="160" cy="132" r="5"/><circle cx="176" cy="124" r="4"/><circle cx="170" cy="144" r="3.5"/></g>
+      <path class="k" fill="#f7f1e4" d="M150 26a14 14 0 1 0 0 1z" opacity="0"/>
+      <circle class="k" cx="54" cy="40" r="16" fill="#d33a2c"/>
+      <path class="k" fill="#2350c9" d="M6 184c30-10 60-10 90 0s70 10 100 0v12H6z"/>
+    </symbol>
+
+    <!-- ===== PRODUCT ART ===== -->
+    <symbol id="p-tee" viewBox="0 0 220 200">
+      <path d="M66 22l30-12c4 12 24 12 28 0l30 12 44 34-24 30-16-12v114H62V74L46 86 22 56z" fill="var(--tee,#f3f1ec)" stroke="rgba(0,0,0,.25)" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M96 10c4 14 24 14 28 0" fill="none" stroke="rgba(0,0,0,.18)" stroke-width="3"/>
+      <path d="M62 74v0M158 74" stroke="rgba(0,0,0,.1)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="demo">Proposta de site (demonstração) · desenvolvida como exemplo para a Built To Last</div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Built To Last, início"><b>Tattoos</b><i>Built to Last</i></a>
+    <nav aria-label="Principal">
+      <ul id="menu">
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#artistas">Artistas</a></li>
+        <li><a href="#loja">Loja</a></li>
+        <li><a href="#agendar">Agendar</a></li>
+        <li><a href="#unidades">Unidades</a></li>
+      </ul>
+    </nav>
+    <div class="nav-r">
+      <button class="bag-btn" id="bagBtn" type="button" aria-label="Abrir sacola"><svg aria-hidden="true"><use href="#i-bag"/></svg><span class="lbl">Sacola</span><span class="bag-count" id="bagCount">0</span></button>
+      <a class="btn btn-neon" href="https://wa.me/5561991730764?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20agendar%20uma%20tattoo." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar</a>
+      <button id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Estúdio de tatuagem · Brasília</span>
+      <h1>Tatuagem feita pra <span class="script">durar</span></h1>
+      <p class="lead">Tradicional, neo tradicional, blackwork e colorido, com traço firme e cor que aguenta o tempo. Duas unidades, Guará II e Asa Sul, e uma loja pra levar o estúdio pra casa.</p>
+      <div class="hero-cta">
+        <a class="btn btn-neon" href="https://wa.me/5561991730764?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20agendar%20uma%20tattoo." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn btn-ghost" href="#loja"><svg aria-hidden="true"><use href="#i-bag"/></svg>Ver a loja</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>11,2 mil</b><span>seguidores no Instagram</span></div>
+        <div class="stat"><b>5.400</b><span>posts de trabalho</span></div>
+        <div class="stat"><b>4,8<small>★</small></b><span>144 avaliações no Google</span></div>
+        <div class="stat"><b>2</b><span>unidades em Brasília</span></div>
+      </div>
+    </div>
+
+    <div class="sign-wrap reveal" aria-hidden="true">
+      <svg class="sign" viewBox="0 0 560 400">
+        <path class="chain" d="M120 0v52M440 0v52" stroke-dasharray="6 4"/>
+        <rect class="plate" x="40" y="52" width="480" height="300" rx="22"/>
+        <circle class="bolt" cx="64" cy="76" r="5"/><circle class="bolt" cx="496" cy="76" r="5"/><circle class="bolt" cx="64" cy="328" r="5"/><circle class="bolt" cx="496" cy="328" r="5"/>
+        <g class="on-g"><g class="flick">
+          <rect class="tube-g" x="70" y="82" width="420" height="240" rx="18" stroke-width="2"/>
+          <text class="tube-g t1" x="280" y="200" text-anchor="middle">TATTOOS</text>
+        </g></g>
+        <g class="on-b">
+          <text class="tube-b t2" x="280" y="272" text-anchor="middle">BUILT TO LAST</text>
+          <path class="tube-b" d="M128 296h304" stroke-width="2"/>
+        </g>
+      </svg>
+      <div class="sign-cap"><span>Guará II · Asa Sul</span><span>@btl.tatuagem</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <span>Tradicional <i></i> <em>Neo tradicional</em> <i class="b"></i> Blackwork <i></i> <em>Colorido</em> <i class="b"></i> Flash <i></i> <em>Built to last</em> <i class="b"></i></span>
+    <span>Tradicional <i></i> <em>Neo tradicional</em> <i class="b"></i> Blackwork <i></i> <em>Colorido</em> <i class="b"></i> Flash <i></i> <em>Built to last</em> <i class="b"></i></span>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<section class="sec flashwall" id="portfolio">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow">Portfólio</span>
+        <h2>A parede de <span class="script">flash</span> do estúdio</h2>
+      </div>
+      <div class="reveal">
+        <p class="lead">Filtre por estilo e toque num desenho para pedir algo parecido. Cada peça é desenhada para envelhecer bem na pele.</p>
+        <div class="filters" role="group" aria-label="Filtrar por estilo" style="margin-top:22px">
+          <button class="chip" type="button" data-f="all" aria-pressed="true">Todos</button>
+          <button class="chip" type="button" data-f="trad" aria-pressed="false">Tradicional</button>
+          <button class="chip" type="button" data-f="neo" aria-pressed="false">Neo tradicional</button>
+          <button class="chip" type="button" data-f="black" aria-pressed="false">Blackwork</button>
+          <button class="chip" type="button" data-f="color" aria-pressed="false">Colorido</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flash-grid" id="flashGrid">
+      <button class="flash reveal" type="button" data-cat="neo color" data-art="f-peacock" data-name="Pavão" data-style="Neo tradicional · colorido" data-desc="Penas em camadas de verde, azul e dourado. Pede área grande, como braço ou costela.">
+        <span class="n">N.º 01</span><span class="art"><svg><use href="#f-peacock"/></svg></span><h3>Pavão</h3><p>Neo tradicional · colorido</p>
+      </button>
+      <button class="flash reveal" type="button" data-cat="black trad" data-art="f-lighthouse" data-name="Farol" data-style="Blackwork · tradicional" data-desc="Preto sólido, contraste alto e linhas grossas. Funciona bem na mão, no antebraço ou na panturrilha.">
+        <span class="n">N.º 02</span><span class="art"><svg><use href="#f-lighthouse"/></svg></span><h3>Farol</h3><p>Blackwork · tradicional</p>
+      </button>
+      <button class="flash reveal" type="button" data-cat="trad color" data-art="f-snake" data-name="Serpente e adaga" data-style="Tradicional · colorido" data-desc="Um clássico do tradicional: serpente enrolada na adaga, cores chapadas e contorno forte.">
+        <span class="n">N.º 03</span><span class="art"><svg><use href="#f-snake"/></svg></span><h3>Serpente e adaga</h3><p>Tradicional · colorido</p>
+      </button>
+      <button class="flash reveal" type="button" data-cat="trad color" data-art="f-rose" data-name="Rosa" data-style="Tradicional · colorido" data-desc="Vermelho e verde chapados, sombra marcada. Fica bem sozinha ou fechando um braço.">
+        <span class="n">N.º 04</span><span class="art"><svg><use href="#f-rose"/></svg></span><h3>Rosa</h3><p>Tradicional · colorido</p>
+      </button>
+      <button class="flash reveal" type="button" data-cat="trad color" data-art="f-swallow" data-name="Andorinha" data-style="Tradicional" data-desc="Andorinha clássica de asas abertas, ótima em dupla no peito ou nas mãos.">
+        <span class="n">N.º 05</span><span class="art"><svg><use href="#f-swallow"/></svg></span><h3>Andorinha</h3><p>Tradicional</p>
+      </button>
+      <button class="flash reveal" type="button" data-cat="trad neo color" data-art="f-skull" data-name="Caveira de bandana" data-style="Tradicional · colorido" data-desc="A caveira que virou estampa da casa, com bandana vermelha e dentes marcados.">
+        <span class="n">N.º 06</span><span class="art"><svg><use href="#f-skull"/></svg></span><h3>Caveira de bandana</h3><p>Tradicional · colorido</p>
+      </button>
+      <button class="flash reveal" type="button" data-cat="trad" data-art="f-anchor" data-name="Âncora Built to Last" data-style="Tradicional · lettering" data-desc="Âncora com faixa e letreiro à mão. Dá para trocar o texto da faixa pelo que fizer sentido para você.">
+        <span class="n">N.º 07</span><span class="art"><svg><use href="#f-anchor"/></svg></span><h3>Âncora</h3><p>Tradicional · lettering</p>
+      </button>
+      <button class="flash reveal" type="button" data-cat="neo color" data-art="f-wave" data-name="Onda" data-style="Neo tradicional · colorido" data-desc="Onda com espuma em garras e sol vermelho. Composição que cresce bem para fechamento.">
+        <span class="n">N.º 08</span><span class="art"><svg><use href="#f-wave"/></svg></span><h3>Onda</h3><p>Neo tradicional · colorido</p>
+      </button>
+    </div>
+
+    <div class="flash-note reveal">
+      <span>Desenhos ilustrativos. Na versão final, esta parede mostra as fotos reais dos trabalhos, separadas por estilo e por artista.</span>
+      <a href="https://www.instagram.com/btl.tatuagem/" target="_blank" rel="noopener">Ver 5.400 posts no Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ARTISTS -->
+<section class="sec" id="artistas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow">Artistas</span>
+        <h2>Quem segura a <span class="script" style="color:var(--volt);text-shadow:0 0 14px rgba(62,170,255,.6)">máquina</span></h2>
+      </div>
+      <p class="lead reveal">Cada artista tem seu traço. Escolha pelo estilo que mais combina com a sua ideia e chame direto no WhatsApp com o nome dele.</p>
+    </div>
+    <div class="artists">
+      <article class="artist reveal"><div class="mono" aria-hidden="true">RR</div><h3>Rodrigo Rocha</h3><p>Trabalhos no destaque “Rodrigo Rocha” do Instagram do estúdio.</p>
+        <div class="row"><a class="btn btn-ghost btn-sm" href="https://wa.me/5561991730764?text=Ol%C3%A1!%20Quero%20agendar%20com%20o%20Rodrigo%20Rocha." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar</a></div></article>
+      <article class="artist reveal"><div class="mono" aria-hidden="true">D</div><h3>Davi</h3><p>Trabalhos no destaque “Davi” do Instagram do estúdio.</p>
+        <div class="row"><a class="btn btn-ghost btn-sm" href="https://wa.me/5561991730764?text=Ol%C3%A1!%20Quero%20agendar%20com%20o%20Davi." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar</a></div></article>
+      <article class="artist reveal"><div class="mono" aria-hidden="true">GM</div><h3>Gabriel Miranda</h3><p>Trabalhos no destaque “Gabriel Miranda” do Instagram do estúdio.</p>
+        <div class="row"><a class="btn btn-ghost btn-sm" href="https://wa.me/5561991730764?text=Ol%C3%A1!%20Quero%20agendar%20com%20o%20Gabriel%20Miranda." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar</a></div></article>
+      <article class="artist reveal"><div class="mono" aria-hidden="true">M</div><h3>Madhu</h3><p>Coautor da coleção Foo Dog, à venda na loja do estúdio.</p>
+        <div class="row"><a class="btn btn-ghost btn-sm" href="https://wa.me/5561991730764?text=Ol%C3%A1!%20Quero%20agendar%20com%20o%20Madhu." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar</a></div></article>
+    </div>
+    <p class="reveal" style="margin-top:26px"><a class="link-arrow" href="https://www.instagram.com/btl.tatuagem/" target="_blank" rel="noopener">Ver os destaques de cada artista no Instagram <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="sec shop" id="loja">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow">Loja Built To Last</span>
+        <h2>Leve o estúdio <span class="script" style="color:var(--volt);text-shadow:0 0 14px rgba(62,170,255,.6)">pra casa</span></h2>
+      </div>
+      <p class="lead reveal">Camisetas, ecobag, print em serigrafia e vale-tattoo. Escolha o tamanho, monte a sacola e feche o pedido pelo WhatsApp.</p>
+    </div>
+
+    <div class="shop-tools reveal">
+      <div class="tabs" role="group" aria-label="Filtrar produtos">
+        <button class="tab" type="button" data-t="all" aria-pressed="true">Todos</button>
+        <button class="tab" type="button" data-t="wear" aria-pressed="false">Vestuário</button>
+        <button class="tab" type="button" data-t="art" aria-pressed="false">Arte e acessórios</button>
+        <button class="tab" type="button" data-t="gift" aria-pressed="false">Vale-tattoo</button>
+      </div>
+      <span class="ship">Frete não incluso nos valores</span>
+    </div>
+
+    <div class="products" id="products">
+      <article class="prod reveal" data-t="wear" data-id="caveira" data-name="Camiseta Branca Caveira" data-price="120">
+        <div class="prod-art"><span class="tag">Estampa nas costas</span>
+          <svg viewBox="0 0 220 200"><use href="#p-tee" style="--tee:#f3f1ec"/><svg x="70" y="62" width="80" height="80" viewBox="0 0 200 200"><use href="#f-skull"/></svg></svg>
+        </div>
+        <div class="prod-body">
+          <h3>Camiseta Branca Caveira</h3><span class="by">Camiseta branca com estampa de caveira no verso.</span>
+          <div class="sizes" role="group" aria-label="Tamanho"><button class="sz" type="button" aria-pressed="false">G</button><button class="sz" type="button" aria-pressed="false">G1</button><button class="sz" type="button" aria-pressed="false">GG</button></div>
+          <span class="hint" aria-live="polite"></span>
+          <div class="prod-foot"><span class="price"><small>R$</small>120</span><button class="add" type="button"><svg aria-hidden="true"><use href="#i-plus"/></svg>Adicionar</button></div>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-t="wear" data-id="foodog-tee" data-name="Camiseta Foo Dog" data-price="120">
+        <div class="prod-art"><span class="tag hot">Collab</span>
+          <svg viewBox="0 0 220 200"><use href="#p-tee" style="--tee:#14171d"/>
+            <g transform="translate(110 104)"><circle r="34" fill="#d33a2c" stroke="#efe6d4" stroke-width="3"/><circle r="27" fill="none" stroke="#efe6d4" stroke-width="1.6" stroke-dasharray="3 4"/>
+              <path d="M-20 4c4-12 16-12 20-2 4-10 16-10 20 2" fill="none" stroke="#efe6d4" stroke-width="3" stroke-linecap="round"/><path d="M-14 12c3-6 9-6 12 0M2 12c3-6 9-6 12 0" fill="none" stroke="#e7b23b" stroke-width="2.6" stroke-linecap="round"/>
+              <text y="-9" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800" font-size="11" letter-spacing="1" fill="#efe6d4">FOO DOG</text></g>
+          </svg>
+        </div>
+        <div class="prod-body">
+          <h3>Camiseta Foo Dog</h3><span class="by">By Madhu e Rodrigo Sete.</span>
+          <div class="sizes" role="group" aria-label="Tamanho"><button class="sz" type="button" aria-pressed="false">P</button><button class="sz" type="button" aria-pressed="false">M</button><button class="sz" type="button" aria-pressed="false">G</button><button class="sz" type="button" aria-pressed="false">GG</button><button class="sz" type="button" aria-pressed="false">XG</button></div>
+          <span class="hint" aria-live="polite"></span>
+          <div class="prod-foot"><span class="price"><small>R$</small>120</span><button class="add" type="button"><svg aria-hidden="true"><use href="#i-plus"/></svg>Adicionar</button></div>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-t="wear" data-id="kit" data-name="Kit Ecobag + Adesivo + Camiseta Foo Dog" data-price="150">
+        <div class="prod-art"><span class="tag hot">Kit · melhor valor</span>
+          <svg viewBox="0 0 220 200">
+            <g transform="translate(118 30) rotate(8)"><path d="M10 34h70l-6 120H16z" fill="#e9dfca" stroke="rgba(0,0,0,.25)" stroke-width="2"/><path d="M28 34c0-30 34-30 34 0" fill="none" stroke="#d6c9ae" stroke-width="6"/><circle cx="45" cy="92" r="20" fill="#d33a2c"/><text x="45" y="96" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800" font-size="8" fill="#efe6d4">FOO DOG</text></g>
+            <g transform="translate(-6 18) scale(.78)"><use href="#p-tee" style="--tee:#14171d"/><g transform="translate(110 104)"><circle r="30" fill="#d33a2c" stroke="#efe6d4" stroke-width="3"/><text y="5" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800" font-size="12" letter-spacing="1" fill="#efe6d4">FOO DOG</text></g></g>
+            <g transform="translate(150 150) rotate(-14)"><circle r="20" fill="#4dff8f"/><circle r="20" fill="none" stroke="#04140a" stroke-width="2"/><text y="4" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800" font-size="10" fill="#04140a">BTL</text></g>
+          </svg>
+        </div>
+        <div class="prod-body">
+          <h3>Kit Ecobag + Adesivo + Camiseta</h3><span class="by">Coleção Foo Dog, by Madhu e Rodrigo Sete.</span>
+          <div class="sizes" role="group" aria-label="Tamanho"><button class="sz" type="button" aria-pressed="false">P</button><button class="sz" type="button" aria-pressed="false">M</button><button class="sz" type="button" aria-pressed="false">G</button><button class="sz" type="button" aria-pressed="false">GG</button><button class="sz" type="button" aria-pressed="false">XG</button></div>
+          <span class="hint" aria-live="polite"></span>
+          <div class="prod-foot"><span class="price"><small>R$</small>150</span><button class="add" type="button"><svg aria-hidden="true"><use href="#i-plus"/></svg>Adicionar</button></div>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-t="art" data-id="ecobag" data-name="Ecobag Foo Dog" data-price="50">
+        <div class="prod-art">
+          <svg viewBox="0 0 220 200"><path d="M80 66c0-50 60-50 60 0" fill="none" stroke="#d6c9ae" stroke-width="9" stroke-linecap="round"/><path d="M52 66h116l-8 124H60z" fill="#e9dfca" stroke="rgba(0,0,0,.25)" stroke-width="2" stroke-linejoin="round"/>
+            <g transform="translate(110 128)"><circle r="34" fill="#d33a2c"/><circle r="27" fill="none" stroke="#efe6d4" stroke-width="1.6" stroke-dasharray="3 4"/><path d="M-20 4c4-12 16-12 20-2 4-10 16-10 20 2" fill="none" stroke="#efe6d4" stroke-width="3" stroke-linecap="round"/><text y="-9" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800" font-size="11" letter-spacing="1" fill="#efe6d4">FOO DOG</text></g></svg>
+        </div>
+        <div class="prod-body">
+          <h3>Ecobag Foo Dog</h3><span class="by">By Madhu e Rodrigo Sete.</span>
+          <div class="sizes"><span class="sz" style="display:inline-grid;place-items:center;cursor:default">Único</span></div>
+          <span class="hint" aria-live="polite"></span>
+          <div class="prod-foot"><span class="price"><small>R$</small>50</span><button class="add" type="button"><svg aria-hidden="true"><use href="#i-plus"/></svg>Adicionar</button></div>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-t="art" data-id="print" data-name="Print Serigrafia A2" data-price="180">
+        <div class="prod-art"><span class="tag">Tamanho A2</span>
+          <svg viewBox="0 0 220 200"><rect x="52" y="10" width="116" height="180" fill="#15120e"/><rect x="60" y="18" width="100" height="164" fill="#efe6d4"/>
+            <svg x="66" y="30" width="88" height="88" viewBox="0 0 200 200"><use href="#f-rose"/></svg>
+            <svg x="74" y="112" width="72" height="60" viewBox="0 0 200 200"><use href="#f-swallow"/></svg>
+            <text x="110" y="176" text-anchor="middle" font-family="Space Mono, monospace" font-size="6" letter-spacing="2" fill="#6d6352">SERIGRAFIA · BTL</text></svg>
+        </div>
+        <div class="prod-body">
+          <h3>Print Serigrafia</h3><span class="by">Print em serigrafia, tamanho A2.</span>
+          <div class="sizes"><span class="sz" style="display:inline-grid;place-items:center;cursor:default">A2</span></div>
+          <span class="hint" aria-live="polite"></span>
+          <div class="prod-foot"><span class="price"><small>R$</small>180</span><button class="add" type="button"><svg aria-hidden="true"><use href="#i-plus"/></svg>Adicionar</button></div>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-t="gift" data-id="voucher-card" data-name="" data-price="0">
+        <div class="prod-art" style="background:radial-gradient(circle at 50% 40%,#16302a,#0e1a17 70%)">
+          <svg viewBox="0 0 220 200"><g transform="rotate(-8 110 100)"><rect x="34" y="56" width="152" height="92" rx="12" fill="#efe6d4"/><path d="M134 62v80" stroke="rgba(27,23,18,.3)" stroke-width="2" stroke-dasharray="4 4"/><text x="48" y="84" font-family="Space Mono, monospace" font-size="8" letter-spacing="2" fill="#d33a2c">VALE TATTOO</text><text x="48" y="112" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800" font-size="24" fill="#1b1712">PRESENTE</text><text x="48" y="132" font-family="Mr Dafoe, cursive" font-size="16" fill="#1b1712">Built to Last</text><circle cx="160" cy="102" r="16" fill="none" stroke="#2f8a4f" stroke-width="2.4"/><text x="160" y="106" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800" font-size="11" fill="#2f8a4f">BTL</text></g></svg>
+        </div>
+        <div class="prod-body">
+          <h3>Vale-tattoo</h3><span class="by">Meia sessão (R$ 600) ou sessão inteira (R$ 1.200). Detalhes logo abaixo.</span>
+          <div class="prod-foot" style="margin-top:auto"><span class="price"><small>a partir de R$</small>600</span><a class="add" href="#presente">Ver vales</a></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="gift reveal" id="presente">
+      <div>
+        <span class="eyebrow">Vale-presente</span>
+        <h3 style="margin-top:16px">Dê uma tattoo de <span class="script">presente</span></h3>
+        <p>Quem ganha escolhe o artista, o desenho e a data. O vale fica guardado até a sessão.</p>
+      </div>
+      <div class="tickets">
+        <div class="ticket" data-id="voucher-meia" data-name="Voucher Vale Tattoo Meia Sessão" data-price="600">
+          <svg class="stamp" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="26" fill="none" stroke="#2f8a4f" stroke-width="2"/><circle cx="30" cy="30" r="20" fill="none" stroke="#2f8a4f" stroke-width="1" stroke-dasharray="2 3"/><text x="30" y="34" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800" font-size="12" fill="#2f8a4f">BTL</text></svg>
+          <span class="k1">Vale tattoo</span><span class="k2">Meia sessão</span><span class="k3">Equivale a meia sessão de tattoo.</span>
+          <span class="perf"></span>
+          <div class="tfoot"><span class="price"><small>R$</small>600</span><button class="add" type="button"><svg aria-hidden="true"><use href="#i-plus"/></svg>Adicionar</button></div>
+        </div>
+        <div class="ticket" data-id="voucher-sessao" data-name="Voucher Vale Tattoo Sessão" data-price="1200">
+          <svg class="stamp" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="26" fill="none" stroke="#d33a2c" stroke-width="2"/><circle cx="30" cy="30" r="20" fill="none" stroke="#d33a2c" stroke-width="1" stroke-dasharray="2 3"/><text x="30" y="34" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800" font-size="12" fill="#d33a2c">BTL</text></svg>
+          <span class="k1">Vale tattoo</span><span class="k2">Sessão inteira</span><span class="k3">Equivale a uma sessão de tattoo.</span>
+          <span class="perf"></span>
+          <div class="tfoot"><span class="price"><small>R$</small>1.200</span><button class="add" type="button"><svg aria-hidden="true"><use href="#i-plus"/></svg>Adicionar</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec" id="agendar">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow">Como agendar</span>
+        <h2>Da ideia à <span class="script" style="color:var(--neon);text-shadow:0 0 14px rgba(77,255,143,.55)">pele</span></h2>
+      </div>
+      <p class="lead reveal">Tudo começa por uma mensagem. Quanto mais detalhe você mandar, mais rápido o desenho chega.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><span class="num">01</span><h3>Escolha a unidade</h3><p>Guará II ou Asa Sul. Cada uma tem o seu WhatsApp.</p></div>
+      <div class="step"><span class="num">02</span><h3>Mande a ideia</h3><p>Referências, parte do corpo e tamanho aproximado. Se já tiver um artista em mente, diga o nome.</p></div>
+      <div class="step"><span class="num">03</span><h3>Desenho e data</h3><p>O artista ajusta o desenho com você e vocês fecham o dia da sessão.</p></div>
+      <div class="step"><span class="num">04</span><h3>Sessão</h3><p>Você chega, confere o decalque no corpo e a gente começa.</p></div>
+    </div>
+    <div class="hours reveal"><span class="dot" aria-hidden="true"></span><b>Seg a sex · 14h às 18h</b><span>Fora dessa grade, atendemos com hora marcada.</span></div>
+  </div>
+</section>
+
+<!-- UNITS -->
+<section class="sec" id="unidades" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow">Unidades</span>
+        <h2>Duas portas, o mesmo <span class="script" style="color:var(--volt);text-shadow:0 0 14px rgba(62,170,255,.6)">padrão</span></h2>
+      </div>
+      <p class="lead reveal">Escolha a mais perto de você. O atendimento é pelo WhatsApp de cada unidade.</p>
+    </div>
+    <div class="units">
+      <article class="unit reveal">
+        <div class="unit-top"><span class="unit-name">Guará II</span></div>
+        <div class="unit-body">
+          <span class="eyebrow">Unidade Guará II</span>
+          <div class="unit-tel">(61) 99173-0764</div>
+          <p>Seg a sex, 14h às 18h. Fora disso, com hora marcada.</p>
+          <div class="unit-btns">
+            <a class="btn btn-neon btn-sm" href="https://wa.me/5561991730764?text=Ol%C3%A1!%20Quero%20agendar%20na%20unidade%20do%20Guar%C3%A1%20II." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+            <a class="btn btn-ghost btn-sm" href="tel:+5561991730764"><svg aria-hidden="true"><use href="#i-tel"/></svg>Ligar</a>
+            <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Built%20To%20Last%20Tatuagem%20Bras%C3%ADlia&amp;query_place_id=ChIJH1z6w-cxWpMRPx46-gm4Cok" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Rotas</a>
+          </div>
+        </div>
+      </article>
+      <article class="unit reveal">
+        <div class="unit-top"><span class="unit-name">Asa Sul</span></div>
+        <div class="unit-body">
+          <span class="eyebrow">Unidade Asa Sul</span>
+          <div class="unit-tel">(61) 98328-8322</div>
+          <p>Seg a sex, 14h às 18h. Fora disso, com hora marcada.</p>
+          <div class="unit-btns">
+            <a class="btn btn-volt btn-sm" href="https://wa.me/5561983288322?text=Ol%C3%A1!%20Quero%20agendar%20na%20unidade%20da%20Asa%20Sul." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+            <a class="btn btn-ghost btn-sm" href="tel:+5561983288322"><svg aria-hidden="true"><use href="#i-tel"/></svg>Ligar</a>
+            <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Built%20To%20Last%20Tatuagem%20Asa%20Sul%20Bras%C3%ADlia" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Rotas</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="proof">
+      <a class="pcard reveal" href="https://www.google.com/maps/search/?api=1&amp;query=Built%20To%20Last%20Tatuagem%20Bras%C3%ADlia&amp;query_place_id=ChIJH1z6w-cxWpMRPx46-gm4Cok" target="_blank" rel="noopener">
+        <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <span class="big">4,8</span><span>Nota no Google, com 144 avaliações de clientes.</span><span class="link-arrow">Ler as avaliações <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="pcard reveal" href="https://www.instagram.com/btl.tatuagem/" target="_blank" rel="noopener">
+        <svg width="28" height="28" aria-hidden="true" style="color:var(--neon)"><use href="#i-ig"/></svg>
+        <span class="big">11,2 mil</span><span>Seguidores acompanhando o trabalho no Instagram.</span><span class="link-arrow">@btl.tatuagem <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="pcard reveal" href="#portfolio">
+        <svg width="28" height="28" aria-hidden="true" style="color:var(--volt)"><use href="#i-star"/></svg>
+        <span class="big">5.400</span><span>Posts de trabalhos publicados pelo estúdio.</span><span class="link-arrow">Ver o portfólio <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="wrap reveal">
+    <span class="eyebrow">Próxima sessão</span>
+    <h2 style="margin-top:18px">Sua próxima tattoo <span class="script">começa aqui</span></h2>
+    <p>Mande a sua ideia para a unidade mais perto. A gente responde e desenha junto com você.</p>
+    <div class="final-cta">
+      <a class="btn btn-neon" href="https://wa.me/5561991730764?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20agendar%20uma%20tattoo." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Guará II</a>
+      <a class="btn btn-volt" href="https://wa.me/5561983288322?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20agendar%20uma%20tattoo." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Asa Sul</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="#top" aria-label="Built To Last, início"><b>Tattoos</b><i>Built to Last</i></a>
+      <p class="foot-about">Estúdio de tatuagem em Brasília, com unidades no Guará II e na Asa Sul. Tradicional, neo tradicional, blackwork e colorido.</p>
+    </div>
+    <div><h4>Navegação</h4><ul><li><a href="#portfolio">Portfólio</a></li><li><a href="#artistas">Artistas</a></li><li><a href="#loja">Loja</a></li><li><a href="#agendar">Agendar</a></li></ul></div>
+    <div><h4>Contato</h4><ul><li><a href="https://wa.me/5561991730764" target="_blank" rel="noopener">Guará II · (61) 99173-0764</a></li><li><a href="https://wa.me/5561983288322" target="_blank" rel="noopener">Asa Sul · (61) 98328-8322</a></li><li><a href="https://www.instagram.com/btl.tatuagem/" target="_blank" rel="noopener">@btl.tatuagem</a></li></ul></div>
+    <div><h4>Horário</h4><ul><li><a href="#agendar">Seg a sex, 14h às 18h</a></li><li><a href="#agendar">Fora disso, com hora marcada</a></li></ul></div>
+  </div>
+  <div class="wrap foot-bot"><span>© Built To Last · Brasília, DF</span><span>Site de demonstração · produtos e valores conforme a loja atual, a confirmar com o estúdio</span></div>
+</footer>
+
+<a class="float" href="https://wa.me/5561991730764?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20agendar%20uma%20tattoo." target="_blank" rel="noopener" aria-label="Agendar na Built To Last pelo WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar</a>
+
+<!-- flash dialog -->
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <div class="dlg">
+    <div class="art"><svg id="dlgArt"><use href="#f-rose"/></svg></div>
+    <div class="dlg-body">
+      <span class="eyebrow" id="dlgStyle">Tradicional</span>
+      <h3 id="dlgTitle">Rosa</h3>
+      <p id="dlgDesc"></p>
+      <a class="btn btn-neon" id="dlgWa" href="https://wa.me/5561991730764" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Quero algo nesse estilo</a>
+    </div>
+    <button class="dlg-x" type="button" id="dlgX" aria-label="Fechar">×</button>
+  </div>
+</dialog>
+
+<!-- bag -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Sacola" aria-hidden="true">
+  <div class="dr-head"><h3>Sua sacola</h3><button class="dr-x" type="button" id="drX" aria-label="Fechar sacola">×</button></div>
+  <ul class="dr-list" id="drList"></ul>
+  <div class="dr-foot">
+    <div class="dr-total"><span>Subtotal</span><b id="drTotal">R$ 0</b></div>
+    <p class="dr-note">Frete não incluso. Na versão final, o pagamento pode ser online ou combinado pelo WhatsApp.</p>
+    <a class="btn btn-neon" id="drGo" href="#" target="_blank" rel="noopener" aria-disabled="true"><svg aria-hidden="true"><use href="#i-wa"/></svg>Finalizar pelo WhatsApp</a>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  /* reveal */
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e)})}
+
+  /* menu */
+  var header=document.getElementById('header'),burger=document.getElementById('burger');
+  function setMenu(open){header.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')}
+  burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+
+  /* portfolio filter */
+  var chips=document.querySelectorAll('.chip'),tiles=document.querySelectorAll('.flash');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    chips.forEach(function(x){x.setAttribute('aria-pressed',x===c)});
+    var f=c.dataset.f;
+    tiles.forEach(function(t){var show=f==='all'||t.dataset.cat.split(' ').indexOf(f)>-1;t.classList.toggle('hide',!show);if(show)t.classList.add('in')});
+  })});
+
+  /* dialog */
+  var dlg=document.getElementById('dlg');
+  tiles.forEach(function(t){t.addEventListener('click',function(){
+    document.querySelector('#dlgArt use').setAttribute('href','#'+t.dataset.art);
+    document.getElementById('dlgTitle').textContent=t.dataset.name;
+    document.getElementById('dlgStyle').textContent=t.dataset.style;
+    document.getElementById('dlgDesc').textContent=t.dataset.desc;
+    document.getElementById('dlgWa').href='https://wa.me/5561991730764?text='+encodeURIComponent('Olá! Vi o desenho "'+t.dataset.name+'" no site e quero uma tattoo nesse estilo ('+t.dataset.style+').');
+    if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');
+  })});
+  document.getElementById('dlgX').addEventListener('click',function(){dlg.close()});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+
+  /* shop tabs */
+  var tabs=document.querySelectorAll('.tab'),prods=document.querySelectorAll('.prod'),gift=document.getElementById('presente');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    var t=b.dataset.t;
+    prods.forEach(function(p){var s=t==='all'||p.dataset.t===t;p.classList.toggle('hide',!s);if(s)p.classList.add('in')});
+    gift.style.display=(t==='all'||t==='gift')?'':'none';
+  })});
+
+  /* sizes */
+  document.querySelectorAll('.sizes').forEach(function(g){
+    var bs=g.querySelectorAll('button.sz');
+    bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});var h=g.parentNode.querySelector('.hint');if(h)h.textContent=''})});
+  });
+
+  /* bag */
+  var bag=[],count=document.getElementById('bagCount'),list=document.getElementById('drList'),total=document.getElementById('drTotal'),go=document.getElementById('drGo');
+  var drawer=document.getElementById('drawer'),scrim=document.getElementById('scrim'),toast=document.getElementById('toast'),tt;
+  function brl(n){return 'R$ '+n.toLocaleString('pt-BR')}
+  function open(on){if(on)toast.classList.remove('on');drawer.classList.toggle('on',on);scrim.classList.toggle('on',on);drawer.setAttribute('aria-hidden',!on)}
+  function say(m){toast.textContent=m;toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},2200)}
+  var thumbs={'caveira':'f-skull','foodog-tee':'f-wave','kit':'f-wave','ecobag':'f-wave','print':'f-rose','voucher-meia':'f-anchor','voucher-sessao':'f-anchor'};
+  function render(){
+    var n=0,sum=0;
+    list.innerHTML='';
+    if(!bag.length){list.innerHTML='<li class="dr-empty"><b>Sacola vazia</b>Escolha um produto da loja para começar.</li>'}
+    bag.forEach(function(it,i){
+      n+=it.q;sum+=it.q*it.p;
+      var li=document.createElement('li');li.className='dr-item';
+      li.innerHTML='<span class="dr-thumb"><svg viewBox="0 0 200 200"><use href="#'+(thumbs[it.id]||'f-rose')+'"/></svg></span><div><b></b><small></small><div class="qty"><button type="button" aria-label="Diminuir">−</button><span>'+it.q+'</span><button type="button" aria-label="Aumentar">+</button></div></div><div><span class="dr-price">'+brl(it.p*it.q)+'</span><button class="dr-rm" type="button">remover</button></div>';
+      li.querySelector('b').textContent=it.name;li.querySelector('small').textContent=it.size?('Tamanho '+it.size):(it.id.indexOf('voucher')===0?'Vale-presente':'Tamanho único');
+      var q=li.querySelectorAll('.qty button');
+      q[0].onclick=function(){it.q--;if(it.q<1)bag.splice(i,1);render()};
+      q[1].onclick=function(){it.q++;render()};
+      li.querySelector('.dr-rm').onclick=function(){bag.splice(i,1);render()};
+      list.appendChild(li);
+    });
+    count.textContent=n;count.classList.remove('bump');void count.offsetWidth;count.classList.add('bump');
+    total.textContent=brl(sum);
+    if(bag.length){
+      var msg='Olá! Quero fazer um pedido na loja Built To Last:\n'+bag.map(function(it){return '• '+it.q+'x '+it.name+(it.size?' ('+it.size+')':'')+' · '+brl(it.p*it.q)}).join('\n')+'\nSubtotal: '+brl(sum)+' (frete à parte)';
+      go.href='https://wa.me/5561991730764?text='+encodeURIComponent(msg);go.setAttribute('aria-disabled','false');
+    }else{go.href='#';go.setAttribute('aria-disabled','true')}
+  }
+  function add(card,btn){
+    var g=card.querySelector('.sizes'),size='';
+    if(g&&g.querySelector('button.sz')){
+      var sel=g.querySelector('button.sz[aria-pressed="true"]');
+      if(!sel){var h=card.querySelector('.hint');if(h)h.textContent='Escolha um tamanho primeiro.';return}
+      size=sel.textContent;
+    }
+    var id=card.dataset.id,name=card.dataset.name,p=+card.dataset.price,ex=null;
+    bag.forEach(function(it){if(it.id===id&&it.size===size)ex=it});
+    if(ex)ex.q++;else bag.push({id:id,name:name,p:p,size:size,q:1});
+    render();
+    btn.classList.add('done');var old=btn.innerHTML;btn.innerHTML='Adicionado ✓';
+    setTimeout(function(){btn.classList.remove('done');btn.innerHTML=old},1400);
+    say(name+(size?' ('+size+')':'')+' na sacola');
+  }
+  document.querySelectorAll('.prod button.add, .ticket button.add').forEach(function(b){
+    b.addEventListener('click',function(){add(b.closest('.prod, .ticket'),b)});
+  });
+  document.getElementById('bagBtn').addEventListener('click',function(){open(true)});
+  document.getElementById('drX').addEventListener('click',function(){open(false)});
+  scrim.addEventListener('click',function(){open(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){setMenu(false);open(false)}});
+  render();count.classList.remove('bump');
+  var fl=document.querySelector('.float');
+  function onS(){fl.classList.toggle('show',window.scrollY>520)}
+  window.addEventListener('scroll',onS,{passive:true});onS();
+})();
+</script>
+</body>
+</html>
