@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Itallo Gontijo | Fineline e blackwork na Asa Norte, Brasília</title>
+<meta name="description" content="Itallo Gontijo, tatuador na Asa Norte em Brasília: fineline e blackwork com personalidade, coberturas e arte autoral. Nota 5,0 no Google. Agende pelo Instagram ou WhatsApp.">
+<!-- Site de demonstração: não indexar no Google até o tatuador aprovar -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#111111">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+/* Layout: tatuador fineline + blackwork. Editorial de revista em preto e branco: papel claro, tinta preta, serifa itálica grande; desenho que mistura traço fino (peônia) e blackwork (folhas sólidas). */
+:root{
+  --paper:#f3f0ea; --paper-2:#e9e4db; --ink:#111111; --ink-2:#1d1c1b; --grey:#8a857d; --muted:#5f5a53; --line:#d6d0c5; --cream:#efe9df;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif; --sans:"Hanken Grotesk",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --header:78px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding-left:20px;padding-right:20px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
+h1 em,h2 em{font-style:italic}
+p{text-wrap:pretty}
+.over{display:inline-flex;align-items:center;gap:12px;font-size:.74rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.over::before{content:"";width:34px;height:1px;background:var(--ink)}
+.sec{padding:clamp(72px,10vw,124px) 0}
+.sec[id]{scroll-margin-top:var(--header)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:500;font-size:.98rem;line-height:1.2;white-space:nowrap;border:1px solid var(--ink);cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{transform:translateY(-2px);background:#2c2b29}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.btn-cream{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.btn-cream:hover{transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(239,233,223,.45);color:var(--cream)}
+.btn-ghost:hover{background:var(--cream);color:var(--ink)}
+.btn-sm{padding:11px 20px;font-size:.9rem}
+.demo{background:var(--ink);color:#b9b3a9;font-size:.74rem;letter-spacing:.03em;text-align:center;padding:7px 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+header{position:sticky;top:0;z-index:50;background:rgba(243,240,234,.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header.scrolled{box-shadow:0 8px 30px rgba(17,17,17,.05)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header)}
+.logo{display:flex;flex-direction:column;line-height:1;flex:none}
+.logo-name{font-family:var(--serif);font-size:1.55rem;letter-spacing:-.01em;white-space:nowrap}
+.logo-name em{font-style:italic}
+.logo-sub{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:5px;white-space:nowrap}
+.menu{display:flex;gap:4px;list-style:none;font-size:.93rem;color:var(--muted)}
+.menu a{display:block;padding:8px 14px;white-space:nowrap;transition:color .2s}
+.menu a:hover{color:var(--ink)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:transparent;cursor:pointer;place-items:center;color:var(--ink)}
+.burger svg{width:22px;height:22px}
+.hero{padding:0;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:56px;min-height:calc(100vh - var(--header) - 31px);max-height:880px;padding-top:52px;padding-bottom:68px}
+.hero h1{font-size:clamp(3rem,6.4vw,5.9rem);margin:24px 0 26px}
+.lead{font-size:1.12rem;color:var(--muted);max-width:520px;font-weight:300}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:36px;margin-top:44px;padding-top:26px;border-top:1px solid var(--line);list-style:none}
+.fact-v{display:block;font-family:var(--serif);font-size:2.1rem;line-height:1}
+.fact-v small{font-size:1rem;color:var(--muted);font-family:var(--sans)}
+.fact-k{display:block;font-size:.8rem;color:var(--muted);margin-top:8px}
+.plate{position:relative;width:min(440px,100%);margin:0 auto;background:#fbfaf7;border:1px solid var(--line);padding:22px;box-shadow:0 40px 70px rgba(17,17,17,.12)}
+.plate-svg{width:100%;height:auto}
+.plate-cap{display:flex;justify-content:space-between;gap:12px;margin-top:14px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.fl{fill:none;stroke:var(--ink);stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round}
+.bw{fill:var(--ink)}
+.js .plate:not(.in) .fl{stroke-dashoffset:1}
+.fl{stroke-dasharray:1;stroke-dashoffset:0}
+.js .plate.in .fl{animation:draw 1.6s ease both;animation-delay:var(--d)}
+.js .plate:not(.in) .bw{opacity:0}
+.js .plate.in .bw{animation:pop 1s ease both;animation-delay:var(--d)}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes pop{from{opacity:0}to{opacity:1}}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.sec-head h2{font-size:clamp(2.4rem,4.6vw,4rem);margin-top:16px}
+.sec-head p{color:var(--muted);font-size:1.05rem;max-width:470px;font-weight:300}
+.briefing{background:var(--ink);color:var(--cream)}
+.briefing .over{color:#a9a399}
+.briefing .over::before{background:var(--cream)}
+.briefing .sec-head p{color:#bdb7ad}
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:32px;align-items:center;margin-top:60px}
+.ask{background:var(--ink-2);border:1px solid rgba(239,233,223,.14);padding:34px 32px;font-family:var(--serif);font-size:1.5rem;line-height:1.4;font-style:italic;color:#e4ded3;position:relative}
+.ask-k,.art-k{display:block;font-family:var(--sans);font-style:normal;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:#a9a399;margin-bottom:16px}
+.ask-lines{margin-top:22px;display:grid;gap:10px}
+.ask-lines span{display:block;height:1px;background:rgba(239,233,223,.16)}
+.x{font-family:var(--serif);font-style:italic;font-size:3.4rem;color:#a9a399;line-height:1}
+.art{background:var(--cream);color:var(--ink);padding:24px;border:1px solid rgba(239,233,223,.14)}
+.art-k{color:var(--muted)}
+.art svg{width:100%;height:auto}
+.vs-note{margin-top:22px;font-size:.84rem;color:#a9a399}
+.styles{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:60px;border-top:1px solid var(--ink)}
+.style{padding:34px 32px 18px 0}
+.style + .style{padding-left:32px;border-left:1px solid var(--line)}
+.style-ico{width:76px;height:76px;margin-bottom:22px}
+.style h3{font-size:2rem;margin-bottom:10px}
+.style-txt{color:var(--muted);font-weight:300}
+.session{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:60px;counter-reset:s}
+.step{background:var(--paper);border:1px solid var(--line);padding:30px 26px 32px}
+.step-n{font-family:var(--serif);font-style:italic;font-size:3rem;line-height:1;color:var(--ink)}
+.step h3{font-size:1.5rem;margin:18px 0 10px}
+.step-txt{color:var(--muted);font-weight:300;font-size:.97rem}
+.rating{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
+.score{font-family:var(--serif);font-size:clamp(6rem,13vw,10rem);line-height:.85;letter-spacing:-.04em}
+.stars{display:flex;gap:6px;margin:12px 0 10px}
+.stars svg{width:24px;height:24px;color:var(--ink)}
+.rating-k{color:var(--muted)}
+.rating h2{font-size:clamp(2.2rem,4vw,3.4rem);margin:16px 0 18px}
+.rating p{color:var(--muted);font-weight:300;max-width:560px;font-size:1.05rem}
+.contact{background:var(--ink);color:var(--cream);text-align:center}
+.contact .over{color:#a9a399}
+.contact .over::before{background:var(--cream)}
+.contact h2{font-size:clamp(2.6rem,5.6vw,4.8rem);margin:20px auto 16px}
+.contact-p{color:#bdb7ad;max-width:540px;margin:0 auto;font-weight:300}
+.contact .cta{justify-content:center}
+.num{margin-top:24px;font-size:.9rem;color:#a9a399}
+footer{font-size:.9rem;color:var(--muted);padding:56px 0 0;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:44px}
+.foot-about{margin-top:18px;max-width:360px;font-weight:300}
+footer h4{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);font-weight:600;margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:var(--ink)}
+.foot-bottom{border-top:1px solid var(--line);padding:22px 0 26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-size:.78rem}
+.float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;height:54px;padding:0 22px 0 18px;border-radius:999px;background:var(--ink);color:var(--paper);font-weight:500;font-size:.95rem;box-shadow:0 14px 30px rgba(17,17,17,.3);transition:transform .2s}
+.float:hover{transform:translateY(-2px)}
+.float svg{width:21px;height:21px;flex:none}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s}
+.js .reveal.in{opacity:1;transform:none}
+@media(min-width:1500px){.wrap{max-width:1280px}body{font-size:17px}}
+@media(max-width:1180px){.menu a{padding:8px 10px}.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:960px){
+  :root{--header:70px}
+  .burger{display:grid}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 20px 16px;font-size:1rem;display:none}
+  header.open .menu{display:flex}
+  .menu a{padding:14px 4px;border-bottom:1px solid var(--line)}
+  .menu li:last-child a{border-bottom:0}
+  .hero-grid{grid-template-columns:1fr;gap:48px;min-height:0;max-height:none;padding-top:44px;padding-bottom:76px}
+  .lead{max-width:none}
+  .plate{width:min(420px,92%)}
+  .sec-head{grid-template-columns:1fr;gap:16px}
+  .vs{grid-template-columns:1fr;gap:18px;max-width:520px}
+  .x{text-align:center}
+  .styles{grid-template-columns:1fr}
+  .style,.style + .style{padding:30px 0 24px;border-left:0;border-bottom:1px solid var(--line)}
+  .rating{grid-template-columns:1fr;gap:24px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media(max-width:640px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav-actions .btn{display:none}
+  .demo-more{display:none}
+  .cta .btn{width:100%}
+  .facts{grid-template-columns:repeat(2,auto);gap:24px 32px}
+  .plate-cap span:nth-child(2){display:none}
+  .steps{grid-template-columns:1fr}
+  .ask{font-size:1.25rem;padding:28px 22px}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .float{right:16px;bottom:16px;height:50px;padding:0 18px 0 14px;font-size:.9rem}
+  footer{padding-bottom:70px}
+}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.js .plate .fl{animation:none;stroke-dashoffset:0}.js .plate .bw{animation:none;opacity:1}html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-wa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z"/><path d="M9.2 8.4c.3-.4.7-.4 1-.1l.9 1.3c.2.3.1.6-.1.9l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.3-.2.6-.3.9-.1l1.3.9c.3.3.3.7-.1 1-.6.8-1.6 1.1-2.6.7-2.4-1-4.2-2.8-5.2-5.2-.3-.8 0-1.7.7-2.4z"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.5-5.4 6.5-11a6.5 6.5 0 1 0-13 0c0 5.6 6.5 11 6.5 11z"/><circle cx="12" cy="10" r="2.3"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+  <!-- peônia em traço fino com folhas em blackwork -->
+  <symbol id="flower" viewBox="0 0 400 480">
+    <path d="M200 470 C196 410 204 350 200 290" fill="none" stroke="#111" stroke-width="1.15" stroke-linecap="round"/>
+    <path d="M200 400 C160 380 120 390 96 420 C130 432 172 426 200 400 Z" fill="#111"/>
+    <path d="M200 350 C240 326 282 334 308 362 C274 376 232 372 200 350 Z" fill="#111"/>
+    <path d="M200 440 C226 424 252 428 268 446 C246 456 220 454 200 440 Z" fill="#111"/>
+    <g fill="none" stroke="#111" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M200 290 C150 292 110 262 108 214 C126 228 150 236 172 236"/>
+      <path d="M200 290 C250 292 290 262 292 214 C274 228 250 236 228 236"/>
+      <path d="M172 236 C140 214 136 170 160 140 C170 162 186 176 200 182"/>
+      <path d="M228 236 C260 214 264 170 240 140 C230 162 214 176 200 182"/>
+      <path d="M200 182 C178 160 178 120 200 96 C222 120 222 160 200 182 Z"/>
+      <path d="M200 260 C176 250 166 226 176 206 M200 260 C224 250 234 226 224 206"/>
+      <path d="M186 214 C192 204 208 204 214 214"/>
+      <path d="M200 120 V170"/>
+    </g>
+  </symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração)<span class="demo-more"> · desenvolvida como exemplo para Itallo Gontijo</span></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Itallo Gontijo, início">
+      <span class="logo-name">Itallo <em>Gontijo</em></span>
+      <span class="logo-sub">Tatuador · Asa Norte</span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul class="menu" id="menu">
+        <li><a href="#processo">Pedido × arte</a></li>
+        <li><a href="#estilos">Estilos</a></li>
+        <li><a href="#sessao">A sessão</a></li>
+        <li><a href="#contato">Agendar</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ink btn-sm" href="https://ig.me/m/itallo.gontijo" target="_blank" rel="noopener">Agendar pela DM</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="over">Tatuador em Brasília · Asa Norte</span>
+      <h1 id="hero-title">Fineline &amp; blackwork <em>com personalidade</em></h1>
+      <p class="lead">O Itallo Gontijo cria tatuagens autorais em traço fino e blackwork. Cada desenho parte do que você pede e ganha uma assinatura própria.</p>
+      <div class="cta">
+        <a class="btn btn-ink" href="https://ig.me/m/itallo.gontijo" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Agendar pela DM</a>
+        <a class="btn btn-line" href="https://wa.me/5561992790904" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Orçamento no WhatsApp</a>
+      </div>
+      <ul class="facts">
+        <li><span class="fact-v">5,0 <small>★</small></span><span class="fact-k">171 avaliações no Google</span></li>
+        <li><span class="fact-v">7,7 mil</span><span class="fact-k">seguidores no Instagram</span></li>
+        <li><span class="fact-v"><em>Asa Norte</em></span><span class="fact-k">Brasília, DF</span></li>
+      </ul>
+    </div>
+    <figure class="plate reveal">
+      <svg class="plate-svg" viewBox="0 0 400 480" role="img" aria-labelledby="pl-t">
+        <title id="pl-t">Peônia em traço fino com folhas sólidas em blackwork</title>
+        <g fill="none" stroke="#d6d0c5" stroke-width="1"><path d="M16 16 h28 M16 16 v28 M384 16 h-28 M384 16 v28 M16 464 h28 M16 464 v-28 M384 464 h-28 M384 464 v-28"/></g>
+        <path class="fl" pathLength="1" style="--d:.1s" d="M200 470 C196 410 204 350 200 290"/>
+        <path class="bw" style="--d:1.4s" d="M200 400 C160 380 120 390 96 420 C130 432 172 426 200 400 Z"/>
+        <path class="bw" style="--d:1.6s" d="M200 350 C240 326 282 334 308 362 C274 376 232 372 200 350 Z"/>
+        <path class="bw" style="--d:1.8s" d="M200 440 C226 424 252 428 268 446 C246 456 220 454 200 440 Z"/>
+        <path class="fl" pathLength="1" style="--d:.5s" d="M200 290 C150 292 110 262 108 214 C126 228 150 236 172 236"/>
+        <path class="fl" pathLength="1" style="--d:.6s" d="M200 290 C250 292 290 262 292 214 C274 228 250 236 228 236"/>
+        <path class="fl" pathLength="1" style="--d:.8s" d="M172 236 C140 214 136 170 160 140 C170 162 186 176 200 182"/>
+        <path class="fl" pathLength="1" style="--d:.9s" d="M228 236 C260 214 264 170 240 140 C230 162 214 176 200 182"/>
+        <path class="fl" pathLength="1" style="--d:1.1s" d="M200 182 C178 160 178 120 200 96 C222 120 222 160 200 182 Z"/>
+        <path class="fl" pathLength="1" style="--d:1.2s" d="M200 260 C176 250 166 226 176 206"/>
+        <path class="fl" pathLength="1" style="--d:1.25s" d="M200 260 C224 250 234 226 224 206"/>
+        <path class="fl" pathLength="1" style="--d:1.35s" d="M186 214 C192 204 208 204 214 214"/>
+        <path class="fl" pathLength="1" style="--d:1.4s" d="M200 120 V170"/>
+        <g class="bw" style="--d:2s"><circle cx="130" cy="120" r="2.4"/><circle cx="118" cy="140" r="1.6"/><circle cx="282" cy="110" r="2.4"/><circle cx="296" cy="132" r="1.6"/><circle cx="320" cy="300" r="2"/><circle cx="80" cy="330" r="2"/></g>
+      </svg>
+      <figcaption class="plate-cap"><span>Fineline</span><span>Desenho ilustrativo</span><span>Blackwork</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec briefing" id="processo" aria-labelledby="processo-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="over">Arte autoral</span><h2 id="processo-title">O que o cliente pediu <em>× a arte que eu criei</em></h2></div>
+      <p>O pedido é o ponto de partida. A partir da sua ideia, o Itallo cria um desenho único, pensado para o seu corpo e com a personalidade do traço dele.</p>
+    </div>
+    <div class="vs">
+      <div class="ask reveal">
+        <span class="ask-k">O pedido</span>
+        “Quero uma flor delicada, mas com força. Algo que seja só meu.”
+        <div class="ask-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+      </div>
+      <span class="x" aria-hidden="true">×</span>
+      <div class="art reveal">
+        <span class="art-k">A arte</span>
+        <svg viewBox="0 0 400 480" role="img" aria-label="Peônia em traço fino com folhas em blackwork"><use href="#flower"/></svg>
+      </div>
+    </div>
+    <p class="vs-note reveal">Exemplo ilustrativo. No Instagram, a série “O que o cliente pediu × a arte que eu criei” mostra casos reais.</p>
+  </div>
+</section>
+
+<section class="sec" id="estilos" aria-labelledby="estilos-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="over">Estilos</span><h2 id="estilos-title">Traço fino, preto sólido <em>e nova vida</em></h2></div>
+      <p>Os três destaques do trabalho do Itallo, que você também encontra no perfil dele.</p>
+    </div>
+    <div class="styles">
+      <article class="style reveal">
+        <svg class="style-ico" viewBox="0 0 76 76" aria-hidden="true"><circle cx="38" cy="38" r="36" fill="none" stroke="#111" stroke-width="1"/><g fill="none" stroke="#111" stroke-width="1.2" stroke-linecap="round"><path d="M26 58 C30 44 36 32 50 18"/><path d="M32 50 c-7 0-10-4-10-9 6 0 10 4 10 9z"/><path d="M38 40 c-6 1-10-2-11-7 6-1 11 2 11 7z"/><path d="M44 31 c1-6 5-8 10-7 0 6-4 8-10 7z"/></g></svg>
+        <h3>Fineline</h3>
+        <p class="style-txt">Linhas finas e precisas para flores, homenagens e desenhos delicados, com riqueza de detalhe.</p>
+      </article>
+      <article class="style reveal">
+        <svg class="style-ico" viewBox="0 0 76 76" aria-hidden="true"><circle cx="38" cy="38" r="36" fill="none" stroke="#111" stroke-width="1"/><path d="M38 14 C52 28 52 48 38 62 C24 48 24 28 38 14 Z" fill="#111"/><path d="M38 22 V56" stroke="#f3f0ea" stroke-width="1.6"/></svg>
+        <h3>Blackwork</h3>
+        <p class="style-txt">Áreas de preto sólido e contraste forte, sozinhas ou junto com o traço fino.</p>
+      </article>
+      <article class="style reveal">
+        <svg class="style-ico" viewBox="0 0 76 76" aria-hidden="true"><circle cx="38" cy="38" r="36" fill="none" stroke="#111" stroke-width="1"/><rect x="20" y="26" width="22" height="22" fill="none" stroke="#8a857d" stroke-width="1.2" stroke-dasharray="2 3"/><path d="M30 36 C38 22 56 24 56 40 C56 54 40 58 30 50" fill="#111"/></svg>
+        <h3>Cobertura</h3>
+        <p class="style-txt">A tatuagem antiga que não faz mais sentido vira um trabalho novo, pensado para cobrir o que ficou.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec session" id="sessao" aria-labelledby="sessao-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="over">A sessão</span><h2 id="sessao-title">Como é tatuar <em>comigo</em></h2></div>
+      <p>Do primeiro contato ao dia da sessão, tudo é conversado antes.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><span class="step-n">1</span><h3>Orçamento</h3><p class="step-txt">Você manda a ideia, o lugar do corpo e o tamanho pela DM ou pelo WhatsApp.</p></li>
+      <li class="step reveal"><span class="step-n">2</span><h3>Criação</h3><p class="step-txt">O pedido vira uma arte autoral, ajustada até ficar do jeito certo para você.</p></li>
+      <li class="step reveal"><span class="step-n">3</span><h3>Agenda</h3><p class="step-txt">Com tudo aprovado, vocês reservam um horário na agenda do mês.</p></li>
+      <li class="step reveal"><span class="step-n">4</span><h3>Sessão</h3><p class="step-txt">No estúdio na Asa Norte, o desenho vai para a pele com calma e atenção.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="nota-title">
+  <div class="wrap rating">
+    <div class="reveal">
+      <div class="score">5,0</div>
+      <div class="stars" aria-label="5 estrelas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+      <span class="rating-k">171 avaliações no Google</span>
+    </div>
+    <div class="reveal">
+      <span class="over">Avaliações</span>
+      <h2 id="nota-title">Nota máxima <em>de quem já tatuou</em></h2>
+      <p>São 171 avaliações no Google, com média 5,0. No Instagram, os feedbacks de clientes, inclusive de quem veio de fora do Brasil, mostram como é a experiência.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contato" aria-labelledby="contato-title">
+  <div class="wrap">
+    <span class="over">Agendar</span>
+    <h2 id="contato-title">Agende sua <em>próxima tatuagem</em></h2>
+    <p class="contact-p">A agenda abre mês a mês e os horários vão sendo reservados com antecedência. Chame pela DM no Instagram ou pelo WhatsApp.</p>
+    <div class="cta">
+      <a class="btn btn-cream" href="https://ig.me/m/itallo.gontijo" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Agendar pela DM</a>
+      <a class="btn btn-ghost" href="https://wa.me/5561992790904" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Itallo%20Allaf%20Tattoo%20Bras%C3%ADlia" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Ver no mapa</a>
+    </div>
+    <p class="num">WhatsApp (61) 99279-0904 · Instagram @itallo.gontijo · Asa Norte, Brasília</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top" aria-label="Itallo Gontijo, início"><span class="logo-name">Itallo <em>Gontijo</em></span><span class="logo-sub">Tatuador · Asa Norte</span></a>
+      <p class="foot-about">Fineline e blackwork com personalidade, em Brasília.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul><li><a href="#processo">Pedido × arte</a></li><li><a href="#estilos">Estilos</a></li><li><a href="#sessao">A sessão</a></li><li><a href="#contato">Agendar</a></li></ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul><li><a href="https://ig.me/m/itallo.gontijo" target="_blank" rel="noopener">Instagram @itallo.gontijo</a></li><li><a href="https://wa.me/5561992790904" target="_blank" rel="noopener">WhatsApp (61) 99279-0904</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-bottom">
+    <span>© Itallo Gontijo</span>
+    <span>Site de demonstração · textos, fotos, valores e endereço a confirmar com o tatuador</span>
+  </div></div>
+</footer>
+
+<a class="float" href="https://wa.me/5561992790904" target="_blank" rel="noopener" aria-label="Pedir orçamento ao Itallo no WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg>Orçamento</a>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e)})}
+  var header=document.getElementById('header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var burger=document.getElementById('burger');
+  function setMenu(open){header.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')}
+  burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+})();
+</script>
+</body>
+</html>
