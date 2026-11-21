@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naja Tattoo | Old school, cobertura e fine line em Brasília</title>
+<meta name="description" content="Naja: tatuadora em Brasília, em estúdio privado. Old school, coberturas e fine line. Faça seu orçamento pelo WhatsApp.">
+<!-- Site de demonstração: não indexar no Google até a artista aprovar -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2b1a3a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Shrikhand&display=swap" rel="stylesheet">
+<style>
+/* Layout: tatuadora old school/cobertura/fine line. Menta e roxo dos destaques do perfil, rosa e amarelo das tatuagens; naja tradicional enrolada num coração que chora. Display retrô itálica + sans humanista. */
+:root{
+  --ink:#2b1a3a; --ink-2:#3b2650; --mint:#8ff0c4; --mint-l:#e9fbf3; --mint-xl:#f5fdf9; --aqua:#a6f3e0;
+  --purple:#7d5a96; --purple-l:#e9e0f1; --pink:#ff7aa8; --pink-d:#e0517f; --yellow:#f6c945;
+  --muted:#5e4f6c; --line:#cfe9dd; --white:#fff;
+  --display:"Shrikhand","Georgia",serif; --sans:"Karla",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --header:76px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--mint-xl);line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--pink-d);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding-left:20px;padding-right:20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;letter-spacing:0;text-wrap:balance}
+h1 em,h2 em{font-style:normal;color:var(--pink-d)}
+p{text-wrap:pretty}
+.over{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--purple)}
+.over::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--pink);box-shadow:16px 0 0 var(--yellow)}
+.over::before{margin-right:16px}
+.sec{padding:clamp(70px,9vw,112px) 0}
+.sec[id]{scroll-margin-top:var(--header)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:1rem;line-height:1.2;white-space:nowrap;border:2px solid var(--ink);cursor:pointer;transition:transform .15s,box-shadow .15s,background .2s,color .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-ink{background:var(--ink);color:#fff;box-shadow:4px 4px 0 var(--pink)}
+.btn-ink:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}
+.btn-line{background:#fff;color:var(--ink)}
+.btn-line:hover{background:var(--purple-l)}
+.btn-mint{background:var(--mint);color:var(--ink);box-shadow:4px 4px 0 var(--yellow)}
+.btn-mint:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--yellow)}
+.btn-ghost{border-color:#fff;color:#fff;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-sm{padding:10px 18px;font-size:.92rem;box-shadow:3px 3px 0 var(--pink)}
+.demo{background:var(--ink);color:#cbbad9;font-size:.74rem;letter-spacing:.03em;text-align:center;padding:7px 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+header{position:sticky;top:0;z-index:50;background:rgba(245,253,249,.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:2px solid var(--ink)}
+header.scrolled{box-shadow:0 6px 0 rgba(43,26,58,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header)}
+.logo{display:flex;align-items:center;gap:12px;flex:none}
+.logo-ico{width:44px;height:44px;flex:none}
+.logo-txt{display:flex;flex-direction:column;line-height:1}
+.logo-name{font-family:var(--display);font-size:1.6rem;color:var(--ink);white-space:nowrap}
+.logo-sub{font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--purple);margin-top:3px;white-space:nowrap}
+.menu{display:flex;gap:4px;list-style:none;font-weight:600;font-size:.98rem}
+.menu a{display:block;padding:8px 14px;white-space:nowrap;transition:color .2s}
+.menu a:hover{color:var(--pink-d)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:2px solid var(--ink);background:#fff;cursor:pointer;place-items:center;color:var(--ink)}
+.burger svg{width:22px;height:22px}
+.hero{position:relative;overflow:hidden;padding:0;background:radial-gradient(60% 70% at 78% 40%,var(--aqua) 0%,transparent 70%),radial-gradient(40% 50% at 8% 90%,var(--purple-l) 0%,transparent 70%),var(--mint-xl)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:56px;min-height:calc(100vh - var(--header) - 31px);max-height:860px;padding-top:56px;padding-bottom:72px}
+.hero h1{font-size:clamp(2.5rem,5vw,4.4rem);margin:22px 0 24px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:520px}
+.cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;list-style:none}
+.chip{font-weight:700;font-size:.88rem;padding:7px 16px;border:2px solid var(--ink);border-radius:999px;background:#fff}
+.chip-p{background:var(--purple-l)}.chip-m{background:var(--mint)}.chip-y{background:var(--yellow)}
+.art{position:relative;width:min(460px,100%);margin:0 auto}
+.art-svg{width:100%;height:auto;overflow:visible}
+.art-cap{display:block;text-align:center;margin-top:6px;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--purple)}
+.js .snake-body{stroke-dashoffset:0}
+.sec-head{max-width:680px}
+.sec-head h2{font-size:clamp(2.1rem,3.8vw,3.2rem);margin:16px 0 14px}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+.styles{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.card{background:#fff;border:2px solid var(--ink);border-radius:26px;padding:32px 28px 34px;box-shadow:7px 7px 0 var(--c,var(--mint))}
+.card-ico{width:84px;height:84px;margin-bottom:18px}
+.card h3{font-size:1.7rem;margin-bottom:10px}
+.card-txt{color:var(--muted)}
+.c-mint{--c:var(--mint)}.c-pink{--c:var(--pink)}.c-purple{--c:var(--purple)}
+.hl{background:var(--ink);color:#fff}
+.hl .over{color:var(--mint)}
+.hl .sec-head h2{color:#fff}
+.hl .sec-head h2 em{color:var(--mint)}
+.hl .sec-head p{color:#cdbfdb}
+.bubbles{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:52px;list-style:none}
+.bubble{text-align:center}
+.bubble-c{width:132px;height:132px;margin:0 auto 18px;border-radius:50%;padding:6px;border:2px solid rgba(255,255,255,.35)}
+.bubble-in{width:100%;height:100%;border-radius:50%;display:grid;place-items:center;color:var(--ink)}
+.bubble-in svg{width:52px;height:52px}
+.b1 .bubble-in{background:var(--aqua)}.b2 .bubble-in{background:var(--mint)}.b3 .bubble-in{background:var(--pink)}.b4 .bubble-in{background:var(--purple);color:#fff}
+.bubble h3{font-size:1.4rem;margin-bottom:6px}
+.bubble-txt{color:#cdbfdb;font-size:.96rem;max-width:240px;margin:0 auto}
+.hl-note{margin-top:40px;text-align:center}
+.private{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.private-card{background:var(--purple-l);border:2px solid var(--ink);border-radius:30px;padding:40px 36px;position:relative;box-shadow:8px 8px 0 var(--ink)}
+.private-card h3{font-size:2rem;margin-bottom:12px}
+.private-card p{color:var(--muted);font-size:1.05rem}
+.key{position:absolute;top:-34px;right:28px;width:76px;height:76px}
+.steps{list-style:none;display:grid;gap:20px}
+.step{display:grid;grid-template-columns:60px 1fr;gap:18px;align-items:start}
+.step-n{width:60px;height:60px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink);display:grid;place-items:center;font-family:var(--display);font-size:1.6rem;box-shadow:3px 3px 0 var(--ink)}
+.step h3{font-size:1.35rem;margin:6px 0 4px}
+.step-txt{color:var(--muted)}
+.contact{background:var(--mint);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);text-align:center;position:relative;overflow:hidden}
+.contact h2{font-size:clamp(2.3rem,4.6vw,3.8rem);margin:18px auto 14px;max-width:820px}
+.contact-p{color:var(--ink-2);font-size:1.1rem;max-width:520px;margin:0 auto}
+.contact .cta{justify-content:center}
+.num{margin-top:22px;font-weight:600;color:var(--ink-2)}
+footer{background:var(--ink);color:#cdbfdb;font-size:.94rem;padding:56px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:44px}
+footer .logo-name{color:#fff}
+footer .logo-sub{color:var(--mint)}
+.foot-about{margin-top:16px;max-width:360px}
+footer h4{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mint);font-weight:700;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding:22px 0 26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-size:.8rem}
+.float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;height:56px;padding:0 22px 0 18px;border-radius:999px;background:var(--ink);color:#fff;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--pink);font-weight:700;font-size:.98rem;transition:transform .15s,box-shadow .15s}
+.float:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}
+.float svg{width:22px;height:22px;flex:none}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.js .reveal.in{opacity:1;transform:none}
+.js .art.in .tear{animation:drip 2.6s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes drip{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media(min-width:1500px){.wrap{max-width:1280px}body{font-size:17px}}
+@media(max-width:1180px){.menu a{padding:8px 10px}.bubbles{grid-template-columns:1fr 1fr;row-gap:40px}}
+@media(max-width:960px){
+  :root{--header:70px}
+  .burger{display:grid}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--mint-xl);border-bottom:2px solid var(--ink);padding:8px 20px 16px;font-size:1.05rem;display:none}
+  header.open .menu{display:flex}
+  .menu a{padding:14px 4px;border-bottom:1px solid var(--line)}
+  .menu li:last-child a{border-bottom:0}
+  .hero-grid{grid-template-columns:1fr;gap:40px;min-height:0;max-height:none;padding-top:44px;padding-bottom:72px}
+  .lead{max-width:none}
+  .art{width:min(420px,92%)}
+  .styles{grid-template-columns:1fr;max-width:560px}
+  .private{grid-template-columns:1fr;gap:56px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media(max-width:640px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav-actions .btn{display:none}
+  .demo-more{display:none}
+  .cta .btn{width:100%}
+  .bubbles{grid-template-columns:1fr}
+  .card{box-shadow:5px 5px 0 var(--c,var(--mint))}
+  .private-card{padding:36px 24px;box-shadow:6px 6px 0 var(--ink)}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .float{right:16px;bottom:16px;height:52px;padding:0 16px 0 14px;font-size:.92rem}
+  footer{padding-bottom:70px}
+}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.js .art.in .tear{animation:none}html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-wa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z"/><path d="M9.2 8.4c.3-.4.7-.4 1-.1l.9 1.3c.2.3.1.6-.1.9l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.3-.2.6-.3.9-.1l1.3.9c.3.3.3.7-.1 1-.6.8-1.6 1.1-2.6.7-2.4-1-4.2-2.8-5.2-5.2-.3-.8 0-1.7.7-2.4z"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-brush" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4.5l5 5-8 8-5-5z"/><path d="M6.5 12.5c-2 0-3.5 1.5-3.5 3.5 0 1.5-.5 2.5-1 3 3 .5 6-.5 7-3"/></g></symbol>
+  <symbol id="i-heal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v4h-4"/><path d="M8.5 12.5l2.3 2.3 4.7-4.8"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></g></symbol>
+  <symbol id="i-snake" viewBox="0 0 44 44"><circle cx="22" cy="22" r="20.5" fill="#8ff0c4" stroke="#2b1a3a" stroke-width="2.5"/><path d="M14 33 C8 27 14 21 22 22 C30 23 34 17 28 12" fill="none" stroke="#2b1a3a" stroke-width="7" stroke-linecap="round"/><path d="M14 33 C8 27 14 21 22 22 C30 23 34 17 28 12" fill="none" stroke="#7d5a96" stroke-width="3.6" stroke-linecap="round"/><ellipse cx="27" cy="11" rx="5" ry="4" fill="#7d5a96" stroke="#2b1a3a" stroke-width="2"/><circle cx="28" cy="10.4" r="1" fill="#f6c945"/></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração)<span class="demo-more"> · desenvolvida como exemplo para a Naja Tattoo</span></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Naja Tattoo, início">
+      <svg class="logo-ico" aria-hidden="true"><use href="#i-snake"/></svg>
+      <span class="logo-txt"><span class="logo-name">Naja</span><span class="logo-sub">Tattoo · Brasília</span></span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul class="menu" id="menu">
+        <li><a href="#estilos">Estilos</a></li>
+        <li><a href="#perfil">No perfil</a></li>
+        <li><a href="#estudio">Estúdio</a></li>
+        <li><a href="#orcamento">Orçamento</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ink btn-sm" href="https://wa.me/5561983729218" target="_blank" rel="noopener">Fazer orçamento</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="over">Artista · Estúdio privado em Brasília</span>
+      <h1 id="hero-title">Old school, cobertura e <em>fine line</em></h1>
+      <p class="lead">A Naja tatua em um estúdio privado em Brasília. Cores fortes do tradicional, coberturas que dão vida nova a tatuagens antigas e o traço delicado do fine line.</p>
+      <div class="cta">
+        <a class="btn btn-ink" href="https://wa.me/5561983729218" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Fazer meu orçamento</a>
+        <a class="btn btn-line" href="https://www.instagram.com/tattoosbynaja/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Ver os trabalhos</a>
+      </div>
+      <ul class="chips" aria-label="Especialidades">
+        <li class="chip chip-p">Old school</li>
+        <li class="chip chip-m">Cobertura</li>
+        <li class="chip chip-y">Fine line</li>
+      </ul>
+    </div>
+
+    <figure class="art reveal">
+      <svg class="art-svg" viewBox="0 0 420 460" role="img" aria-labelledby="art-t art-d">
+        <title id="art-t">Naja enrolada em um coração que chora</title>
+        <desc id="art-d">Desenho no estilo tradicional: um coração rosa com lágrimas azuis e uma cobra naja verde e roxa enrolada em volta, com a cabeça aberta no alto.</desc>
+        <circle cx="210" cy="240" r="186" fill="#fff" stroke="#2b1a3a" stroke-width="3"/>
+        <circle cx="210" cy="240" r="170" fill="none" stroke="#2b1a3a" stroke-width="1.5" stroke-dasharray="2 7" stroke-linecap="round"/>
+        <!-- coração -->
+        <path d="M210 372 C140 322 104 282 104 232 C104 196 132 172 164 172 C186 172 202 184 210 202 C218 184 234 172 256 172 C288 172 316 196 316 232 C316 282 280 322 210 372 Z" fill="#ff7aa8" stroke="#2b1a3a" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M296 230 C296 272 266 304 222 338 L210 350 C262 318 292 286 300 246 Z" fill="#e0517f"/>
+        <path d="M128 222 C130 204 142 192 160 190" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+        <!-- rosto do coração -->
+        <path d="M168 248 Q180 238 192 248" fill="none" stroke="#2b1a3a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M228 248 Q240 238 252 248" fill="none" stroke="#2b1a3a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M196 296 Q210 284 224 296" fill="none" stroke="#2b1a3a" stroke-width="4" stroke-linecap="round"/>
+        <g stroke="#2b1a3a" stroke-width="2.5" fill="#6fc6f0">
+          <path class="tear" style="--d:0s" d="M180 258 c-5 9 -7 13 -7 16 a7 7 0 0 0 14 0 c0-3 -2-7 -7-16z"/>
+          <path class="tear" style="--d:.8s" d="M240 258 c-5 9 -7 13 -7 16 a7 7 0 0 0 14 0 c0-3 -2-7 -7-16z"/>
+          <path class="tear" style="--d:1.5s" d="M140 296 c-4 7 -6 10 -6 13 a6 6 0 0 0 12 0 c0-3 -2-6 -6-13z"/>
+          <path class="tear" style="--d:.4s" d="M282 296 c-4 7 -6 10 -6 13 a6 6 0 0 0 12 0 c0-3 -2-6 -6-13z"/>
+        </g>
+        <!-- naja: contorno grosso + corpo menta + barriga -->
+        <path d="M120 402 C70 380 66 330 112 312 C160 294 240 354 300 326 C352 302 344 246 300 228 C262 212 248 176 262 146 C270 128 280 116 286 104" fill="none" stroke="#2b1a3a" stroke-width="30" stroke-linecap="round"/>
+        <path class="snake-body" d="M120 402 C70 380 66 330 112 312 C160 294 240 354 300 326 C352 302 344 246 300 228 C262 212 248 176 262 146 C270 128 280 116 286 104" fill="none" stroke="#8ff0c4" stroke-width="20" stroke-linecap="round"/>
+        <path d="M120 402 C70 380 66 330 112 312 C160 294 240 354 300 326 C352 302 344 246 300 228 C262 212 248 176 262 146 C270 128 280 116 286 104" fill="none" stroke="#7d5a96" stroke-width="20" stroke-dasharray="6 14" stroke-linecap="butt"/>
+        <path d="M120 402 C70 380 66 330 112 312 C160 294 240 354 300 326 C352 302 344 246 300 228 C262 212 248 176 262 146" fill="none" stroke="#2b1a3a" stroke-width="1.5" opacity=".5"/>
+        <!-- cabeça da naja (capuz aberto) -->
+        <path d="M286 112 C252 104 244 66 262 42 C272 28 286 22 296 22 C306 22 320 28 330 42 C348 66 340 104 306 112 Z" fill="#7d5a96" stroke="#2b1a3a" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M296 104 C280 92 278 66 288 52 M296 104 C312 92 314 66 304 52" fill="none" stroke="#8ff0c4" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="296" cy="58" rx="16" ry="20" fill="#8ff0c4" stroke="#2b1a3a" stroke-width="5"/>
+        <circle cx="289" cy="54" r="4" fill="#f6c945" stroke="#2b1a3a" stroke-width="2"/>
+        <circle cx="303" cy="54" r="4" fill="#f6c945" stroke="#2b1a3a" stroke-width="2"/>
+        <path d="M289 52 v4 M303 52 v4" stroke="#2b1a3a" stroke-width="1.6"/>
+        <path d="M296 78 v14 l-5 7 M296 92 l5 7" fill="none" stroke="#e0517f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- brilhos -->
+        <path d="M58 120 l5 -14 5 14 14 5 -14 5 -5 14 -5 -14 -14 -5z" fill="#f6c945" stroke="#2b1a3a" stroke-width="3"/>
+        <path d="M372 380 l4 -11 4 11 11 4 -11 4 -4 11 -4 -11 -11 -4z" fill="#f6c945" stroke="#2b1a3a" stroke-width="3"/>
+        <path d="M80 210 l3 -8 3 8 8 3 -8 3 -3 8 -3 -8 -8 -3z" fill="#fff" stroke="#2b1a3a" stroke-width="2.5"/>
+      </svg>
+      <figcaption class="art-cap">Desenho ilustrativo</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec" id="estilos" aria-labelledby="estilos-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="over">Estilos</span>
+      <h2 id="estilos-title">Três jeitos de <em>contar a sua história</em></h2>
+      <p>Do contorno grosso e colorido do tradicional ao traço fino e delicado, passando pela arte de transformar uma tatuagem antiga.</p>
+    </div>
+    <div class="styles">
+      <article class="card c-pink reveal">
+        <svg class="card-ico" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="#ffe3ec" stroke="#2b1a3a" stroke-width="2.5"/><path d="M42 64 C26 53 20 45 20 36 C20 29 25 24 31 24 C36 24 40 27 42 31 C44 27 48 24 53 24 C59 24 64 29 64 36 C64 45 58 53 42 64 Z" fill="#ff7aa8" stroke="#2b1a3a" stroke-width="3.5" stroke-linejoin="round"/><path d="M27 36 C27 32 30 29 33 29" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+        <h3>Old school</h3>
+        <p class="card-txt">Contorno forte, cores sólidas e os clássicos do tradicional, feitos para continuar bonitos por muitos anos.</p>
+      </article>
+      <article class="card c-mint reveal">
+        <svg class="card-ico" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="#e9fbf3" stroke="#2b1a3a" stroke-width="2.5"/><circle cx="42" cy="42" r="10" fill="#e0517f" stroke="#2b1a3a" stroke-width="2.5"/><g fill="#ff7aa8" stroke="#2b1a3a" stroke-width="2.5"><ellipse cx="42" cy="25" rx="9" ry="10"/><ellipse cx="42" cy="59" rx="9" ry="10"/><ellipse cx="25" cy="42" rx="10" ry="9"/><ellipse cx="59" cy="42" rx="10" ry="9"/></g><circle cx="42" cy="42" r="9" fill="#f6c945" stroke="#2b1a3a" stroke-width="2.5"/><path d="M60 64 l10 4 M66 60 l4 10" stroke="#2b1a3a" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <h3>Cobertura</h3>
+        <p class="card-txt">Aquela tatuagem antiga que não agrada mais vira um desenho novo por cima, pensado para esconder o que ficou para trás.</p>
+      </article>
+      <article class="card c-purple reveal">
+        <svg class="card-ico" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="#e9e0f1" stroke="#2b1a3a" stroke-width="2.5"/><g fill="none" stroke="#2b1a3a" stroke-width="1.6" stroke-linecap="round"><path d="M30 64 C34 50 40 38 54 22"/><path d="M36 54 c-7 0-10-4-10-9 6 0 10 4 10 9z"/><path d="M42 44 c-6 1-10-2-11-7 6-1 11 2 11 7z"/><path d="M48 35 c1-6 5-8 10-7 0 6-4 8-10 7z"/><path d="M58 50 v6 M55 53 h6"/></g></svg>
+        <h3>Fine line</h3>
+        <p class="card-txt">Linhas finas e delicadas para desenhos discretos, leves e cheios de detalhe.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec hl" id="perfil" aria-labelledby="perfil-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="over">No perfil</span>
+      <h2 id="perfil-title">Muito além do <em>feed</em></h2>
+      <p>Os destaques do Instagram da Naja mostram o trabalho por inteiro, do desenho ao resultado.</p>
+    </div>
+    <ul class="bubbles">
+      <li class="bubble b1 reveal"><div class="bubble-c"><div class="bubble-in"><svg aria-hidden="true"><use href="#i-brush"/></svg></div></div><h3>Pinturas</h3><p class="bubble-txt">A arte da Naja também fora da pele.</p></li>
+      <li class="bubble b2 reveal"><div class="bubble-c"><div class="bubble-in"><svg aria-hidden="true"><use href="#i-heal"/></svg></div></div><h3>Cicatrizadas</h3><p class="bubble-txt">Como as tatuagens ficam depois de cicatrizadas.</p></li>
+      <li class="bubble b3 reveal"><div class="bubble-c"><div class="bubble-in"><svg aria-hidden="true"><use href="#i-layers"/></svg></div></div><h3>Coberturas</h3><p class="bubble-txt">O antes e depois de tatuagens que ganharam vida nova.</p></li>
+      <li class="bubble b4 reveal"><div class="bubble-c"><div class="bubble-in"><svg aria-hidden="true"><use href="#i-chat"/></svg></div></div><h3>Feedback</h3><p class="bubble-txt">O que as clientes e os clientes contam depois da sessão.</p></li>
+    </ul>
+    <div class="hl-note reveal"><a class="btn btn-mint" href="https://www.instagram.com/tattoosbynaja/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Ver @tattoosbynaja</a></div>
+  </div>
+</section>
+
+<section class="sec" id="estudio" aria-labelledby="estudio-title">
+  <div class="wrap private">
+    <div class="private-card reveal">
+      <svg class="key" viewBox="0 0 76 76" aria-hidden="true"><circle cx="38" cy="38" r="36" fill="#f6c945" stroke="#2b1a3a" stroke-width="3"/><circle cx="30" cy="38" r="9" fill="none" stroke="#2b1a3a" stroke-width="4"/><path d="M39 38 H58 M52 38 v7 M58 38 v5" fill="none" stroke="#2b1a3a" stroke-width="4" stroke-linecap="round"/></svg>
+      <span class="over">Estúdio privado</span>
+      <h3 id="estudio-title" style="margin-top:14px">Atendimento reservado em Brasília</h3>
+      <p>A Naja atende em um estúdio privado. O endereço e o horário são combinados pelo WhatsApp, junto com o orçamento.</p>
+    </div>
+    <div class="reveal" id="orcamento">
+      <span class="over">Orçamento</span>
+      <h2 style="font-size:clamp(2.1rem,3.8vw,3.2rem);margin:16px 0 26px">Como fazer o <em>seu orçamento</em></h2>
+      <ol class="steps">
+        <li class="step"><span class="step-n">1</span><div><h3>Mande a ideia</h3><p class="step-txt">Conte o que quer tatuar e envie referências de que você gosta.</p></div></li>
+        <li class="step"><span class="step-n">2</span><div><h3>Lugar e tamanho</h3><p class="step-txt">Diga em que parte do corpo e o tamanho aproximado. Se for cobertura, mande uma foto da tatuagem atual.</p></div></li>
+        <li class="step"><span class="step-n">3</span><div><h3>Valor e data</h3><p class="step-txt">Com o orçamento aprovado, vocês combinam o dia da sessão.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contato" aria-labelledby="contato-title">
+  <div class="wrap">
+    <span class="over">Contato</span>
+    <h2 id="contato-title">Faça seu <em>orçamento</em></h2>
+    <p class="contact-p">Chame a Naja no WhatsApp e conte a sua ideia.</p>
+    <div class="cta">
+      <a class="btn btn-ink" href="https://wa.me/5561983729218" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+      <a class="btn btn-line" href="https://www.instagram.com/tattoosbynaja/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>@tattoosbynaja</a>
+    </div>
+    <p class="num">WhatsApp (61) 98372-9218 · Brasília, DF</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top" aria-label="Naja Tattoo, início">
+        <svg class="logo-ico" aria-hidden="true"><use href="#i-snake"/></svg>
+        <span class="logo-txt"><span class="logo-name">Naja</span><span class="logo-sub">Tattoo · Brasília</span></span>
+      </a>
+      <p class="foot-about">Old school, cobertura e fine line em estúdio privado em Brasília.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul><li><a href="#estilos">Estilos</a></li><li><a href="#perfil">No perfil</a></li><li><a href="#estudio">Estúdio</a></li><li><a href="#orcamento">Orçamento</a></li></ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul><li><a href="https://wa.me/5561983729218" target="_blank" rel="noopener">WhatsApp (61) 98372-9218</a></li><li><a href="https://www.instagram.com/tattoosbynaja/" target="_blank" rel="noopener">Instagram @tattoosbynaja</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-bottom">
+    <span>© Naja Tattoo</span>
+    <span>Site de demonstração · textos, fotos e valores a confirmar com a artista</span>
+  </div></div>
+</footer>
+
+<a class="float" href="https://wa.me/5561983729218" target="_blank" rel="noopener" aria-label="Fazer orçamento com a Naja no WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg>Orçamento</a>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e)})}
+  var header=document.getElementById('header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var burger=document.getElementById('burger');
+  function setMenu(open){header.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')}
+  burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+})();
+</script>
+</body>
+</html>
