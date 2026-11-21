@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Freitas · Mix Ink</title>
+<meta name="description" content="Freitas Tattoo no Mix Ink, na Asa Sul (Brasília): especialista em cobertura e realismo colorido. Orçamento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=UnifrakturMaguntia&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#09090b; --ink2:#111114; --ink3:#18181d; --line:#2a2a31;
+  --txt:#f3efe6; --mute:#a7a29a; --dim:#6f6b65;
+  --gold:#d9b86c; --gold2:#f6e4a8; --gold3:#9c7a35;
+  --cy:#22b8ff; --or:#ff7a1a; --mg:#ff3f80; --yl:#ffd23f; --tl:#18c3a4;
+  --goldg:linear-gradient(160deg,#fff3c4 0%,#e9c977 28%,#b48a3c 55%,#f3d98f 72%,#8a6828 100%);
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--txt);font-family:Archivo,system-ui,sans-serif;font-variation-settings:"wdth" 100;line-height:1.55;overflow-x:hidden}
+img,svg{display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1240px;margin:0 auto;padding-left:32px;padding-right:32px}
+.mono{font-family:"JetBrains Mono",monospace}
+.gold{background:var(--goldg);-webkit-background-clip:text;background-clip:text;color:transparent}
+.frak{font-family:UnifrakturMaguntia,serif;font-weight:400}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+h1,h2,h3{font-variation-settings:"wdth" 118;font-weight:850;letter-spacing:-.01em;line-height:.98;text-transform:uppercase}
+h2{font-size:clamp(34px,5vw,64px);text-wrap:balance}
+.lead{color:var(--mute);font-size:clamp(16px,1.4vw,18px);max-width:60ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:700;font-size:15px;letter-spacing:.02em;transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:20px;height:20px}
+.btn-gold{background:var(--goldg);color:#1a1307;box-shadow:0 10px 30px -10px rgba(217,184,108,.6)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(217,184,108,.8)}
+.btn-ghost{border:1px solid var(--line);color:var(--txt)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold2)}
+
+/* demo banner */
+.demo{background:#1a1408;color:var(--gold2);font:600 12px/1.4 "JetBrains Mono",monospace;text-align:center;padding:8px 16px;letter-spacing:.06em;border-bottom:1px solid #3a2d12}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(9,9,11,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.05)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .mono-f{width:42px;height:42px;border-radius:50%;border:1px solid var(--gold3);display:grid;place-items:center;font-size:26px;line-height:1;background:radial-gradient(circle at 50% 40%,#1d1910,#09090b 70%)}
+.brand b{font-variation-settings:"wdth" 120;font-weight:850;letter-spacing:.08em;font-size:17px;display:block;line-height:1}
+.brand small{font:500 10px/1 "JetBrains Mono",monospace;letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+.links{display:flex;gap:28px;font-size:14px;color:var(--mute)}
+.links a:hover{color:var(--gold2)}
+.nav .btn{padding:11px 18px;font-size:14px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);align-items:center;justify-content:center}
+.burger span{width:18px;height:2px;background:var(--txt);position:relative;display:block}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--txt);transition:transform .25s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.nav.open .burger span{background:transparent}
+.nav.open .burger span::before{transform:translateY(6px) rotate(45deg)}
+.nav.open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:72px 0 96px}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 420px at 78% 40%,rgba(34,184,255,.16),transparent 70%),
+  radial-gradient(520px 380px at 92% 78%,rgba(255,122,26,.16),transparent 70%),
+  radial-gradient(420px 320px at 62% 12%,rgba(255,63,128,.12),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
+.hero h1{font-size:clamp(44px,5.7vw,86px);margin:22px 0 24px}
+.hero h1 .frak{text-transform:none;font-size:1.08em;letter-spacing:0;display:inline-block;padding-right:.04em}
+.hero .lead{font-size:clamp(17px,1.5vw,20px)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;margin-top:48px;border-top:1px solid var(--line)}
+.stat{padding:22px 28px 0 0;margin-right:28px}
+.stat+.stat{padding-left:28px;border-left:1px solid var(--line)}
+.stat b{display:block;white-space:nowrap;font-variation-settings:"wdth" 120;font-weight:850;font-size:30px;line-height:1}
+.stat span{font-size:13px;color:var(--mute);white-space:nowrap}
+.stat .star{color:var(--yl)}
+
+.medal{position:relative;aspect-ratio:1;width:100%;max-width:520px;justify-self:center}
+.medal .splash{position:absolute;border-radius:50%;filter:blur(38px);opacity:.55}
+.medal .s1{width:46%;height:46%;left:-4%;top:8%;background:var(--cy)}
+.medal .s2{width:40%;height:40%;right:-2%;bottom:6%;background:var(--or)}
+.medal .s3{width:28%;height:28%;right:12%;top:-2%;background:var(--mg);opacity:.4}
+.medal svg.ring{position:absolute;inset:0;width:100%;height:100%}
+.medal .spin{transform-origin:50% 50%;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.medal .core{position:absolute;inset:17%;border-radius:50%;background:radial-gradient(circle at 50% 35%,#1f1a10 0%,#0b0a08 62%,#050505 100%);box-shadow:inset 0 0 0 1px rgba(246,228,168,.25),inset 0 0 60px rgba(0,0,0,.8),0 30px 80px -20px rgba(0,0,0,.9);display:grid;place-items:center}
+.medal .bigF{font-size:clamp(150px,19vw,250px);line-height:1;transform:translateY(-3%);filter:drop-shadow(0 6px 0 rgba(0,0,0,.6)) drop-shadow(0 0 18px rgba(217,184,108,.25))}
+.medal .shine{position:absolute;inset:17%;border-radius:50%;overflow:hidden;pointer-events:none}
+.medal .shine::after{content:"";position:absolute;top:-50%;left:-80%;width:45%;height:200%;background:linear-gradient(90deg,transparent,rgba(255,240,200,.14),transparent);transform:rotate(25deg);animation:shine 6s ease-in-out infinite}
+@keyframes shine{0%,60%{left:-80%}100%{left:140%}}
+.medal .tag{position:absolute;left:50%;bottom:4%;transform:translateX(-50%);background:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font:600 11px/1 "JetBrains Mono",monospace;letter-spacing:.16em;color:var(--gold2);white-space:nowrap}
+
+/* marquee */
+.marq{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink2);overflow:hidden;padding:18px 0}
+.marq .track{display:flex;gap:42px;width:max-content;animation:marq 38s linear infinite}
+.marq span{font-variation-settings:"wdth" 125;font-weight:850;font-size:22px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);display:flex;align-items:center;gap:42px;white-space:nowrap}
+.marq span::after{content:"✦";color:var(--gold);font-size:14px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding:120px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.sec-head h2{margin-top:16px}
+
+/* cobertura */
+.cover .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+.cover ul{list-style:none;margin:30px 0 36px;display:grid;gap:16px}
+.cover li{display:flex;gap:14px;align-items:flex-start;color:var(--mute)}
+.cover li b{color:var(--txt);font-weight:700}
+.cover li svg{flex:none;width:22px;height:22px;margin-top:2px;color:var(--gold)}
+.ba{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:6/7;background:#d9a982;box-shadow:0 40px 90px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.06);user-select:none;-webkit-user-select:none;touch-action:pan-y}
+.ba svg{position:absolute;inset:0;width:100%;height:100%}
+.ba .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;margin-left:-1px;background:var(--gold2);box-shadow:0 0 0 1px rgba(0,0,0,.25);pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:var(--pos,50%);width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:var(--goldg);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.45);pointer-events:none;color:#1a1307}
+.ba .knob svg{position:static;width:26px;height:26px}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba .lbl{position:absolute;top:16px;padding:7px 12px;border-radius:999px;background:rgba(9,9,11,.72);font:600 11px/1 "JetBrains Mono",monospace;letter-spacing:.16em;text-transform:uppercase;pointer-events:none}
+.ba .lbl.l{left:16px}.ba .lbl.r{right:16px;color:var(--gold2)}
+.ba-note{margin-top:14px;font-size:13px;color:var(--dim);display:flex;gap:8px;align-items:center}
+.ba-note svg{width:16px;height:16px;flex:none}
+
+/* estilos */
+.styles{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid-st{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.st.big.wide{grid-column:1/-1}
+.st{position:relative;padding:34px 30px 30px;border-radius:var(--r);background:var(--ink3);border:1px solid var(--line);overflow:hidden;transition:border-color .25s,transform .25s}
+.st:hover{border-color:rgba(217,184,108,.5);transform:translateY(-4px)}
+.st::before{content:"";position:absolute;width:220px;height:220px;right:-80px;top:-90px;border-radius:50%;background:var(--c,var(--gold));filter:blur(60px);opacity:.18;transition:opacity .25s}
+.st:hover::before{opacity:.32}
+.st .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.04);border:1px solid var(--line);margin-bottom:26px;color:var(--c,var(--gold))}
+.st .ic svg{width:26px;height:26px}
+.st h3{font-size:24px;margin-bottom:12px}
+.st p{color:var(--mute);font-size:15px}
+.st .k{position:absolute;right:26px;top:30px;font:600 11px/1 "JetBrains Mono",monospace;color:var(--dim);letter-spacing:.14em}
+.st.big{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end}
+.st.big h3{font-size:34px}
+
+/* mural */
+.mural{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:14px}
+.tile{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#141418}
+.tile .art{position:absolute;inset:0;transition:transform .6s}
+.tile:hover .art{transform:scale(1.06)}
+.tile.t1{grid-row:span 2}
+.tile.t4{grid-column:span 2}
+.tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px;background:linear-gradient(transparent,rgba(0,0,0,.82));display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+.tile figcaption b{font-variation-settings:"wdth" 115;font-weight:800;text-transform:uppercase;font-size:15px;letter-spacing:.03em}
+.tile figcaption span{font:500 10px/1.3 "JetBrains Mono",monospace;color:var(--mute);letter-spacing:.1em;text-transform:uppercase;text-align:right}
+.a1{background:radial-gradient(60% 50% at 30% 30%,#ffd23f 0,transparent 60%),radial-gradient(70% 60% at 70% 60%,#ff7a1a 0,transparent 62%),radial-gradient(50% 50% at 40% 80%,#ff3f80 0,transparent 60%),#2a1208}
+.a2{background:radial-gradient(60% 60% at 65% 35%,#22b8ff 0,transparent 60%),radial-gradient(50% 50% at 25% 70%,#4b5bff 0,transparent 62%),#0b1426}
+.a3{background:repeating-linear-gradient(115deg,transparent 0 22px,rgba(246,228,168,.12) 22px 23px),radial-gradient(50% 50% at 50% 50%,#2c2c34 0,#121215 70%)}
+.a4{background:radial-gradient(45% 70% at 20% 50%,#ff3f80 0,transparent 60%),radial-gradient(45% 70% at 50% 40%,#ffd23f 0,transparent 60%),radial-gradient(45% 70% at 82% 55%,#18c3a4 0,transparent 60%),#160b14}
+.a5{background:radial-gradient(60% 60% at 40% 40%,#e9c977 0,transparent 55%),radial-gradient(60% 60% at 70% 70%,#6b3d17 0,transparent 60%),#160f07}
+.a6{background:radial-gradient(55% 55% at 55% 45%,#18c3a4 0,transparent 60%),radial-gradient(45% 45% at 25% 75%,#22b8ff 0,transparent 60%),radial-gradient(40% 40% at 80% 80%,#ff7a1a 0,transparent 60%),#06161a}
+.tile .art::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");mix-blend-mode:overlay}
+.tile .ph{position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:10px;background:rgba(0,0,0,.45);display:grid;place-items:center;color:rgba(255,255,255,.75)}
+.tile .ph svg{width:18px;height:18px}
+.mural-foot{margin-top:26px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:var(--dim);font-size:13px}
+
+/* orçamento */
+.quote{background:radial-gradient(800px 500px at 15% 0%,rgba(217,184,108,.08),transparent 70%)}
+.q-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
+.q-form{background:var(--ink2);border:1px solid var(--line);border-radius:24px;padding:34px}
+.q-step{padding-bottom:26px;margin-bottom:26px;border-bottom:1px dashed var(--line)}
+.q-step:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.q-step legend,.q-step label.t{display:flex;align-items:center;gap:12px;font-weight:700;font-size:15px;margin-bottom:14px}
+.q-step legend i,.q-step label.t i{font:600 11px/1 "JetBrains Mono",monospace;font-style:normal;color:var(--gold);border:1px solid var(--gold3);border-radius:999px;padding:5px 8px}
+fieldset{border:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:var(--mute);cursor:pointer;transition:all .2s}
+.chip span:hover{border-color:#4a4a52;color:var(--txt)}
+.chip input:checked+span{background:rgba(217,184,108,.12);border-color:var(--gold);color:var(--gold2)}
+.chip input:focus-visible+span{outline:2px solid var(--gold2);outline-offset:2px}
+textarea{width:100%;min-height:96px;resize:vertical;background:var(--ink);border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:var(--txt);font:15px/1.5 Archivo,sans-serif}
+textarea:focus{outline:none;border-color:var(--gold)}
+.hint{display:none;margin-top:12px;font-size:13px;color:var(--gold2);background:rgba(217,184,108,.08);border:1px solid rgba(217,184,108,.25);border-radius:12px;padding:10px 14px;gap:8px;align-items:flex-start}
+.hint.on{display:flex}
+.hint svg{width:16px;height:16px;flex:none;margin-top:2px}
+.q-out{position:sticky;top:96px;background:#0e0e11;border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.q-out header{display:flex;align-items:center;gap:12px;padding:18px 22px;background:#16161a;border-bottom:1px solid var(--line)}
+.q-out header .av{width:38px;height:38px;border-radius:50%;border:1px solid var(--gold3);display:grid;place-items:center;font-size:22px;background:#0b0a08}
+.q-out header b{display:block;font-size:15px}
+.q-out header small{color:var(--mute);font-size:12px}
+.bubble{margin:22px;padding:16px 18px;background:#1e3a2c;border-radius:16px 16px 4px 16px;font-size:14.5px;line-height:1.55;white-space:pre-line;min-height:120px;color:#e9f5ee}
+.q-out .foot{padding:0 22px 22px}
+.q-out .btn{width:100%}
+.q-out .fine{margin-top:12px;font-size:12px;color:var(--dim);text-align:center}
+
+/* processo */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{padding:30px 24px 30px 0;border-top:2px solid var(--line);position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font:600 13px/1 "JetBrains Mono",monospace;color:var(--gold);display:block;margin-bottom:22px}
+.step::after{content:"";position:absolute;top:-2px;left:0;width:48px;height:2px;background:var(--gold)}
+.step h3{font-size:21px;margin-bottom:10px}
+.step p{color:var(--mute);font-size:15px}
+
+/* códice */
+.codice{position:relative;background:#f1ebdf;color:#0c0c0e;overflow:hidden}
+.codice .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;position:relative}
+.codice .word{font-variation-settings:"wdth" 125;font-weight:900;font-size:clamp(64px,11vw,170px);line-height:.85;text-transform:uppercase;letter-spacing:-.02em}
+.codice .word em{font-style:normal;color:transparent;-webkit-text-stroke:2px #0c0c0e;display:block;font-size:.46em;line-height:1;margin-top:.25em;white-space:nowrap}
+.codice .eyebrow{color:#6b5320}
+.codice .eyebrow::before{background:#6b5320}
+.codice p{color:#3c3a36;font-size:17px;margin:18px 0 28px;max-width:44ch}
+.codice .btn-dark{background:#0c0c0e;color:#f1ebdf}
+.codice .btn-dark:hover{transform:translateY(-2px)}
+.codice .stamp{position:absolute;right:-60px;bottom:-60px;width:300px;height:300px;opacity:.07}
+.tape{display:inline-block;background:#0c0c0e;color:#f1ebdf;font:600 12px/1 "JetBrains Mono",monospace;letter-spacing:.2em;padding:9px 14px;transform:rotate(-2deg);margin-top:18px}
+
+/* local + faq */
+.loc .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:24px;padding:36px}
+.card h3{font-size:30px;margin:16px 0 14px}
+.addr{display:flex;gap:14px;align-items:flex-start;margin:24px 0;color:var(--mute)}
+.addr svg{width:22px;height:22px;flex:none;color:var(--gold);margin-top:2px}
+.addr b{color:var(--txt);display:block;font-size:17px}
+.map-art{height:170px;border-radius:16px;margin:8px 0 24px;border:1px solid var(--line);position:relative;overflow:hidden;background:
+  linear-gradient(90deg,transparent 49.6%,rgba(217,184,108,.25) 49.6% 50.4%,transparent 50.4%),
+  repeating-linear-gradient(0deg,transparent 0 33px,rgba(255,255,255,.04) 33px 34px),
+  repeating-linear-gradient(90deg,transparent 0 33px,rgba(255,255,255,.04) 33px 34px),#0e0e11}
+.map-art::before{content:"";position:absolute;left:-10%;right:-10%;top:58%;height:2px;background:rgba(217,184,108,.25);transform:rotate(-14deg)}
+.map-art .pin{position:absolute;left:50%;top:44%;transform:translate(-50%,-100%);width:40px;height:40px;color:var(--gold)}
+.map-art .pin::after{content:"";position:absolute;left:50%;top:100%;width:60px;height:60px;margin:-30px 0 0 -30px;border-radius:50%;border:1px solid var(--gold);animation:ping 2.4s ease-out infinite}
+@keyframes ping{from{transform:scale(.2);opacity:1}to{transform:scale(1.6);opacity:0}}
+.map-art .pin svg{width:40px;height:40px}
+.row-btn{display:flex;flex-wrap:wrap;gap:12px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line);margin-top:24px}
+summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;gap:16px;font-weight:700;font-size:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 24px/1 "JetBrains Mono",monospace;color:var(--gold);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute);padding:0 0 22px;font-size:15px;max-width:58ch}
+
+/* final */
+.final{text-align:center;position:relative;overflow:hidden;padding:140px 0}
+.final::before{content:"F";font-family:UnifrakturMaguntia,serif;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:min(70vw,760px);line-height:1;color:rgba(217,184,108,.05);pointer-events:none}
+.final h2{font-size:clamp(40px,6.6vw,96px);max-width:14ch;margin:20px auto 22px}
+.final .lead{margin:0 auto}
+.final .cta-row{justify-content:center}
+
+footer{border-top:1px solid var(--line);padding:42px 0;color:var(--dim);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer nav{display:flex;gap:20px}
+footer a:hover{color:var(--gold2)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px -6px rgba(0,0,0,.6);transform:scale(0);transition:transform .3s}
+.float.show{transform:scale(1)}
+.float svg{width:30px;height:30px;color:#fff}
+
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:1100px){
+  .links{display:none}
+  .burger{display:inline-flex}
+  .nav .btn{display:none}
+  .nav.open .links{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:rgba(9,9,11,.97);border-bottom:1px solid var(--line);padding:8px 32px 20px}
+  .nav.open .links a{padding:14px 0;border-bottom:1px solid var(--line);font-size:16px;color:var(--txt)}
+  .grid-st{grid-template-columns:1fr 1fr}
+  .st.big{grid-column:span 2}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .hero .wrap,.cover .wrap,.q-grid,.codice .wrap,.loc .wrap{grid-template-columns:1fr}
+  .medal{max-width:400px}
+  .q-out{position:static}
+  .mural{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+  .tile.t4{grid-column:span 2}
+  section{padding:88px 0}
+}
+@media (max-width:600px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav.open .links{padding-left:16px;padding-right:16px}
+  .hero{padding:44px 0 72px}
+  .hero .wrap{gap:36px}
+  .stats{display:grid;grid-template-columns:1fr 1fr 1fr}
+  .stat,.stat+.stat{padding:18px 8px 0 0;margin-right:0;border-left:0}
+  .stat+.stat{padding-left:10px;border-left:1px solid var(--line)}
+  .stat b{font-size:20px}
+  .stat span{font-size:11.5px;display:block;line-height:1.3;margin-top:4px;white-space:normal}
+  .cta-row .btn{width:100%}
+  .grid-st{grid-template-columns:1fr}
+  .st.big,.st.wide{grid-column:auto;grid-template-columns:1fr;gap:0}
+  .st.big h3{font-size:26px}
+  .steps{grid-template-columns:1fr}
+  .q-form{padding:24px 18px}
+  .card{padding:26px 20px}
+  .mural{grid-auto-rows:150px;gap:10px}
+  .tile figcaption{padding:12px}
+  .tile figcaption span{display:none}
+  .marq span{font-size:17px}
+  .codice .word em{-webkit-text-stroke:1.5px #0c0c0e}
+  .final{padding:100px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-pinf" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22s-7.5-6.6-7.5-12.2a7.5 7.5 0 0 1 15 0C19.5 15.4 12 22 12 22Z"/><circle cx="12" cy="9.8" r="2.8" fill="#09090b"/></symbol>
+  <symbol id="i-arrows" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m9 7-5 5 5 5M15 7l5 5-5 5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m7.5 12.3 3 3 6-6.3"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 11v6M12 7.5v.1"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 17.5 9 4.5 9-4.5" opacity=".5"/></g></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3s6.5 7 6.5 11.5a6.5 6.5 0 0 1-13 0C5.5 10 12 3 12 3Z"/><path d="M9 15a3 3 0 0 0 3 3" stroke-linecap="round"/></g></symbol>
+  <symbol id="i-line" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 20c4-1 6-5 8-9s5-7 8-7"/><path d="M4 15c3-.5 4-3 5.5-5.5" opacity=".55"/></g></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M4 20l4.5-1 10-10a2.1 2.1 0 0 0-3-3l-10 10L4 20Z"/><path d="M13.5 7.5l3 3"/></g></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="m12 2.8 8 4.6v9.2l-8 4.6-8-4.6V7.4l8-4.6Z"/><path d="m4 7.4 8 4.6 8-4.6M12 12v9.2"/></g></symbol>
+  <symbol id="i-face" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="9" r="4.5"/><path d="M4 21c1.2-4 4.3-6 8-6s6.8 2 8 6"/></g></symbol>
+  <symbol id="i-photo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="12" cy="12" r="3.3"/><path d="M8 5l1.3-2h5.4L16 5"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração) · feita pela NovaTech para o Mix Ink</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Freitas Tattoo, início">
+      <span class="mono-f"><span class="frak gold">F</span></span>
+      <span><b>FREITAS</b><small>Mix Ink · Asa Sul</small></span>
+    </a>
+    <nav class="links" id="links">
+      <a href="#cobertura">Cobertura</a>
+      <a href="#estilos">Estilos</a>
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#codice">Códice</a>
+      <a href="#local">Local</a>
+    </nav>
+    <a class="btn btn-gold" href="https://wa.me/5561992698051?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20tatuagem." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Orçamento</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="links"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow reveal">Tatuador · Brasília</span>
+      <h1 class="reveal">Cobertura que vira <span style="white-space:nowrap"><span class="frak gold">obra</span>.</span></h1>
+      <p class="lead reveal">Especialista em cobertura e realismo colorido na Asa Sul. Aquela tatuagem que você não quer mais vira uma peça nova, com cor, contraste e desenho feito só pra você.</p>
+      <div class="cta-row reveal">
+        <a class="btn btn-gold" href="#orcamento"><svg><use href="#i-arrow"/></svg>Montar meu orçamento</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/_freitattoo/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Ver trabalhos</a>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b>5,0 <span class="star">★</span></b><span>91 avaliações no Google</span></div>
+        <div class="stat"><b>12,1 mil</b><span>seguidores no Instagram</span></div>
+        <div class="stat"><b>Asa Sul</b><span>Centro Empresarial Brasília</span></div>
+      </div>
+    </div>
+    <div class="medal reveal" aria-hidden="true">
+      <i class="splash s1"></i><i class="splash s2"></i><i class="splash s3"></i>
+      <svg class="ring" viewBox="0 0 500 500">
+        <defs>
+          <linearGradient id="gRing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3c4"/><stop offset=".35" stop-color="#d9b86c"/><stop offset=".6" stop-color="#8a6828"/><stop offset="1" stop-color="#f3d98f"/></linearGradient>
+          <path id="ringPath" d="M250 250m-206 0a206 206 0 1 1 412 0a206 206 0 1 1-412 0"/>
+        </defs>
+        <circle cx="250" cy="250" r="236" fill="none" stroke="url(#gRing)" stroke-width="1.5" opacity=".7"/>
+        <circle cx="250" cy="250" r="176" fill="none" stroke="url(#gRing)" stroke-width="2.5"/>
+        <circle cx="250" cy="250" r="168" fill="none" stroke="url(#gRing)" stroke-width=".8" opacity=".6"/>
+        <g class="spin">
+          <text font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="600" fill="#d9b86c"><textPath href="#ringPath" textLength="1286" lengthAdjust="spacing">ESPECIALISTA EM COBERTURA ✦ REALISMO COLORIDO ✦ FINELINE ✦ DESENHO AUTORAL ✦ </textPath></text>
+        </g>
+        <g fill="url(#gRing)"><path d="M250 64l6 10-6 10-6-10z"/><path d="M250 416l6 10-6 10-6-10z"/><path d="M64 250l10-6 10 6-10 6z"/><path d="M416 250l10-6 10 6-10 6z"/></g>
+      </svg>
+      <div class="core"><span class="bigF frak gold">F</span></div>
+      <div class="shine"></div>
+      <span class="tag">_FREITATTOO</span>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true">
+  <div class="track">
+    <span>Cobertura</span><span>Realismo colorido</span><span>Personagens</span><span>Fineline</span><span>Desenho autoral</span><span>Asa Sul · Brasília</span>
+    <span>Cobertura</span><span>Realismo colorido</span><span>Personagens</span><span>Fineline</span><span>Desenho autoral</span><span>Asa Sul · Brasília</span>
+  </div>
+</div>
+
+<section class="cover" id="cobertura">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow reveal">A especialidade</span>
+      <h2 class="reveal">Não apaga. <span class="gold">Transforma.</span></h2>
+      <p class="lead reveal" style="margin-top:22px">Cobrir uma tatuagem antiga é desenho, não remendo. A arte nova nasce pensando no que está por baixo: onde a tinta é mais escura, onde dá pra usar cor e como fazer a peça antiga sumir de vez.</p>
+      <ul class="reveal">
+        <li><svg><use href="#i-check"/></svg><span><b>Avaliação pela foto.</b> Você manda a tatuagem atual e já sabe o que dá pra fazer.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><b>Desenho sob medida.</b> Tamanho, cor e composição pensados pra cobrir de verdade.</span></li>
+        <li><svg><use href="#i-check"/></svg><span><b>Cor que segura.</b> Contraste e saturação pra peça nova dominar a pele.</span></li>
+      </ul>
+      <a class="btn btn-gold reveal" href="#orcamento" data-pick="Cobertura"><svg><use href="#i-photo"/></svg>Quero cobrir uma tatuagem</a>
+    </div>
+    <div class="reveal">
+      <div class="ba" id="ba" style="--pos:50%">
+        <svg class="before" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" aria-label="Antes: tatuagem antiga e desbotada">
+          <defs>
+            <radialGradient id="skin" cx=".45" cy=".4" r=".85"><stop offset="0" stop-color="#e8bc98"/><stop offset=".6" stop-color="#d4a07c"/><stop offset="1" stop-color="#b98361"/></radialGradient>
+            <filter id="fade" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="2.4"/></filter>
+            <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .3  0 0 0 0 .22  0 0 0 .22 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+          </defs>
+          <rect width="600" height="700" fill="url(#skin)"/>
+          <g filter="url(#fade)" fill="#3e5563" opacity=".62">
+            <path d="M300 150c-30 60-90 90-150 100 40 10 80 30 100 70-50-10-100 0-140 40 60-5 110 10 150 50-20 40-10 90 20 130 0-50 20-90 60-110 40 20 60 60 60 110 30-40 40-90 20-130 40-40 90-55 150-50-40-40-90-50-140-40 20-40 60-60 100-70-60-10-120-40-150-100-10 40-10 80 0 110-10 10-20 10-30 0 10-30 10-70 0-110Z"/>
+          </g>
+          <g filter="url(#fade)" opacity=".55" fill="none" stroke="#3a4d5a" stroke-width="7" stroke-linecap="round">
+            <path d="M170 560c30-20 50-10 60 10s30 30 55 5 40-25 60 0 40 25 70 0"/>
+          </g>
+          <rect width="600" height="700" filter="url(#grain)" fill="#000" opacity=".9"/>
+        </svg>
+        <svg class="after" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" aria-label="Depois: peça nova e colorida cobrindo a antiga">
+          <defs>
+            <radialGradient id="skin2" cx=".45" cy=".4" r=".85"><stop offset="0" stop-color="#e8bc98"/><stop offset=".6" stop-color="#d4a07c"/><stop offset="1" stop-color="#b98361"/></radialGradient>
+            <radialGradient id="pet1" cx=".5" cy=".95" r=".95"><stop offset="0" stop-color="#7a0f3a"/><stop offset=".45" stop-color="#e2245f"/><stop offset=".85" stop-color="#ff7a9e"/><stop offset="1" stop-color="#ffd1dc"/></radialGradient>
+            <radialGradient id="pet2" cx=".5" cy=".95" r=".95"><stop offset="0" stop-color="#8f1d0a"/><stop offset=".5" stop-color="#ff5a1f"/><stop offset=".9" stop-color="#ffb066"/><stop offset="1" stop-color="#ffe2b8"/></radialGradient>
+            <radialGradient id="pet3" cx=".5" cy=".95" r=".95"><stop offset="0" stop-color="#a3410a"/><stop offset=".55" stop-color="#ffb020"/><stop offset="1" stop-color="#fff0a8"/></radialGradient>
+            <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b5c55"/><stop offset=".5" stop-color="#18c3a4"/><stop offset="1" stop-color="#9df5df"/></linearGradient>
+            <filter id="wc" x="-30%" y="-30%" width="160%" height="160%"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="70"/><feGaussianBlur stdDeviation="5"/></filter>
+            <path id="petal" d="M0 0C-62-34-78-150 0-178 78-150 62-34 0 0Z"/>
+          </defs>
+          <rect width="600" height="700" fill="url(#skin2)"/>
+          <g filter="url(#wc)" opacity=".85">
+            <circle cx="170" cy="230" r="120" fill="#22b8ff"/>
+            <circle cx="455" cy="470" r="115" fill="#ff7a1a"/>
+            <circle cx="420" cy="170" r="70" fill="#4b5bff" opacity=".8"/>
+            <circle cx="150" cy="520" r="80" fill="#18c3a4" opacity=".8"/>
+          </g>
+          <g stroke="#140a0e" stroke-width="6" stroke-linejoin="round">
+            <path d="M300 420C220 470 130 470 70 430c70-10 120-40 170-90 10 40 30 70 60 80Z" fill="url(#leaf)"/>
+            <path d="M300 420c80 50 170 50 230 10-70-10-120-40-170-90-10 40-30 70-60 80Z" fill="url(#leaf)"/>
+            <path d="M300 440c-20 60-70 110-130 140 50-60 70-110 80-160" fill="url(#leaf)"/>
+            <path d="M300 440c20 60 70 110 130 140-50-60-70-110-80-160" fill="url(#leaf)"/>
+            <g fill="none" stroke-width="3" opacity=".7"><path d="M110 430c60-10 120-30 170-70"/><path d="M490 430c-60-10-120-30-170-70"/></g>
+          </g>
+          <g transform="translate(300 330)" stroke="#140a0e" stroke-width="6" stroke-linejoin="round">
+            <g fill="url(#pet1)">
+              <use href="#petal" transform="rotate(0) scale(1.18)"/><use href="#petal" transform="rotate(36) scale(1.18)"/><use href="#petal" transform="rotate(72) scale(1.18)"/><use href="#petal" transform="rotate(108) scale(1.18)"/><use href="#petal" transform="rotate(144) scale(1.18)"/><use href="#petal" transform="rotate(180) scale(1.18)"/><use href="#petal" transform="rotate(216) scale(1.18)"/><use href="#petal" transform="rotate(252) scale(1.18)"/><use href="#petal" transform="rotate(288) scale(1.18)"/><use href="#petal" transform="rotate(324) scale(1.18)"/>
+            </g>
+            <g fill="url(#pet2)">
+              <use href="#petal" transform="rotate(18) scale(.82)"/><use href="#petal" transform="rotate(63) scale(.82)"/><use href="#petal" transform="rotate(108) scale(.82)"/><use href="#petal" transform="rotate(153) scale(.82)"/><use href="#petal" transform="rotate(198) scale(.82)"/><use href="#petal" transform="rotate(243) scale(.82)"/><use href="#petal" transform="rotate(288) scale(.82)"/><use href="#petal" transform="rotate(333) scale(.82)"/>
+            </g>
+            <g fill="url(#pet3)">
+              <use href="#petal" transform="rotate(0) scale(.5)"/><use href="#petal" transform="rotate(60) scale(.5)"/><use href="#petal" transform="rotate(120) scale(.5)"/><use href="#petal" transform="rotate(180) scale(.5)"/><use href="#petal" transform="rotate(240) scale(.5)"/><use href="#petal" transform="rotate(300) scale(.5)"/>
+            </g>
+            <circle r="26" fill="#ffd23f"/>
+            <g fill="#140a0e" stroke="none"><circle cx="-8" cy="-6" r="4"/><circle cx="9" cy="-4" r="4"/><circle cx="0" cy="9" r="4"/></g>
+          </g>
+          <g fill="#140a0e"><circle cx="120" cy="140" r="4"/><circle cx="104" cy="160" r="3"/><circle cx="96" cy="184" r="2.5"/><circle cx="492" cy="590" r="4"/><circle cx="510" cy="570" r="3"/><circle cx="520" cy="548" r="2.5"/></g>
+          <g fill="#fff" opacity=".55"><ellipse cx="250" cy="215" rx="12" ry="30" transform="rotate(-30 250 215)"/><ellipse cx="370" cy="250" rx="8" ry="22" transform="rotate(35 370 250)"/></g>
+        </svg>
+        <span class="lbl l">Antes</span><span class="lbl r">Depois</span>
+        <span class="bar"></span><span class="knob"><svg><use href="#i-arrows"/></svg></span>
+        <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Arraste para comparar antes e depois">
+      </div>
+      <p class="ba-note"><svg><use href="#i-info"/></svg>Ilustração demonstrativa. No site final entram fotos reais de antes e depois.</p>
+    </div>
+  </div>
+</section>
+
+<section class="styles" id="estilos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow reveal">O que sai da agulha</span><h2 class="reveal">Estilos</h2></div>
+      <p class="lead reveal" style="max-width:44ch">Do realismo colorido cheio de contraste ao traço fino. Cada peça começa num desenho exclusivo.</p>
+    </div>
+    <div class="grid-st">
+      <article class="st big reveal" style="--c:var(--or)">
+        <div><div class="ic"><svg><use href="#i-layers"/></svg></div><h3>Cobertura</h3></div>
+        <p>A especialidade da casa. Peças antigas, desbotadas ou que perderam o sentido viram uma arte nova, desenhada pra esconder o que está por baixo.</p>
+        <span class="k">01</span>
+      </article>
+      <article class="st reveal" style="--c:var(--mg)">
+        <div class="ic"><svg><use href="#i-drop"/></svg></div>
+        <h3>Realismo colorido</h3>
+        <p>Cor saturada, sombra e luz com profundidade. Peças que chamam atenção de longe.</p>
+        <span class="k">02</span>
+      </article>
+      <article class="st reveal" style="--c:var(--cy)">
+        <div class="ic"><svg><use href="#i-face"/></svg></div>
+        <h3>Personagens</h3>
+        <p>Heróis, anime e animação com o traço e a expressão de cada personagem.</p>
+        <span class="k">03</span>
+      </article>
+      <article class="st reveal" style="--c:var(--gold2)">
+        <div class="ic"><svg><use href="#i-line"/></svg></div>
+        <h3>Fineline</h3>
+        <p>Traço fino e delicado pra peças menores, discretas e cheias de detalhe.</p>
+        <span class="k">04</span>
+      </article>
+      <article class="st reveal" style="--c:var(--tl)">
+        <div class="ic"><svg><use href="#i-pen"/></svg></div>
+        <h3>Desenho autoral</h3>
+        <p>Arte criada do zero a partir da sua ideia, pronta pra virar tatuagem.</p>
+        <span class="k">05</span>
+      </article>
+      <article class="st big wide reveal" style="--c:var(--cy)">
+        <div><div class="ic"><svg><use href="#i-cube"/></svg></div><h3>Impressões 3D</h3></div>
+        <p>A arte também ganha volume: o Freitas mantém o projeto Freitas Impressões 3D. Pergunte no WhatsApp o que dá pra criar.</p>
+        <span class="k">06</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="trabalhos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow reveal">Portfólio</span><h2 class="reveal">Na pele</h2></div>
+      <a class="btn btn-ghost reveal" href="https://www.instagram.com/_freitattoo/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@_freitattoo</a>
+    </div>
+    <div class="mural">
+      <figure class="tile t1 reveal"><div class="art a1"></div><span class="ph"><svg><use href="#i-photo"/></svg></span><figcaption><b>Realismo colorido</b><span>Perna</span></figcaption></figure>
+      <figure class="tile reveal"><div class="art a2"></div><span class="ph"><svg><use href="#i-photo"/></svg></span><figcaption><b>Personagem</b><span>Antebraço</span></figcaption></figure>
+      <figure class="tile reveal"><div class="art a3"></div><span class="ph"><svg><use href="#i-photo"/></svg></span><figcaption><b>Fineline</b><span>Traço fino</span></figcaption></figure>
+      <figure class="tile t4 reveal"><div class="art a4"></div><span class="ph"><svg><use href="#i-photo"/></svg></span><figcaption><b>Cobertura</b><span>Antes e depois</span></figcaption></figure>
+      <figure class="tile reveal"><div class="art a5"></div><span class="ph"><svg><use href="#i-photo"/></svg></span><figcaption><b>Desenho autoral</b><span>Exclusivo</span></figcaption></figure>
+      <figure class="tile reveal"><div class="art a6"></div><span class="ph"><svg><use href="#i-photo"/></svg></span><figcaption><b>Retrato</b><span>Colorido</span></figcaption></figure>
+    </div>
+    <div class="mural-foot reveal">
+      <span>Os quadros acima mostram onde entram as fotos dos trabalhos. Hoje elas estão no Instagram.</span>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="orcamento">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow reveal">Orçamento em 1 minuto</span><h2 class="reveal">Monte sua <span class="gold">ideia</span></h2></div>
+      <p class="lead reveal" style="max-width:44ch">Escolha as opções e a mensagem sai pronta no WhatsApp. É só enviar.</p>
+    </div>
+    <div class="q-grid">
+      <form class="q-form reveal" id="qform" onsubmit="return false">
+        <fieldset class="q-step">
+          <legend><i>01</i>O que você quer fazer?</legend>
+          <div class="chips" data-name="tipo">
+            <label class="chip"><input type="radio" name="tipo" value="Cobertura" checked><span>Cobertura</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="Tatuagem nova"><span>Tatuagem nova</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="Fineline"><span>Fineline</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="Desenho exclusivo"><span>Desenho exclusivo</span></label>
+          </div>
+          <p class="hint" id="hint"><svg><use href="#i-photo"/></svg>Na conversa, mande uma foto da tatuagem que você quer cobrir. Isso ajuda a definir o desenho e o tamanho.</p>
+        </fieldset>
+        <fieldset class="q-step">
+          <legend><i>02</i>Cor</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="cor" value="colorida" checked><span>Colorida</span></label>
+            <label class="chip"><input type="radio" name="cor" value="preto e sombra"><span>Preto e sombra</span></label>
+            <label class="chip"><input type="radio" name="cor" value="ainda não sei"><span>Ainda não sei</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="q-step">
+          <legend><i>03</i>Onde no corpo?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="local" value="braço" checked><span>Braço</span></label>
+            <label class="chip"><input type="radio" name="local" value="antebraço"><span>Antebraço</span></label>
+            <label class="chip"><input type="radio" name="local" value="perna"><span>Perna</span></label>
+            <label class="chip"><input type="radio" name="local" value="panturrilha"><span>Panturrilha</span></label>
+            <label class="chip"><input type="radio" name="local" value="costas"><span>Costas</span></label>
+            <label class="chip"><input type="radio" name="local" value="peito"><span>Peito</span></label>
+            <label class="chip"><input type="radio" name="local" value="outro lugar"><span>Outro</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="q-step">
+          <legend><i>04</i>Tamanho</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="tam" value="pequena (até 10 cm)"><span>Pequena · até 10 cm</span></label>
+            <label class="chip"><input type="radio" name="tam" value="média (10 a 20 cm)" checked><span>Média · 10 a 20 cm</span></label>
+            <label class="chip"><input type="radio" name="tam" value="grande (mais de 20 cm)"><span>Grande · 20 cm+</span></label>
+            <label class="chip"><input type="radio" name="tam" value="fechamento"><span>Fechamento</span></label>
+          </div>
+        </fieldset>
+        <div class="q-step">
+          <label class="t" for="ideia"><i>05</i>Conta a ideia (opcional)</label>
+          <textarea id="ideia" placeholder="Ex.: quero cobrir um tribal antigo com algo colorido, tipo flores ou um personagem."></textarea>
+        </div>
+      </form>
+      <aside class="q-out reveal" aria-live="polite">
+        <header><span class="av"><span class="frak gold">F</span></span><div><b>Freitas · Mix Ink</b><small>Prévia da sua mensagem</small></div></header>
+        <div class="bubble" id="msg"></div>
+        <div class="foot">
+          <a class="btn btn-gold" id="send" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enviar pelo WhatsApp</a>
+          <p class="fine">Abre a conversa com a mensagem pronta. Você revisa antes de enviar.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="processo" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow reveal">Como funciona</span><h2 class="reveal">Da ideia à pele</h2></div>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Orçamento</h3><p>Você conta a ideia pelo WhatsApp: local, tamanho e, se for cobertura, uma foto da tatuagem atual.</p></div>
+      <div class="step reveal"><h3>Desenho</h3><p>A arte é criada pra você, no tamanho certo e pensando no que precisa cobrir.</p></div>
+      <div class="step reveal"><h3>Sessão</h3><p>Tatuagem feita no estúdio da Asa Sul, no Centro Empresarial Brasília, com hora marcada.</p></div>
+      <div class="step reveal"><h3>Cuidados</h3><p>Você sai com as orientações de cicatrização pra cor ficar viva por muito tempo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="codice" id="codice">
+  <svg class="stamp" viewBox="0 0 100 100" aria-hidden="true"><text x="50" y="78" text-anchor="middle" font-family="UnifrakturMaguntia" font-size="96">F</text></svg>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="word">Códice<em>Arte pela arte</em></div>
+      <span class="tape">STREET WEAR</span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Além da tatuagem</span>
+      <p>A arte do Freitas também sai da pele e vai pra rua. A Códice é a marca de streetwear dele, com o mesmo cuidado de desenho que vai em cada tatuagem.</p>
+      <a class="btn btn-dark" href="https://www.instagram.com/_freitattoo/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Ver no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section class="loc" id="local">
+  <div class="wrap">
+    <div class="card reveal">
+      <span class="eyebrow">Onde fica</span>
+      <h3>Asa Sul · Brasília</h3>
+      <div class="map-art" aria-hidden="true"><span class="pin"><svg><use href="#i-pinf"/></svg></span></div>
+      <div class="addr"><svg><use href="#i-pin"/></svg><div><b>Mix Ink · Centro Empresarial Brasília</b>Asa Sul, Brasília - DF</div></div>
+      <div class="row-btn">
+        <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Mix%20Ink%20Studio%20de%20est%C3%A9tica%20e%20tatuagem&amp;query_place_id=ChIJz_mTXdY7WpMR2h01n5naHVk" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Abrir no Maps</a>
+        <a class="btn btn-ghost" href="tel:+5561992698051">(61) 99269-8051</a>
+      </div>
+    </div>
+    <div class="card reveal">
+      <span class="eyebrow">Dúvidas</span>
+      <h3>Antes de marcar</h3>
+      <details><summary>Toda tatuagem dá pra cobrir?</summary><p>Depende do tamanho, da cor e de quanto a tinta antiga ainda está escura. Por isso a avaliação começa pela foto: com ela dá pra dizer o que funciona e qual tamanho a peça nova precisa ter.</p></details>
+      <details><summary>Quanto custa?</summary><p>O valor depende do tamanho, do local do corpo e do nível de detalhe. Monte sua ideia ali em cima e o orçamento é passado pelo WhatsApp.</p></details>
+      <details><summary>Posso levar minha própria ideia?</summary><p>Pode e deve. Referências, fotos e rascunhos ajudam a criar um desenho exclusivo, feito do seu jeito.</p></details>
+      <details><summary>Como agendo?</summary><p>Pelo WhatsApp (61) 99269-8051. Depois do orçamento e do desenho aprovados, a sessão é marcada no estúdio da Asa Sul.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <span class="eyebrow reveal">Bora transformar</span>
+    <h2 class="reveal">Sua próxima tatuagem começa <span class="gold">aqui</span>.</h2>
+    <p class="lead reveal">Manda a ideia, ou a foto da tatuagem que quer cobrir, e receba o orçamento.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-gold" href="https://wa.me/5561992698051?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20tatuagem." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/_freitattoo/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Seguir no Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b class="frak gold" style="font-size:20px">F</b>&nbsp; Freitas Tattoo · Mix Ink · Asa Sul, Brasília - DF</span>
+    <nav><a href="https://www.instagram.com/_freitattoo/" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/5561992698051" target="_blank" rel="noopener">WhatsApp</a><a href="#top">Topo ↑</a></nav>
+  </div>
+</footer>
+
+<a class="float" id="float" href="https://wa.me/5561992698051?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20tatuagem." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var WA='5561992698051';
+  // menu
+  var nav=document.getElementById('nav'),bur=document.getElementById('burger');
+  bur.addEventListener('click',function(){var o=nav.classList.toggle('open');bur.setAttribute('aria-expanded',o)});
+  document.querySelectorAll('#links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');bur.setAttribute('aria-expanded',false)})});
+
+  // reveal
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('in')});
+
+  // float
+  var fl=document.getElementById('float');
+  function onS(){fl.classList.toggle('show',window.scrollY>520)}
+  window.addEventListener('scroll',onS,{passive:true});onS();
+
+  // before/after
+  var ba=document.getElementById('ba'),rg=document.getElementById('baRange');
+  rg.addEventListener('input',function(){ba.style.setProperty('--pos',rg.value+'%')});
+
+  // quote builder
+  var form=document.getElementById('qform'),msg=document.getElementById('msg'),send=document.getElementById('send'),hint=document.getElementById('hint'),ideia=document.getElementById('ideia');
+  function val(n){var e=form.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function build(){
+    var tipo=val('tipo'),cor=val('cor'),local=val('local'),tam=val('tam'),txt=ideia.value.trim();
+    var l1;
+    if(tipo==='Cobertura') l1='Olá! Vi o site e quero cobrir uma tatuagem.';
+    else if(tipo==='Desenho exclusivo') l1='Olá! Vi o site e quero um desenho exclusivo pra tatuar.';
+    else l1='Olá! Vi o site e quero fazer uma tatuagem'+(tipo==='Fineline'?' fineline.':'.');
+    var lines=[l1,'','• Tipo: '+tipo,'• Cor: '+cor,'• Local: '+local,'• Tamanho: '+tam];
+    if(txt) lines.push('• Ideia: '+txt);
+    if(tipo==='Cobertura') lines.push('','Vou mandar a foto da tatuagem atual aqui.');
+    lines.push('','Pode me passar um orçamento?');
+    var m=lines.join('\n');
+    msg.textContent=m;
+    send.href='https://wa.me/'+WA+'?text='+encodeURIComponent(m);
+    hint.classList.toggle('on',tipo==='Cobertura');
+  }
+  form.addEventListener('change',build);ideia.addEventListener('input',build);build();
+  document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){var r=form.querySelector('input[name="tipo"][value="'+a.dataset.pick+'"]');if(r){r.checked=true;build()}})});
+})();
+</script>
+</body>
+</html>
