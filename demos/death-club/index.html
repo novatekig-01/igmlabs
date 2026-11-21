@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Death Club | Estúdio de tatuagem na Asa Sul, Brasília</title>
+<meta name="description" content="Death Club: estúdio de tatuagem no Centro Empresarial Brasília, Asa Sul. Dark art, blackwork e realismo em preto e cinza. Nota 5,0 no Google com 168 avaliações. Agende pelo WhatsApp.">
+<!-- Site de demonstração: não indexar no Google até o estúdio aprovar -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#070606">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Archivo+Narrow:wght@500;600&family=Pirata+One&display=swap" rel="stylesheet">
+<style>
+/* Layout: estúdio dark art. Preto absoluto, neon vermelho como no teto do estúdio, grafismos pontiagudos e vidro estilhaçado; letra gótica para a marca, sans firme para o texto. */
+:root{
+  --bg:#070606; --bg-2:#0f0d0d; --bg-3:#171414; --text:#efe9e6; --muted:#a39a96; --line:rgba(239,233,230,.12);
+  --red:#ff2a2a; --red-d:#c3121a; --red-glow:rgba(255,42,42,.55);
+  --goth:"Pirata One","UnifrakturCook",Georgia,serif; --sans:"Archivo",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; --cond:"Archivo Narrow","Arial Narrow",sans-serif;
+  --header:76px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;color:var(--text);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{width:100%;max-width:1220px;margin:0 auto;padding-left:22px;padding-right:22px}
+h1,h2,h3{font-weight:600;line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
+.goth{font-family:var(--goth);font-weight:400;letter-spacing:.01em}
+.neon{color:#fff;text-shadow:0 0 6px var(--red),0 0 18px var(--red),0 0 42px var(--red-glow)}
+p{text-wrap:pretty}
+.over{display:inline-flex;align-items:center;gap:12px;font-family:var(--cond);font-size:.82rem;letter-spacing:.3em;text-transform:uppercase;color:var(--red)}
+.over::before{content:"✶";font-size:.9rem}
+.sec{padding:clamp(80px,10vw,136px) 0;position:relative}
+.sec[id]{scroll-margin-top:var(--header)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 30px;font-family:var(--cond);font-weight:600;font-size:.95rem;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;border:1px solid var(--text);cursor:pointer;transition:background .3s,color .3s,box-shadow .3s,border-color .3s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-red{background:var(--red-d);border-color:var(--red);color:#fff;box-shadow:0 0 0 1px rgba(255,42,42,.4),0 0 26px rgba(255,42,42,.35)}
+.btn-red:hover{background:var(--red);box-shadow:0 0 0 1px var(--red),0 0 44px rgba(255,42,42,.6)}
+.btn-line{background:transparent;color:var(--text);border-color:rgba(239,233,230,.3)}
+.btn-line:hover{border-color:var(--text);background:rgba(239,233,230,.05)}
+.btn-sm{padding:12px 20px;font-size:.85rem}
+.demo{background:#000;color:#8a817d;font-size:.72rem;letter-spacing:.04em;text-align:center;padding:7px 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+header{position:sticky;top:0;z-index:50;background:rgba(7,6,6,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);opacity:.6}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header)}
+.logo{display:flex;align-items:center;gap:10px;flex:none;font-family:var(--goth);font-size:1.9rem;line-height:1;white-space:nowrap}
+.logo-star{color:var(--red);font-family:var(--sans);font-size:1rem;text-shadow:0 0 10px var(--red)}
+.menu{display:flex;gap:4px;list-style:none;font-family:var(--cond);font-size:.95rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.menu a{display:block;padding:8px 14px;white-space:nowrap;transition:color .25s,text-shadow .25s}
+.menu a:hover{color:#fff;text-shadow:0 0 12px var(--red)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--line);background:transparent;cursor:pointer;place-items:center;color:var(--text)}
+.burger svg{width:22px;height:22px}
+
+/* Hero com neon */
+.hero{position:relative;overflow:hidden;padding:0}
+.tubes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.tube{stroke:var(--red);stroke-width:4;stroke-linecap:round;filter:url(#glow)}
+.js .tube{animation:flick 6s infinite}
+.tube:nth-child(2){animation-delay:1.3s}.tube:nth-child(3){animation-delay:2.7s}.tube:nth-child(4){animation-delay:.6s}.tube:nth-child(5){animation-delay:3.9s}
+@keyframes flick{0%,18%,22%,62%,64%,100%{opacity:.9}20%,63%{opacity:.25}}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 80% at 30% 55%,rgba(7,6,6,.92) 0%,rgba(7,6,6,.55) 60%,rgba(7,6,6,.2) 100%);pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;min-height:calc(100vh - var(--header) - 31px);max-height:900px;padding-top:48px;padding-bottom:80px}
+.hero-mark{font-family:var(--goth);font-size:clamp(4rem,10vw,9rem);line-height:.9;margin:18px 0 22px}
+.hero h1{font-size:clamp(1.6rem,2.6vw,2.3rem);font-weight:500;letter-spacing:-.01em;max-width:560px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.lead{margin-top:18px;font-size:1.08rem;color:var(--muted);max-width:520px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.rating{display:flex;align-items:center;gap:14px;margin-top:34px;font-family:var(--cond);letter-spacing:.12em;text-transform:uppercase;font-size:.86rem;color:var(--muted)}
+.rating b{font-family:var(--sans);font-size:1.6rem;color:#fff;letter-spacing:0}
+.rating .st{color:var(--red);letter-spacing:2px;text-shadow:0 0 10px var(--red)}
+.relic{position:relative;width:min(460px,100%);margin:0 auto}
+.relic-svg{width:100%;height:auto;overflow:visible}
+.relic-cap{display:block;text-align:center;margin-top:6px;font-family:var(--cond);font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+
+/* Estilos */
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,4.2rem);margin-top:18px}
+.sec-head h2 .goth{color:var(--red);font-size:1.12em}
+.sec-head p{color:var(--muted);font-size:1.05rem;max-width:470px}
+.styles{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.style{position:relative;background:var(--bg);padding:34px 28px 36px;overflow:hidden;transition:background .4s}
+.style::before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:var(--red);box-shadow:0 0 14px var(--red);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.style:hover{background:var(--bg-2)}
+.style:hover::before{transform:scaleX(1)}
+.style-n{font-family:var(--cond);font-size:.8rem;letter-spacing:.24em;color:var(--red)}
+.style-ico{width:80px;height:80px;margin:22px 0 22px}
+.style h3{font-size:1.5rem;margin-bottom:10px}
+.style-d{color:var(--muted);font-size:.96rem}
+
+/* Estúdio */
+.club{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.club-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.room{position:relative;aspect-ratio:4/5;border:1px solid var(--line);background:#0b0909;overflow:hidden}
+.room svg{width:100%;height:100%}
+.club h2{font-size:clamp(2.4rem,4.6vw,4rem);margin:18px 0 22px}
+.club h2 .goth{color:var(--red);font-size:1.12em}
+.club-p{color:var(--muted);font-size:1.05rem;max-width:520px}
+.feats{list-style:none;margin-top:32px;border-top:1px solid var(--line)}
+.feat{display:grid;grid-template-columns:28px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.feat-i{color:var(--red);text-shadow:0 0 10px var(--red);font-size:1.1rem;line-height:1.5}
+.feat b{display:block;font-weight:600;color:#fff;margin-bottom:2px}
+.feat span{color:var(--muted);font-size:.96rem}
+
+/* Prova */
+.proof{text-align:center}
+.score{font-family:var(--sans);font-weight:600;letter-spacing:-.04em;font-size:clamp(6rem,14vw,11rem);line-height:.9}
+.stars{font-size:1.6rem;letter-spacing:8px;color:var(--red);text-shadow:0 0 14px var(--red);margin:10px 0 14px}
+.proof-k{font-family:var(--cond);letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-size:.9rem}
+.proof .cta{justify-content:center}
+
+/* Agendar */
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.steps{list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:72px 1fr;gap:18px;padding:26px 0;border-bottom:1px solid var(--line)}
+.step-n{font-family:var(--goth);font-size:3rem;line-height:1;color:var(--red);text-shadow:0 0 18px var(--red-glow)}
+.step h3{font-size:1.3rem;margin-bottom:6px}
+.step-d{color:var(--muted)}
+.place{border:1px solid var(--line);background:var(--bg-2);padding:36px 32px;position:relative}
+.place::before{content:"";position:absolute;left:-1px;top:-1px;width:60px;height:60px;border-left:2px solid var(--red);border-top:2px solid var(--red);box-shadow:-4px -4px 18px -6px var(--red)}
+.place-k{font-family:var(--cond);font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;color:var(--red)}
+.place-t{font-size:1.7rem;font-weight:600;line-height:1.2;margin:12px 0 8px}
+.place-d{color:var(--muted)}
+.place .cta{margin-top:28px;gap:12px}
+.place .btn{flex:1 1 auto}
+.num{margin-top:22px;font-family:var(--cond);letter-spacing:.12em;color:var(--muted)}
+
+/* Final */
+.final{text-align:center;overflow:hidden}
+.final .tubes{opacity:.5}
+.final .wrap{position:relative;z-index:1}
+.final h2{font-family:var(--goth);font-weight:400;font-size:clamp(3.6rem,9vw,8rem);margin:16px 0 14px;letter-spacing:0}
+.final-p{color:var(--muted);max-width:520px;margin:0 auto;font-size:1.06rem}
+.final .cta{justify-content:center}
+
+footer{border-top:1px solid var(--line);font-size:.9rem;color:var(--muted);padding:56px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:44px}
+.foot-about{margin-top:16px;max-width:340px}
+footer h4{font-family:var(--cond);font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;color:var(--red);font-weight:600;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:#fff}
+.foot-bottom{border-top:1px solid var(--line);padding:22px 0 26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-size:.78rem}
+.float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;height:54px;padding:0 22px 0 18px;background:var(--red-d);border:1px solid var(--red);color:#fff;font-family:var(--cond);font-weight:600;font-size:.92rem;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 0 30px rgba(255,42,42,.45);transition:background .3s}
+.float:hover{background:var(--red)}
+.float svg{width:21px;height:21px;flex:none}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.js .reveal.in{opacity:1;transform:none}
+@media(min-width:1600px){.wrap{max-width:1340px}body{font-size:17px}}
+@media(max-width:1180px){.menu a{padding:8px 10px}.styles{grid-template-columns:1fr 1fr}}
+@media(max-width:960px){
+  :root{--header:70px}
+  .burger{display:grid}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 22px 16px;font-size:1rem;display:none}
+  header.open .menu{display:flex}
+  .menu a{padding:15px 0;border-bottom:1px solid var(--line)}
+  .menu li:last-child a{border-bottom:0}
+  .hero-grid{grid-template-columns:1fr;gap:40px;min-height:0;max-height:none;padding-top:44px;padding-bottom:80px}
+  .relic{width:min(400px,90%)}
+  .sec-head,.club-grid,.book-grid{grid-template-columns:1fr;gap:32px}
+  .room{max-width:460px;width:100%;margin:0 auto}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media(max-width:640px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav-actions .btn{display:none}
+  .demo-more{display:none}
+  .logo{font-size:1.6rem}
+  .cta .btn{width:100%}
+  .styles{grid-template-columns:1fr}
+  .place{padding:30px 22px}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .float{right:16px;bottom:16px;height:50px;padding:0 16px 0 14px}
+  footer{padding-bottom:70px}
+}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.js .tube{animation:none}html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <symbol id="i-wa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z"/><path d="M9.2 8.4c.3-.4.7-.4 1-.1l.9 1.3c.2.3.1.6-.1.9l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.3-.2.6-.3.9-.1l1.3.9c.3.3.3.7-.1 1-.6.8-1.6 1.1-2.6.7-2.4-1-4.2-2.8-5.2-5.2-.3-.8 0-1.7.7-2.4z"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.5-5.4 6.5-11a6.5 6.5 0 1 0-13 0c0 5.6 6.5 11 6.5 11z"/><circle cx="12" cy="10" r="2.3"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração)<span class="demo-more"> · desenvolvida como exemplo para o Death Club</span></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Death Club, início"><span class="logo-star" aria-hidden="true">✶</span>Death Club<span class="logo-star" aria-hidden="true">✶</span></a>
+    <nav aria-label="Menu principal">
+      <ul class="menu" id="menu">
+        <li><a href="#estilos">Estilos</a></li>
+        <li><a href="#estudio">O clube</a></li>
+        <li><a href="#agendar">Agendar</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-red btn-sm" href="https://wa.me/5561920028163" target="_blank" rel="noopener">Agendar</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <svg class="tubes" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <line class="tube" x1="760" y1="80" x2="1180" y2="20"/>
+    <line class="tube" x1="900" y1="210" x2="1440" y2="140"/>
+    <line class="tube" x1="1040" y1="40" x2="1300" y2="360"/>
+    <line class="tube" x1="620" y1="840" x2="980" y2="760"/>
+    <line class="tube" x1="1320" y1="520" x2="1440" y2="860"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="over">Private society · Asa Sul, Brasília</span>
+      <p class="hero-mark neon" aria-hidden="true">Death Club</p>
+      <h1 id="hero-title">Estúdio de tatuagem para quem gosta de <em>arte sombria</em> e traço impecável.</h1>
+      <p class="lead">Dark art, blackwork e realismo em preto e cinza, no Centro Empresarial Brasília. Um estúdio com cara de clube, luz vermelha e muita arte nas paredes.</p>
+      <div class="cta">
+        <a class="btn btn-red" href="https://wa.me/5561920028163" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn btn-line" href="https://www.instagram.com/death__club/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>@death__club</a>
+      </div>
+      <div class="rating"><b>5,0</b><span class="st" aria-hidden="true">★★★★★</span><span>168 avaliações no Google</span></div>
+    </div>
+    <figure class="relic reveal">
+      <svg class="relic-svg" viewBox="0 0 420 480" role="img" aria-labelledby="rl-t">
+        <title id="rl-t">Caveira em blackwork com espinhos, vidro estilhaçado e neon vermelho</title>
+        <g stroke="rgba(239,233,230,.28)" stroke-width="1.2" fill="none">
+          <path d="M210 230 L40 120 M210 230 L380 100 M210 230 L404 300 M210 230 L60 420 M210 230 L300 470 M210 230 L18 260 M210 230 L230 10"/>
+          <path d="M150 190 L120 250 L170 300 M270 170 L320 240 L280 300 M130 330 L200 350 L280 330"/>
+        </g>
+        <!-- espinhos (dark art) -->
+        <g fill="#efe9e6">
+          <path d="M210 404 C176 420 150 446 140 476 C162 452 186 436 214 430 Z"/>
+          <path d="M210 404 C244 420 270 446 280 476 C258 452 234 436 206 430 Z"/>
+          <path d="M96 236 C70 214 54 184 52 150 C72 178 92 196 118 208 Z"/>
+          <path d="M324 236 C350 214 366 184 368 150 C348 178 328 196 302 208 Z"/>
+          <path d="M120 300 C88 300 60 314 40 336 C70 326 96 324 124 330 Z"/>
+          <path d="M300 300 C332 300 360 314 380 336 C350 326 324 324 296 330 Z"/>
+        </g>
+        <!-- caveira -->
+        <path d="M210 70 C140 70 104 122 104 186 C104 226 120 254 142 270 L142 312 C142 326 152 334 166 334 L254 334 C268 334 278 326 278 312 L278 270 C300 254 316 226 316 186 C316 122 280 70 210 70 Z" fill="#efe9e6"/>
+        <path d="M160 196 C160 172 196 168 198 196 C200 222 160 226 160 196 Z" fill="#070606"/>
+        <path d="M222 196 C224 168 260 172 260 196 C260 226 220 222 222 196 Z" fill="#070606"/>
+        <path d="M210 228 L198 256 L222 256 Z" fill="#070606"/>
+        <g fill="#070606"><rect x="166" y="286" width="12" height="30" rx="2"/><rect x="184" y="286" width="12" height="34" rx="2"/><rect x="202" y="286" width="16" height="36" rx="2"/><rect x="224" y="286" width="12" height="34" rx="2"/><rect x="242" y="286" width="12" height="30" rx="2"/></g>
+        <path d="M150 120 C170 100 196 96 214 100" fill="none" stroke="#070606" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+        <path d="M236 92 L250 130 L238 150 L256 176" fill="none" stroke="#070606" stroke-width="2.4" stroke-linecap="round"/>
+        <!-- neon vermelho -->
+        <g stroke="#ff2a2a" stroke-width="5" stroke-linecap="round" filter="url(#glow)">
+          <line x1="40" y1="96" x2="196" y2="40"/>
+          <line x1="250" y1="150" x2="400" y2="86"/>
+          <line x1="70" y1="370" x2="190" y2="330"/>
+          <line x1="300" y1="380" x2="396" y2="420"/>
+        </g>
+        <g fill="#ff2a2a" opacity=".85"><rect x="168" y="190" width="14" height="10"/><rect x="236" y="186" width="10" height="14"/><rect x="190" y="240" width="8" height="8"/></g>
+      </svg>
+      <figcaption class="relic-cap">Ilustração</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec" id="estilos" aria-labelledby="estilos-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="over">Estilos</span><h2 id="estilos-title">Arte <span class="goth">sombria</span>, na pele</h2></div>
+      <p>Do ornamental pontiagudo ao realismo em preto e cinza: trabalhos densos, com contraste forte e muito detalhe.</p>
+    </div>
+    <div class="styles">
+      <article class="style reveal"><span class="style-n">01</span>
+        <svg class="style-ico" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 6 C30 22 30 40 40 74 C50 40 50 22 40 6 Z" fill="#efe9e6"/><path d="M40 30 C26 24 14 26 6 34 C18 32 28 34 38 40 Z M40 30 C54 24 66 26 74 34 C62 32 52 34 42 40 Z" fill="#efe9e6"/><path d="M40 50 C30 48 20 52 14 60 C24 56 32 56 40 58 Z M40 50 C50 48 60 52 66 60 C56 56 48 56 40 58 Z" fill="#ff2a2a"/></svg>
+        <h3>Dark art</h3><p class="style-d">Ceifadores, caveiras e figuras sombrias, com grafismos pontiagudos e muito preto.</p></article>
+      <article class="style reveal"><span class="style-n">02</span>
+        <svg class="style-ico" viewBox="0 0 80 80" aria-hidden="true"><rect x="10" y="10" width="60" height="60" fill="#efe9e6"/><path d="M10 70 L70 10 L70 70 Z" fill="#070606" stroke="#efe9e6" stroke-width="1.5"/><circle cx="40" cy="40" r="10" fill="#ff2a2a"/></svg>
+        <h3>Blackwork</h3><p class="style-d">Preto sólido e contraste máximo, sozinho ou junto com outros estilos.</p></article>
+      <article class="style reveal"><span class="style-n">03</span>
+        <svg class="style-ico" viewBox="0 0 80 80" aria-hidden="true"><defs><linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#efe9e6"/><stop offset="1" stop-color="#2a2626"/></linearGradient></defs><circle cx="40" cy="40" r="30" fill="url(#gr)"/><path d="M40 10 A30 30 0 0 1 40 70" fill="none" stroke="#ff2a2a" stroke-width="2"/></svg>
+        <h3>Realismo preto e cinza</h3><p class="style-d">Retratos, guerreiros e cenas com sombra, volume e textura de verdade.</p></article>
+      <article class="style reveal"><span class="style-n">04</span>
+        <svg class="style-ico" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 74 V40" stroke="#efe9e6" stroke-width="2.5"/><path d="M40 54 l-8 -4 M40 62 l8 -4 M40 46 l7 -5" stroke="#efe9e6" stroke-width="2" stroke-linecap="round"/><path d="M40 40 C26 38 22 24 30 14 C34 20 38 22 40 22 C42 22 46 20 50 14 C58 24 54 38 40 40 Z" fill="#ff2a2a"/><path d="M40 22 C36 28 36 34 40 40 C44 34 44 28 40 22 Z" fill="#070606"/></svg>
+        <h3>Rosas e espinhos</h3><p class="style-d">Florais sombrios, adagas e símbolos clássicos com uma pegada mais pesada.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec club" id="estudio" aria-labelledby="estudio-title">
+  <div class="wrap club-grid">
+    <div class="room reveal">
+      <svg viewBox="0 0 400 500" role="img" aria-label="Ilustração do estúdio com neon vermelho no teto, quadros nas paredes e piso preto e branco">
+        <rect width="400" height="500" fill="#0b0909"/>
+        <path d="M0 0 L400 0 L400 140 L0 180 Z" fill="#120d0d"/>
+        <g stroke="#ff2a2a" stroke-width="5" stroke-linecap="round" filter="url(#glow)"><line x1="30" y1="40" x2="200" y2="20"/><line x1="150" y1="80" x2="370" y2="50"/><line x1="40" y1="120" x2="160" y2="104"/><line x1="230" y1="118" x2="380" y2="100"/></g>
+        <g fill="none" stroke="rgba(239,233,230,.4)" stroke-width="2"><rect x="40" y="200" width="54" height="70"/><rect x="110" y="196" width="44" height="56"/><rect x="170" y="204" width="60" height="44"/><rect x="250" y="192" width="48" height="66"/><rect x="314" y="200" width="50" height="50"/></g>
+        <g fill="rgba(255,42,42,.35)"><rect x="46" y="206" width="42" height="58"/><rect x="256" y="198" width="36" height="54"/></g>
+        <path d="M0 340 L400 300 L400 500 L0 500 Z" fill="#efe9e6"/>
+        <path d="M0 400 C60 360 120 440 190 400 S300 330 400 380 L400 430 C320 400 270 470 190 450 S60 420 0 460 Z" fill="#070606"/>
+        <path d="M60 500 C100 470 160 490 210 470 S330 450 400 480 L400 500 Z" fill="#070606"/>
+        <rect x="40" y="300" width="160" height="70" fill="#f4efec"/>
+        <g fill="#070606"><path d="M50 368 L66 310 L74 368 Z"/><path d="M90 368 L112 304 L118 368 Z"/><path d="M140 368 L150 316 L166 368 Z"/><path d="M176 368 L190 320 L196 368 Z"/></g>
+        <rect x="40" y="296" width="160" height="6" fill="#ff2a2a" opacity=".6"/>
+      </svg>
+    </div>
+    <div class="reveal">
+      <span class="over">O clube</span>
+      <h2 id="estudio-title">Uma <span class="goth">sociedade</span> privada</h2>
+      <p class="club-p">O Death Club é um estúdio com identidade própria: luz neon vermelha, paredes cheias de arte e um clima de clube fechado, pensado para quem leva tatuagem a sério.</p>
+      <ul class="feats">
+        <li class="feat"><span class="feat-i" aria-hidden="true">✶</span><div><b>Ambiente com identidade</b><span>Neon vermelho, quadros e grafismos do próprio estúdio.</span></div></li>
+        <li class="feat"><span class="feat-i" aria-hidden="true">✶</span><div><b>Trabalhos autorais</b><span>Desenhos pensados para cada pessoa e cada parte do corpo.</span></div></li>
+        <li class="feat"><span class="feat-i" aria-hidden="true">✶</span><div><b>No Centro Empresarial Brasília</b><span>Setor de Rádio e Televisão Sul, Asa Sul.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec proof" aria-labelledby="nota-title">
+  <div class="wrap reveal">
+    <span class="over">Avaliações</span>
+    <h2 id="nota-title" class="score neon">5,0</h2>
+    <div class="stars" aria-label="5 estrelas">★★★★★</div>
+    <p class="proof-k">168 avaliações no Google</p>
+    <div class="cta"><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=DEATH%20CLUB%20tattoo%20Bras%C3%ADlia&amp;query_place_id=ChIJua2RI6k7WpMR5s58YXKOY8A" target="_blank" rel="noopener">Ler as avaliações</a></div>
+  </div>
+</section>
+
+<section class="sec" id="agendar" aria-labelledby="agendar-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="over">Agendar</span><h2 id="agendar-title">Entre para o <span class="goth">clube</span></h2></div>
+      <p>Tudo começa com uma mensagem no WhatsApp.</p>
+    </div>
+    <div class="book-grid">
+      <ol class="steps reveal">
+        <li class="step"><span class="step-n">I</span><div><h3>Mande a ideia</h3><p class="step-d">O que quer tatuar, referências e o estilo que combina com você.</p></div></li>
+        <li class="step"><span class="step-n">II</span><div><h3>Lugar e tamanho</h3><p class="step-d">Em que parte do corpo e o tamanho aproximado.</p></div></li>
+        <li class="step"><span class="step-n">III</span><div><h3>Orçamento e data</h3><p class="step-d">Com o desenho combinado, vocês acertam o valor e marcam a sessão.</p></div></li>
+      </ol>
+      <div class="place reveal">
+        <p class="place-k">Onde fica</p>
+        <p class="place-t">Centro Empresarial Brasília</p>
+        <p class="place-d">Setor de Rádio e Televisão Sul (SRTVS) · Asa Sul<br>Brasília, DF · CEP 70340-907</p>
+        <div class="cta">
+          <a class="btn btn-red" href="https://wa.me/5561920028163" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          <a class="btn btn-line" href="tel:+5561920028163"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ligar</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=DEATH%20CLUB%20tattoo%20Bras%C3%ADlia&amp;query_place_id=ChIJua2RI6k7WpMR5s58YXKOY8A" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Rotas</a>
+        </div>
+        <p class="num">(61) 92002-8163 · @death__club</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec final" id="contato" aria-labelledby="contato-title">
+  <svg class="tubes" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <line class="tube" x1="80" y1="60" x2="420" y2="20"/><line class="tube" x1="1040" y1="70" x2="1400" y2="30"/><line class="tube" x1="200" y1="560" x2="520" y2="520"/><line class="tube" x1="960" y1="540" x2="1300" y2="580"/>
+  </svg>
+  <div class="wrap">
+    <span class="over">Contato</span>
+    <h2 id="contato-title" class="neon">Death Club</h2>
+    <p class="final-p">Chame no WhatsApp ou na DM do Instagram e conte a sua ideia.</p>
+    <div class="cta">
+      <a class="btn btn-red" href="https://wa.me/5561920028163" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+      <a class="btn btn-line" href="https://ig.me/m/death__club" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Chamar na DM</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top" aria-label="Death Club, início"><span class="logo-star" aria-hidden="true">✶</span>Death Club<span class="logo-star" aria-hidden="true">✶</span></a>
+      <p class="foot-about">Estúdio de tatuagem no Centro Empresarial Brasília, Asa Sul. Dark art, blackwork e realismo.</p>
+    </div>
+    <div><h4>Navegação</h4><ul><li><a href="#estilos">Estilos</a></li><li><a href="#estudio">O clube</a></li><li><a href="#agendar">Agendar</a></li></ul></div>
+    <div><h4>Contato</h4><ul><li><a href="https://wa.me/5561920028163" target="_blank" rel="noopener">WhatsApp (61) 92002-8163</a></li><li><a href="https://www.instagram.com/death__club/" target="_blank" rel="noopener">Instagram @death__club</a></li><li>SRTVS · Asa Sul · Brasília</li></ul></div>
+  </div>
+  <div class="wrap"><div class="foot-bottom">
+    <span>© Death Club</span>
+    <span>Site de demonstração · textos, fotos e valores a confirmar com o estúdio</span>
+  </div></div>
+</footer>
+
+<a class="float" href="https://wa.me/5561920028163" target="_blank" rel="noopener" aria-label="Agendar no Death Club pelo WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar</a>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e)})}
+  var header=document.getElementById('header');
+  var burger=document.getElementById('burger');
+  function setMenu(open){header.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')}
+  burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+})();
+</script>
+</body>
+</html>
