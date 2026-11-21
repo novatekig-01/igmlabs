@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atemporal Tattoo | Tatuagem old school em Brasília</title>
+<meta name="description" content="Atemporal Tattoo: estúdio de tatuagem old school do Miguel Souza no Setor Comercial Sul, em Brasília. Traço forte, cor sólida e tatuagens feitas para durar. Agende pelo WhatsApp.">
+<!-- Site de demonstração: não indexar no Google até o estúdio aprovar -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1a1714">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=Ultra&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+/* Layout: estúdio old school. Folha de flash: papel creme, contorno preto grosso, vermelho, mostarda e verde; sombras sólidas deslocadas, como carimbo. Slab pesada + script de letreiro + sans condensada. */
+:root{
+  --ink:#1a1714; --ink-2:#27211b; --red:#b8321f; --red-d:#8a2416; --mus:#d99a1e; --grn:#2e6150;
+  --paper:#f2e8d5; --paper-2:#eadcc1; --cream:#f7efe0; --muted:#5b5246; --line:#d3c3a3;
+  --display:"Ultra","Rockwell Extra Bold","Georgia",serif;
+  --script:"Yellowtail","Brush Script MT",cursive;
+  --sans:"Barlow",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --cond:"Barlow Condensed","Arial Narrow",sans-serif;
+  --header:78px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;background-image:radial-gradient(rgba(26,23,20,.05) 1px,transparent 1.2px);background-size:7px 7px}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding-left:20px;padding-right:20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;letter-spacing:.005em;text-wrap:balance}
+h1 em,h2 em{font-family:var(--script);font-style:normal;color:var(--red);font-size:1.18em;letter-spacing:0;line-height:.9}
+p{text-wrap:pretty}
+.over{display:inline-flex;align-items:center;gap:10px;font-family:var(--cond);font-size:.95rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+.over::before{content:"";width:10px;height:10px;background:var(--mus);border:2px solid var(--ink);transform:rotate(45deg)}
+.sec{padding:clamp(64px,9vw,110px) 0}
+.sec[id]{scroll-margin-top:var(--header)}
+
+/* Botões (carimbo) */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:12px;font-family:var(--cond);font-weight:700;font-size:1.12rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.1;white-space:nowrap;border:2.5px solid var(--ink);cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s,color .15s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-red{background:var(--red);color:#fff;box-shadow:4px 4px 0 var(--ink)}
+.btn-red:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.btn-cream{background:var(--cream);color:var(--ink);box-shadow:4px 4px 0 var(--mus)}
+.btn-cream:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--mus)}
+.btn-ghost{border-color:var(--cream);color:var(--cream)}
+.btn-ghost:hover{background:var(--cream);color:var(--ink)}
+.btn-sm{padding:10px 18px;font-size:1rem;box-shadow:3px 3px 0 var(--ink)}
+
+/* Faixa de demonstração */
+.demo{background:var(--ink);color:#d8ccb6;font-size:.74rem;letter-spacing:.03em;text-align:center;padding:7px 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Cabeçalho */
+header{position:sticky;top:0;z-index:50;background:rgba(242,232,213,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:2.5px solid var(--ink);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 6px 0 rgba(26,23,20,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--header)}
+.logo{display:flex;align-items:center;gap:12px;flex:none}
+.logo-ico{width:40px;height:40px;flex:none}
+.logo-txt{display:flex;flex-direction:column;line-height:1}
+.logo-name{font-family:var(--display);font-size:1.45rem;letter-spacing:.03em;color:var(--ink);white-space:nowrap}
+.logo-sub{font-family:var(--cond);font-size:.78rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-top:5px;white-space:nowrap}
+.menu{display:flex;gap:4px;list-style:none;font-family:var(--cond);font-weight:600;font-size:1.08rem;letter-spacing:.06em;text-transform:uppercase}
+.menu a{display:block;padding:8px 14px;white-space:nowrap;transition:color .2s}
+.menu a:hover{color:var(--red)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.burger{display:none;width:46px;height:46px;border-radius:12px;border:2.5px solid var(--ink);background:var(--cream);cursor:pointer;place-items:center;color:var(--ink)}
+.burger svg{width:22px;height:22px}
+
+/* Hero */
+.hero{padding:0;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:64px;min-height:calc(100vh - var(--header) - 31px);max-height:840px;padding-top:56px;padding-bottom:72px}
+.hero h1{font-size:clamp(2.5rem,4.7vw,4.2rem);margin:20px 0 24px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:530px}
+.cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;list-style:none}
+.chip{font-family:var(--cond);font-weight:600;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border:2px solid var(--ink);border-radius:999px;background:var(--cream)}
+.chip-red{background:var(--red);color:#fff}
+.chip-mus{background:var(--mus)}
+
+.flash{position:relative;width:min(470px,100%);margin:0 auto;background:var(--cream);border:3px solid var(--ink);border-radius:22px;box-shadow:12px 12px 0 var(--ink);padding:44px 26px 30px}
+.flash-svg{width:100%;height:auto;overflow:visible}
+.ban-t{font-family:var(--display);font-size:31px;letter-spacing:2px}
+.flash-tag{position:absolute;top:14px;left:20px;font-family:var(--cond);font-weight:700;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.flash-tag-r{left:auto;right:20px}
+.flash-cap{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);background:var(--mus);border:2.5px solid var(--ink);font-family:var(--cond);font-weight:700;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;padding:6px 16px;border-radius:999px;white-space:nowrap}
+.seal{position:absolute;bottom:-40px;left:-40px;width:118px;height:118px;color:var(--ink);z-index:2}
+.seal-rot{animation:spin 26s linear infinite;transform-origin:50% 50%}
+.seal-t{font-family:var(--cond);font-weight:700;font-size:11.5px;letter-spacing:2.4px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Cabeçalho de seção */
+.sec-head{max-width:680px}
+.sec-head h2{font-size:clamp(2.1rem,3.6vw,3.1rem);margin:16px 0 16px}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+/* O estilo */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}
+.pillar{background:var(--cream);border:2.5px solid var(--ink);border-radius:20px;box-shadow:7px 7px 0 var(--ink);padding:30px 28px 32px}
+.pillar-ico{width:72px;height:72px;margin-bottom:20px}
+.pillar h3{font-size:1.55rem;margin-bottom:10px}
+.pillar-txt{color:var(--muted);font-size:1rem}
+
+/* Clássicos (folha de flash) */
+.classics{background:var(--paper-2);border-top:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink)}
+.sheet{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:50px;background:var(--cream);border:3px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:10px 10px 0 var(--ink)}
+.tile{padding:34px 30px 36px;border-right:2px dashed rgba(26,23,20,.35);border-bottom:2px dashed rgba(26,23,20,.35);text-align:center}
+.tile:nth-child(3n){border-right:0}
+.tile:nth-child(n+4){border-bottom:0}
+.tile-art{width:132px;height:132px;margin:0 auto 18px}
+.tile-art svg{width:100%;height:100%}
+.tile-t{font-size:1.35rem;margin-bottom:8px}
+.tile-d{color:var(--muted);font-size:.97rem;max-width:280px;margin:0 auto}
+
+/* O tatuador */
+.artist{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.artist-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
+.artist .over{color:var(--mus)}
+.artist .over::before{border-color:var(--cream)}
+.artist-name{font-family:var(--script);font-size:clamp(3.4rem,7vw,6rem);color:var(--mus);line-height:1;margin-top:18px;transform:rotate(-4deg);transform-origin:left center}
+.artist h2{font-size:clamp(1.9rem,3.2vw,2.7rem);color:var(--cream);margin-top:14px}
+.artist-p{color:#d3c7b2;font-size:1.1rem}
+.facts{list-style:none;display:grid;gap:14px;margin:28px 0 34px}
+.fact{display:flex;gap:14px;align-items:center;font-size:1.05rem;color:var(--cream)}
+.fact-dot{flex:none;width:30px;height:30px;border-radius:50%;background:var(--red);border:2px solid var(--cream);display:grid;place-items:center}
+.fact-dot svg{width:15px;height:15px;color:#fff}
+.artist .cta{margin-top:0}
+
+/* Agendar */
+.book-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start;margin-top:50px}
+.steps{list-style:none;display:grid;gap:26px}
+.step{display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:start}
+.step-n{width:64px;height:64px;border-radius:50%;background:var(--mus);border:2.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink);display:grid;place-items:center;font-family:var(--display);font-size:1.6rem}
+.step h3{font-size:1.4rem;margin:6px 0 6px}
+.step-txt{color:var(--muted)}
+.place{background:var(--cream);border:2.5px solid var(--ink);border-radius:22px;box-shadow:9px 9px 0 var(--red);padding:32px 30px}
+.place-t{font-family:var(--cond);font-weight:700;font-size:.95rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+.place-addr{font-family:var(--display);font-size:1.45rem;line-height:1.2;margin:12px 0 6px}
+.place-sub{color:var(--muted)}
+.place-row{display:flex;gap:12px;align-items:center;margin-top:20px;padding-top:20px;border-top:2px dashed rgba(26,23,20,.3);font-size:1.05rem}
+.place-row svg{width:22px;height:22px;flex:none;color:var(--red)}
+.place .cta{margin-top:26px;gap:12px}
+.place .btn{flex:1 1 auto}
+
+/* Rodapé */
+footer{background:var(--ink-2);color:#cfc3ad;font-size:.95rem;padding:56px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:44px}
+footer .logo-name{color:var(--cream)}
+.foot-about{margin-top:16px;max-width:360px}
+footer h4{font-family:var(--cond);font-size:.95rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mus);font-weight:700;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a:hover{color:var(--mus)}
+.foot-bottom{border-top:1px solid rgba(247,239,224,.15);padding:22px 0 26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-size:.82rem}
+
+/* Botão flutuante */
+.float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;height:56px;padding:0 22px 0 18px;border-radius:14px;background:var(--red);color:#fff;border:2.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink);font-family:var(--cond);font-weight:700;font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase;transition:transform .15s,box-shadow .15s}
+.float:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.float svg{width:22px;height:22px;flex:none}
+
+/* Entrada */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.js .reveal.in{opacity:1;transform:none}
+
+@media(min-width:1500px){.wrap{max-width:1280px}body{font-size:17px}}
+@media(max-width:1180px){.menu a{padding:8px 10px}.seal{left:-18px}}
+@media(max-width:960px){
+  :root{--header:70px}
+  .burger{display:grid}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:2.5px solid var(--ink);padding:8px 20px 16px;font-size:1.15rem;display:none}
+  header.open .menu{display:flex}
+  .menu a{padding:14px 4px;border-bottom:1px solid var(--line)}
+  .menu li:last-child a{border-bottom:0}
+  .hero-grid{grid-template-columns:1fr;gap:72px;min-height:0;max-height:none;padding-top:44px;padding-bottom:80px}
+  .lead{max-width:none}
+  .flash{width:min(440px,92%)}
+  .pillars{grid-template-columns:1fr;max-width:560px}
+  .sheet{grid-template-columns:1fr 1fr}
+  .tile:nth-child(3n){border-right:2px dashed rgba(26,23,20,.35)}
+  .tile:nth-child(2n){border-right:0}
+  .tile:nth-child(n+4){border-bottom:2px dashed rgba(26,23,20,.35)}
+  .tile:nth-child(n+5){border-bottom:0}
+  .artist-grid,.book-grid{grid-template-columns:1fr;gap:40px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media(max-width:640px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav-actions .btn{display:none}
+  .demo-more{display:none}
+  .logo-name{font-size:1.25rem}
+  .logo-ico{width:34px;height:34px}
+  .cta .btn{width:100%}
+  .seal{width:70px;height:70px;bottom:-24px;left:-10px}
+  .flash{padding:40px 16px 26px;box-shadow:8px 8px 0 var(--ink)}
+  .sheet{grid-template-columns:1fr;box-shadow:6px 6px 0 var(--ink)}
+  .tile,.tile:nth-child(3n),.tile:nth-child(n+4){border-right:0;border-bottom:2px dashed rgba(26,23,20,.35)}
+  .tile:last-child{border-bottom:0}
+  .pillar{box-shadow:5px 5px 0 var(--ink)}
+  .step{grid-template-columns:54px 1fr;gap:16px}
+  .step-n{width:54px;height:54px;font-size:1.35rem}
+  .place{padding:26px 20px;box-shadow:6px 6px 0 var(--red)}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .float{right:16px;bottom:16px;height:52px;padding:0 16px 0 14px;font-size:.98rem}
+  footer{padding-bottom:70px}
+}
+@media(prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .seal-rot{animation:none}
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-wa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z"/><path d="M9.2 8.4c.3-.4.7-.4 1-.1l.9 1.3c.2.3.1.6-.1.9l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.3-.2.6-.3.9-.1l1.3.9c.3.3.3.7-.1 1-.6.8-1.6 1.1-2.6.7-2.4-1-4.2-2.8-5.2-5.2-.3-.8 0-1.7.7-2.4z"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.5-5.4 6.5-11a6.5 6.5 0 1 0-13 0c0 5.6 6.5 11 6.5 11z"/><circle cx="12" cy="10" r="2.3"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-hourglass" viewBox="0 0 40 40"><g stroke="#1a1714" stroke-width="2.6" stroke-linejoin="round"><rect x="7" y="4" width="26" height="6" rx="2" fill="#b8321f"/><rect x="7" y="30" width="26" height="6" rx="2" fill="#b8321f"/><path d="M12 10 H28 Q28 18 21.5 20 Q28 22 28 30 H12 Q12 22 18.5 20 Q12 18 12 10 Z" fill="#f7efe0"/><path d="M15.5 14 H24.5 Q23.5 18 20 19.3 Q16.5 18 15.5 14 Z" fill="#d99a1e" stroke="none"/><path d="M14.5 29.5 Q20 22.5 25.5 29.5 Z" fill="#d99a1e" stroke="none"/></g></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração)<span class="demo-more"> · desenvolvida como exemplo para o Atemporal Tattoo</span></div>
+
+<header id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Atemporal Tattoo, início">
+      <svg class="logo-ico" aria-hidden="true"><use href="#i-hourglass"/></svg>
+      <span class="logo-txt"><span class="logo-name">Atemporal</span><span class="logo-sub">Tattoo · Asa Sul</span></span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul class="menu" id="menu">
+        <li><a href="#estilo">O estilo</a></li>
+        <li><a href="#classicos">Clássicos</a></li>
+        <li><a href="#tatuador">O tatuador</a></li>
+        <li><a href="#agendar">Agendar</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-red btn-sm" href="https://wa.me/5561982934691" target="_blank" rel="noopener">Agendar</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="over">Old school · Setor Comercial Sul, Brasília</span>
+      <h1 id="hero-title">Tatuagem old school, <em>feita para durar</em></h1>
+      <p class="lead">Traço forte, cor sólida e os clássicos da tatuagem tradicional. O Atemporal é o estúdio do Miguel Souza, que tatua em Brasília desde 2016.</p>
+      <div class="cta">
+        <a class="btn btn-red" href="https://wa.me/5561982934691" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn btn-line" href="#estilo">Ver o estilo<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <ul class="chips" aria-label="Especialidades">
+        <li class="chip chip-red">Old school</li>
+        <li class="chip chip-mus">Tradicional</li>
+        <li class="chip">Cor sólida</li>
+      </ul>
+    </div>
+
+    <figure class="flash reveal">
+      <span class="flash-tag" aria-hidden="true">Flash Nº 01</span>
+      <span class="flash-tag flash-tag-r" aria-hidden="true">BSB · DF</span>
+      <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="56" fill="#d99a1e" stroke="#1a1714" stroke-width="3"/>
+        <circle cx="60" cy="60" r="34" fill="#f7efe0" stroke="#1a1714" stroke-width="2.5"/>
+        <g class="seal-rot">
+          <path id="sealpath" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0" fill="none"/>
+          <text class="seal-t" fill="#1a1714"><textPath href="#sealpath" textLength="272" lengthAdjust="spacing">FEITO PARA DURAR · OLD SCHOOL · </textPath></text>
+        </g>
+        <path d="M60 44 l4.2 10 10.8 1 -8.2 7 2.5 10.6 -9.3 -5.6 -9.3 5.6 2.5 -10.6 -8.2 -7 10.8 -1z" fill="#b8321f" stroke="#1a1714" stroke-width="2.2" stroke-linejoin="round"/>
+      </svg>
+      <svg class="flash-svg" viewBox="0 0 400 420" role="img" aria-labelledby="fl-t fl-d">
+<title id="fl-t">Coração atravessado por uma adaga, com a faixa Atemporal</title>
+<desc id="fl-d">Desenho no estilo old school: coração vermelho com contorno grosso, uma adaga dourada e verde e uma faixa com a palavra Atemporal.</desc>
+<defs><clipPath id="hclip"><path d="M200 330 C120 270 70 225 70 165 C70 120 105 90 145 90 C170 90 190 103 200 122 C210 103 230 90 255 90 C295 90 330 120 330 165 C330 225 280 270 200 330 Z"/></clipPath>
+<path id="banarc" d="M66 232 Q200 210 334 232"/></defs>
+<g class="dg"><g transform="translate(290 112) rotate(35) scale(1.2)"><path d="M0 232 L-17 12 L17 12 Z" fill="#e9e4da" stroke="#1a1714" stroke-width="6" stroke-linejoin="round"/><path d="M0 220 L0 18" stroke="#1a1714" stroke-width="2.6" stroke-linecap="round"/><path d="M-8 30 L-4 150" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".85"/></g></g>
+<path d="M200 330 C120 270 70 225 70 165 C70 120 105 90 145 90 C170 90 190 103 200 122 C210 103 230 90 255 90 C295 90 330 120 330 165 C330 225 280 270 200 330 Z" fill="#b8321f"/>
+<g clip-path="url(#hclip)"><path d="M330 150 C330 250 260 300 200 340 L340 340 Z" fill="#8a2416"/><path d="M300 236 l-14 9" stroke="#1a1714" stroke-width="3" stroke-linecap="round"/><path d="M288 254 l-14 9" stroke="#1a1714" stroke-width="3" stroke-linecap="round"/><path d="M272 272 l-14 9" stroke="#1a1714" stroke-width="3" stroke-linecap="round"/><path d="M256 288 l-14 9" stroke="#1a1714" stroke-width="3" stroke-linecap="round"/><path d="M316 214 l-14 9" stroke="#1a1714" stroke-width="3" stroke-linecap="round"/></g>
+<path d="M200 330 C120 270 70 225 70 165 C70 120 105 90 145 90 C170 90 190 103 200 122 C210 103 230 90 255 90 C295 90 330 120 330 165 C330 225 280 270 200 330 Z" fill="none" stroke="#1a1714" stroke-width="7" stroke-linejoin="round"/>
+<path d="M110 156 C112 132 128 118 150 116" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+<circle cx="106" cy="178" r="5" fill="#fff"/>
+<g class="dg"><g transform="translate(290 112) rotate(35) scale(1.2)"><rect x="-48" y="-6" width="96" height="19" rx="9.5" fill="#d99a1e" stroke="#1a1714" stroke-width="6"/><rect x="-12" y="-72" width="24" height="66" rx="7" fill="#2e6150" stroke="#1a1714" stroke-width="6"/><path d="M-12 -52 L12 -62" stroke="#1a1714" stroke-width="3"/><path d="M-12 -34 L12 -44" stroke="#1a1714" stroke-width="3"/><path d="M-12 -16 L12 -26" stroke="#1a1714" stroke-width="3"/><circle cy="-88" r="17" fill="#d99a1e" stroke="#1a1714" stroke-width="6"/><circle cx="-5" cy="-93" r="4.5" fill="#fff"/></g></g>
+<path d="M64 216 L20 216 L36 240 L20 264 L64 264 Z" fill="#e6d6b8" stroke="#1a1714" stroke-width="6" stroke-linejoin="round"/>
+<path d="M336 216 L380 216 L364 240 L380 264 L336 264 Z" fill="#e6d6b8" stroke="#1a1714" stroke-width="6" stroke-linejoin="round"/>
+<path d="M60 200 Q200 178 340 200 L340 252 Q200 230 60 252 Z" fill="#f7efe0" stroke="#1a1714" stroke-width="6" stroke-linejoin="round"/>
+<path d="M60 252 L64 264 L48 258 Z" fill="#1a1714"/><path d="M340 252 L336 264 L352 258 Z" fill="#1a1714"/>
+<text class="ban-t" fill="#1a1714"><textPath href="#banarc" startOffset="50%" text-anchor="middle">ATEMPORAL</textPath></text>
+<path transform="translate(64 86) scale(1.1)" d="M0 -16 Q3 -3 16 0 Q3 3 0 16 Q-3 3 -16 0 Q-3 -3 0 -16 Z" fill="#d99a1e" stroke="#1a1714" stroke-width="3.64" stroke-linejoin="round"/>
+<path transform="translate(352 330) scale(1.25)" d="M0 -16 Q3 -3 16 0 Q3 3 0 16 Q-3 3 -16 0 Q-3 -3 0 -16 Z" fill="#d99a1e" stroke="#1a1714" stroke-width="3.20" stroke-linejoin="round"/>
+<path transform="translate(52 330) scale(0.8)" d="M0 -16 Q3 -3 16 0 Q3 3 0 16 Q-3 3 -16 0 Q-3 -3 0 -16 Z" fill="#b8321f" stroke="#1a1714" stroke-width="5.00" stroke-linejoin="round"/>
+<path transform="translate(236 44) scale(0.7)" d="M0 -16 Q3 -3 16 0 Q3 3 0 16 Q-3 3 -16 0 Q-3 -3 0 -16 Z" fill="#b8321f" stroke="#1a1714" stroke-width="5.71" stroke-linejoin="round"/>
+<circle cx="96" cy="60" r="3.2" fill="#1a1714"/><circle cx="330" cy="290" r="3.2" fill="#1a1714"/><circle cx="30" cy="140" r="3.2" fill="#1a1714"/><circle cx="378" cy="150" r="3.2" fill="#1a1714"/><circle cx="150" cy="370" r="3.2" fill="#1a1714"/><circle cx="250" cy="384" r="3.2" fill="#1a1714"/>
+</svg>
+      <figcaption class="flash-cap">Desenho ilustrativo</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- O ESTILO -->
+<section class="sec" id="estilo" aria-labelledby="estilo-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="over">O que é old school</span>
+      <h2 id="estilo-title">Feita para atravessar <em>o tempo</em></h2>
+      <p>O old school é a tatuagem tradicional: desenhos diretos, que continuam bonitos e legíveis com o passar dos anos. É o estilo do Atemporal.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal">
+        <svg class="pillar-ico" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="33" fill="#f2e8d5" stroke="#1a1714" stroke-width="2.5"/><path d="M18 48 C26 22 44 52 54 24" fill="none" stroke="#1a1714" stroke-width="9" stroke-linecap="round"/><path d="M18 48 C26 22 44 52 54 24" fill="none" stroke="#b8321f" stroke-width="3.5" stroke-linecap="round"/></svg>
+        <h3>Traço grosso</h3>
+        <p class="pillar-txt">Contornos fortes, que seguram o desenho e mantêm a leitura mesmo de longe e com os anos.</p>
+      </article>
+      <article class="pillar reveal">
+        <svg class="pillar-ico" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="33" fill="#f2e8d5" stroke="#1a1714" stroke-width="2.5"/><circle cx="26" cy="29" r="9" fill="#b8321f" stroke="#1a1714" stroke-width="2.5"/><circle cx="46" cy="29" r="9" fill="#d99a1e" stroke="#1a1714" stroke-width="2.5"/><circle cx="36" cy="46" r="9" fill="#2e6150" stroke="#1a1714" stroke-width="2.5"/></svg>
+        <h3>Paleta limitada</h3>
+        <p class="pillar-txt">Poucas cores, como vermelho, amarelo e verde, aplicadas de forma sólida e bem preenchida.</p>
+      </article>
+      <article class="pillar reveal">
+        <svg class="pillar-ico" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="33" fill="#f2e8d5" stroke="#1a1714" stroke-width="2.5"/><circle cx="36" cy="36" r="18" fill="#f7efe0" stroke="#1a1714" stroke-width="3"/><path d="M36 18 A18 18 0 0 1 36 54 Z" fill="#1a1714"/><path d="M24 30 l-6 3 M23 38 l-6 2 M26 45 l-5 4" stroke="#1a1714" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <h3>Sombra carregada</h3>
+        <p class="pillar-txt">Sombras bem marcadas em preto, que dão contraste e profundidade ao desenho.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CLÁSSICOS -->
+<section class="sec classics" id="classicos" aria-labelledby="classicos-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="over">Clássicos do tradicional</span>
+      <h2 id="classicos-title">Temas que <em>nunca saem de moda</em></h2>
+      <p>Coração, adaga, âncora: símbolos que atravessam gerações no old school. Traga a sua ideia ou parta de um clássico.</p>
+    </div>
+    <div class="sheet">
+      <article class="tile reveal">
+        <div class="tile-art"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 100 C34 82 18 68 18 48 C18 33 30 22 43 22 C51 22 57 27 60 33 C63 27 69 22 77 22 C90 22 102 33 102 48 C102 68 86 82 60 100 Z" fill="#b8321f" stroke="#1a1714" stroke-width="5" stroke-linejoin="round"/><path d="M30 48 C30 40 36 34 43 33" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg></div>
+        <h3 class="tile-t">Coração</h3>
+        <p class="tile-d">Costuma representar amor e lealdade.</p>
+      </article>
+      <article class="tile reveal">
+        <div class="tile-art"><svg viewBox="0 0 120 120" aria-hidden="true"><g transform="translate(60 52) scale(.9)"><path d="M0 72 L-10 8 L10 8 Z" fill="#e9e4da" stroke="#1a1714" stroke-width="4.5" stroke-linejoin="round"/><path d="M0 66 V12" stroke="#1a1714" stroke-width="2"/><rect x="-30" y="-2" width="60" height="12" rx="6" fill="#d99a1e" stroke="#1a1714" stroke-width="4.5"/><rect x="-8" y="-34" width="16" height="32" rx="5" fill="#2e6150" stroke="#1a1714" stroke-width="4.5"/><circle cy="-40" r="10" fill="#d99a1e" stroke="#1a1714" stroke-width="4.5"/></g></svg></div>
+        <h3 class="tile-t">Adaga</h3>
+        <p class="tile-d">Coragem e sacrifício, muitas vezes ao lado de um coração ou de uma rosa.</p>
+      </article>
+      <article class="tile reveal">
+        <div class="tile-art"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="22" r="8" fill="none" stroke="#1a1714" stroke-width="11"/><circle cx="60" cy="22" r="8" fill="none" stroke="#2e6150" stroke-width="4.5"/><path d="M60 30 V96 M38 42 H82 M22 72 Q28 100 60 102 Q92 100 98 72" fill="none" stroke="#1a1714" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 30 V96 M38 42 H82 M22 72 Q28 100 60 102 Q92 100 98 72" fill="none" stroke="#2e6150" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 66 L22 72 L30 64" fill="#2e6150" stroke="#1a1714" stroke-width="4" stroke-linejoin="round"/><path d="M106 66 L98 72 L90 64" fill="#2e6150" stroke="#1a1714" stroke-width="4" stroke-linejoin="round"/></svg></div>
+        <h3 class="tile-t">Âncora</h3>
+        <p class="tile-d">Firmeza e estabilidade, herança dos marinheiros que levaram a tatuagem pelo mundo.</p>
+      </article>
+      <article class="tile reveal">
+        <div class="tile-art"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 63 L60.0 15.0 L71.2 47.6 Z" fill="#b8321f"/><path d="M60 63 L48.8 47.6 L60.0 15.0 Z" fill="#f7efe0"/><path d="M60 63 L60.0 15.0" stroke="#1a1714" stroke-width="2.5"/><path d="M60 63 L105.7 48.2 L78.1 68.9 Z" fill="#b8321f"/><path d="M60 63 L71.2 47.6 L105.7 48.2 Z" fill="#f7efe0"/><path d="M60 63 L105.7 48.2" stroke="#1a1714" stroke-width="2.5"/><path d="M60 63 L88.2 101.8 L60.0 82.0 Z" fill="#b8321f"/><path d="M60 63 L78.1 68.9 L88.2 101.8 Z" fill="#f7efe0"/><path d="M60 63 L88.2 101.8" stroke="#1a1714" stroke-width="2.5"/><path d="M60 63 L31.8 101.8 L41.9 68.9 Z" fill="#b8321f"/><path d="M60 63 L60.0 82.0 L31.8 101.8 Z" fill="#f7efe0"/><path d="M60 63 L31.8 101.8" stroke="#1a1714" stroke-width="2.5"/><path d="M60 63 L14.3 48.2 L48.8 47.6 Z" fill="#b8321f"/><path d="M60 63 L41.9 68.9 L14.3 48.2 Z" fill="#f7efe0"/><path d="M60 63 L14.3 48.2" stroke="#1a1714" stroke-width="2.5"/><polygon points="60.0,15.0 71.2,47.6 105.7,48.2 78.1,68.9 88.2,101.8 60.0,82.0 31.8,101.8 41.9,68.9 14.3,48.2 48.8,47.6" fill="none" stroke="#1a1714" stroke-width="5" stroke-linejoin="round"/></svg></div>
+        <h3 class="tile-t">Estrela náutica</h3>
+        <p class="tile-d">O guia de volta para casa, das cartas de navegação para a pele.</p>
+      </article>
+      <article class="tile reveal">
+        <div class="tile-art"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M40 26 L80 26 Q80 50 63 60 Q80 70 80 94 L40 94 Q40 70 57 60 Q40 50 40 26 Z" fill="#f7efe0" stroke="#1a1714" stroke-width="4.5" stroke-linejoin="round"/><path d="M47 38 L73 38 Q71 51 60 57 Q49 51 47 38 Z" fill="#d99a1e"/><path d="M45 92 Q60 72 75 92 Z" fill="#d99a1e"/><path d="M60 58 V84" stroke="#d99a1e" stroke-width="2.5"/><rect x="28" y="16" width="64" height="12" rx="4" fill="#b8321f" stroke="#1a1714" stroke-width="4.5"/><rect x="28" y="92" width="64" height="12" rx="4" fill="#b8321f" stroke="#1a1714" stroke-width="4.5"/><path d="M34 28 V92 M86 28 V92" stroke="#1a1714" stroke-width="4.5"/><path d="M47 32 Q46 42 52 50" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <h3 class="tile-t">Ampulheta</h3>
+        <p class="tile-d">A passagem do tempo, tema certo para um estúdio chamado Atemporal.</p>
+      </article>
+      <article class="tile reveal">
+        <div class="tile-art"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M28 46 L44 28 L76 28 L92 46 L60 98 Z" fill="#7fb6a6" stroke="#1a1714" stroke-width="4.5" stroke-linejoin="round"/><path d="M28 46 H92 M44 28 L52 46 L60 98 L68 46 L76 28 M52 46 L60 28 L68 46" fill="none" stroke="#1a1714" stroke-width="2.6" stroke-linejoin="round"/><path d="M30 46 L52 46 L60 98 Z" fill="#2e6150" opacity=".55"/><path d="M46 34 L41 42" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/></svg></div>
+        <h3 class="tile-t">Diamante</h3>
+        <p class="tile-d">Valor e força: o que é sólido e não se desgasta.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- O TATUADOR -->
+<section class="sec artist" id="tatuador" aria-labelledby="tatuador-title">
+  <div class="wrap artist-grid">
+    <div class="reveal">
+      <span class="over">O tatuador</span>
+      <p class="artist-name" aria-hidden="true">Miguel Souza</p>
+      <h2 id="tatuador-title">Quem está por trás do Atemporal</h2>
+    </div>
+    <div class="reveal">
+      <p class="artist-p">O Miguel Souza é o dono do Atemporal e trabalha com old school, a tatuagem tradicional. O lema dele resume o estúdio: tatuagens sólidas e feitas para durar.</p>
+      <ul class="facts">
+        <li class="fact"><span class="fact-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Tatuando em Brasília desde 2016</li>
+        <li class="fact"><span class="fact-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Especialista em old school e tradicional</li>
+        <li class="fact"><span class="fact-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Agendamento pelo WhatsApp</li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-cream" href="https://www.instagram.com/msouzatattoo/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>@msouzatattoo</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/tattoo.atemporal/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>@tattoo.atemporal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDAR -->
+<section class="sec" id="agendar" aria-labelledby="agendar-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="over">Agendar</span>
+      <h2 id="agendar-title">Da ideia à <em>pele</em></h2>
+      <p>Tudo é combinado pelo WhatsApp.</p>
+    </div>
+    <div class="book-grid">
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-n">1</span>
+          <div><h3>Mande a sua ideia</h3><p class="step-txt">Conte o que quer tatuar, ou escolha um clássico do tradicional para partir.</p></div>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">2</span>
+          <div><h3>Lugar e tamanho</h3><p class="step-txt">Diga em que parte do corpo e o tamanho aproximado. Referências ajudam.</p></div>
+        </li>
+        <li class="step reveal">
+          <span class="step-n">3</span>
+          <div><h3>Data e orçamento</h3><p class="step-txt">Com o desenho combinado, vocês acertam o valor e marcam a sessão.</p></div>
+        </li>
+      </ol>
+      <div class="place reveal">
+        <p class="place-t">Onde fica</p>
+        <p class="place-addr">Setor Comercial Sul, Quadra 1, Bloco E, Sala 509</p>
+        <p class="place-sub">Asa Sul · Brasília, DF</p>
+        <p class="place-row"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp (61) 98293-4691</p>
+        <div class="cta">
+          <a class="btn btn-red" href="https://wa.me/5561982934691" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Atemporal%20Tattoo%20SCS%20Quadra%201%20Bloco%20E%20Bras%C3%ADlia" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Abrir no mapa</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top" aria-label="Atemporal Tattoo, início">
+        <svg class="logo-ico" aria-hidden="true"><use href="#i-hourglass"/></svg>
+        <span class="logo-txt"><span class="logo-name">Atemporal</span><span class="logo-sub">Tattoo · Asa Sul</span></span>
+      </a>
+      <p class="foot-about">Tatuagem old school no Setor Comercial Sul, em Brasília. Tatuagens sólidas e feitas para durar.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#estilo">O estilo</a></li>
+        <li><a href="#classicos">Clássicos</a></li>
+        <li><a href="#tatuador">O tatuador</a></li>
+        <li><a href="#agendar">Agendar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5561982934691" target="_blank" rel="noopener">WhatsApp (61) 98293-4691</a></li>
+        <li><a href="https://www.instagram.com/tattoo.atemporal/" target="_blank" rel="noopener">Instagram @tattoo.atemporal</a></li>
+        <li><a href="https://www.instagram.com/msouzatattoo/" target="_blank" rel="noopener">Instagram @msouzatattoo</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-bottom">
+    <span>© Atemporal Tattoo</span>
+    <span>Site de demonstração · textos, fotos, valores e endereço a confirmar com o estúdio</span>
+  </div></div>
+</footer>
+
+<a class="float" href="https://wa.me/5561982934691" target="_blank" rel="noopener" aria-label="Agendar no WhatsApp com o Atemporal Tattoo"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar</a>
+
+<script>
+(function(){
+  // Animação de entrada
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  // Sombra no cabeçalho ao rolar
+  var header=document.getElementById('header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Menu mobile
+  var burger=document.getElementById('burger');
+  function setMenu(open){header.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')}
+  burger.addEventListener('click',function(){setMenu(!header.classList.contains('open'))});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+})();
+</script>
+</body>
+</html>
