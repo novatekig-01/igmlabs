@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Rony Pereira · Tatuagem</title>
+<meta name="description" content="Rony Pereira: realismo, anime, coberturas e free hand em studio privado em Brasília. Orçamento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0c0e;--bg2:#141417;--card:#19191d;--line:#2a2a30;
+  --txt:#ecebe6;--mut:#9d9ca3;--red:#e0263f;--red2:#ff5468;
+  --ig:linear-gradient(45deg,#f9a03f,#e0263f 45%,#b0237a 80%);
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font:16px/1.6 "Inter Tight",system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img,svg{display:block}
+.wrap{width:min(1160px,100%);margin:0 auto;padding:0 28px;position:relative;z-index:1}
+.demo{position:relative;z-index:60;background:var(--red);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:7px 12px;letter-spacing:.02em}
+.hand{font-family:"Permanent Marker",cursive;font-weight:400}
+.disp{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.92}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--red2);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+.kicker::before{content:"";width:28px;height:2px;background:currentColor}
+h2.disp{font-size:clamp(42px,6.4vw,84px);margin:14px 0 18px}
+.lead{color:var(--mut);font-size:18px;max-width:600px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:700;transition:transform .2s,background .2s,box-shadow .2s}
+.btn svg{width:20px;height:20px}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 30px -10px var(--red)}
+.btn-red:hover{transform:translateY(-2px);background:var(--red2)}
+.btn-ghost{border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--txt)}
+section{padding:110px 0;position:relative}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(12,12,14,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:700}
+.logo .ring{width:40px;height:40px;border-radius:50%;padding:2px;background:var(--ig)}
+.logo .ring span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--bg);font-family:Anton;font-size:16px;letter-spacing:.04em}
+.logo small{display:block;color:var(--mut);font-weight:500;font-size:12px;line-height:1.2}
+.links{display:flex;gap:28px;font-weight:600;font-size:15px}
+.links a{color:var(--mut);transition:color .2s}.links a:hover{color:var(--txt)}
+.nav .btn{padding:10px 18px;font-size:14px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);align-items:center;justify-content:center}
+.burger span{width:18px;height:2px;background:var(--txt);position:relative;display:block}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--txt);transition:transform .25s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.nav.open .burger span{background:transparent}
+.nav.open .burger span::before{transform:translateY(6px) rotate(45deg)}
+.nav.open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{padding:70px 0 90px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:50px;align-items:center}
+.hero h1{font-size:clamp(70px,12vw,168px);margin:18px 0 6px}
+.hero h1 .out{color:transparent;-webkit-text-stroke:2px var(--txt)}
+.hero h1 .ink{filter:url(#bleed)}
+.hero .sig{font-size:clamp(26px,3.4vw,40px);color:var(--red2);transform:rotate(-4deg);display:inline-block;margin:0 0 22px 6px}
+.hero p.lead{margin-bottom:30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:grid;grid-template-columns:repeat(3,auto);gap:30px;margin-top:44px;justify-content:start}
+.facts b{display:block;font-family:Anton;font-size:30px;font-weight:400;white-space:nowrap}
+.facts span{color:var(--mut);font-size:13px;white-space:nowrap}
+.art{position:relative;aspect-ratio:1;max-width:460px;width:100%;justify-self:center}
+.art .halo{position:absolute;inset:0;border-radius:50%;padding:6px;background:var(--ig);animation:spin 18s linear infinite}
+.art .halo::after{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--bg)}
+.art svg.main{position:absolute;inset:8%;width:84%;height:84%}
+.art .bgm{animation:spin 60s linear infinite reverse}
+.art .tag{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:13px;font-weight:600;box-shadow:0 16px 40px -18px #000}
+.art .tag i{font-style:normal;color:var(--red2)}
+.art .t1{left:-6%;top:14%;transform:rotate(-5deg)}
+.art .t2{right:-4%;bottom:12%;transform:rotate(4deg)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.draw path,.draw circle,.draw ellipse{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 3.2s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;padding:18px 0;position:relative;z-index:1}
+.marq .row{display:flex;gap:48px;width:max-content;animation:mq 30s linear infinite}
+.marq span{font-family:Anton;font-size:28px;text-transform:uppercase;white-space:nowrap;color:var(--mut)}
+.marq span em{font-style:normal;color:var(--red)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* destaques */
+.hl-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.rings{display:flex;gap:26px;margin-top:46px;overflow-x:auto;padding:6px 4px 14px;scrollbar-width:none}
+.rings::-webkit-scrollbar{display:none}
+.hl{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:10px;width:118px}
+.hl .rg{width:112px;height:112px;border-radius:50%;padding:4px;background:var(--ig);transition:transform .25s}
+.hl.seen .rg{background:#3a3a42}
+.hl:hover .rg{transform:scale(1.05)}
+.hl .rg span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--card);border:4px solid var(--bg)}
+.hl .rg svg{width:62%;height:62%}
+.hl b{font-weight:600;font-size:14px}
+.hint{margin-top:10px;color:var(--mut);font-size:14px}
+.hint .hand{color:var(--red2);font-size:18px}
+
+/* story modal */
+.story{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.86);display:none;align-items:center;justify-content:center;padding:16px}
+.story.on{display:flex}
+.sbox{position:relative;width:min(420px,100%);aspect-ratio:9/16;max-height:calc(100vh - 32px);border-radius:22px;overflow:hidden;background:radial-gradient(120% 80% at 50% 10%,#2a1218,#0e0e11 60%);border:1px solid var(--line);display:flex;flex-direction:column}
+.bars{display:flex;gap:4px;padding:14px 14px 0}
+.bars i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.25);overflow:hidden}
+.bars i b{display:block;height:100%;width:0;background:#fff}
+.stop{display:flex;align-items:center;gap:10px;padding:12px 14px;font-size:14px;font-weight:600}
+.stop .mini{width:32px;height:32px;border-radius:50%;padding:2px;background:var(--ig)}
+.stop .mini span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:#111;font-family:Anton;font-size:12px}
+.stop small{color:var(--mut);font-weight:500}
+.stop .x{margin-left:auto;width:36px;height:36px;font-size:26px;line-height:1}
+.sbody{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:10px 28px 34px}
+.sbody svg{width:72%;max-width:250px;aspect-ratio:1}
+.sbody h3{font-family:Anton;font-weight:400;text-transform:uppercase;font-size:34px;line-height:1;margin:20px 0 10px}
+.sbody p{color:#cfcdd4;font-size:15px}
+.sbody .hand{color:var(--red2);font-size:20px;margin-top:12px}
+.tapl,.tapr{position:absolute;top:70px;bottom:0;width:38%;z-index:2}
+.tapl{left:0}.tapr{right:0}
+.sbody a.btn{white-space:nowrap;position:relative;z-index:3;margin-top:18px;font-size:14px;padding:11px 18px}
+
+/* portfolio */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px;grid-auto-flow:dense}
+.pc{position:relative;border-radius:var(--r);background:var(--card);border:1px solid var(--line);overflow:hidden;aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;transition:transform .3s,border-color .3s}
+.pc:hover{transform:translateY(-4px);border-color:#46464f}
+.pc.tall{grid-row:span 2;aspect-ratio:auto}
+.pc svg{position:absolute;inset:10% 12% 30%;width:76%;height:60%}
+.pc.tall svg{inset:12% 6% 20%;width:88%;height:68%}
+.pc b{font-weight:700;position:relative}
+.pc small{color:var(--mut);position:relative;font-size:13px}
+.pc .chip{position:absolute;top:14px;left:14px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(224,38,63,.15);color:var(--red2);border-radius:999px;padding:5px 10px}
+.note{display:flex;gap:10px;align-items:center;margin-top:20px;color:var(--mut);font-size:14px}
+.note svg{width:18px;height:18px;flex:0 0 auto}
+
+/* lazy feed */
+.lazy{background:var(--bg2);border-block:1px solid var(--line)}
+.lazy .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:60px;align-items:center}
+.quote{font-size:clamp(34px,4.6vw,58px);line-height:1.1;transform:rotate(-2deg)}
+.quote .em{color:var(--red2)}
+.phone{width:min(300px,100%);justify-self:center;border-radius:36px;border:8px solid #222228;background:#0f0f12;padding:20px 14px;box-shadow:0 40px 80px -40px #000}
+.phone .ph{display:flex;align-items:center;gap:12px}
+.phone .ph .mini{width:56px;height:56px;border-radius:50%;padding:3px;background:var(--ig)}
+.phone .ph .mini span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:#111;font-family:Anton;font-size:18px}
+.phone .ph b{font-size:14px}.phone .ph small{display:block;color:var(--mut);font-size:12px}
+.phone .bio{font-size:12.5px;color:#cfcdd4;margin:12px 0}
+.phone .hls{display:flex;gap:10px}
+.phone .hls i{width:46px;height:46px;border-radius:50%;border:2px solid #3a3a42;background:var(--card)}
+.phone .hls i.a{border:2px solid var(--red)}
+.phone .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:14px}
+.phone .feed i{aspect-ratio:1;background:#1c1c21}
+.phone .feed i:nth-child(n+4){background:repeating-linear-gradient(45deg,#16161a 0 6px,#1a1a1f 6px 12px)}
+.phone .zz{text-align:center;color:var(--mut);font-size:12px;margin-top:10px}
+
+/* processo */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:Anton;font-size:46px;color:transparent;-webkit-text-stroke:1.5px var(--red);display:block;margin-bottom:10px}
+.step h3{font-size:19px;margin-bottom:6px}
+.step p{color:var(--mut);font-size:15px}
+
+/* orcamento */
+.orc .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px}
+fieldset{border:0;margin-bottom:24px}
+legend{font-weight:700;margin-bottom:12px;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative}
+.chips input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chips span{display:inline-block;padding:9px 15px;border-radius:999px;border:1.5px solid var(--line);font-size:14px;font-weight:600;transition:all .2s}
+.chips input:checked+span{background:var(--red);border-color:var(--red);color:#fff}
+.chips input:focus-visible+span{outline:2px solid var(--red2);outline-offset:2px}
+.size{display:flex;align-items:center;gap:16px}
+.size input{flex:1;accent-color:var(--red)}
+.size output{font-family:Anton;font-size:28px;min-width:92px;text-align:right}
+.field{display:block;width:100%;background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;color:var(--txt);font:inherit;font-size:15px}
+.field:focus{outline:none;border-color:var(--red)}
+textarea.field{min-height:92px;resize:vertical}
+.preview{margin-top:20px;background:var(--bg);border:1px dashed #3a3a42;border-radius:14px;padding:14px 16px;font-size:14px;color:#cfcdd4;white-space:pre-line}
+.preview b{display:block;color:var(--mut);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.form .btn{width:100%;justify-content:center;margin-top:18px}
+.info{display:grid;gap:14px;margin-top:30px}
+.info div{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.info svg{width:22px;height:22px;color:var(--red2);flex:0 0 auto;margin-top:2px}
+.info small{display:block;color:var(--mut)}
+
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:14px;position:relative;z-index:1}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--txt)}
+.float{position:fixed;right:20px;bottom:20px;z-index:70;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transform:scale(0);transition:transform .3s}
+.float.on{transform:scale(1)}
+.float svg{width:30px;height:30px}
+
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .hero .wrap,.lazy .wrap,.orc .wrap{grid-template-columns:1fr}
+  .art{max-width:380px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .links{display:none}.burger{display:inline-flex}.nav .btn{display:none}
+  .nav.open .links{display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:var(--bg);padding:20px 16px;gap:18px;border-bottom:1px solid var(--line)}
+  .wrap{padding:0 16px}
+  section{padding:80px 0}
+  .facts{gap:18px}.facts b{font-size:24px}
+  .art .t1{left:0}.art .t2{right:0}
+  .hl{width:96px}.hl .rg{width:90px;height:90px}
+  .rings{gap:16px}
+  .form{padding:22px}
+}
+@media (max-width:520px){
+  .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .pc{padding:12px}.pc b{font-size:14px}.pc small{font-size:12px}
+  .steps{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(3,auto);gap:14px}.facts b{font-size:21px}.facts span{font-size:11.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .draw path,.draw circle,.draw ellipse{stroke-dashoffset:0}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="bleed"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter>
+  </defs>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></g></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></g></symbol>
+
+  <!-- ilustrações (traço) -->
+  <symbol id="a-dog" viewBox="0 0 200 200"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M58 70c-14-22-12-46 2-54 10 10 18 26 22 40M142 70c14-22 12-46-2-54-10 10-18 26-22 40"/>
+    <path d="M60 66c-10 18-14 44-6 66 10 28 28 48 46 50 18-2 36-22 46-50 8-22 4-48-6-66-10-12-24-18-40-18s-30 6-40 18Z"/>
+    <path d="M76 100c6-6 14-6 18 0M106 100c4-6 12-6 18 0"/><circle cx="85" cy="104" r="4" fill="currentColor"/><circle cx="115" cy="104" r="4" fill="currentColor"/>
+    <path d="M88 132c4-6 20-6 24 0-2 8-8 12-12 12s-10-4-12-12Z" fill="currentColor"/>
+    <path d="M100 144v10M86 160c6 6 22 6 28 0"/><path d="M92 158c2 14 14 14 16 0" />
+    <path d="M66 84l-6 10M134 84l6 10M70 140l-10 6M130 140l10 6M74 150l-6 10M126 150l6 10" opacity=".6"/>
+  </g></symbol>
+  <symbol id="a-flower" viewBox="0 0 200 200"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="80" cy="70" r="18"/><circle cx="80" cy="70" r="10" stroke-dasharray="2 4"/>
+    <path d="M80 52c-6-14 6-24 0-34 -6 10 6 20 0 34M98 70c14-6 24 6 34 0-10-6-20 6-34 0M80 88c6 14-6 24 0 34 6-10-6-20 0-34M62 70c-14 6-24-6-34 0 10 6 20-6 34 0M93 57c6-14 22-12 26-22-12 0-18 14-26 22M93 83c14 6 12 22 22 26 0-12-14-18-22-26M67 83c-6 14-22 12-26 22 12 0 18-14 26-22M67 57c-14-6-12-22-22-26 0 12 14 18 22 26"/>
+    <path d="M124 118c-10-4-22 2-22 14s12 22 24 20 18-14 14-24-8-12-16-10Z"/>
+    <path d="M118 126c6-4 14 0 12 8s-12 8-14 2M110 134c0 10 10 16 20 12M128 120c8 2 12 8 10 16"/>
+    <path d="M118 152c-8 16-12 30-10 44M92 92c10 18 18 34 22 56"/>
+    <path d="M110 178c-14-2-22-10-24-20 12 0 22 8 24 20ZM112 168c10-8 22-8 30-2-10 8-22 8-30 2Z"/>
+  </g></symbol>
+  <symbol id="a-wolf" viewBox="0 0 200 200"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48 36l20 44M152 36l-20 44M48 36c18 4 32 14 40 28h24c8-14 22-24 40-28"/>
+    <path d="M68 80c-12 20-16 42-8 60l40 44 40-44c8-18 4-40-8-60"/>
+    <path d="M74 104l18 6M126 104l-18 6"/><path d="M80 106c4 3 8 3 12 4M120 106c-4 3-8 3-12 4" stroke-width="4"/>
+    <path d="M100 116v34M90 150h20l-10 12Z" fill="currentColor"/>
+    <path d="M58 120l-16 8 18 2M142 120l16 8-18 2M62 142l-14 14 20-4M138 142l14 14-20-4" opacity=".7"/>
+    <path d="M88 64l12 40 12-40" opacity=".55"/>
+  </g></symbol>
+  <symbol id="a-manga" viewBox="0 0 200 200"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 92c30-26 110-34 146-6"/><path d="M40 96c22 32 98 40 128 4"/>
+    <ellipse cx="102" cy="104" rx="30" ry="30"/><circle cx="102" cy="104" r="15" fill="currentColor"/><circle cx="110" cy="96" r="5" fill="#0c0c0e" stroke="none"/>
+    <path d="M36 76l-14-10M60 64l-6-16M150 64l8-16M172 76l14-10"/>
+    <path d="M24 150h48M24 162h70M24 174h34M140 150h36M120 162h56" opacity=".55"/>
+    <path d="M44 60c20-12 50-18 80-16" stroke-width="5"/>
+  </g></symbol>
+  <symbol id="a-heal" viewBox="0 0 200 200"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M54 30c-8 50-10 100 0 150M146 30c8 50 10 100 0 150"/>
+    <circle cx="100" cy="100" r="34"/><circle cx="100" cy="100" r="20"/><circle cx="100" cy="100" r="6" fill="currentColor"/>
+    <path d="M100 66v-14M100 134v14M66 100H52M134 100h14M76 76l-10-10M124 124l10 10M124 76l10-10M76 124l-10 10"/>
+    <path d="M156 40l6-10 6 10-6 10ZM150 160l4-6 4 6-4 6Z" fill="currentColor"/>
+  </g></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração) feita pela NovaTech para @rony.tattoos</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo"><span class="ring"><span>RP</span></span><span>Rony Pereira<small>Tatuagem · Brasília</small></span></a>
+    <nav class="links" id="links">
+      <a href="#destaques">Destaques</a><a href="#trabalhos">Trabalhos</a><a href="#processo">Processo</a><a href="#orcamento">Orçamento</a>
+    </nav>
+    <a class="btn btn-red" href="#orcamento"><svg><use href="#i-wa"/></svg>Orçamento</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="links"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Studio privado · Brasília</span>
+      <h1 class="disp"><span class="ink">Rony</span><br><span class="out">Pereira</span></h1>
+      <span class="hand sig">realismo, anime &amp; coberturas</span>
+      <p class="lead">Preto e cinza com contraste, personagens que saltam da pele e coberturas planejadas pra apagar de vez aquela tattoo antiga. Tudo num studio privado, com atenção total a você.</p>
+      <div class="cta">
+        <a class="btn btn-red" href="#orcamento"><svg><use href="#i-wa"/></svg>Pedir orçamento</a>
+        <a class="btn btn-ghost" href="#destaques">Ver os destaques</a>
+      </div>
+      <div class="facts">
+        <div><b>12,7 mil</b><span>seguidores no Instagram</span></div>
+        <div><b>Privado</b><span>studio exclusivo</span></div>
+        <div><b>Free hand</b><span>desenho direto na pele</span></div>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <div class="halo"></div>
+      <svg class="main bgm" id="heroM" style="color:var(--red);opacity:.22" aria-hidden="true"></svg>
+      <svg class="main draw" viewBox="0 0 200 200" style="color:var(--txt);inset:20%;width:60%;height:60%">
+        <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M48 36l20 44M152 36l-20 44M48 36c18 4 32 14 40 28h24c8-14 22-24 40-28"/>
+          <path d="M68 80c-12 20-16 42-8 60l40 44 40-44c8-18 4-40-8-60"/>
+          <path d="M74 104l18 6M126 104l-18 6"/>
+          <path d="M100 116v34M90 150h20l-10 12Z"/>
+          <path d="M58 120l-16 8 18 2M142 120l16 8-18 2M62 142l-14 14 20-4M138 142l14 14-20-4"/>
+          <path d="M88 64l12 40 12-40"/>
+        </g>
+              </svg>
+      <div class="tag t1"><i>●</i> Coberturas</div>
+      <div class="tag t2">Realismo <i>preto &amp; cinza</i></div>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="row" id="mq">
+  <span>Realismo <em>✦</em></span><span>Anime <em>✦</em></span><span>Coberturas <em>✦</em></span><span>Free hand <em>✦</em></span><span>Pets <em>✦</em></span><span>Florais <em>✦</em></span><span>Preto &amp; cinza <em>✦</em></span>
+</div></div>
+
+<section id="destaques">
+  <div class="wrap">
+    <div class="hl-head reveal">
+      <div>
+        <span class="kicker">Os destaques</span>
+        <h2 class="disp">O melhor fica<br>nos destaques</h2>
+        <p class="lead">Do jeito que o Rony já organiza no Instagram: toque num círculo e veja cada estilo como um story.</p>
+      </div>
+    </div>
+    <div class="rings reveal" id="rings"></div>
+    <p class="hint reveal"><span class="hand">toque pra abrir ↑</span> · no story, toque à direita pra avançar</p>
+  </div>
+</section>
+
+<section id="trabalhos" style="padding-top:20px">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Trabalhos</span>
+      <h2 class="disp">Estilos que<br>ele domina</h2>
+      <p class="lead">Uma amostra dos temas que aparecem no perfil. No site final, cada card vira uma foto real do trabalho cicatrizado.</p>
+    </div>
+    <div class="grid">
+      <article class="pc tall reveal"><span class="chip">Anime</span><svg style="color:var(--txt)"><use href="#a-manga"/></svg><b>Sleeve de anime</b><small>Personagens em preto e cinza no antebraço</small></article>
+      <article class="pc reveal"><span class="chip">Realismo</span><svg style="color:var(--txt)"><use href="#a-dog"/></svg><b>Retrato de pet</b><small>Pelagem e olhar em realismo</small></article>
+      <article class="pc reveal"><span class="chip">Floral</span><svg style="color:var(--txt)"><use href="#a-flower"/></svg><b>Girassol e rosa</b><small>Sombra suave, contraste forte</small></article>
+      <article class="pc tall reveal"><span class="chip">Cobertura</span><svg style="color:var(--txt)"><use href="#a-wolf"/></svg><b>Lobo em cobertura</b><small>Peça escura pensada pra esconder a antiga</small></article>
+      <article class="pc reveal"><span class="chip">Free hand</span><svg style="color:var(--red2)" id="mandSmall"></svg><b>Mandala free hand</b><small>Desenhada direto na pele</small></article>
+      <article class="pc reveal"><span class="chip">Cicatrizada</span><svg style="color:var(--txt)"><use href="#a-heal"/></svg><b>Depois de curada</b><small>O resultado que fica pra sempre</small></article>
+    </div>
+    <p class="note reveal"><svg><use href="#i-info"/></svg>Ilustrações de exemplo. Fotos dos trabalhos só entram no site com autorização do Rony.</p>
+  </div>
+</section>
+
+<section class="lazy">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Sobre o feed</span>
+      <p class="hand quote" style="margin-top:22px">“Tenho preguiça de postar no feed”<br><span class="em">— o próprio Rony</span></p>
+      <p class="lead" style="margin-top:28px">Por isso este site existe: o portfólio fica organizado num lugar só, fácil de achar no Google e de mandar pra quem pergunta “tem foto do seu trabalho?”. Sem depender do algoritmo.</p>
+      <div class="cta" style="margin-top:26px"><a class="btn btn-ghost" href="https://www.instagram.com/rony.tattoos/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@rony.tattoos</a></div>
+    </div>
+    <div class="phone reveal" aria-hidden="true">
+      <div class="ph"><span class="mini"><span>RP</span></span><div><b>rony.tattoos</b><small>111 posts · 12,7 mil seguidores</small></div></div>
+      <p class="bio">Artista · Studio privado<br>🚨 Tatuagens nos destaques 🚨</p>
+      <div class="hls"><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i></div>
+      <div class="feed"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="zz">zzz… 😴</p>
+    </div>
+  </div>
+</section>
+
+<section id="processo">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Como funciona</span>
+      <h2 class="disp">Da ideia<br>à pele</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Conversa</h3><p>Você manda a ideia, referências, local e tamanho pelo WhatsApp.</p></div>
+      <div class="step reveal"><h3>Orçamento</h3><p>O Rony avalia o projeto e passa valor e disponibilidade.</p></div>
+      <div class="step reveal"><h3>Sessão</h3><p>Atendimento no studio privado, no horário combinado.</p></div>
+      <div class="step reveal"><h3>Cicatrização</h3><p>Orientações de cuidado pra tattoo curar bonita e durar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="orc" id="orcamento" style="background:var(--bg2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Orçamento</span>
+      <h2 class="disp">Monte o seu<br>pedido</h2>
+      <p class="lead">Escolha as opções e a mensagem já sai pronta no WhatsApp do Rony. Quanto mais detalhe, mais rápido o orçamento.</p>
+      <div class="info">
+        <div><svg><use href="#i-lock"/></svg><span><b>Studio privado</b><small>Atendimento reservado, só com horário combinado.</small></span></div>
+        <div><svg><use href="#i-pin"/></svg><span><b>Brasília · DF</b><small>A localização é passada no agendamento.</small></span></div>
+        <div><svg><use href="#i-wa"/></svg><span><b>(61) 99108-7361</b><small>Orçamentos pelo WhatsApp.</small></span></div>
+      </div>
+    </div>
+    <form class="form reveal" id="f">
+      <fieldset><legend>Estilo</legend><div class="chips" data-n="estilo">
+        <label><input type="radio" name="estilo" value="Realismo" checked><span>Realismo</span></label>
+        <label><input type="radio" name="estilo" value="Anime / geek"><span>Anime / geek</span></label>
+        <label><input type="radio" name="estilo" value="Cobertura"><span>Cobertura</span></label>
+        <label><input type="radio" name="estilo" value="Free hand"><span>Free hand</span></label>
+        <label><input type="radio" name="estilo" value="Floral"><span>Floral</span></label>
+        <label><input type="radio" name="estilo" value="Pet"><span>Pet</span></label>
+      </div></fieldset>
+      <fieldset><legend>Local do corpo</legend><div class="chips">
+        <label><input type="radio" name="local" value="Antebraço" checked><span>Antebraço</span></label>
+        <label><input type="radio" name="local" value="Braço"><span>Braço</span></label>
+        <label><input type="radio" name="local" value="Perna"><span>Perna</span></label>
+        <label><input type="radio" name="local" value="Costas"><span>Costas</span></label>
+        <label><input type="radio" name="local" value="Peito"><span>Peito</span></label>
+        <label><input type="radio" name="local" value="Outro"><span>Outro</span></label>
+      </div></fieldset>
+      <fieldset><legend>Tamanho aproximado</legend>
+        <div class="size"><input type="range" id="tam" min="5" max="45" value="15" aria-label="Tamanho em centímetros"><output id="tamo">15 cm</output></div>
+      </fieldset>
+      <fieldset><legend>Sua ideia</legend>
+        <input class="field" id="nome" placeholder="Seu nome" autocomplete="name" style="margin-bottom:10px">
+        <textarea class="field" id="ideia" placeholder="Ex.: retrato do meu cachorro, quero cobrir uma tattoo antiga no ombro…"></textarea>
+      </fieldset>
+      <div class="preview" id="pv"></div>
+      <a class="btn btn-red" id="send" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enviar no WhatsApp</a>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <span>© Rony Pereira · Tatuagem · Brasília, DF</span>
+  <span><a href="https://www.instagram.com/rony.tattoos/" target="_blank" rel="noopener">@rony.tattoos</a> · <a href="https://wa.me/5561991087361" target="_blank" rel="noopener">WhatsApp</a></span>
+</div></footer>
+
+<a class="float" id="float" href="https://wa.me/5561991087361" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<div class="story" id="story" role="dialog" aria-modal="true" aria-label="Destaque">
+  <div class="sbox">
+    <div class="bars" id="bars"></div>
+    <div class="stop"><span class="mini"><span>RP</span></span><span>rony.tattoos <small id="stl"></small></span><button class="x" id="sx" aria-label="Fechar">×</button></div>
+    <button class="tapl" id="tl" aria-label="Anterior"></button><button class="tapr" id="tr" aria-label="Próximo"></button>
+    <div class="sbody" id="sb"></div>
+  </div>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+var WA='5561991087361';
+
+/* mandala gerada */
+function mandala(el,color){
+  var s='<g fill="none" stroke="'+color+'" stroke-width="1.6" stroke-linecap="round">';
+  [18,34,52,72,88].forEach(function(r){s+='<circle cx="100" cy="100" r="'+r+'"/>'});
+  for(var i=0;i<16;i++){var a=i*22.5;
+    s+='<path transform="rotate('+a+' 100 100)" d="M100 48c8 8 8 18 0 24-8-6-8-16 0-24Z"/>';
+    s+='<path transform="rotate('+(a+11.25)+' 100 100)" d="M100 12c10 10 12 22 0 30-12-8-10-20 0-30Z"/>';
+    s+='<circle transform="rotate('+a+' 100 100)" cx="100" cy="80" r="2.5" fill="'+color+'"/>';
+  }
+  for(var j=0;j<8;j++){s+='<path transform="rotate('+(j*45)+' 100 100)" d="M100 82l6 -12h-12Z"/>'}
+  el.setAttribute('viewBox','0 0 200 200');el.innerHTML=s+'</g>';
+}
+mandala(document.getElementById('mandSmall'),'currentColor');mandala(document.getElementById('heroM'),'currentColor');
+
+/* destaques */
+var HL=[
+  {n:'Realismo',ic:'a-dog',s:[
+    {ic:'a-dog',t:'Pets e retratos',p:'Pelagem, olhar e volume em preto e cinza. O realismo vive de contraste.'},
+    {ic:'a-flower',t:'Florais com sombra',p:'Girassóis, rosas e folhas com profundidade, do antebraço à perna.'}]},
+  {n:'Anime',ic:'a-manga',s:[
+    {ic:'a-manga',t:'Personagens na pele',p:'Anime e mangá em preto e cinza, com expressão e traço fiel ao estilo.',h:'fechamento de antebraço? bora'},
+    {ic:'a-manga',t:'Do seu jeito',p:'Leve a referência do personagem e a cena favorita. O desenho é montado pro seu braço.'}]},
+  {n:'Coberturas',ic:'a-wolf',s:[
+    {ic:'a-wolf',t:'Tattoo antiga?',p:'Aquela que você não curte mais pode virar uma peça nova, escura e bem planejada.',h:'🔥 dá pra cobrir'},
+    {ic:'a-wolf',t:'Avaliação antes',p:'Mande uma foto da tattoo atual no WhatsApp pra ver tamanho e possibilidades.',cta:1}]},
+  {n:'Free hand',ic:'mand',s:[
+    {ic:'mand',t:'Desenho na pele',p:'Mandalas e ornamentos desenhados direto no corpo, acompanhando a anatomia.'}]},
+  {n:'Cicatrizadas',ic:'a-heal',s:[
+    {ic:'a-heal',t:'O que fica',p:'Depois de curada é que se vê o trabalho de verdade. No site final, aqui entram as fotos cicatrizadas.',cta:1}]}
+];
+function ico(id,color){return id==='mand'?'<svg class="m" style="color:'+(color||'var(--red2)')+'"></svg>':'<svg style="color:'+(color||'var(--txt)')+'"><use href="#'+id+'"/></svg>'}
+var rings=document.getElementById('rings');
+HL.forEach(function(h,i){
+  var b=document.createElement('button');b.className='hl';b.type='button';
+  b.innerHTML='<span class="rg"><span>'+ico(h.ic)+'</span></span><b>'+h.n+'</b>';
+  b.addEventListener('click',function(){open(i,0)});rings.appendChild(b);
+});
+rings.querySelectorAll('svg.m').forEach(function(s){mandala(s,'currentColor')});
+
+var st=document.getElementById('story'),bars=document.getElementById('bars'),sb=document.getElementById('sb'),stl=document.getElementById('stl');
+var cur=0,si=0,timer=null,t0=0,DUR=5500,raf=null,lastFocus=null;
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function open(i,s){lastFocus=document.activeElement;cur=i;si=s;st.classList.add('on');document.body.style.overflow='hidden';rings.children[i].classList.add('seen');render();document.getElementById('sx').focus()}
+function close(){st.classList.remove('on');document.body.style.overflow='';cancelAnimationFrame(raf);if(lastFocus)lastFocus.focus()}
+function render(){
+  var h=HL[cur],s=h.s[si];stl.textContent='· '+h.n;
+  bars.innerHTML=h.s.map(function(_,k){return '<i><b style="width:'+(k<si?100:0)+'%"></b></i>'}).join('');
+  sb.innerHTML=ico(s.ic,s.ic==='mand'?'var(--red2)':'#fff')+'<h3>'+s.t+'</h3><p>'+s.p+'</p>'+(s.h?'<span class="hand">'+s.h+'</span>':'')+
+    (s.cta?'<a class="btn btn-red" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent('Olá, Rony! Vi seus destaques de '+h.n.toLowerCase()+' e quero um orçamento.')+'"><svg><use href="#i-wa"/></svg>Pedir orçamento</a>':'');
+  var m=sb.querySelector('svg.m');if(m)mandala(m,'currentColor');
+  cancelAnimationFrame(raf);t0=performance.now();
+  var bar=bars.children[si].firstChild;
+  if(reduce){bar.style.width='100%';return}
+  (function tick(now){var p=Math.min(1,(now-t0)/DUR);bar.style.width=(p*100)+'%';if(p<1)raf=requestAnimationFrame(tick);else next()})(t0);
+}
+function next(){var h=HL[cur];if(si<h.s.length-1){si++;render()}else if(cur<HL.length-1){cur++;si=0;rings.children[cur].classList.add('seen');render()}else close()}
+function prev(){if(si>0){si--;render()}else if(cur>0){cur--;si=HL[cur].s.length-1;render()}else render()}
+document.getElementById('tr').addEventListener('click',next);
+document.getElementById('tl').addEventListener('click',prev);
+document.getElementById('sx').addEventListener('click',close);
+st.addEventListener('click',function(e){if(e.target===st)close()});
+document.addEventListener('keydown',function(e){if(!st.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev()});
+
+/* marquee duplicado */
+var mq=document.getElementById('mq');mq.innerHTML+=mq.innerHTML;
+
+/* orçamento */
+var f=document.getElementById('f'),tam=document.getElementById('tam'),tamo=document.getElementById('tamo'),pv=document.getElementById('pv'),send=document.getElementById('send');
+function val(n){var c=f.querySelector('input[name="'+n+'"]:checked');return c?c.value:''}
+function upd(){
+  var t=+tam.value;tamo.textContent=(t>=45?'45+':t)+' cm';
+  var nome=document.getElementById('nome').value.trim(),ideia=document.getElementById('ideia').value.trim();
+  var msg='Olá, Rony! '+(nome?'Aqui é '+nome+'. ':'')+'Quero um orçamento:\n'+
+    '• Estilo: '+val('estilo')+'\n• Local: '+val('local')+'\n• Tamanho: cerca de '+(t>=45?'45 cm ou mais':t+' cm')+
+    (ideia?'\n• Ideia: '+ideia:'')+(val('estilo')==='Cobertura'?'\n(Vou mandar uma foto da tattoo que quero cobrir.)':'');
+  pv.innerHTML='<b>Prévia da mensagem</b>';pv.appendChild(document.createTextNode(msg));
+  send.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+}
+f.addEventListener('input',upd);f.addEventListener('change',upd);upd();
+
+/* nav, reveal, float */
+var nav=document.getElementById('nav'),bur=document.getElementById('burger');
+bur.addEventListener('click',function(){var o=nav.classList.toggle('open');bur.setAttribute('aria-expanded',o)});
+document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');bur.setAttribute('aria-expanded',false)})});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+var fl=document.getElementById('float');
+addEventListener('scroll',function(){fl.classList.toggle('on',scrollY>520)},{passive:true});
+</script>
+</body>
+</html>
