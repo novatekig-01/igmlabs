@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Yoru Studio · Paulo Evandro</title>
+<meta name="description" content="Yoru Studio, de Paulo Evandro, na Asa Sul: tattoo e piercing nerd e pop. Viciado em tatuar o que você é fã. Orçamento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0a0f24; --night2:#10183a; --night3:#18224d; --line:#26305e;
+  --txt:#eef1ff; --mute:#a5add6; --dim:#6c75a6;
+  --cyan:#3fc7f2; --cyan2:#8ee3ff; --red:#ff3b4e; --yel:#ffd84a; --pink:#ff7bd0;
+  --paper:#fff8ec;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--night);color:var(--txt);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+img,svg{display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
+.dela{font-family:"Dela Gothic One",sans-serif;font-weight:400}
+.mono{font-family:"Space Mono",monospace}
+.tag{display:inline-flex;align-items:center;gap:10px;font:700 12px/1 "Space Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan2)}
+.tag b{background:var(--red);color:#fff;padding:5px 8px;border-radius:6px;letter-spacing:.04em}
+h1,h2,h3{font-family:"Dela Gothic One",sans-serif;font-weight:400;line-height:1.05}
+h2{font-size:clamp(34px,4.6vw,60px);text-wrap:balance}
+.hl{color:var(--cyan)}
+.hr{color:var(--red)}
+.lead{color:var(--mute);font-size:clamp(16px,1.35vw,18px);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:14px;font-weight:900;font-size:15px;border:2px solid #000;box-shadow:4px 4px 0 #000;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #000}
+.btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 #000}
+.btn svg{width:20px;height:20px}
+.btn-cy{background:var(--cyan);color:#06142a}
+.btn-red{background:var(--red);color:#fff}
+.btn-w{background:var(--paper);color:#0a0f24}
+
+.demo{background:var(--yel);color:#1a1405;font:700 12px/1.4 "Space Mono",monospace;text-align:center;padding:8px 16px;letter-spacing:.04em}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,15,36,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .k{width:44px;height:44px;border-radius:12px;background:var(--cyan);color:#06142a;display:grid;place-items:center;font-family:"Dela Gothic One";font-size:24px;border:2px solid #000;box-shadow:3px 3px 0 #000}
+.brand b{font-family:"Dela Gothic One";font-weight:400;font-size:21px;letter-spacing:.02em;line-height:1;display:block}
+.brand small{font:700 10px/1 "Space Mono",monospace;letter-spacing:.14em;color:var(--mute)}
+.links{display:flex;gap:28px;font-weight:700;font-size:14px;color:var(--mute)}
+.links a:hover{color:var(--cyan2)}
+.nav .btn{padding:10px 16px;font-size:14px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:2px solid var(--line);align-items:center;justify-content:center}
+.burger span{width:18px;height:2px;background:var(--txt);position:relative;display:block}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--txt);transition:transform .25s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.nav.open .burger span{background:transparent}
+.nav.open .burger span::before{transform:translateY(6px) rotate(45deg)}
+.nav.open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:70px 0 90px}
+.stars{position:absolute;inset:0;pointer-events:none;background:
+ radial-gradient(1.5px 1.5px at 10% 20%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 30% 70%,#fff 50%,transparent 51%),
+ radial-gradient(1.5px 1.5px at 55% 15%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 75% 55%,#fff 50%,transparent 51%),
+ radial-gradient(2px 2px at 88% 25%,#8ee3ff 50%,transparent 51%),radial-gradient(1px 1px at 20% 45%,#fff 50%,transparent 51%),
+ radial-gradient(1.5px 1.5px at 65% 85%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 45% 40%,#8ee3ff 50%,transparent 51%);opacity:.7;animation:tw 4s ease-in-out infinite alternate}
+@keyframes tw{to{opacity:.35}}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:50px;align-items:center}
+.hero h1{font-size:clamp(42px,5.8vw,86px);margin:24px 0 22px}
+.hero h1 .bub{display:inline-block;background:var(--paper);color:var(--night);padding:0 .22em;border-radius:.2em;border:3px solid #000;box-shadow:6px 6px 0 var(--red);transform:rotate(-2deg)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.stats div{background:var(--night2);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.stats b{display:block;font-family:"Dela Gothic One";font-size:24px;line-height:1.1}
+.stats span{font-size:12.5px;color:var(--mute)}
+
+.moonbox{position:relative;aspect-ratio:1;max-width:460px;width:100%;justify-self:center}
+.moon{position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fffbe8,#ffe9a8 45%,#f2c96a 75%,#d9a948);box-shadow:0 0 80px rgba(255,216,74,.35),0 0 0 3px #000}
+.moon::before,.moon::after{content:"";position:absolute;border-radius:50%;background:rgba(217,169,72,.45)}
+.moon::before{width:18%;height:18%;left:22%;top:52%}
+.moon::after{width:10%;height:10%;left:62%;top:28%}
+.kanji{position:absolute;inset:0;display:grid;place-items:center;font-family:"Dela Gothic One";font-size:clamp(150px,18vw,240px);color:var(--night);line-height:1;padding-top:4%}
+.orbit{position:absolute;inset:0;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sticker{position:absolute;background:var(--paper);color:var(--night);border:2.5px solid #000;border-radius:12px;padding:8px 12px;font-weight:900;font-size:14px;box-shadow:4px 4px 0 #000;white-space:nowrap}
+.s1{left:-4%;top:14%;transform:rotate(-8deg);background:var(--cyan)}
+.s2{right:-4%;top:34%;transform:rotate(7deg);background:var(--yel)}
+.s3{left:4%;bottom:12%;transform:rotate(5deg);background:var(--pink)}
+.s4{right:6%;bottom:4%;transform:rotate(-6deg);background:var(--red);color:#fff}
+
+.marq{background:var(--red);border-top:3px solid #000;border-bottom:3px solid #000;overflow:hidden;padding:14px 0;transform:rotate(-1deg);margin:0 -10px}
+.marq .track{display:flex;width:max-content;animation:mq 30s linear infinite}
+.marq span{font-family:"Dela Gothic One";font-size:22px;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:28px;padding-right:28px}
+.marq span::after{content:"★";color:var(--yel)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:110px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:50px}
+.head h2{margin-top:16px}
+
+/* fandoms */
+.fan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fan{position:relative;border-radius:20px;padding:26px 22px 24px;border:2.5px solid #000;box-shadow:5px 5px 0 #000;color:#0a0f24;overflow:hidden;transition:transform .2s}
+.fan:hover{transform:translate(-3px,-3px) rotate(-1deg)}
+.fan::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.14) 1.2px,transparent 1.3px);background-size:9px 9px;opacity:.6;pointer-events:none}
+.fan .num{font:700 11px/1 "Space Mono",monospace;letter-spacing:.12em}
+.fan h3{font-size:28px;margin:46px 0 8px}
+.fan p{font-weight:500;font-size:14.5px;position:relative;z-index:1}
+.f1{background:var(--yel)}.f2{background:var(--pink)}.f3{background:var(--cyan)}.f4{background:var(--paper)}
+.fan svg{position:absolute;right:16px;top:16px;width:46px;height:46px;z-index:1}
+
+/* serviços */
+.serv{background:var(--night2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sv{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px}
+.sbox{border:1px solid var(--line);border-radius:22px;padding:32px 28px;background:var(--night)}
+.sbox .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--night3);color:var(--cyan2);margin-bottom:22px}
+.sbox .ic svg{width:26px;height:26px}
+.sbox h3{font-size:30px;margin-bottom:10px}
+.sbox p{color:var(--mute)}
+.sbox.big{background:linear-gradient(150deg,#1a2350,#0a0f24);position:relative;overflow:hidden}
+.sbox.big .flash{display:inline-block;margin-top:20px;background:var(--paper);color:var(--night);border:2px solid #000;border-radius:12px;padding:12px 16px;box-shadow:4px 4px 0 var(--red);font-weight:700;font-size:14px;transform:rotate(-1.5deg)}
+.sbox.big .flash b{font-family:"Dela Gothic One";font-weight:400;font-size:18px;display:block;color:var(--red)}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;perspective:900px}
+.tc{border-radius:16px;padding:10px;background:linear-gradient(135deg,#ffd84a,#ff7bd0 50%,#3fc7f2);border:2.5px solid #000;box-shadow:5px 5px 0 #000;transition:transform .25s}
+.tc:hover{transform:rotateY(-8deg) rotateX(4deg) translateY(-6px)}
+.tc .in{background:var(--paper);border-radius:10px;padding:10px;color:var(--night);border:2px solid #000}
+.tc .top{display:flex;justify-content:space-between;font-weight:900;font-size:13px;margin-bottom:8px}
+.tc .top span{font:700 11px/1.6 "Space Mono",monospace}
+.tc .pic{aspect-ratio:1;border-radius:6px;border:2px solid #000;background:radial-gradient(circle at 50% 40%,#ffffff,#e9e1d0);display:grid;place-items:center;position:relative;overflow:hidden}
+.tc .pic::after{content:"";position:absolute;inset:-40%;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.75) 50%,transparent 60%);transform:translateX(-60%);transition:transform .8s}
+.tc:hover .pic::after{transform:translateX(60%)}
+.tc .pic svg{width:44%;height:44%;color:#9aa0b8}
+.tc .desc{font-size:12px;margin-top:8px;border-top:1.5px dashed #000;padding-top:6px;display:flex;justify-content:space-between;gap:6px}
+.tc .desc b{font-weight:900}
+.c-note{margin-top:26px;font-size:13px;color:var(--dim)}
+
+/* builder */
+.build{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+.form{background:var(--night2);border:1px solid var(--line);border-radius:22px;padding:30px}
+.q{padding-bottom:22px;margin-bottom:22px;border-bottom:1px dashed var(--line)}
+.q:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.q legend,.q label.t{display:flex;align-items:center;gap:10px;font-weight:900;font-size:16px;margin-bottom:12px}
+.q legend i,.q label.t i{font:700 11px/1 "Space Mono",monospace;font-style:normal;background:var(--cyan);color:#06142a;padding:5px 7px;border-radius:6px}
+fieldset{border:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-flex;padding:10px 15px;border-radius:12px;border:2px solid var(--line);font-weight:700;font-size:14px;color:var(--mute);cursor:pointer;transition:all .15s}
+.chip span:hover{border-color:var(--cyan);color:var(--txt)}
+.chip input:checked+span{background:var(--yel);color:#1a1405;border-color:#000;box-shadow:3px 3px 0 #000}
+.chip input:focus-visible+span{outline:2px solid var(--cyan2);outline-offset:2px}
+input[type=text]{width:100%;background:var(--night);border:2px solid var(--line);border-radius:12px;padding:13px 14px;color:var(--txt);font:500 15px "Zen Kaku Gothic New",sans-serif}
+input[type=text]:focus{outline:none;border-color:var(--cyan)}
+.preview{position:sticky;top:96px}
+.bigcard{border-radius:22px;padding:14px;background:linear-gradient(135deg,#ffd84a,#ff7bd0 50%,#3fc7f2);border:3px solid #000;box-shadow:8px 8px 0 #000;transform:rotate(1.5deg)}
+.bigcard .in{background:var(--paper);border-radius:14px;padding:16px;color:var(--night);border:2.5px solid #000}
+.bigcard .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.bigcard .top b{font-family:"Dela Gothic One";font-weight:400;font-size:22px;line-height:1.1;word-break:break-word}
+.bigcard .top span{font:700 12px "Space Mono",monospace;white-space:nowrap}
+.bigcard .art{margin:12px 0;aspect-ratio:4/3;border-radius:10px;border:2.5px solid #000;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#fff,#e9e1d0);position:relative;overflow:hidden}
+.bigcard .art .k{font-family:"Dela Gothic One";font-size:90px;color:var(--night);opacity:.12}
+.bigcard .art .type{position:absolute;left:10px;top:10px;background:var(--red);color:#fff;border:2px solid #000;border-radius:8px;padding:3px 8px;font-weight:900;font-size:12px}
+.bigcard dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}
+.bigcard dt{font:700 11px/1.8 "Space Mono",monospace;text-transform:uppercase}
+.bigcard dd{font-weight:700;text-align:right}
+.preview .btn{width:100%;margin-top:26px}
+.preview .fine{margin-top:12px;font-size:12px;color:var(--dim);text-align:center}
+
+/* local + faq */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.lcard{border:1px solid var(--line);border-radius:22px;padding:34px;background:var(--night2)}
+.lcard h3{font-size:34px;margin:14px 0 12px}
+.lcard p{color:var(--mute);margin-bottom:22px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:18px 0;display:flex;justify-content:space-between;gap:16px;font-weight:900}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:700 22px/1 "Space Mono",monospace;color:var(--cyan)}
+details[open] summary::after{content:"−"}
+details p{color:var(--mute);padding:0 0 18px}
+
+.final{text-align:center;padding:130px 0;position:relative;overflow:hidden;background:radial-gradient(600px 300px at 50% 110%,rgba(63,199,242,.25),transparent 70%)}
+.final .bk{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:"Dela Gothic One";font-size:min(60vw,520px);color:rgba(63,199,242,.06);line-height:1;pointer-events:none}
+.final h2{position:relative;font-size:clamp(40px,6vw,84px);max-width:14ch;margin:20px auto}
+.final .lead{position:relative;margin:0 auto}
+.final .cta-row{position:relative;justify-content:center}
+
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--dim);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer nav{display:flex;gap:22px}
+footer a:hover{color:var(--cyan2)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;border:2.5px solid #000;display:grid;place-items:center;box-shadow:4px 4px 0 #000;transform:scale(0);transition:transform .3s}
+.float.show{transform:scale(1)}
+.float svg{width:30px;height:30px;color:#fff}
+
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:1060px){
+  .links{display:none}.burger{display:inline-flex}.nav .btn{display:none}
+  .nav.open .links{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--night);border-bottom:1px solid var(--line);padding:8px 32px 20px}
+  .nav.open .links a{padding:14px 0;border-bottom:1px solid var(--line);color:var(--txt)}
+  .fan-grid,.cards{grid-template-columns:1fr 1fr}
+  .sv{grid-template-columns:1fr 1fr}.sbox.big{grid-column:1/-1}
+}
+@media (max-width:900px){
+  .hero .wrap,.build,.loc{grid-template-columns:1fr}
+  .moonbox{max-width:360px}
+  .preview{position:static}
+  section{padding:84px 0}
+}
+@media (max-width:600px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav.open .links{padding-left:16px;padding-right:16px}
+  .hero{padding:44px 0 70px}
+  .cta-row .btn{width:100%}
+  .sv{grid-template-columns:1fr}
+  .fan-grid{gap:12px}
+  .fan{padding:18px 14px}
+  .fan h3{font-size:22px;margin-top:40px}
+  .fan p{font-size:13px}
+  .fan svg{width:34px;height:34px;right:12px;top:12px}
+  .cards{gap:12px}
+  .tc{padding:7px}.tc .in{padding:7px}
+  .tc .desc span{display:none}
+  .form{padding:22px 16px}
+  .lcard{padding:26px 20px}
+  .sticker{font-size:12px;padding:6px 9px}
+  .marq span{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-ball" viewBox="0 0 48 48"><path d="M28 3 9 27h13l-4 18 21-26H26Z" fill="#fff" stroke="#000" stroke-width="3" stroke-linejoin="round"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 48 48"><g stroke="#000" stroke-width="3" fill="none"><path d="M4 24c6-10 14-14 20-14s14 4 20 14c-6 10-14 14-20 14S10 34 4 24Z" fill="#fff"/><circle cx="24" cy="24" r="7" fill="#0a0f24"/></g><path d="M14 8l4 5M34 8l-4 5M24 4v6" stroke="#000" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 48 48"><g fill="#0a0f24"><ellipse cx="24" cy="31" rx="10" ry="8"/><circle cx="12" cy="20" r="4.5"/><circle cx="19" cy="12" r="4.5"/><circle cx="29" cy="12" r="4.5"/><circle cx="36" cy="20" r="4.5"/></g></symbol>
+  <symbol id="i-pad" viewBox="0 0 48 48"><g stroke="#000" stroke-width="3"><rect x="4" y="14" width="40" height="22" rx="11" fill="#fff"/><path d="M14 21v8M10 25h8" stroke-linecap="round"/></g><circle cx="32" cy="22" r="2.5" fill="#ff3b4e"/><circle cx="37" cy="27" r="2.5" fill="#3fc7f2"/></symbol>
+  <symbol id="i-needle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l6-6M8 12l4 4M10 10l8-8 4 4-8 8"/></g></symbol>
+  <symbol id="i-ring" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="7"/><circle cx="12" cy="5" r="2"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9Z"/></symbol>
+  <symbol id="i-photo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.4"/><path d="M8.5 6l1.3-2h4.4l1.3 2"/></g></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração) · feita pela NovaTech para o Yoru Studio</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Yoru Studio, início"><span class="k">夜</span><span><b>YORU STUDIO</b><small>PAULO EVANDRO · ASA SUL</small></span></a>
+    <nav class="links" id="links">
+      <a href="#fandoms">Fandoms</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#colecao">Coleção</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#local">Onde</a>
+    </nav>
+    <a class="btn btn-cy" href="https://wa.me/5561996364713?text=Fala%2C%20Paulo!%20Vi%20o%20site%20do%20Yoru%20Studio%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Orçamento</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="links"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="tag reveal"><b>夜</b>Tattoo · Piercing · Nerd &amp; Pop</span>
+      <h1 class="reveal">Viciado em tatuar o que você é <span class="bub">fã</span>.</h1>
+      <p class="lead reveal">Anime, Pokémon, games, o seu pet e tudo que faz parte da sua história. No Yoru Studio, o Paulo Evandro transforma o seu fandom em tatuagem, na Asa Sul.</p>
+      <div class="cta-row reveal">
+        <a class="btn btn-cy" href="#orcamento"><svg><use href="#i-star"/></svg>Montar minha carta</a>
+        <a class="btn btn-w" href="https://www.instagram.com/paulo.yorustudio/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@paulo.yorustudio</a>
+      </div>
+      <div class="stats reveal">
+        <div><b class="hl">1.481</b><span>seguidores no Instagram</span></div>
+        <div><b>Asa Sul</b><span>Brasília</span></div>
+        <div><b class="hr">Tattoo + Piercing</b><span>e eventos</span></div>
+      </div>
+    </div>
+    <div class="moonbox reveal" aria-hidden="true">
+      <div class="moon"></div>
+      <div class="kanji">夜</div>
+      <span class="sticker s1">Pokémon</span>
+      <span class="sticker s2">Anime</span>
+      <span class="sticker s3">Pets</span>
+      <span class="sticker s4">Nerd &amp; Pop</span>
+    </div>
+  </div>
+</section>
+
+<div style="overflow:hidden;padding:8px 0"><div class="marq" aria-hidden="true"><div class="track">
+  <span>Tatuo o que você é fã</span><span>Mini tattoos</span><span>Pokémon</span><span>Jujutsu</span><span>Pets</span><span>Piercing</span><span>Eventos</span>
+  <span>Tatuo o que você é fã</span><span>Mini tattoos</span><span>Pokémon</span><span>Jujutsu</span><span>Pets</span><span>Piercing</span><span>Eventos</span>
+</div></div></div>
+
+<section id="fandoms">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="tag reveal">Escolha seu fandom</span><h2 class="reveal">Do seu <span class="hl">universo</span> pra sua pele</h2></div>
+      <p class="lead reveal" style="max-width:40ch">Os destaques do Instagram já mostram: aqui o nerd e o pop são levados a sério.</p>
+    </div>
+    <div class="fan-grid">
+      <article class="fan f1 reveal"><svg><use href="#i-ball"/></svg><span class="num">#001</span><h3>Pokémon</h3><p>Mini tattoos de Pokémon com traço fofo e cheio de personalidade.</p></article>
+      <article class="fan f2 reveal"><svg><use href="#i-eye"/></svg><span class="num">#002</span><h3>Anime</h3><p>Jujutsu e outros animes que marcaram a sua vida.</p></article>
+      <article class="fan f3 reveal"><svg><use href="#i-paw"/></svg><span class="num">#003</span><h3>Pets</h3><p>O seu bicho de estimação eternizado no estilo que você quiser.</p></article>
+      <article class="fan f4 reveal"><svg><use href="#i-pad"/></svg><span class="num">#004</span><h3>Nerd &amp; Pop</h3><p>Games, filmes, séries e cultura pop. Se você é fã, dá tattoo.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="serv" id="servicos">
+  <div class="wrap">
+    <div class="head"><div><span class="tag reveal">Serviços</span><h2 class="reveal">Tattoo, piercing e <span class="hr">eventos</span></h2></div></div>
+    <div class="sv">
+      <article class="sbox big reveal">
+        <div class="ic"><svg><use href="#i-star"/></svg></div>
+        <h3>Eventos e Flash Day</h3>
+        <p>O Yoru também leva a tattoo para eventos e faz Flash Days, com desenhos prontos e preço especial.</p>
+        <div class="flash"><b>Já rolou: Flash Day</b>Tattoos de até 5 cm, nos dias 18 e 19 de setembro</div>
+      </article>
+      <article class="sbox reveal"><div class="ic"><svg><use href="#i-needle"/></svg></div><h3>Tattoo</h3><p>Do mini ao ornamental. Cada projeto é desenhado a partir da sua ideia.</p></article>
+      <article class="sbox reveal"><div class="ic"><svg><use href="#i-ring"/></svg></div><h3>Piercing</h3><p>Também tem piercing no estúdio. Pergunte pelo WhatsApp.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="colecao">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="tag reveal">Coleção</span><h2 class="reveal">Cartas <span class="hl">raras</span></h2></div>
+      <a class="btn btn-w reveal" href="https://www.instagram.com/paulo.yorustudio/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Ver no Instagram</a>
+    </div>
+    <div class="cards">
+      <div class="tc reveal"><div class="in"><div class="top">Mini Pokémon<span>#001</span></div><div class="pic"><svg><use href="#i-photo"/></svg></div><div class="desc"><b>Foto real</b><span>Mini tattoo</span></div></div></div>
+      <div class="tc reveal"><div class="in"><div class="top">Ornamental<span>#002</span></div><div class="pic"><svg><use href="#i-photo"/></svg></div><div class="desc"><b>Foto real</b><span>Ombro</span></div></div></div>
+      <div class="tc reveal"><div class="in"><div class="top">Pet<span>#003</span></div><div class="pic"><svg><use href="#i-photo"/></svg></div><div class="desc"><b>Foto real</b><span>Retrato</span></div></div></div>
+      <div class="tc reveal"><div class="in"><div class="top">Anime<span>#004</span></div><div class="pic"><svg><use href="#i-photo"/></svg></div><div class="desc"><b>Foto real</b><span>Fandom</span></div></div></div>
+    </div>
+    <p class="c-note reveal">As cartas mostram onde entram as fotos reais dos trabalhos. Hoje elas estão no Instagram @paulo.yorustudio.</p>
+  </div>
+</section>
+
+<section id="orcamento" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="tag reveal">Orçamento</span><h2 class="reveal">Monte a <span class="hl">carta</span> da sua tattoo</h2></div>
+      <p class="lead reveal" style="max-width:40ch">Escolha as opções, veja sua carta pronta e mande direto no WhatsApp do Paulo.</p>
+    </div>
+    <div class="build">
+      <form class="form reveal" id="f" onsubmit="return false">
+        <fieldset class="q"><legend><i>01</i>Qual fandom?</legend><div class="chips">
+          <label class="chip"><input type="radio" name="fan" value="Pokémon" checked><span>Pokémon</span></label>
+          <label class="chip"><input type="radio" name="fan" value="Anime"><span>Anime</span></label>
+          <label class="chip"><input type="radio" name="fan" value="Pet"><span>Meu pet</span></label>
+          <label class="chip"><input type="radio" name="fan" value="Games"><span>Games</span></label>
+          <label class="chip"><input type="radio" name="fan" value="Filme / série"><span>Filme / série</span></label>
+          <label class="chip"><input type="radio" name="fan" value="Outro"><span>Outro</span></label>
+        </div></fieldset>
+        <div class="q"><label class="t" for="nome"><i>02</i>Qual personagem ou ideia?</label>
+          <input type="text" id="nome" maxlength="40" placeholder="Ex.: meu cachorro Thor, um personagem favorito..."></div>
+        <fieldset class="q"><legend><i>03</i>Tamanho</legend><div class="chips">
+          <label class="chip"><input type="radio" name="tam" value="mini (até 5 cm)" checked><span>Mini · até 5 cm</span></label>
+          <label class="chip"><input type="radio" name="tam" value="média (5 a 15 cm)"><span>Média · 5–15 cm</span></label>
+          <label class="chip"><input type="radio" name="tam" value="grande (15 cm+)"><span>Grande · 15 cm+</span></label>
+        </div></fieldset>
+        <fieldset class="q"><legend><i>04</i>Onde no corpo?</legend><div class="chips">
+          <label class="chip"><input type="radio" name="loc" value="antebraço" checked><span>Antebraço</span></label>
+          <label class="chip"><input type="radio" name="loc" value="braço"><span>Braço</span></label>
+          <label class="chip"><input type="radio" name="loc" value="perna"><span>Perna</span></label>
+          <label class="chip"><input type="radio" name="loc" value="ombro / costas"><span>Ombro / costas</span></label>
+          <label class="chip"><input type="radio" name="loc" value="outro lugar"><span>Outro</span></label>
+        </div></fieldset>
+      </form>
+      <aside class="preview reveal" aria-live="polite">
+        <div class="bigcard"><div class="in">
+          <div class="top"><b id="cName">Seu personagem</b><span id="cNum">#???</span></div>
+          <div class="art"><span class="type" id="cFan">Pokémon</span><span class="k">夜</span></div>
+          <dl><dt>Tamanho</dt><dd id="cTam"></dd><dt>Local</dt><dd id="cLoc"></dd><dt>Estúdio</dt><dd>Yoru · Asa Sul</dd></dl>
+        </div></div>
+        <a class="btn btn-red" id="send" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Mandar carta no WhatsApp</a>
+        <p class="fine">Abre a conversa com a mensagem pronta. Você revisa antes de enviar.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="local" style="padding-top:20px">
+  <div class="wrap loc">
+    <div class="lcard reveal">
+      <span class="tag">Onde fica</span>
+      <h3>Asa Sul · <span class="hl">Brasília</span></h3>
+      <p>Os orçamentos são feitos por mensagem. O endereço e o horário são combinados no agendamento.</p>
+      <div class="cta-row" style="margin-top:0">
+        <a class="btn btn-cy" href="https://wa.me/5561996364713?text=Fala%2C%20Paulo!%20Vi%20o%20site%20do%20Yoru%20Studio%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>(61) 99636-4713</a>
+      </div>
+    </div>
+    <div class="lcard reveal">
+      <span class="tag">Dúvidas</span>
+      <h3 style="margin-bottom:18px">Antes de tatuar</h3>
+      <details><summary>Você faz o personagem que eu quiser?</summary><p>Manda a referência pelo WhatsApp! O Paulo é viciado em tatuar o que você é fã, e o desenho é adaptado para ficar bom na pele.</p></details>
+      <details><summary>Quanto custa?</summary><p>Depende do tamanho, do local e do detalhe. Monte sua carta acima e o orçamento vem por mensagem.</p></details>
+      <details><summary>Tem Flash Day de novo?</summary><p>Os eventos e Flash Days são anunciados no Instagram @paulo.yorustudio. Fica de olho!</p></details>
+      <details><summary>Também faz piercing?</summary><p>Faz. Pergunte pelo WhatsApp quais opções estão disponíveis.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <span class="bk" aria-hidden="true">夜</span>
+  <div class="wrap">
+    <span class="tag reveal" style="justify-content:center"><b>夜</b>Yoru Studio</span>
+    <h2 class="reveal">Qual vai ser a sua próxima <span class="hl">carta</span>?</h2>
+    <p class="lead reveal">Conta o que você é fã e recebe o orçamento direto do Paulo.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-red" href="https://wa.me/5561996364713?text=Fala%2C%20Paulo!%20Vi%20o%20site%20do%20Yoru%20Studio%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+      <a class="btn btn-w" href="https://www.instagram.com/paulo.yorustudio/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Seguir no Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <span>夜 Yoru Studio · Paulo Evandro · Asa Sul, Brasília - DF</span>
+  <nav><a href="https://www.instagram.com/paulo.yorustudio/" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/5561996364713" target="_blank" rel="noopener">WhatsApp</a><a href="#top">Topo ↑</a></nav>
+</div></footer>
+
+<a class="float" id="float" href="https://wa.me/5561996364713?text=Fala%2C%20Paulo!%20Vi%20o%20site%20do%20Yoru%20Studio%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var nav=document.getElementById('nav'),bur=document.getElementById('burger');
+  bur.addEventListener('click',function(){var o=nav.classList.toggle('open');bur.setAttribute('aria-expanded',o)});
+  document.querySelectorAll('#links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');bur.setAttribute('aria-expanded',false)})});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){io.observe(el)})}else els.forEach(function(el){el.classList.add('in')});
+  var fl=document.getElementById('float');function onS(){fl.classList.toggle('show',scrollY>520)}addEventListener('scroll',onS,{passive:true});onS();
+  var f=document.getElementById('f'),nome=document.getElementById('nome'),send=document.getElementById('send');
+  function val(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function hash(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))%997;return ('00'+h).slice(-3)}
+  function build(){
+    var fan=val('fan'),tam=val('tam'),loc=val('loc'),n=nome.value.trim();
+    document.getElementById('cName').textContent=n||'Seu personagem';
+    document.getElementById('cFan').textContent=fan;
+    document.getElementById('cTam').textContent=tam;
+    document.getElementById('cLoc').textContent=loc;
+    document.getElementById('cNum').textContent='#'+hash(fan+n+tam+loc);
+    var m=['Fala, Paulo! Vi o site do Yoru Studio e quero fazer uma tattoo.','','• Fandom: '+fan];
+    if(n)m.push('• Personagem/ideia: '+n);m.push('• Tamanho: '+tam,'• Local: '+loc,'','Vou mandar a referência aqui. Pode me passar um orçamento?');
+    send.href='https://wa.me/5561996364713?text='+encodeURIComponent(m.join('\n'));
+  }
+  f.addEventListener('change',build);nome.addEventListener('input',build);build();
+})();
+</script>
+</body>
+</html>
