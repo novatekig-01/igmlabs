@@ -36,6 +36,21 @@ e registrar em Notas "dd/mm: follow-up N enviado (Nome)". O alerta volta a conta
 ### Quando a pessoa diz que o lead respondeu / fechou / não quer
 Atualizar Etapa (Respondeu, Em negociação, Fechado, Sem interesse), Último contato = hoje e Notas.
 
+### Procedimento padrão: lead recusou o site → tirar o site do ar
+Quando a pessoa disser que o lead não quer o site (Etapa "Sem interesse" por recusa), na mesma hora:
+1. Achar onde o site está hospedado (coluna S do Kaptar / Notas do CRM).
+2. **GitHub Pages** (`novatekig-01.github.io/igmlabs/demos/<pasta>/`): `git rm -r demos/<pasta>`, tirar
+   qualquer link para ele em outros arquivos (ex.: index.html da raiz), commit e push no branch de trabalho.
+   Esperar o deploy do Pages terminar e confirmar que o link dá 404.
+3. **Netlify** (`*.netlify.app`, sites antigos): apagar o site no Netlify (o código continua em `demos/` no
+   histórico do git, então dá para republicar se o lead voltar). Confirmar que o link saiu do ar.
+4. Registrar: CRM (Etapa "Sem interesse", Situação do site "Site removido do ar em dd/mm", nota em Notas)
+   e Kaptar (Q "Sem interesse", T com "dd/mm: recusou o site; site removido do ar (Nome)", S fica com a URL
+   antiga só como histórico).
+5. Avisar a pessoa que o link foi desativado.
+Se o lead só sumiu (3+ follow-ups sem resposta) mas não recusou, não derrubar o site sem a pessoa pedir.
+Lead encerrado por outro motivo (ex.: número sem WhatsApp) e que tenha site: derrubar também.
+
 ### Quando a pessoa diz que enviou a 1ª mensagem
 Nova linha na aba Geral (Responsável = pessoa ativa, Etapa "Aguardando resposta", 1ª abordagem e
 Último contato = hoje, Follow-ups feitos = 0) e Kaptar Status "Mensagem enviada" + data.
