@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Rafaela Leonel · Fine Art Tattoo</title>
+<meta name="description" content="Rafaela Leonel Fine Art Tattoo, em Brasília. Tatuagem como obra de arte, feita sob encomenda. Agende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wall:#f7f4ee; --wall2:#efeae1; --wall3:#e6dfd2; --line:#d9d0c0;
+  --ink:#1d1b18; --ink2:#45413b; --mute:#7a7369; --dim:#a39a8c;
+  --gold:#b08d4f; --gold2:#cfae72; --gold3:#8c6c35;
+  --goldg:linear-gradient(160deg,#e6cc8f 0%,#b08d4f 45%,#8c6c35 70%,#d8b878 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--wall);color:var(--ink);font-family:Jost,system-ui,sans-serif;font-weight:400;line-height:1.65;overflow-x:hidden}
+img,svg{display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
+.script{font-family:"Pinyon Script",cursive;font-weight:400}
+.g{background:var(--goldg);-webkit-background-clip:text;background-clip:text;color:transparent}
+.label{font:500 11px/1 Jost,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:var(--gold3)}
+h1,h2,h3{font-family:"Bodoni Moda",serif;font-weight:400;line-height:1.04;letter-spacing:-.01em}
+h2{font-size:clamp(40px,5vw,66px);text-wrap:balance}
+h2 em,h1 em{font-style:italic;color:var(--gold3)}
+.lead{color:var(--mute);font-size:clamp(16px,1.3vw,18px);font-weight:300;max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:all .25s}
+.btn svg{width:18px;height:18px}
+.btn-ink{background:var(--ink);color:var(--wall)}
+.btn-ink:hover{background:var(--gold3)}
+.btn-line{border:1px solid var(--ink2);color:var(--ink)}
+.btn-line:hover{border-color:var(--gold);color:var(--gold3)}
+
+.demo{background:var(--ink);color:#e9dcc0;font:400 12px/1.4 Jost,sans-serif;letter-spacing:.08em;text-align:center;padding:8px 16px}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(247,244,238,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .mono{width:46px;height:46px;border-radius:50%;border:1px solid var(--gold2);display:grid;place-items:center;font-size:26px;line-height:1;padding-top:4px}
+.brand b{display:block;font-family:"Bodoni Moda",serif;font-weight:400;font-size:19px;letter-spacing:.14em;line-height:1}
+.brand small{font-family:"Pinyon Script",cursive;font-size:17px;color:var(--gold3);line-height:1}
+.links{display:flex;gap:32px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.links a:hover{color:var(--gold3)}
+.nav .btn{padding:12px 20px}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);align-items:center;justify-content:center}
+.burger span{width:18px;height:1.5px;background:var(--ink);position:relative;display:block}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:var(--ink);transition:transform .25s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.nav.open .burger span{background:transparent}
+.nav.open .burger span::before{transform:translateY(6px) rotate(45deg)}
+.nav.open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{padding:80px 0 110px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(transparent,var(--line),transparent);opacity:.7}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:70px;align-items:center;position:relative}
+.hero h1{font-size:clamp(52px,6.6vw,96px);margin:26px 0 26px}
+.hero h1 .script{font-size:1.18em;color:var(--gold3);display:inline-block;transform:translateY(.06em);line-height:.6}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.hero-note{margin-top:40px;display:flex;gap:28px;flex-wrap:wrap;font-size:13px;color:var(--mute);letter-spacing:.06em}
+.hero-note span{display:flex;align-items:center;gap:10px}
+.hero-note span::before{content:"";width:6px;height:6px;transform:rotate(45deg);background:var(--gold)}
+
+.piece{justify-self:center;width:100%;max-width:460px;position:relative}
+.piece .spot{position:absolute;left:50%;top:-12%;width:120%;height:70%;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(255,244,214,.9),transparent 70%);pointer-events:none}
+.frame{position:relative;background:linear-gradient(145deg,#d9bd84,#a8823f 40%,#e3c88d 60%,#8c6c35);padding:14px;box-shadow:0 30px 60px -30px rgba(40,30,15,.55),0 10px 20px -10px rgba(40,30,15,.3)}
+.frame .mat{background:#fbf9f4;padding:34px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06),inset 0 6px 14px rgba(0,0,0,.08)}
+.frame .art{aspect-ratio:4/5;background:#fffdf8;border:1px solid #ece5d8;display:grid;place-items:center;position:relative;overflow:hidden}
+.frame .art svg{width:84%;height:auto}
+.draw path,.draw circle{stroke-dasharray:var(--l,1200);stroke-dashoffset:var(--l,1200);animation:draw 4.5s ease forwards}
+.draw .d2{animation-delay:.6s}.draw .d3{animation-delay:1.2s}.draw .d4{animation-delay:1.8s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.placard{margin:26px auto 0;max-width:300px;background:#fffdf8;border:1px solid var(--line);padding:16px 18px;font-size:12px;color:var(--mute);box-shadow:0 6px 14px -8px rgba(0,0,0,.2)}
+.placard b{display:block;font-family:"Bodoni Moda",serif;font-weight:500;font-size:16px;color:var(--ink);font-style:italic}
+.placard i{font-style:normal;color:var(--dim)}
+
+section{padding:120px 0}
+.head{text-align:center;margin-bottom:64px}
+.head h2{margin:18px auto 0;max-width:18ch}
+.head .lead{margin:18px auto 0}
+
+/* manifesto */
+.manifesto{background:var(--ink);color:#efe7d8;text-align:center;padding:110px 0}
+.manifesto p{font-family:"Bodoni Moda",serif;font-style:italic;font-size:clamp(28px,3.4vw,46px);line-height:1.25;max-width:24ch;margin:0 auto}
+.manifesto p em{color:var(--gold2)}
+.manifesto .label{color:var(--gold2);display:block;margin-bottom:26px}
+
+/* galeria */
+.wall{display:grid;grid-template-columns:repeat(12,1fr);gap:28px;align-items:start}
+.work{cursor:default}
+.work:nth-child(1){grid-column:1/5}
+.work:nth-child(2){grid-column:5/9;margin-top:60px}
+.work:nth-child(3){grid-column:9/13}
+.work:nth-child(4){grid-column:2/6}
+.work:nth-child(5){grid-column:7/12;margin-top:-40px}
+.work .fr{background:linear-gradient(145deg,#2a2622,#100e0c);padding:10px;box-shadow:0 22px 40px -24px rgba(0,0,0,.5);transition:transform .35s}
+.work:hover .fr{transform:translateY(-6px)}
+.work.light .fr{background:linear-gradient(145deg,#e2c993,#a8823f 50%,#d9bd84)}
+.work .in{background:#fbf9f4;padding:18px}
+.work .pic{aspect-ratio:var(--ar,4/5);background:#f1ece3;display:grid;place-items:center;border:1px solid #e6dfd2}
+.work .pic svg{width:56%;opacity:.75}
+.work .tag{margin-top:14px;font-size:12px;color:var(--mute)}
+.work .tag b{display:block;font-family:"Bodoni Moda",serif;font-weight:400;font-style:italic;font-size:19px;color:var(--ink)}
+.g-note{margin-top:46px;text-align:center;font-size:13px;color:var(--mute)}
+
+/* processo */
+.proc{background:var(--wall2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.step{padding:10px 30px;text-align:center;position:relative}
+.step+.step{border-left:1px solid var(--line)}
+.step::before{counter-increment:s;content:counter(s,upper-roman);display:block;font-family:"Bodoni Moda",serif;font-size:44px;color:var(--gold);line-height:1;margin-bottom:18px}
+.step h3{font-size:24px;margin-bottom:10px}
+.step p{color:var(--mute);font-size:15px;font-weight:300}
+
+/* encomenda */
+.order{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+.form{background:#fffdf8;border:1px solid var(--line);padding:36px}
+.q{padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid var(--wall3)}
+.q:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.q legend,.q label.t{display:block;font-family:"Bodoni Moda",serif;font-size:22px;margin-bottom:14px}
+.q legend i,.q label.t i{font-style:italic;color:var(--gold3);margin-right:8px}
+fieldset{border:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-flex;padding:10px 18px;border:1px solid var(--line);font-size:14px;color:var(--ink2);cursor:pointer;transition:all .2s;background:var(--wall)}
+.chip span:hover{border-color:var(--gold)}
+.chip input:checked+span{background:var(--ink);border-color:var(--ink);color:var(--wall)}
+.chip input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+textarea{width:100%;min-height:100px;resize:vertical;background:var(--wall);border:1px solid var(--line);padding:14px 16px;color:var(--ink);font:15px/1.5 Jost,sans-serif}
+textarea:focus{outline:none;border-color:var(--gold)}
+.card{position:sticky;top:100px;background:var(--ink);color:#efe7d8;padding:34px 30px;text-align:center}
+.card .mono{width:64px;height:64px;margin:0 auto 14px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-size:36px;padding-top:6px;color:var(--gold2)}
+.card .label{color:var(--gold2)}
+.card .t{font-family:"Bodoni Moda",serif;font-size:26px;margin:10px 0 22px}
+.card ul{list-style:none;text-align:left;border-top:1px solid #3a352e;margin-bottom:24px}
+.card li{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid #3a352e;font-size:14px}
+.card li span{color:#a99d88;letter-spacing:.1em;text-transform:uppercase;font-size:11px;padding-top:3px}
+.card .idea{font-family:"Bodoni Moda",serif;font-style:italic;color:#c9bca4;min-height:24px;margin-bottom:24px;font-size:16px}
+.card .btn{width:100%;background:var(--goldg);color:#1d1b18}
+.card .btn:hover{filter:brightness(1.08)}
+.card .fine{margin-top:12px;font-size:12px;color:#8f846f}
+
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:16px;font-family:"Bodoni Moda",serif;font-size:22px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:Jost,sans-serif;font-weight:300;font-size:26px;line-height:1;color:var(--gold3);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute);padding:0 0 22px;font-weight:300;max-width:62ch}
+.faq{max-width:820px;margin:0 auto}
+
+.final{text-align:center;padding:130px 0;position:relative;overflow:hidden;background:var(--wall2);border-top:1px solid var(--line)}
+.final .big{font-family:"Pinyon Script",cursive;font-size:clamp(120px,22vw,300px);line-height:.8;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:rgba(176,141,79,.12);pointer-events:none;white-space:nowrap}
+.final h2{position:relative;font-size:clamp(44px,6vw,86px);max-width:14ch;margin:20px auto}
+.final .lead{position:relative;margin:0 auto}
+.final .cta-row{justify-content:center;position:relative}
+
+footer{background:var(--ink);color:#8f846f;padding:34px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer nav{display:flex;gap:22px}
+footer a:hover{color:var(--gold2)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.4);transform:scale(0);transition:transform .3s}
+.float.show{transform:scale(1)}
+.float svg{width:30px;height:30px;color:#fff}
+
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:1060px){
+  .links{display:none}.burger{display:inline-flex}.nav .btn{display:none}
+  .nav.open .links{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--wall);border-bottom:1px solid var(--line);padding:8px 32px 20px}
+  .nav.open .links a{padding:14px 0;border-bottom:1px solid var(--line)}
+  .steps{grid-template-columns:1fr 1fr;row-gap:40px}
+  .step:nth-child(3){border-left:0}
+}
+@media (max-width:900px){
+  .hero .wrap,.order{grid-template-columns:1fr}
+  .hero::before{display:none}
+  .card{position:static}
+  .wall{grid-template-columns:1fr 1fr;gap:18px}
+  .work:nth-child(n){grid-column:auto;margin-top:0}
+  .work:nth-child(2),.work:nth-child(4){margin-top:40px}
+  .work:nth-child(5){grid-column:1/-1}
+  section{padding:88px 0}
+}
+@media (max-width:600px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav.open .links{padding-left:16px;padding-right:16px}
+  .brand b{font-size:15px;letter-spacing:.1em}
+  .hero{padding:48px 0 80px}
+  .cta-row .btn{width:100%}
+  .frame{padding:10px}.frame .mat{padding:20px}
+  .steps{grid-template-columns:1fr}
+  .step+.step{border-left:0;border-top:1px solid var(--line);padding-top:36px}
+  .work .in{padding:10px}
+  .work .tag b{font-size:16px}
+  .form{padding:24px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .draw path,.draw circle{stroke-dashoffset:0}
+  .js .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="sprig" viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M60 156C58 110 62 70 74 20"/><path d="M62 120c-14-4-24-14-28-28 14 2 24 12 28 28Z"/><path d="M64 92c12-6 22-18 24-32-12 6-22 16-24 32Z"/><path d="M66 64c-12-4-20-14-22-26 12 4 20 12 22 26Z"/><path d="M71 36c8-6 14-16 14-26-8 6-14 14-14 26Z"/></g></symbol>
+  <symbol id="moon" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M74 18a44 44 0 1 0 28 72A36 36 0 0 1 74 18Z"/><path d="M92 30l2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/><circle cx="100" cy="58" r="1.6"/></g></symbol>
+  <symbol id="hand" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 96c10-10 20-12 30-10l26-4c4-1 4-7 0-8l-22 2"/><path d="M60 86l28-14c4-2 2-8-2-7l-26 9"/><path d="M60 80l26-14c4-2 1-8-3-6l-25 10"/><path d="M58 70l16-12c3-3 0-7-4-5L46 68c-8 4-14 10-16 18"/><circle cx="92" cy="30" r="10"/><path d="M92 14v6M92 40v6M76 30h6M102 30h6"/></g></symbol>
+  <symbol id="wave" viewBox="0 0 140 80"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 50c14-20 30-20 44 0s30 20 44 0 30-20 44 0"/><path d="M6 64c14-20 30-20 44 0s30 20 44 0 30-20 44 0" opacity=".5"/><circle cx="70" cy="18" r="8"/></g></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração) · feita pela NovaTech para Rafaela Leonel</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Rafaela Leonel, início"><span class="mono script g">RL</span><span><b>RAFAELA LEONEL</b><small>Fine Art Tattoo</small></span></a>
+    <nav class="links" id="links">
+      <a href="#galeria">Galeria</a>
+      <a href="#processo">Processo</a>
+      <a href="#encomenda">Encomenda</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-ink" href="https://wa.me/5561920028832?text=Ol%C3%A1%2C%20Rafaela!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20uma%20tatuagem." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Agendar</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="links"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="label reveal">Fine Art Tattoo · Brasília</span>
+      <h1 class="reveal">Sua pele, uma <span class="script">obra</span> de arte.</h1>
+      <p class="lead reveal">Tatuagens pensadas como peças únicas: traço delicado, composição cuidadosa e um desenho criado para você e para o lugar do corpo onde ele vai morar.</p>
+      <div class="cta-row reveal">
+        <a class="btn btn-ink" href="#encomenda"><svg><use href="#i-arrow"/></svg>Encomendar minha arte</a>
+        <a class="btn btn-line" href="#galeria">Ver a galeria</a>
+      </div>
+      <div class="hero-note reveal"><span>Peças exclusivas</span><span>Sob agendamento</span><span>Brasília - DF</span></div>
+    </div>
+    <div class="piece reveal" aria-hidden="true">
+      <div class="spot"></div>
+      <div class="frame"><div class="mat"><div class="art">
+        <svg viewBox="0 0 300 375" class="draw">
+          <g fill="none" stroke="#2a2622" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3">
+            <path style="--l:700" d="M150 350C146 280 150 200 170 120 178 90 190 64 206 40"/>
+            <path class="d2" style="--l:300" d="M152 300c-30-6-52-26-60-54 30 4 52 24 60 54Z"/>
+            <path class="d2" style="--l:300" d="M156 250c28-10 48-32 52-60-28 10-48 32-52 60Z"/>
+            <path class="d3" style="--l:300" d="M162 196c-26-6-44-26-48-50 26 6 42 24 48 50Z"/>
+            <path class="d3" style="--l:300" d="M170 150c22-10 36-30 38-52-22 10-36 28-38 52Z"/>
+            <path class="d4" style="--l:300" d="M186 96c-18-2-30-14-34-30 18 2 30 14 34 30Z"/>
+            <circle class="d4" style="--l:120" cx="214" cy="32" r="9"/>
+            <path class="d4" style="--l:200" d="M80 330c20-8 44-10 70-4M150 326c26-6 50-4 70 4" stroke-width=".9"/>
+          </g>
+          <g fill="#b08d4f"><circle cx="96" cy="120" r="1.6"/><circle cx="232" cy="210" r="1.4"/><circle cx="84" cy="230" r="1.2"/><circle cx="240" cy="96" r="1.2"/></g>
+        </svg>
+      </div></div></div>
+      <div class="placard"><b>Ramo em fine line</b>Ilustração demonstrativa · <i>espaço para uma obra real</i></div>
+    </div>
+  </div>
+</section>
+
+<div class="manifesto">
+  <div class="wrap">
+    <span class="label reveal">Fine Art Tattoo</span>
+    <p class="reveal">Uma tatuagem fine art não é escolhida num catálogo. Ela é <em>desenhada</em>, pensada e assinada para uma pessoa só.</p>
+  </div>
+</div>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="head">
+      <span class="label reveal">A galeria</span>
+      <h2 class="reveal">Obras em <em>exposição</em></h2>
+      <p class="lead reveal">Cada moldura é o lugar de um trabalho real. Aqui o site mostra as peças como numa galeria.</p>
+    </div>
+    <div class="wall">
+      <figure class="work reveal"><div class="fr"><div class="in"><div class="pic" style="--ar:4/5"><svg><use href="#sprig"/></svg></div></div></div><figcaption class="tag"><b>Obra nº 01</b>Botânico · fine line</figcaption></figure>
+      <figure class="work light reveal"><div class="fr"><div class="in"><div class="pic" style="--ar:3/4"><svg><use href="#moon"/></svg></div></div></div><figcaption class="tag"><b>Obra nº 02</b>Lua e estrelas</figcaption></figure>
+      <figure class="work reveal"><div class="fr"><div class="in"><div class="pic" style="--ar:1/1"><svg><use href="#wave"/></svg></div></div></div><figcaption class="tag"><b>Obra nº 03</b>Traço contínuo</figcaption></figure>
+      <figure class="work light reveal"><div class="fr"><div class="in"><div class="pic" style="--ar:1/1"><svg><use href="#hand"/></svg></div></div></div><figcaption class="tag"><b>Obra nº 04</b>Composição autoral</figcaption></figure>
+      <figure class="work reveal"><div class="fr"><div class="in"><div class="pic" style="--ar:16/10"><svg style="width:30%"><use href="#sprig"/></svg></div></div></div><figcaption class="tag"><b>Obra nº 05</b>Espaço para o seu projeto</figcaption></figure>
+    </div>
+    <p class="g-note reveal">As ilustrações são demonstrativas. No site final, cada moldura recebe a foto de um trabalho real.</p>
+  </div>
+</section>
+
+<section class="proc" id="processo">
+  <div class="wrap">
+    <div class="head"><span class="label reveal">O processo</span><h2 class="reveal">Do esboço à <em>pele</em></h2></div>
+    <div class="steps">
+      <div class="step reveal"><h3>Conversa</h3><p>Você conta a ideia, o significado e onde imagina a tatuagem.</p></div>
+      <div class="step reveal"><h3>Esboço</h3><p>A arte é desenhada sob medida e ajustada até ficar do seu jeito.</p></div>
+      <div class="step reveal"><h3>Sessão</h3><p>Dia e horário reservados, com calma para cada detalhe do traço.</p></div>
+      <div class="step reveal"><h3>Cuidado</h3><p>Orientações de cicatrização para a obra durar com a mesma delicadeza.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="encomenda">
+  <div class="wrap">
+    <div class="head"><span class="label reveal">Encomenda</span><h2 class="reveal">Encomende sua <em>obra</em></h2><p class="lead reveal">Escolha as opções e a mensagem chega pronta no WhatsApp da Rafaela.</p></div>
+    <div class="order">
+      <form class="form reveal" id="f" onsubmit="return false">
+        <fieldset class="q"><legend><i>I.</i>O que você imagina?</legend><div class="chips">
+          <label class="chip"><input type="radio" name="est" value="fine line" checked><span>Fine line</span></label>
+          <label class="chip"><input type="radio" name="est" value="botânico / floral"><span>Botânico</span></label>
+          <label class="chip"><input type="radio" name="est" value="escrita"><span>Escrita</span></label>
+          <label class="chip"><input type="radio" name="est" value="minimalista"><span>Minimalista</span></label>
+          <label class="chip"><input type="radio" name="est" value="quero ajuda para definir"><span>Quero ajuda para definir</span></label>
+        </div></fieldset>
+        <fieldset class="q"><legend><i>II.</i>Onde no corpo?</legend><div class="chips">
+          <label class="chip"><input type="radio" name="loc" value="pulso"><span>Pulso</span></label>
+          <label class="chip"><input type="radio" name="loc" value="antebraço" checked><span>Antebraço</span></label>
+          <label class="chip"><input type="radio" name="loc" value="costela"><span>Costela</span></label>
+          <label class="chip"><input type="radio" name="loc" value="nuca / costas"><span>Nuca / costas</span></label>
+          <label class="chip"><input type="radio" name="loc" value="tornozelo"><span>Tornozelo</span></label>
+          <label class="chip"><input type="radio" name="loc" value="outro lugar"><span>Outro</span></label>
+        </div></fieldset>
+        <fieldset class="q"><legend><i>III.</i>Tamanho</legend><div class="chips">
+          <label class="chip"><input type="radio" name="tam" value="delicada (até 5 cm)"><span>Delicada · até 5 cm</span></label>
+          <label class="chip"><input type="radio" name="tam" value="pequena (5 a 10 cm)" checked><span>Pequena · 5–10 cm</span></label>
+          <label class="chip"><input type="radio" name="tam" value="média (10 a 20 cm)"><span>Média · 10–20 cm</span></label>
+        </div></fieldset>
+        <div class="q"><label class="t" for="idea"><i>IV.</i>A história por trás (opcional)</label>
+          <textarea id="idea" placeholder="Ex.: um ramo de oliveira com a data de nascimento da minha filha."></textarea></div>
+      </form>
+      <aside class="card reveal" aria-live="polite">
+        <div class="mono script">RL</div>
+        <span class="label">Ficha da obra</span>
+        <p class="t">Sua encomenda</p>
+        <ul><li><span>Estilo</span><b id="cEst"></b></li><li><span>Local</span><b id="cLoc"></b></li><li><span>Tamanho</span><b id="cTam"></b></li></ul>
+        <p class="idea" id="cIdea"></p>
+        <a class="btn" id="send" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enviar pelo WhatsApp</a>
+        <p class="fine">Abre a conversa com a mensagem pronta. Você revisa antes de enviar.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas" style="padding-top:0">
+  <div class="wrap faq">
+    <div class="head" style="margin-bottom:40px"><span class="label reveal">Dúvidas</span><h2 class="reveal">Antes da <em>primeira</em> sessão</h2></div>
+    <details class="reveal"><summary>O que é uma tatuagem fine art?</summary><p>É uma tatuagem tratada como obra: desenho exclusivo, traço delicado e composição pensada para o corpo de quem vai usar.</p></details>
+    <details class="reveal"><summary>Posso levar uma referência?</summary><p>Pode e deve. Referências ajudam a entender o que você gosta. O desenho final é criado do zero, só para você.</p></details>
+    <details class="reveal"><summary>Quanto custa?</summary><p>Depende do tamanho, do local e do nível de detalhe. Monte sua encomenda acima e receba o orçamento pelo WhatsApp.</p></details>
+    <details class="reveal"><summary>Traço fino dura?</summary><p>Com o cuidado certo na cicatrização e protetor solar no dia a dia, a tatuagem mantém a delicadeza por muitos anos. Você sai da sessão com todas as orientações.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <span class="big" aria-hidden="true">Rafaela</span>
+  <div class="wrap">
+    <span class="label reveal">Rafaela Leonel · Fine Art Tattoo</span>
+    <h2 class="reveal">Vamos criar a sua <em>obra</em>?</h2>
+    <p class="lead reveal">Conte a sua ideia e receba o orçamento direto da Rafaela.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-ink" href="https://wa.me/5561920028832?text=Ol%C3%A1%2C%20Rafaela!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20uma%20tatuagem." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <span>Rafaela Leonel · Fine Art Tattoo · Brasília - DF</span>
+  <nav><a href="https://wa.me/5561920028832" target="_blank" rel="noopener">WhatsApp</a><a href="#galeria">Galeria</a><a href="#top">Topo ↑</a></nav>
+</div></footer>
+
+<a class="float" id="float" href="https://wa.me/5561920028832?text=Ol%C3%A1%2C%20Rafaela!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20uma%20tatuagem." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var nav=document.getElementById('nav'),bur=document.getElementById('burger');
+  bur.addEventListener('click',function(){var o=nav.classList.toggle('open');bur.setAttribute('aria-expanded',o)});
+  document.querySelectorAll('#links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');bur.setAttribute('aria-expanded',false)})});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){io.observe(el)})}else els.forEach(function(el){el.classList.add('in')});
+  var fl=document.getElementById('float');function onS(){fl.classList.toggle('show',scrollY>520)}addEventListener('scroll',onS,{passive:true});onS();
+  var f=document.getElementById('f'),idea=document.getElementById('idea'),send=document.getElementById('send');
+  function val(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function build(){
+    var est=val('est'),loc=val('loc'),tam=val('tam'),t=idea.value.trim();
+    document.getElementById('cEst').textContent=est;document.getElementById('cLoc').textContent=loc;document.getElementById('cTam').textContent=tam;
+    document.getElementById('cIdea').textContent=t?'"'+t+'"':'Conte a história por trás (opcional).';
+    var m=['Olá, Rafaela! Vi seu site e quero encomendar uma tatuagem.','','• Estilo: '+est,'• Local: '+loc,'• Tamanho: '+tam];
+    if(t)m.push('• A história: '+t);m.push('','Pode me passar um orçamento?');
+    send.href='https://wa.me/5561920028832?text='+encodeURIComponent(m.join('\n'));
+  }
+  f.addEventListener('change',build);idea.addEventListener('input',build);build();
+})();
+</script>
+</body>
+</html>
