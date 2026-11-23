@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Raira Nogueira Estética</title>
+<meta name="description" content="Raira Nogueira Estética, em Brasília. Avaliação personalizada e agendamento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Figtree:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#ffffff; --off:#faf9f6; --soft:#f2efe9; --line:#e6e1d8;
+  --black:#0c0c0c; --black2:#161616; --ink:#1a1a1a; --mute:#6f6b65; --dim:#a19c94;
+  --gold:#b8964f; --gold2:#d6b878; --gold3:#8f7134;
+  --goldg:linear-gradient(135deg,#ecd59c 0%,#c4a15a 40%,#9a7a3a 65%,#e2c789 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--white);color:var(--ink);font-family:Figtree,system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+img,svg{display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
+.g{background:var(--goldg);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cap{font-size:11px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--gold3);display:inline-flex;align-items:center;gap:14px}
+.cap::before{content:"";width:30px;height:1px;background:var(--gold)}
+h1,h2,h3{font-family:Italiana,serif;font-weight:400;line-height:1.05;letter-spacing:.01em}
+h2{font-size:clamp(40px,5.2vw,70px);text-wrap:balance}
+.lead{color:var(--mute);font-size:clamp(16px,1.3vw,18px);font-weight:300;max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 30px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:all .25s}
+.btn svg{width:18px;height:18px}
+.btn-black{background:var(--black);color:#fff}
+.btn-black:hover{background:var(--gold3)}
+.btn-gold{background:var(--goldg);color:#1a1408;box-shadow:0 12px 30px -14px rgba(184,150,79,.8)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-line{border:1px solid var(--ink);color:var(--ink)}
+.btn-line:hover{border-color:var(--gold);color:var(--gold3)}
+
+.demo{background:var(--black);color:var(--gold2);font:400 12px/1.4 Figtree,sans-serif;letter-spacing:.1em;text-align:center;padding:8px 16px}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .mono{width:48px;height:48px;border-radius:50%;background:var(--black);display:grid;place-items:center;font-family:Italiana,serif;font-size:19px;letter-spacing:.06em}
+.brand b{display:block;font-family:Italiana,serif;font-weight:400;font-size:22px;letter-spacing:.12em;line-height:1}
+.brand small{font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold3)}
+.links{display:flex;gap:32px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.links a:hover{color:var(--gold3)}
+.nav .btn{padding:12px 20px}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);align-items:center;justify-content:center}
+.burger span{width:18px;height:1.5px;background:var(--ink);position:relative;display:block}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:var(--ink);transition:transform .25s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.nav.open .burger span{background:transparent}
+.nav.open .burger span::before{transform:translateY(6px) rotate(45deg)}
+.nav.open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:76px 0 100px;background:radial-gradient(700px 500px at 85% 40%,#fbf6ea,transparent 70%),var(--white)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:50px;align-items:center}
+.hero h1{font-size:clamp(58px,7.6vw,118px);line-height:.95;margin:26px 0 8px}
+.hero .sig{font-family:"Great Vibes",cursive;font-size:clamp(34px,3.6vw,52px);line-height:1;margin-bottom:26px;display:block}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:38px}
+.pills span{padding:9px 16px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--mute)}
+.pills span b{color:var(--gold3);font-weight:600}
+
+.portrait{position:relative;justify-self:center;width:100%;max-width:470px;aspect-ratio:4/5}
+.portrait .arch{position:absolute;inset:0;border-radius:240px 240px 18px 18px;background:var(--black);overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.55)}
+.portrait .arch::before{content:"";position:absolute;inset:12px;border-radius:230px 230px 12px 12px;border:1px solid rgba(214,184,120,.5)}
+.portrait .arch::after{content:"";position:absolute;left:50%;top:30%;width:120%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(214,184,120,.22),transparent 60%)}
+.portrait svg.face{position:absolute;left:50%;top:52%;width:68%;transform:translate(-50%,-50%);z-index:1}
+.face path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 5s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.portrait .badge{position:absolute;left:-28px;bottom:58px;background:var(--white);border:1px solid var(--line);padding:16px 20px;border-radius:14px;box-shadow:0 20px 40px -20px rgba(0,0,0,.25);z-index:2}
+.portrait .badge b{display:block;font-family:Italiana,serif;font-size:24px;line-height:1}
+.portrait .badge span{font-size:12px;color:var(--mute)}
+.portrait .ring{position:absolute;right:-30px;top:40px;width:120px;height:120px;z-index:2;animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* black band */
+.band{background:var(--black);color:#fff;padding:26px 0;overflow:hidden}
+.band .track{display:flex;width:max-content;animation:marq 42s linear infinite}
+.band span{font-family:Italiana,serif;font-size:28px;letter-spacing:.08em;white-space:nowrap;display:flex;align-items:center;gap:40px;padding-right:40px}
+.band span::after{content:"";width:8px;height:8px;transform:rotate(45deg);background:var(--goldg)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding:120px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:60px}
+.head h2{margin-top:18px}
+
+/* filosofia */
+.philo .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.philo blockquote{font-family:Italiana,serif;font-size:clamp(30px,3.4vw,46px);line-height:1.2}
+.philo blockquote em{font-style:normal}
+.values{display:grid;gap:0;border-top:1px solid var(--line)}
+.value{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid var(--line)}
+.value i{font-style:normal;font-family:Italiana,serif;font-size:30px;line-height:1}
+.value h3{font-size:24px;margin-bottom:4px}
+.value p{color:var(--mute);font-weight:300;font-size:15px}
+
+/* cuidados */
+.care{background:var(--black);color:#fff}
+.care .lead{color:#a8a29a}
+.care .cap{color:var(--gold2)}
+.care-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cc{position:relative;padding:40px 32px 34px;border:1px solid #2a2a2a;border-radius:18px;background:linear-gradient(180deg,#141414,#0c0c0c);overflow:hidden;transition:border-color .3s,transform .3s}
+.cc:hover{border-color:rgba(214,184,120,.55);transform:translateY(-4px)}
+.cc svg{width:54px;height:54px;color:var(--gold2);margin-bottom:28px}
+.cc h3{font-size:34px;margin-bottom:10px}
+.cc p{color:#a8a29a;font-weight:300}
+.cc .k{position:absolute;right:28px;top:28px;font-size:11px;letter-spacing:.2em;color:#5f5a52}
+.care-note{margin-top:28px;font-size:13px;color:#7c766d;text-align:center}
+
+/* diagnóstico */
+.diag{background:var(--off)}
+.dg{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+.form{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:36px}
+.q{padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid var(--soft)}
+.q:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.q legend,.q label.t{display:flex;align-items:baseline;gap:12px;font-family:Italiana,serif;font-size:26px;margin-bottom:14px}
+.q legend i,.q label.t i{font-family:Figtree,sans-serif;font-style:normal;font-size:11px;font-weight:600;letter-spacing:.2em;color:var(--gold3)}
+fieldset{border:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-flex;padding:11px 18px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:var(--ink);cursor:pointer;transition:all .2s;background:var(--white)}
+.chip span:hover{border-color:var(--gold)}
+.chip input:checked+span{background:var(--black);border-color:var(--black);color:#fff}
+.chip input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+textarea{width:100%;min-height:96px;resize:vertical;background:var(--off);border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:var(--ink);font:15px/1.5 Figtree,sans-serif}
+textarea:focus{outline:none;border-color:var(--gold)}
+.result{position:sticky;top:100px;background:var(--black);color:#fff;border-radius:22px;padding:34px 30px;overflow:hidden}
+.result::before{content:"";position:absolute;right:-80px;top:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(214,184,120,.25),transparent 65%)}
+.result .cap{color:var(--gold2)}
+.result h3{font-size:34px;margin:14px 0 18px;position:relative}
+.result ul{list-style:none;border-top:1px solid #2a2a2a;margin-bottom:22px}
+.result li{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid #2a2a2a;font-size:14px}
+.result li span{color:#8f8a82;font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding-top:3px}
+.result li b{font-weight:500;text-align:right}
+.result .note{font-size:14px;color:#a8a29a;font-style:italic;min-height:22px;margin-bottom:22px}
+.result .btn{width:100%}
+.result .fine{margin-top:12px;font-size:12px;color:#7c766d;text-align:center}
+
+/* passos */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{padding:34px 26px;border:1px solid var(--line);border-radius:18px;position:relative}
+.step b{font-family:Italiana,serif;font-size:56px;line-height:1;display:block;margin-bottom:18px}
+.step h3{font-size:26px;margin-bottom:8px}
+.step p{color:var(--mute);font-weight:300;font-size:15px}
+
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:16px;font-family:Italiana,serif;font-size:24px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:Figtree,sans-serif;font-weight:300;font-size:26px;line-height:1;color:var(--gold3);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute);padding:0 0 22px;font-weight:300;max-width:62ch}
+.faq{max-width:820px;margin:0 auto}
+.faq .head{justify-content:center;text-align:center}
+
+.final{background:var(--black);color:#fff;text-align:center;padding:140px 0;position:relative;overflow:hidden}
+.final .big{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:Italiana,serif;font-size:min(46vw,560px);line-height:.8;color:rgba(214,184,120,.06);pointer-events:none;letter-spacing:.05em}
+.final .cap{color:var(--gold2)}
+.final h2{position:relative;font-size:clamp(46px,6.6vw,96px);max-width:14ch;margin:22px auto}
+.final .lead{position:relative;color:#a8a29a;margin:0 auto}
+.final .cta-row{position:relative;justify-content:center}
+
+footer{background:var(--black);color:#7c766d;border-top:1px solid #222;padding:34px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer nav{display:flex;gap:22px}
+footer a:hover{color:var(--gold2)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.4);transform:scale(0);transition:transform .3s}
+.float.show{transform:scale(1)}
+.float svg{width:30px;height:30px;color:#fff}
+
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:1060px){
+  .links{display:none}.burger{display:inline-flex}.nav .btn{display:none}
+  .nav.open .links{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:8px 32px 20px}
+  .nav.open .links a{padding:14px 0;border-bottom:1px solid var(--line)}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .hero .wrap,.philo .wrap,.dg{grid-template-columns:1fr}
+  .care-grid{grid-template-columns:1fr}
+  .portrait{max-width:380px}
+  .result{position:static}
+  .philo .wrap{gap:50px}
+  section{padding:88px 0}
+}
+@media (max-width:600px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav.open .links{padding-left:16px;padding-right:16px}
+  .brand b{font-size:18px;letter-spacing:.08em}
+  .hero{padding:44px 0 80px}
+  .cta-row .btn{width:100%}
+  .portrait .badge{left:-6px;bottom:30px;padding:12px 14px}
+  .portrait .ring{right:-6px;top:10px;width:90px;height:90px}
+  .steps{grid-template-columns:1fr}
+  .form{padding:24px 18px}
+  .band span{font-size:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .face path{stroke-dashoffset:0}
+  .js .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="c-face" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6c-12 0-20 10-20 22 0 14 9 28 20 30 11-2 20-16 20-30C52 16 44 6 32 6Z"/><path d="M24 28c2-2 5-2 7 0M33 28c2-2 5-2 7 0"/><path d="M32 30v8l-3 2"/><path d="M27 46c3 2 7 2 10 0"/><path d="M54 14l2-4M58 22h4M50 8l1-4" stroke-width="1"/></g></symbol>
+  <symbol id="c-body" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M26 6c-2 6 0 12 4 14-6 2-10 8-10 16 0 8 4 14 4 22M38 6c2 6 0 12-4 14 6 2 10 8 10 16 0 8-4 14-4 22"/><path d="M24 36c5 3 11 3 16 0"/></g></symbol>
+  <symbol id="c-leaf" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 52C12 26 30 10 54 10c0 24-16 42-42 42Z"/><path d="M12 52 40 24M24 40h10M30 34v-8"/></g></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração) · feita pela NovaTech para Raira Nogueira Estética</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Raira Nogueira Estética, início"><span class="mono"><span class="g">RN</span></span><span><b>RAIRA NOGUEIRA</b><small>Estética</small></span></a>
+    <nav class="links" id="links">
+      <a href="#sobre">Sobre</a>
+      <a href="#cuidados">Cuidados</a>
+      <a href="#avaliacao">Avaliação</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-black" href="https://wa.me/5561999710612?text=Ol%C3%A1%2C%20Raira!%20Vi%20seu%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Agendar</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="links"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="cap reveal">Estética · Brasília</span>
+      <h1 class="reveal">Raira <span class="g">Nogueira</span></h1>
+      <span class="sig g reveal">sua beleza, no seu tempo</span>
+      <p class="lead reveal">Um atendimento pensado para você, do primeiro olhar à última sessão. Cada cuidado começa com uma avaliação feita com calma e termina com um resultado natural.</p>
+      <div class="cta-row reveal">
+        <a class="btn btn-black" href="#avaliacao"><svg><use href="#i-arrow"/></svg>Agendar avaliação</a>
+        <a class="btn btn-line" href="#cuidados">Ver cuidados</a>
+      </div>
+      <div class="pills reveal"><span><b>✦</b> Atendimento personalizado</span><span><b>✦</b> Com hora marcada</span><span><b>✦</b> Brasília - DF</span></div>
+    </div>
+    <div class="portrait reveal" aria-hidden="true">
+      <div class="arch"></div>
+      <svg class="face" viewBox="0 0 300 380">
+        <defs><linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0dba4"/><stop offset=".5" stop-color="#c4a15a"/><stop offset="1" stop-color="#e2c789"/></linearGradient></defs>
+        <g fill="none" stroke="url(#gl)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M196 30c-40-16-96 2-110 52-8 28-2 52-14 72-8 14-20 22-16 34 3 8 14 8 18 14 4 8-6 14-2 22 4 6 14 4 16 12 2 10-4 18 2 28 8 12 30 10 46 6 20-4 30 6 32 26l4 70"/>
+          <path d="M100 152c10-8 24-8 34 0"/>
+          <path d="M196 30c30 14 48 46 46 90-2 40-20 70-12 110 6 30 24 50 30 120"/>
+          <path d="M150 96c24-18 58-14 74 6M164 74c20-10 44-6 58 8"/>
+          <path d="M80 230c14 2 22-2 28-8"/>
+        </g>
+        <g fill="#d6b878"><circle cx="246" cy="60" r="2"/><circle cx="262" cy="80" r="1.3"/><circle cx="70" cy="110" r="1.3"/></g>
+      </svg>
+      <div class="badge"><b class="g">Avaliação</b><span>personalizada antes de tudo</span></div>
+      <svg class="ring" viewBox="0 0 120 120"><defs><path id="rp" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><circle cx="60" cy="60" r="56" fill="#0c0c0c"/><text font-family="Figtree" font-size="9.4" letter-spacing="3.4" fill="#d6b878"><textPath href="#rp">RAIRA NOGUEIRA ✦ ESTÉTICA ✦ </textPath></text><text x="60" y="68" text-anchor="middle" font-family="Italiana" font-size="22" fill="#fff">RN</text></svg>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><div class="track">
+  <span>Rosto</span><span>Corpo</span><span>Bem-estar</span><span>Avaliação personalizada</span><span>Brasília</span>
+  <span>Rosto</span><span>Corpo</span><span>Bem-estar</span><span>Avaliação personalizada</span><span>Brasília</span>
+</div></div>
+
+<section class="philo" id="sobre">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="cap">A filosofia</span>
+      <blockquote style="margin-top:22px">Beleza não é seguir um padrão. É se <em class="g">reconhecer</em> no espelho, só que mais leve e mais cuidada.</blockquote>
+    </div>
+    <div class="values reveal">
+      <div class="value"><i class="g">01</i><div><h3>Escuta primeiro</h3><p>Antes de qualquer procedimento, uma conversa para entender o que você quer e o que faz sentido.</p></div></div>
+      <div class="value"><i class="g">02</i><div><h3>Plano sob medida</h3><p>Nada de pacote pronto: o cuidado é montado para a sua pele, o seu corpo e a sua rotina.</p></div></div>
+      <div class="value"><i class="g">03</i><div><h3>Resultado natural</h3><p>A ideia é realçar o que já é seu, com acompanhamento a cada sessão.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="care" id="cuidados">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="cap reveal">Cuidados</span><h2 class="reveal" style="color:#fff">Para o rosto, o corpo e <span class="g">você</span></h2></div>
+      <p class="lead reveal" style="max-width:40ch">Três frentes de cuidado. Na avaliação, a Raira indica o que é melhor para o seu caso.</p>
+    </div>
+    <div class="care-grid">
+      <article class="cc reveal"><span class="k">01</span><svg><use href="#c-face"/></svg><h3>Rosto</h3><p>Cuidados para uma pele mais uniforme, viçosa e bem tratada.</p></article>
+      <article class="cc reveal"><span class="k">02</span><svg><use href="#c-body"/></svg><h3>Corpo</h3><p>Tratamentos corporais pensados para o seu objetivo e o seu ritmo.</p></article>
+      <article class="cc reveal"><span class="k">03</span><svg><use href="#c-leaf"/></svg><h3>Bem-estar</h3><p>Um momento seu, de pausa e cuidado, longe da correria.</p></article>
+    </div>
+    <p class="care-note reveal">No site final, cada área traz a lista dos procedimentos da Raira, com fotos e detalhes.</p>
+  </div>
+</section>
+
+<section class="diag" id="avaliacao">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="cap reveal">Avaliação</span><h2 class="reveal">Conte o que você <span class="g">procura</span></h2></div>
+      <p class="lead reveal" style="max-width:40ch">Responda em 30 segundos e a mensagem chega pronta no WhatsApp da Raira.</p>
+    </div>
+    <div class="dg">
+      <form class="form reveal" id="f" onsubmit="return false">
+        <fieldset class="q"><legend><i>01</i>Área de cuidado</legend><div class="chips">
+          <label class="chip"><input type="radio" name="area" value="Rosto" checked><span>Rosto</span></label>
+          <label class="chip"><input type="radio" name="area" value="Corpo"><span>Corpo</span></label>
+          <label class="chip"><input type="radio" name="area" value="Bem-estar"><span>Bem-estar</span></label>
+          <label class="chip"><input type="radio" name="area" value="Ainda não sei"><span>Ainda não sei</span></label>
+        </div></fieldset>
+        <fieldset class="q"><legend><i>02</i>Seu objetivo</legend><div class="chips">
+          <label class="chip"><input type="radio" name="obj" value="pele mais uniforme" checked><span>Pele mais uniforme</span></label>
+          <label class="chip"><input type="radio" name="obj" value="mais viço e hidratação"><span>Mais viço</span></label>
+          <label class="chip"><input type="radio" name="obj" value="cuidar do corpo"><span>Cuidar do corpo</span></label>
+          <label class="chip"><input type="radio" name="obj" value="relaxar"><span>Relaxar</span></label>
+          <label class="chip"><input type="radio" name="obj" value="quero uma indicação"><span>Quero uma indicação</span></label>
+        </div></fieldset>
+        <fieldset class="q"><legend><i>03</i>Já fez algum procedimento?</legend><div class="chips">
+          <label class="chip"><input type="radio" name="ja" value="é minha primeira vez" checked><span>É minha primeira vez</span></label>
+          <label class="chip"><input type="radio" name="ja" value="já fiz antes"><span>Já fiz antes</span></label>
+        </div></fieldset>
+        <fieldset class="q"><legend><i>04</i>Melhor período</legend><div class="chips">
+          <label class="chip"><input type="radio" name="per" value="manhã"><span>Manhã</span></label>
+          <label class="chip"><input type="radio" name="per" value="tarde" checked><span>Tarde</span></label>
+          <label class="chip"><input type="radio" name="per" value="noite"><span>Noite</span></label>
+        </div></fieldset>
+        <div class="q"><label class="t" for="obs"><i>05</i>Algo mais? (opcional)</label>
+          <textarea id="obs" placeholder="Ex.: tenho um evento no mês que vem e quero cuidar da pele antes."></textarea></div>
+      </form>
+      <aside class="result reveal" aria-live="polite">
+        <span class="cap">Sua avaliação</span>
+        <h3>Resumo para a Raira</h3>
+        <ul><li><span>Área</span><b id="rArea"></b></li><li><span>Objetivo</span><b id="rObj"></b></li><li><span>Experiência</span><b id="rJa"></b></li><li><span>Período</span><b id="rPer"></b></li></ul>
+        <p class="note" id="rObs"></p>
+        <a class="btn btn-gold" id="send" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enviar pelo WhatsApp</a>
+        <p class="fine">Abre a conversa com a mensagem pronta. Você revisa antes de enviar.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="passos">
+  <div class="wrap">
+    <div class="head"><div><span class="cap reveal">Como funciona</span><h2 class="reveal">Do primeiro contato ao <span class="g">resultado</span></h2></div></div>
+    <div class="steps">
+      <div class="step reveal"><b class="g">01</b><h3>Contato</h3><p>Você conta pelo WhatsApp o que procura.</p></div>
+      <div class="step reveal"><b class="g">02</b><h3>Avaliação</h3><p>Uma conversa para entender sua pele, seu corpo e seus objetivos.</p></div>
+      <div class="step reveal"><b class="g">03</b><h3>Plano</h3><p>O cuidado certo para você, com número de sessões e valores claros.</p></div>
+      <div class="step reveal"><b class="g">04</b><h3>Acompanhamento</h3><p>Evolução acompanhada de perto a cada sessão.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas" style="padding-top:0">
+  <div class="wrap faq">
+    <div class="head"><div><span class="cap reveal">Dúvidas</span><h2 class="reveal">Antes de <span class="g">agendar</span></h2></div></div>
+    <details class="reveal"><summary>Preciso fazer avaliação antes?</summary><p>Sim. É na avaliação que a Raira entende o seu caso e indica o cuidado mais adequado para você.</p></details>
+    <details class="reveal"><summary>Quanto custa?</summary><p>Depende do cuidado indicado e do número de sessões. Os valores são passados depois da avaliação, pelo WhatsApp.</p></details>
+    <details class="reveal"><summary>Nunca fiz nenhum procedimento. Tem problema?</summary><p>Nenhum. Conte isso na mensagem e tudo é explicado com calma, passo a passo.</p></details>
+    <details class="reveal"><summary>Como agendo?</summary><p>Pelo WhatsApp (61) 99971-0612. É só usar o formulário acima ou o botão verde.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <span class="big" aria-hidden="true">RN</span>
+  <div class="wrap">
+    <span class="cap reveal">Raira Nogueira Estética</span>
+    <h2 class="reveal">Seu momento de <span class="g">cuidado</span> começa aqui.</h2>
+    <p class="lead reveal">Agende sua avaliação pelo WhatsApp.</p>
+    <div class="cta-row reveal"><a class="btn btn-gold" href="https://wa.me/5561999710612?text=Ol%C3%A1%2C%20Raira!%20Vi%20seu%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chamar no WhatsApp</a></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <span>Raira Nogueira Estética · Brasília - DF</span>
+  <nav><a href="https://wa.me/5561999710612" target="_blank" rel="noopener">WhatsApp</a><a href="#avaliacao">Avaliação</a><a href="#top">Topo ↑</a></nav>
+</div></footer>
+
+<a class="float" id="float" href="https://wa.me/5561999710612?text=Ol%C3%A1%2C%20Raira!%20Vi%20seu%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var nav=document.getElementById('nav'),bur=document.getElementById('burger');
+  bur.addEventListener('click',function(){var o=nav.classList.toggle('open');bur.setAttribute('aria-expanded',o)});
+  document.querySelectorAll('#links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');bur.setAttribute('aria-expanded',false)})});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){io.observe(el)})}else els.forEach(function(el){el.classList.add('in')});
+  var fl=document.getElementById('float');function onS(){fl.classList.toggle('show',scrollY>520)}addEventListener('scroll',onS,{passive:true});onS();
+  var f=document.getElementById('f'),obs=document.getElementById('obs'),send=document.getElementById('send');
+  function val(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+  function build(){
+    var a=val('area'),o=val('obj'),j=val('ja'),p=val('per'),t=obs.value.trim();
+    document.getElementById('rArea').textContent=a;document.getElementById('rObj').textContent=o;document.getElementById('rJa').textContent=j;document.getElementById('rPer').textContent=p;
+    document.getElementById('rObs').textContent=t?'"'+t+'"':'Conte mais detalhes ao lado (opcional).';
+    var m=['Olá, Raira! Vi seu site e quero agendar uma avaliação.','','• Área: '+a,'• Objetivo: '+o,'• Experiência: '+j,'• Melhor período: '+p];
+    if(t)m.push('• Observação: '+t);m.push('','Quais horários você tem disponíveis?');
+    send.href='https://wa.me/5561999710612?text='+encodeURIComponent(m.join('\n'));
+  }
+  f.addEventListener('change',build);obs.addEventListener('input',build);build();
+})();
+</script>
+</body>
+</html>
