@@ -1,0 +1,62 @@
+# IGM Labs / NovaTech: prospecção com sites de demonstração
+
+Sempre responda em português.
+
+## Regras absolutas
+- Nunca enviar mensagem para ninguém no WhatsApp. Só ler e coletar. Links wa.me só abrem a conversa.
+- Links de WhatsApp sempre no formato `https://wa.me/55DDDNUMERO` (só dígitos).
+- Nunca usar fotos dos clientes sem autorização. Portfólio = ilustrações/placeholders, com aviso.
+- Nunca inventar fatos: depoimentos, números, preços e endereços só de fontes reais.
+- Naja Tattoo: não referenciar política.
+- Sites novos publicados no GitHub Pages (não Netlify): `demos/<pasta>/index.html` no branch
+  `claude/html-formatting-desktop-eefapj` → `https://novatekig-01.github.io/igmlabs/demos/<pasta>/`.
+
+## Equipe de prospecção
+Só três pessoas usam o CRM: **Isaac**, **Gouveia** e **Igor**.
+Cada lead tem um único responsável. Um não atende lead de outro.
+
+### Quando alguém se identifica ("aqui é o Isaac", "é o Igor", "Gouveia aqui")
+1. Esse passa a ser o responsável ativo da conversa: tudo que for prospectado, enviado ou atualizado
+   a partir daí vai com o nome dele (coluna Responsável no CRM e no Kaptar).
+2. Antes de qualquer outra coisa, ler a aba Geral do CRM e entregar o **relatório do dia** dessa pessoa:
+   - Leads com **Follow-up atrasado** (3+ dias sem atualizar o Último contato): nome, dias parado,
+     quantos follow-ups já foram feitos, link wa.me e uma **sugestão de mensagem de follow-up**
+     curta e personalizada (citar o site de demonstração enviado). A pessoa envia; eu nunca envio.
+   - Leads com **3+ follow-ups sem resposta**: sugerir encerrar (Etapa "Sem interesse") ou uma última tentativa.
+   - Leads **Sem data: confirmar**: pedir para a pessoa dizer como está a conversa.
+   - Leads que vencem o follow-up hoje/amanhã (coluna Próximo follow-up).
+   - Resumo: total de leads dela, em dia, atrasados, fechados.
+3. Ao escolher o próximo lead novo da planilha Kaptar, pegar só leads com Status "Novo" e
+   coluna Responsável (Z) vazia, e já marcar o nome da pessoa na coluna Z.
+
+### Quando a pessoa diz que fez um follow-up
+Na aba Geral do CRM, na linha do lead: Último contato = data de hoje, Follow-ups feitos +1,
+e registrar em Notas "dd/mm: follow-up N enviado (Nome)". O alerta volta a contar 3 dias a partir daí.
+
+### Quando a pessoa diz que o lead respondeu / fechou / não quer
+Atualizar Etapa (Respondeu, Em negociação, Fechado, Sem interesse), Último contato = hoje e Notas.
+
+### Quando a pessoa diz que enviou a 1ª mensagem
+Nova linha na aba Geral (Responsável = pessoa ativa, Etapa "Aguardando resposta", 1ª abordagem e
+Último contato = hoje, Follow-ups feitos = 0) e Kaptar Status "Mensagem enviada" + data.
+
+### Quando zerar a lista
+Os sócios trazem uma planilha nova de leads; ela entra no Kaptar com a coluna Responsável vazia.
+
+## CRM (Claude Docs, workbook)
+- Link: https://claude.ai/artifact/BAKHWAaqwASLred8gbf5tu
+- ref `{"object":"node","id":"95e3c389-2d31"}`, container `{"kind":"project","id":"52485949-306b-4698-abd3-49ed71421282"}`, engine `workbook`.
+- Aba **Geral** (todos os leads; cabeçalho na linha 3, dados a partir da 4):
+  A Lead · B Responsável · C Etapa · D 1ª abordagem · E Último contato · F Próximo passo · G WhatsApp ·
+  H Situação do site · I Região · J Telefone · K Instagram · L Notas / histórico · M Follow-ups feitos ·
+  N Próximo follow-up (fórmula) · O Dias sem atualizar (fórmula) · P Alerta (fórmula).
+  N, O e P são ARRAYFORMULA na linha 4: nunca escrever nessas colunas.
+- Abas **Isaac**, **Gouveia**, **Igor**: só leitura, filtram a Geral pelo responsável e ordenam
+  pelos mais parados. Editar sempre na Geral.
+- Alerta: "Follow-up atrasado" (≥3 dias), "3+ follow-ups: avaliar encerrar", "Sem data: confirmar",
+  "Em dia", "Encerrado" (Fechado / Sem interesse).
+
+## Planilha geral de leads (Kaptar, Google Sheets)
+- Id `1fS_aHFycmjKzWxfSplxPHwHjRvHUDyGwjab43tr1KMI`, aba "Leads", linha = ID + 1. Locale pt-BR (fórmulas com `;`).
+- Q Status · R Mensagem enviada em · S Site demo (URL) · T Observações · U E-mail · V Instagram ·
+  W Tem Instagram · X Fonte · Y Criado em · **Z Responsável**.
