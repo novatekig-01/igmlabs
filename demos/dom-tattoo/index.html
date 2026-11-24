@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Dom · Tattoo Artist in London</title>
-<meta name="description" content="Dom: Brazilian tattoo artist based in London. Custom tattoos, booked one-to-one on WhatsApp.">
+<title>Dom · Custom Tattoo in London</title>
+<meta name="description" content="Dom: custom tattoos in London, by appointment. Consultation on WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -70,17 +70,21 @@ section{padding:110px 0}
 .draw path,.draw circle{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 3.5s ease forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
 
-/* clocks */
-.clocks{background:var(--green);color:var(--paper)}
-.clocks .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:50px;align-items:center}
-.clocks .eyebrow{color:var(--brass2)}
-.clocks h2 em{color:var(--brass2)}
-.clocks .lead{color:#c9d3cc}
-.cl{display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
-.c{text-align:center}
-.c svg{width:170px;height:170px}
-.c b{display:block;margin-top:12px;font-size:15px}
-.c small{color:var(--brass2);font-size:13px}
+.promise{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:36px;font-weight:600;font-size:14px}
+.promise li{display:flex;align-items:center;gap:8px}
+.promise svg{width:18px;height:18px;color:var(--brass);padding:2px;border:1.5px solid var(--brass);border-radius:50%}
+.exp{background:var(--ink);color:var(--paper)}
+.exp .eyebrow{color:var(--brass2)}
+.exp h2 em{color:var(--brass2)}
+.exp .lead{color:#b7b3aa}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:50px}
+.card{border:1px solid #34362f;border-radius:var(--r);padding:28px 24px;background:linear-gradient(180deg,#1d1f1c,#16181a);transition:border-color .3s,transform .3s}
+.card:hover{border-color:var(--brass);transform:translateY(-3px)}
+.card .num{font-family:"DM Serif Display";font-size:30px;color:var(--brass2);display:block;margin-bottom:18px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{color:#b7b3aa;font-size:15px}
+@media (max-width:960px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.cards{grid-template-columns:1fr}}
 
 /* work */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:46px}
@@ -143,7 +147,7 @@ footer a{color:var(--paper)}
 .js .reveal.in{opacity:1;transform:none}
 
 @media (max-width:960px){
-  .hero .wrap,.clocks .wrap,.book .wrap{grid-template-columns:1fr}
+  .hero .wrap,.book .wrap{grid-template-columns:1fr}
   .plate{max-width:360px}
   .steps{grid-template-columns:1fr 1fr;row-gap:26px}
 }
@@ -153,7 +157,7 @@ footer a{color:var(--paper)}
   .wrap{padding:0 16px}
   section{padding:80px 0}
   .grid{grid-template-columns:1fr 1fr;gap:10px}
-  .c svg{width:130px;height:130px}
+
   .ticket .body,.stub{padding-left:20px;padding-right:20px}
   .ticket .top{padding:18px 20px}
 }
@@ -172,6 +176,7 @@ footer a{color:var(--paper)}
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4Z"/></g></symbol>
   <symbol id="i-pen" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16Z"/><path d="M14 6l3 3"/></g></symbol>
@@ -184,8 +189,8 @@ footer a{color:var(--paper)}
 <header class="nav" id="nav">
   <div class="wrap">
     <a href="#top" class="logo"><b>Dom</b><span>Tattoo · London</span></a>
-    <nav class="links" id="links"><a href="#work">Work</a><a href="#how">How it works</a><a href="#book">Book</a></nav>
-    <a class="btn btn-dark" href="#book"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
+    <nav class="links" id="links"><a href="#work">Portfolio</a><a href="#how">Process</a><a href="#book">Book</a></nav>
+    <a class="btn btn-dark" href="#book"><svg><use href="#i-wa"/></svg>Book now</a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span></button>
   </div>
 </header>
@@ -194,44 +199,48 @@ footer a{color:var(--paper)}
 <section class="hero">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow">Tattoo artist · Based in London</span>
-      <h1 class="serif">Brazilian hands<span class="amp">,</span><br><em>London</em> ink.</h1>
-      <p class="lead">Custom tattoos by Dom, a Brazilian artist now working in London. Every piece is designed for you and booked one-to-one, straight on WhatsApp.</p>
+      <span class="eyebrow">Custom tattoo · London · By appointment</span>
+      <h1 class="serif">Tattoos made<br>for <em>you</em><span class="amp">.</span></h1>
+      <p class="lead">Every piece starts with a conversation and ends with a design that is yours alone. Considered, custom work in London, booked one-to-one with Dom.</p>
       <div class="cta">
-        <a class="btn btn-dark" href="#book"><svg><use href="#i-wa"/></svg>Request a booking</a>
-        <a class="btn btn-line" href="#work">See the work</a>
+        <a class="btn btn-dark" href="#book"><svg><use href="#i-wa"/></svg>Book a consultation</a>
+        <a class="btn btn-line" href="#work">View the portfolio</a>
       </div>
-      <div class="route" aria-label="From Brasília to London">
-        <b>Brasília</b>
-        <svg viewBox="0 0 120 20" aria-hidden="true"><path d="M2 14C30 2 90 2 118 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 5"/><path d="M112 9l6 5-7 2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-        <b>London</b>
-      </div>
+      <ul class="promise">
+        <li><svg><use href="#i-check"/></svg>Consultation on WhatsApp</li>
+        <li><svg><use href="#i-check"/></svg>Original design</li>
+        <li><svg><use href="#i-check"/></svg>Aftercare guidance</li>
+      </ul>
     </div>
     <div class="plate reveal" aria-hidden="true">
       <svg class="draw" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
-        <g fill="none" stroke="#cfae78" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".9">
-          <circle cx="200" cy="200" r="120"/>
-          <circle cx="200" cy="200" r="96" stroke-dasharray="2 6"/>
-          <path d="M200 80c-40 60-40 180 0 240M200 80c40 60 40 180 0 240M80 200h240M98 140c60 20 144 20 204 0M98 260c60-20 144-20 204 0"/>
-          <path d="M70 300C110 380 290 380 330 300" stroke-dasharray="5 7"/>
-          <circle cx="70" cy="300" r="5" fill="#cfae78"/><circle cx="330" cy="300" r="5" fill="#cfae78"/>
+        <g fill="none" stroke="#cfae78" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M200 70c70 0 120 50 120 130v120c0 50-50 90-120 110-70-20-120-60-120-110V200c0-80 50-130 120-130Z"/>
+          <path d="M200 92c58 0 100 42 100 110v116c0 40-42 74-100 92-58-18-100-52-100-92V202c0-68 42-110 100-110Z" stroke-dasharray="2 6"/>
+          <path d="M150 300c-26-20-36-56-28-92M250 300c26-20 36-56 28-92"/>
+          <path d="M132 236c-10-4-16-14-14-24 10 2 16 12 14 24ZM128 262c-12 0-20-8-22-18 12 0 20 8 22 18ZM138 286c-12 4-22 0-28-8 12-4 22 0 28 8ZM268 236c10-4 16-14 14-24-10 2-16 12-14 24ZM272 262c12 0 20-8 22-18-12 0-20 8-22 18ZM262 286c12 4 22 0 28-8-12-4-22 0-28 8Z"/>
+          <path d="M184 150h30c34 0 52 24 52 58s-18 58-52 58h-30Z" stroke-width="2.2"/>
+          <path d="M184 150v116M170 150h28M170 266h28" stroke-width="2.2"/>
+          <path d="M200 120l6 10-6 10-6-10Z"/>
         </g>
       </svg>
-      <div class="cap"><small>Now booking</small><b>London &amp; around</b></div>
+      <div class="cap"><small>Dom · Tattoo</small><b>London · By appointment</b></div>
     </div>
   </div>
 </section>
 
-<section class="clocks">
+<section class="exp">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow">Two time zones</span>
-      <h2 class="serif">Working on <em>London</em> time</h2>
-      <p class="lead">Dom is based in London. Send your idea at any hour, from anywhere: it lands straight in his WhatsApp.</p>
+      <span class="eyebrow">The experience</span>
+      <h2 class="serif">Calm, considered, <em>yours</em></h2>
+      <p class="lead">A tattoo stays with you for life. The process should feel just as solid as the result.</p>
     </div>
-    <div class="cl reveal">
-      <div class="c"><svg viewBox="0 0 100 100" id="ck1"></svg><b>London</b><small id="t1"></small></div>
-      <div class="c"><svg viewBox="0 0 100 100" id="ck2"></svg><b>Brasília</b><small id="t2"></small></div>
+    <div class="cards">
+      <article class="card reveal"><span class="num">I</span><h3>Consultation first</h3><p>Talk through your idea, placement and size on WhatsApp before anything is booked.</p></article>
+      <article class="card reveal"><span class="num">II</span><h3>Designed for you</h3><p>No copy-paste flash. The piece is drawn around your idea and your body.</p></article>
+      <article class="card reveal"><span class="num">III</span><h3>One-to-one sessions</h3><p>Appointments are booked privately, so your time in the chair is about you.</p></article>
+      <article class="card reveal"><span class="num">IV</span><h3>Aftercare included</h3><p>Clear guidance after your session, so the tattoo heals the way it should.</p></article>
     </div>
   </div>
 </section>
@@ -241,7 +250,7 @@ footer a{color:var(--paper)}
     <div class="reveal">
       <span class="eyebrow">Selected work</span>
       <h2 class="serif">The <em>portfolio</em></h2>
-      <p class="lead">A space for Dom's best pieces, healed and fresh, ready to send to anyone who asks “can I see your work?”.</p>
+      <p class="lead">Fresh and healed pieces, presented the way they deserve. Browse the work, then book your consultation.</p>
     </div>
     <div class="grid">
       <div class="frame reveal"><svg><use href="#i-photo"/></svg><b>Piece 01</b><small>Photo from Dom's Instagram</small></div>
@@ -274,7 +283,7 @@ footer a{color:var(--paper)}
   <div class="wrap">
     <div class="aside reveal">
       <span class="eyebrow">Booking</span>
-      <h2 class="serif">Get your <em>ticket</em></h2>
+      <h2 class="serif">Book your <em>consultation</em></h2>
       <p class="lead">Pick the options, add your idea and send. The message goes straight to Dom's WhatsApp.</p>
       <div class="facts">
         <div><svg><use href="#i-pin"/></svg><span><b>London, UK</b><small>Exact location shared when your booking is confirmed.</small></span></div>
@@ -283,7 +292,7 @@ footer a{color:var(--paper)}
       </div>
     </div>
     <form class="ticket reveal" id="f">
-      <div class="top"><b>Booking request</b><small>Dom · Tattoo</small></div>
+      <div class="top"><b>Consultation request</b><small>Dom · Tattoo</small></div>
       <div class="body">
         <fieldset><legend>Size</legend><div class="chips">
           <label><input type="radio" name="size" value="Small (up to 8 cm)" checked><span>Small</span></label>
@@ -305,7 +314,7 @@ footer a{color:var(--paper)}
           <label><input type="radio" name="when" value="Flexible"><span>Flexible</span></label>
         </div></fieldset>
         <fieldset><legend>About you</legend>
-          <div class="two"><input class="field" id="nm" placeholder="Your name" autocomplete="name"><input class="field" id="ct" placeholder="Your city"></div>
+          <div class="two"><input class="field" id="nm" placeholder="Your name" autocomplete="name"><input class="field" id="ct" placeholder="Your area (e.g. Camden)"></div>
           <textarea class="field" id="idea" placeholder="Describe your idea…" style="margin-top:10px"></textarea>
         </fieldset>
       </div>
@@ -321,7 +330,7 @@ footer a{color:var(--paper)}
 
 <footer><div class="wrap">
   <b>Dom</b>
-  <span>Tattoo artist · London, UK · <a href="https://wa.me/5561982782332" target="_blank" rel="noopener">WhatsApp</a></span>
+  <span>Custom tattoo · London, UK · By appointment · <a href="https://wa.me/5561982782332" target="_blank" rel="noopener">WhatsApp</a></span>
 </div></footer>
 <a class="float" id="float" href="https://wa.me/5561982782332" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
@@ -329,35 +338,12 @@ footer a{color:var(--paper)}
 document.documentElement.classList.add('js');
 var WA='5561982782332';
 
-/* clocks */
-function face(svg){
-  var s='<circle cx="50" cy="50" r="46" fill="none" stroke="#cfae78" stroke-width="1.5"/>';
-  for(var i=0;i<12;i++){s+='<line x1="50" y1="8" x2="50" y2="'+(i%3?12:15)+'" stroke="#f2ede3" stroke-width="'+(i%3?1:2)+'" transform="rotate('+i*30+' 50 50)"/>'}
-  s+='<line class="h" x1="50" y1="50" x2="50" y2="28" stroke="#f2ede3" stroke-width="3" stroke-linecap="round"/><line class="m" x1="50" y1="50" x2="50" y2="16" stroke="#f2ede3" stroke-width="2" stroke-linecap="round"/><line class="s" x1="50" y1="56" x2="50" y2="12" stroke="#cfae78" stroke-width="1"/><circle cx="50" cy="50" r="2.5" fill="#cfae78"/>';
-  svg.innerHTML=s;
-}
-var C=[[document.getElementById('ck1'),'Europe/London',document.getElementById('t1')],[document.getElementById('ck2'),'America/Sao_Paulo',document.getElementById('t2')]];
-C.forEach(function(c){face(c[0])});
-function tick(){
-  var now=new Date();
-  C.forEach(function(c){
-    var p=new Intl.DateTimeFormat('en-GB',{timeZone:c[1],hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).formatToParts(now),v={};
-    p.forEach(function(x){v[x.type]=+x.value});
-    var h=v.hour%12,m=v.minute,s=v.second;
-    c[0].querySelector('.h').setAttribute('transform','rotate('+(h*30+m/2)+' 50 50)');
-    c[0].querySelector('.m').setAttribute('transform','rotate('+(m*6)+' 50 50)');
-    c[0].querySelector('.s').setAttribute('transform','rotate('+(s*6)+' 50 50)');
-    c[2].textContent=(v.hour<10?'0':'')+v.hour+':'+(m<10?'0':'')+m;
-  });
-}
-tick();setInterval(tick,1000);
-
 /* booking */
 var f=document.getElementById('f'),pv=document.getElementById('pv'),send=document.getElementById('send');
 function val(n){var c=f.querySelector('input[name="'+n+'"]:checked');return c?c.value:''}
 function upd(){
   var nm=document.getElementById('nm').value.trim(),ct=document.getElementById('ct').value.trim(),idea=document.getElementById('idea').value.trim();
-  var msg='Hi Dom! '+(nm?"I'm "+nm+(ct?' from '+ct:'')+'. ':(ct?"I'm from "+ct+'. ':''))+"I'd like to book a tattoo:\n"+
+  var msg='Hi Dom! '+(nm?"I'm "+nm+(ct?' from '+ct:'')+'. ':(ct?"I'm from "+ct+'. ':''))+"I'd like a consultation for a new tattoo:\n"+
     '• Size: '+val('size')+'\n• Placement: '+val('place')+'\n• When: '+val('when')+(idea?'\n• Idea: '+idea:'');
   pv.textContent=msg;send.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
 }
