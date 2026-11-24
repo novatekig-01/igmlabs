@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>LK Piercer · São Sebastião</title>
+<meta name="description" content="LK Piercer: perfurador corporal em São Sebastião-DF. Orelha, nariz, boca e microdermal, só com horário marcado. Agende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08090b;--bg2:#0f1114;--card:#14171b;--line:#23272d;
+  --txt:#eef2f0;--mut:#8b948f;--acid:#5ce1c6;--acid2:#9bf2df;--bone:#f3e7b1;--red:#ff4d5e;
+  --disp:"Bricolage Grotesque",system-ui,sans-serif;--sans:Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font:400 16px/1.6 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+svg{display:block}
+.wrap{width:min(1120px,100%);margin:0 auto;padding:0 24px}
+.demo{background:var(--acid);color:#06231d;text-align:center;font-size:12px;font-weight:600;padding:7px 16px}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(8,9,11,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:800;font-size:20px;letter-spacing:.02em}
+.brand i{width:34px;height:34px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:grid;place-items:center}
+.brand i svg{width:22px;height:22px}
+.links{display:flex;gap:28px;font-size:14px;color:var(--mut)}
+.links a:hover{color:var(--txt)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:14px;font-weight:600;font-size:15px;transition:transform .2s,background .2s,border-color .2s}
+.btn svg{width:19px;height:19px}
+.btn-acid{background:var(--acid);color:#06231d}
+.btn-acid:hover{background:var(--acid2);transform:translateY(-2px)}
+.btn-line{border:1px solid var(--line)}
+.btn-line:hover{border-color:var(--acid)}
+.nav .btn{padding:10px 16px;font-size:14px;border-radius:12px}
+
+.hero{padding:80px 0 96px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:640px;height:640px;right:-160px;top:-120px;background:radial-gradient(circle,rgba(92,225,198,.16),transparent 65%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--mut)}
+.pill b{width:7px;height:7px;border-radius:50%;background:var(--acid);box-shadow:0 0 10px var(--acid)}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(48px,7.6vw,96px);line-height:.95;letter-spacing:-.025em;margin:22px 0 22px}
+h1 span{color:var(--acid)}
+.hero p{font-size:18px;color:#b9c2bd;max-width:500px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.mini{display:flex;flex-wrap:wrap;gap:26px;margin-top:40px;color:var(--mut);font-size:14px}
+.mini b{display:block;font-family:var(--disp);font-size:28px;color:var(--txt);line-height:1.1}
+.skull{aspect-ratio:1;max-width:420px;width:100%;justify-self:center;border-radius:50%;background:radial-gradient(circle at 50% 45%,#16201e,#0b0d0f 70%);border:1px solid var(--line);display:grid;place-items:center;position:relative}
+.skull svg{width:72%;height:72%}
+.skull .ring{position:absolute;inset:-14px;border-radius:50%;border:1px dashed #2c3a37;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+section{padding:96px 0;border-top:1px solid var(--line)}
+.kick{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--acid)}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(36px,5vw,60px);line-height:1;letter-spacing:-.02em;margin:12px 0 16px}
+.lead{color:var(--mut);max-width:560px;font-size:17px}
+
+/* builder */
+.builder{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tab{padding:10px 18px;border-radius:999px;border:1px solid var(--line);font-weight:500;font-size:15px;color:var(--mut);transition:all .2s}
+.tab.on{background:var(--txt);color:var(--bg);border-color:var(--txt)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{text-align:left;padding:16px;border-radius:14px;background:var(--card);border:1px solid var(--line);transition:border-color .2s,background .2s}
+.opt:hover{border-color:#3a4a46}
+.opt.sel{border-color:var(--acid);background:#0f1f1c}
+.opt b{display:block;font-weight:600}
+.opt span{font-size:13px;color:var(--mut)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:18px;position:sticky;top:90px;align-self:start}
+.panel h3{font-family:var(--disp);font-size:24px;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px;min-height:40px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#0f1f1c;border:1px solid #1f4740;font-size:14px}
+.chip button{color:var(--mut);font-size:16px;line-height:1}
+.empty{color:var(--mut);font-size:14px}
+.panel label{font-size:13px;color:var(--mut);display:block;margin-bottom:6px}
+.panel input,.panel select{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--txt);font:inherit}
+.panel input:focus,.panel select:focus{outline:none;border-color:var(--acid)}
+.panel .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.panel .btn{width:100%}
+.panel small{color:var(--mut);font-size:12px;text-align:center}
+
+/* portfolio */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.ph{aspect-ratio:3/4;border-radius:16px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;padding:18px;position:relative;overflow:hidden}
+.ph svg{width:62%;margin:12px auto 0;opacity:.95}
+.ph b{font-family:var(--disp);font-size:20px}
+.ph span{font-size:13px;color:var(--mut)}
+.note{display:flex;gap:10px;margin-top:22px;font-size:13px;color:var(--mut)}
+.note svg{width:16px;height:16px;flex:none;margin-top:2px}
+
+/* care */
+.care{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.c i{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#0f1f1c;color:var(--acid);font-style:normal;font-family:var(--disp);font-weight:800;margin-bottom:14px}
+.c h3{font-family:var(--disp);font-size:20px;margin-bottom:6px}
+.c p{color:var(--mut);font-size:15px}
+
+/* info */
+.info{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+.cardbig{background:linear-gradient(135deg,#0f1f1c,#0b0d0f);border:1px solid #1f4740;border-radius:24px;padding:40px}
+.cardbig h2{margin-top:0}
+.facts{display:grid;gap:12px}
+.f{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.f span{color:var(--mut);font-size:14px}
+.f b{font-weight:600;text-align:right}
+.f a b{color:var(--acid)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(37,211,102,.6)}
+.fab svg{width:30px;height:30px}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.skull .ring{animation:none}}
+
+@media (max-width:960px){
+  .links{display:none}
+  .hero .wrap,.builder,.info{grid-template-columns:1fr}
+  .skull{max-width:300px}
+  .panel{position:static}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .care{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .nav .btn span{display:none}
+  .hero{padding:56px 0 72px}
+  section{padding:72px 0}
+  .opts{grid-template-columns:1fr 1fr}
+  .opt{padding:13px}
+  .panel{padding:22px}
+  .cardbig{padding:28px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="skull" viewBox="0 0 200 200">
+    <path d="M58 54l-6-30 22 22M100 40l0-32 12 32M142 54l6-30-22 22" fill="#8a96a0" stroke="#0b0d0f" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M40 104c0-46 28-70 60-70s60 24 60 70c0 22-10 36-22 44v20H62v-20c-12-8-22-22-22-44Z" fill="#6fd3c9" stroke="#0b0d0f" stroke-width="4"/>
+    <circle cx="76" cy="100" r="22" fill="#f3e7b1" stroke="#0b0d0f" stroke-width="4"/><circle cx="76" cy="100" r="8" fill="#0b0d0f"/>
+    <path d="M110 92c10-10 34-10 40 6-10 10-30 12-40-6Z" fill="#0b0d0f"/>
+    <path d="M62 148h76v-12c-8-6-22-8-38-8s-30 2-38 8Z" fill="#f2c94c" stroke="#0b0d0f" stroke-width="4"/>
+    <path d="M78 130v18M92 128v20M106 128v20M120 130v18" stroke="#0b0d0f" stroke-width="3"/>
+    <path d="M96 120l4-10 4 10Z" fill="#0b0d0f"/>
+    <path d="M52 78l14-12" stroke="#ff4d5e" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="158" cy="118" r="7" fill="none" stroke="#c9d3d8" stroke-width="3"/><circle cx="42" cy="122" r="5" fill="#c9d3d8"/>
+  </symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração) feita pela NovaTech para @lk_piercer</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand"><i><svg><use href="#skull"/></svg></i>LK PIERCER</a>
+    <nav class="links"><a href="#monte">Monte seu piercing</a><a href="#trabalhos">Trabalhos</a><a href="#cuidados">Cuidados</a><a href="#agendar">Agendar</a></nav>
+    <a class="btn btn-acid" href="https://wa.me/5561996194010" target="_blank" rel="noopener" data-wa><svg><use href="#i-wa"/></svg><span>Agendar</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="border-top:0">
+  <div class="wrap">
+    <div class="rv">
+      <span class="pill"><b></b>Só com horário marcado</span>
+      <h1>Perfuração<br>corporal em<br><span>São Sebastião.</span></h1>
+      <p>Orelha, nariz, boca e microdermal. Escolha o seu piercing aqui no site e já chegue no WhatsApp com o horário pra marcar.</p>
+      <div class="cta">
+        <a class="btn btn-acid" href="#monte">Montar meu piercing</a>
+        <a class="btn btn-line" href="https://wa.me/5561996194010" target="_blank" rel="noopener" data-wa><svg><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+      </div>
+      <div class="mini">
+        <div><b>4,7</b>no Google · 15 avaliações</div>
+        <div><b>2.400+</b>seguidores no Instagram</div>
+        <div><b>DF</b>São Sebastião</div>
+      </div>
+    </div>
+    <div class="skull rv" aria-hidden="true"><span class="ring"></span><svg viewBox="0 0 200 200"><use href="#skull"/></svg></div>
+  </div>
+</section>
+
+<section id="monte">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kick">Monte seu piercing</div>
+      <h2>Escolha, marque<br>e é só aparecer.</h2>
+      <p class="lead">Toque na região e no piercing que você quer. Pode escolher mais de um. No fim, sua mensagem já vai pronta pro WhatsApp do LK.</p>
+    </div>
+    <div class="builder">
+      <div class="rv">
+        <div class="tabs" id="tabs"></div>
+        <div class="opts" id="opts"></div>
+      </div>
+      <aside class="panel rv">
+        <h3>Seu pedido</h3>
+        <div class="chips" id="chips"><span class="empty">Nenhum piercing escolhido ainda.</span></div>
+        <div>
+          <label for="nome">Seu nome</label>
+          <input id="nome" placeholder="Como posso te chamar?">
+        </div>
+        <div class="row">
+          <div><label for="dia">Melhor dia</label>
+            <select id="dia"><option>Qualquer dia</option><option>Segunda</option><option>Terça</option><option>Quarta</option><option>Quinta</option><option>Sexta</option><option>Sábado</option></select></div>
+          <div><label for="turno">Turno</label>
+            <select id="turno"><option>Qualquer horário</option><option>Manhã</option><option>Tarde</option><option>Noite</option></select></div>
+        </div>
+        <div><label for="joia">Já tem a joia?</label>
+          <select id="joia"><option>Não, quero ver as opções</option><option>Sim, vou levar a minha</option></select></div>
+        <a class="btn btn-acid" id="send" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enviar pro WhatsApp</a>
+        <small>Valores e joias são combinados direto no WhatsApp.</small>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="trabalhos">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kick">Trabalhos</div>
+      <h2>Do lóbulo ao microdermal.</h2>
+      <p class="lead">As mesmas categorias dos destaques do Instagram, organizadas pra quem chega pelo Google.</p>
+    </div>
+    <div class="gal">
+      <div class="ph rv"><svg viewBox="0 0 120 120"><path d="M70 14c26 4 40 26 34 52-4 18-18 22-24 36-4 10-14 14-22 10" fill="none" stroke="#c9d3d8" stroke-width="4" stroke-linecap="round"/><circle cx="92" cy="30" r="6" fill="none" stroke="#5ce1c6" stroke-width="3"/><circle cx="62" cy="106" r="7" fill="#f3e7b1"/><path d="M60 44a14 14 0 1 1 6 22" fill="none" stroke="#5ce1c6" stroke-width="3"/></svg><div><b>Orelha</b><br><span>Lóbulo, hélix, tragus, daith e mais</span></div></div>
+      <div class="ph rv"><svg viewBox="0 0 120 120"><path d="M60 14c-4 30-18 48-26 66 10 12 42 12 52 0-8-18-22-36-26-66Z" fill="none" stroke="#c9d3d8" stroke-width="4" stroke-linejoin="round"/><circle cx="40" cy="78" r="4" fill="#5ce1c6"/><path d="M50 92a10 10 0 0 0 20 0" fill="none" stroke="#5ce1c6" stroke-width="3"/></svg><div><b>Nariz</b><br><span>Narina e septo</span></div></div>
+      <div class="ph rv"><svg viewBox="0 0 120 120"><path d="M16 58c16-14 30-18 44-10 14-8 28-4 44 10-16 18-30 24-44 24S32 76 16 58Z" fill="none" stroke="#c9d3d8" stroke-width="4" stroke-linejoin="round"/><path d="M16 58h88" stroke="#c9d3d8" stroke-width="2"/><circle cx="60" cy="92" r="5" fill="#5ce1c6"/><circle cx="40" cy="86" r="4" fill="#5ce1c6"/><circle cx="80" cy="86" r="4" fill="#5ce1c6"/></svg><div><b>Boca</b><br><span>Labret, medusa, língua</span></div></div>
+      <div class="ph rv"><svg viewBox="0 0 120 120"><path d="M20 70c20-24 60-24 80 0" fill="none" stroke="#c9d3d8" stroke-width="4" stroke-linecap="round"/><circle cx="60" cy="60" r="12" fill="none" stroke="#5ce1c6" stroke-width="3"/><path d="M60 50l4 6 7 1-5 5 1 7-7-3-7 3 1-7-5-5 7-1Z" fill="#5ce1c6"/></svg><div><b>Microdermal</b><br><span>Brilho onde você quiser</span></div></div>
+    </div>
+    <p class="note rv"><svg><use href="#i-info"/></svg>Ilustrações de exemplo. Fotos dos trabalhos só entram no site com autorização do LK.</p>
+  </div>
+</section>
+
+<section id="cuidados">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kick">Depois da perfuração</div>
+      <h2>Cicatrização tranquila.</h2>
+      <p class="lead">Cuidados básicos que valem pra quase todo piercing. As orientações do seu caso você recebe na hora.</p>
+    </div>
+    <div class="care">
+      <div class="c rv"><i>01</i><h3>Mãos limpas</h3><p>Só toque no piercing com as mãos lavadas, e só na hora de limpar.</p></div>
+      <div class="c rv"><i>02</i><h3>Limpeza diária</h3><p>Limpe do jeito que o perfurador indicar, sem girar a joia sem necessidade.</p></div>
+      <div class="c rv"><i>03</i><h3>Qualquer dúvida</h3><p>Ficou inchado ou estranho? Manda foto no WhatsApp antes de mexer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="agendar">
+  <div class="wrap info">
+    <div class="cardbig rv">
+      <div class="kick">Agendar</div>
+      <h2>Bora furar?</h2>
+      <p class="lead" style="margin-bottom:28px">Atendimento só com horário marcado. Chama no WhatsApp e escolhe o seu.</p>
+      <a class="btn btn-acid" href="https://wa.me/5561996194010" target="_blank" rel="noopener" data-wa><svg><use href="#i-wa"/></svg>Marcar meu horário</a>
+    </div>
+    <div class="facts rv">
+      <a class="f" href="https://wa.me/5561996194010" target="_blank" rel="noopener" data-wa><span>WhatsApp</span><b>(61) 99619-4010</b></a>
+      <a class="f" href="https://www.instagram.com/lk_piercer/" target="_blank" rel="noopener"><span>Instagram</span><b>@lk_piercer</b></a>
+      <div class="f"><span>Onde</span><b>São Sebastião · DF</b></div>
+      <div class="f"><span>Atendimento</span><b>Só com horário marcado</b></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>LK Piercer · Perfurador corporal · São Sebastião-DF</span><span>Demonstração NovaTech</span></div></footer>
+<a class="fab" href="https://wa.me/5561996194010" target="_blank" rel="noopener" data-wa aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+const PHONE="5561996194010";
+const wa=t=>`https://wa.me/${PHONE}?text=${encodeURIComponent(t)}`;
+document.querySelectorAll("[data-wa]").forEach(a=>a.href=wa("Olá! Vi o site do LK Piercer e quero marcar um horário."));
+const CAT={
+  "Orelha":[["Lóbulo","clássico"],["Hélix","cartilagem superior"],["Tragus","na frente do ouvido"],["Daith","dobra interna"],["Conch","concha"],["Industrial","barra atravessada"]],
+  "Nariz":[["Narina","ponto ou argola"],["Septo","no centro"]],
+  "Boca":[["Labret","abaixo do lábio"],["Labret vertical","no lábio"],["Medusa","acima do lábio"],["Língua","no centro"]],
+  "Microdermal":[["Microdermal","onde você quiser"]]
+};
+let reg="Orelha";const sel=new Set();
+const tabs=document.getElementById("tabs"),opts=document.getElementById("opts"),chips=document.getElementById("chips");
+function draw(){
+  tabs.innerHTML=Object.keys(CAT).map(k=>`<button class="tab${k===reg?" on":""}" data-r="${k}">${k}</button>`).join("");
+  opts.innerHTML=CAT[reg].map(([n,d])=>{const id=reg+" · "+n;return `<button class="opt${sel.has(id)?" sel":""}" data-id="${id}"><b>${n}</b><span>${d}</span></button>`}).join("");
+  chips.innerHTML=sel.size?[...sel].map(i=>`<span class="chip">${i}<button data-x="${i}" aria-label="Remover">×</button></span>`).join(""):'<span class="empty">Nenhum piercing escolhido ainda.</span>';
+  link();
+}
+function link(){
+  const nome=document.getElementById("nome").value.trim();
+  const l=["Olá! Vim pelo site do LK Piercer."];
+  if(nome)l.push("Meu nome é "+nome+".");
+  l.push(sel.size?"Quero fazer: "+[...sel].join(", ")+".":"Quero fazer um piercing.");
+  l.push("Melhor dia: "+document.getElementById("dia").value+" · "+document.getElementById("turno").value+".");
+  l.push("Joia: "+document.getElementById("joia").value+".");
+  document.getElementById("send").href=wa(l.join("\n"));
+}
+tabs.onclick=e=>{const b=e.target.closest("[data-r]");if(b){reg=b.dataset.r;draw()}};
+opts.onclick=e=>{const b=e.target.closest("[data-id]");if(b){const i=b.dataset.id;sel.has(i)?sel.delete(i):sel.add(i);draw()}};
+chips.onclick=e=>{const b=e.target.closest("[data-x]");if(b){sel.delete(b.dataset.x);draw()}};
+["nome","dia","turno","joia"].forEach(id=>document.getElementById(id).addEventListener("input",link));
+draw();
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
