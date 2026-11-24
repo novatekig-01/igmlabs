@@ -90,6 +90,17 @@ Os sócios trazem uma planilha nova de leads; ela entra no Kaptar com a coluna R
 - Lista nova chega só pela sessão de Administração. Se alguém mandar uma lista numa sessão de trabalho,
   avisar que a importação é feita na Administração.
 
+### Lista nova de leads (feito pela Administração)
+1. Salvar a lista no Google Drive, pasta **01 - Leads & Prospecção / Listas recebidas**
+   (id `1P9fpBGfKBFNsgMaZ964epCvuz2HsyPf_`, https://drive.google.com/drive/folders/1P9fpBGfKBFNsgMaZ964epCvuz2HsyPf_),
+   como planilha Google com o nome `AAAA-MM-DD - <segmento/região> - <N> leads` (ex.: `2026-11-25 - Tatuagem Asa Norte - 40 leads`).
+   Não apagar nem editar a lista original depois de salva.
+2. Importar os leads no Kaptar (próximos IDs, Status "Novo", Responsável vazio, Fonte = nome do arquivo no Drive),
+   pulando quem já existe (mesmo nome, telefone ou Instagram). Anotar quantos entraram e quantos foram pulados.
+3. Avisar as três sessões de trabalho (send_message) com: nome e link do arquivo no Drive, quantos leads novos
+   entraram no Kaptar e a faixa de IDs. As sessões continuam pegando leads só pelo Kaptar ("próximo cliente"),
+   para a trava anti-duplicidade funcionar; a lista no Drive é para consulta.
+
 ## CRM (Claude Docs, workbook)
 - Link: https://claude.ai/artifact/BAKHWAaqwASLred8gbf5tu
 - ref `{"object":"node","id":"95e3c389-2d31"}`, container `{"kind":"project","id":"52485949-306b-4698-abd3-49ed71421282"}`, engine `workbook`.
