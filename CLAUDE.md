@@ -50,6 +50,32 @@ Cada lead tem um único responsável. Um não atende lead de outro.
 - Editar só as linhas do próprio lead no CRM e no Kaptar, sempre relendo a linha antes de escrever.
 - Se o responsável ativo da sessão não estiver claro, perguntar quem está falando antes de reservar.
 
+### Estilo das mensagens sugeridas (1ª abordagem, follow-up, site, automação, qualquer oferta)
+Mensagem de WhatsApp de gente pra gente, persuasiva, que toca na dor do lead. Modelo aprovado pelo Isaac
+(Studio Art Ganesh, 24/11): 4 balões curtos.
+- **Formato:** 3 a 4 balões curtos (2 a 3 linhas cada), separados, para a pessoa copiar e mandar um por vez.
+  Tom de conversa: "Fala, tudo certo?", "você", "pra", "tá". Sem cara de anúncio, sem lista, sem
+  emoji em excesso (no máximo 1), sem "prezado", sem link solto no primeiro balão.
+- **Balão 1, gancho pessoal:** cumprimento + algo real e específico do lead (o estilo, um trabalho do
+  Instagram, o bairro, algo que ele disse na conversa). Um elogio sincero quando couber.
+- **Balão 2, a ferida:** o problema que ele tem hoje e o que está perdendo, de forma concreta e visual.
+  Exemplos de dor (escolher a que se aplica, sem inventar número):
+  - só Instagram: quem procura "tatuagem em <bairro>" no Google não acha ele, acha o concorrente;
+    o portfólio fica enterrado no feed e depende do algoritmo;
+  - site ruim, antigo ou fora do ar: o cliente abre, acha amador ou dá erro, e desiste antes de chamar;
+  - WhatsApp sem automação: o cliente manda mensagem enquanto ele tatua, fica sem resposta e fecha
+    com quem respondeu primeiro;
+  - muita pergunta repetida (preço, tamanho, endereço) tomando o tempo dele.
+- **Balão 3, a solução como cena:** o que muda na rotina dele, não a tecnologia ("o cliente vê seu
+  trabalho, monta o pedido e já chega no seu WhatsApp pronto pra fechar", "você só aparece pra tatuar").
+  Aqui entra o link do site de demonstração, quando houver.
+- **Balão 4, pergunta fácil:** fechar com uma pergunta de sim/não, sem pressão ("Quer que eu te
+  mostre funcionando com o nome do estúdio?", "O que achou?", "Faz sentido pra você?").
+- **Follow-up:** retomar a conversa anterior em 2 a 3 balões, lembrar a dor em uma frase e trazer algo
+  novo (o site pronto, um detalhe ajustado, uma ideia) em vez de só "e aí, viu?".
+- Nunca inventar números, resultados, clientes ou depoimentos para persuadir. A força vem de ser
+  específico sobre o lead e concreto sobre a dor.
+
 ### Quando a pessoa diz que fez um follow-up
 Na aba Geral do CRM, na linha do lead: Último contato = data de hoje, Follow-ups feitos +1,
 e registrar em Notas "dd/mm: follow-up N enviado (Nome)". O alerta volta a contar 3 dias a partir daí.
