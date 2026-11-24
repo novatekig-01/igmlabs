@@ -76,6 +76,36 @@ Mensagem de WhatsApp de gente pra gente, persuasiva, que toca na dor do lead. Mo
 - Nunca inventar números, resultados, clientes ou depoimentos para persuadir. A força vem de ser
   específico sobre o lead e concreto sobre a dor.
 
+### Proposta de site (padrão aprovado pelo Isaac em 24/11; vale para Isaac, Gouveia e Igor)
+Exemplo pronto: https://novatekig-01.github.io/igmlabs/demos/lk-piercer-proposta/ (`demos/lk-piercer-proposta/index.html`).
+- **Onde fica:** `demos/<pasta-do-lead>-proposta/index.html` no branch de trabalho (GitHub Pages), com
+  `<meta name="robots" content="noindex,nofollow">`.
+- **Preço nunca na prévia do link:** o preço não pode estar no `<title>`, `<meta name="description">`,
+  `og:title` nem `og:description` (é o que o WhatsApp mostra). Title "Proposta de site · <Nome do lead>",
+  description neutra. O preço aparece só dentro da página, no bloco "Investimento". Se uma prévia antiga
+  ficar em cache no WhatsApp, mandar o link com `?v=2` no final.
+- **Visual:** o mesmo do site de demonstração do lead (cores e fontes), como continuação dele.
+- **Seções, nesta ordem:**
+  1. Abertura: o que o site faz pelo lead em uma frase + 2 ou 3 fatos reais dele (cidade, nota no Google, seguidores).
+  2. O que você recebe: 4 cartões (serviço apresentado, pedido direto no WhatsApp, funciona em qualquer
+     dispositivo, contato e informações) + a demo funcionando numa moldura de celular
+     (iframe `../<pasta-do-lead>/`) e o link "Abrir em tela cheia".
+  3. Como funciona: 01 você aprova; 02 seus trabalhos entram (só fotos que o cliente autorizar);
+     03 site no ar em até 7 dias após confirmar todas as informações.
+  4. Investimento: o preço (definido pela pessoa que atende o lead; nunca inventar) e os inclusos.
+- **Condições padrão (confirmadas pelo Isaac para os três):**
+  - domínio e hospedagem inclusos por 1 ano;
+  - suporte e manutenção por nossa conta por 1 ano;
+  - entrega em até 7 dias após a confirmação de todas as informações necessárias;
+  - funciona em qualquer dispositivo (celular, tablet e computador);
+  - forma de pagamento combinada direto no WhatsApp.
+  Não inventar o que não foi informado (renovação depois de 1 ano, valores extras, forma de pagamento):
+  deixar "combinado no WhatsApp".
+- **Botão final:** não leva a número nenhum. Texto: "Gostou? Responda a nossa mensagem no WhatsApp e a gente começa."
+- **Antes de mandar o link:** conferir no celular e no computador (sem rolagem para o lado) e esperar o
+  deploy do Pages terminar com sucesso; se o deploy falhar (link 404), refazer antes de enviar.
+- **Registrar** no CRM (Notas do lead) o link da proposta, o preço e as condições.
+
 ### Quando a pessoa diz que fez um follow-up
 Na aba Geral do CRM, na linha do lead: Último contato = data de hoje, Follow-ups feitos +1,
 e registrar em Notas "dd/mm: follow-up N enviado (Nome)". O alerta volta a contar 3 dias a partir daí.
