@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Proposta de site · Hellfire Tattoo Club</title>
+<meta name="description" content="Proposta de site para o Joaquim, do Hellfire Tattoo Club: apresenta o trabalho, mostra o catálogo de designs e leva o cliente direto para o WhatsApp.">
+<meta property="og:title" content="Proposta de site · Hellfire Tattoo Club">
+<meta property="og:description" content="Proposta de site para o Joaquim, do Hellfire Tattoo Club: apresenta o trabalho, mostra o catálogo de designs e leva o cliente direto para o WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a;--bg2:#111110;--card:#141312;--line:#262523;--txt:#f1ede5;--mut:#8f8a82;
+  --red:#c8202b;--red2:#e8333e;--neon:#ff3d6e;
+  --serif:"Cormorant Garamond",Georgia,serif;--sans:Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font:300 16px/1.7 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.wrap{width:min(1080px,100%);margin:0 auto;padding:0 24px}
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:66px;gap:12px;font-size:13px;letter-spacing:.08em;color:var(--mut)}
+.top b{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:.02em;color:var(--txt)}
+.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--mut);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--red2)}
+.num{font-size:12px;letter-spacing:.3em;color:var(--red2);text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,7.4vw,96px);line-height:.98;letter-spacing:-.01em;margin:24px 0 24px}
+h1 i{color:var(--red2)}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(36px,5vw,60px);line-height:1.02;margin:12px 0 14px}
+h2 i{color:var(--mut)}
+.lead{color:#c9c4bb;font-size:18px;max-width:580px}
+.mut{color:var(--mut)}
+
+.hero{padding:88px 0 96px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:640px;height:640px;right:-200px;top:-180px;background:radial-gradient(circle,rgba(200,32,43,.18),transparent 65%);pointer-events:none}
+.hero .wrap{position:relative}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.pill{border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:13px;color:var(--mut)}
+.pill b{color:var(--txt);font-weight:500}
+
+section{padding:96px 0;border-top:1px solid var(--line)}
+.two{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.two>*{min-width:0}
+
+.list{display:grid;gap:0;margin-top:34px;border-top:1px solid var(--line)}
+.item{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.item i{flex:none;font-style:normal;font-family:var(--serif);font-size:22px;color:var(--red2);width:30px}
+.item b{display:block;font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.15;margin-bottom:4px}
+.item span{color:var(--mut);font-size:15px}
+
+.phone{width:min(290px,100%);aspect-ratio:9/18.5;margin:0 auto;border-radius:34px;border:8px solid #1d1b1a;background:#000;overflow:hidden;box-shadow:0 30px 80px -30px rgba(232,51,62,.4)}
+.phone iframe{width:390px;height:800px;border:0;transform-origin:0 0;transform:scale(.7231)}
+.cap{text-align:center;margin-top:18px;font-size:14px;color:var(--mut)}
+.cap a{color:var(--red2)}
+
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:44px}
+.step{border-top:1px solid var(--line);padding-top:24px}
+.step em{font-style:normal;font-family:var(--serif);font-size:20px;color:var(--red2)}
+.step b{display:block;font-family:var(--serif);font-weight:500;font-size:28px;margin:8px 0 6px;line-height:1.1}
+.step span{color:var(--mut);font-size:15px}
+
+.price{border:1px solid var(--line);border-radius:6px;padding:64px 40px;text-align:center;background:radial-gradient(circle at 50% 0%,#1d0a0c,#0d0b0b 70%)}
+.price .v{font-family:var(--serif);font-weight:500;font-size:clamp(64px,11vw,120px);line-height:1;letter-spacing:-.02em;margin:18px 0 8px}
+.price .v small{font-size:.36em;color:var(--mut);margin-right:10px}
+.price ul{list-style:none;display:inline-grid;gap:10px;text-align:left;margin:30px 0 34px;color:#d6d1c8}
+.price li{display:flex;gap:12px;align-items:flex-start}
+.price li::before{content:"";flex:none;width:14px;height:1px;background:var(--red2);margin-top:13px}
+.open{font-family:var(--serif);font-style:italic;font-size:24px}
+.note{margin-top:22px;display:flex;gap:10px;font-size:13px;color:var(--mut)}
+.note svg{width:16px;height:16px;flex:none;margin-top:3px}
+.center{justify-content:center;text-align:center}
+.sig{font-family:var(--serif);font-style:italic;color:var(--neon);text-shadow:0 0 12px rgba(255,61,110,.6)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (max-width:880px){.two{grid-template-columns:1fr;gap:44px}.flow{grid-template-columns:1fr;gap:28px}}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .hero{padding:60px 0 70px}
+  section{padding:70px 0}
+  .price{padding:44px 20px}
+  .top .wrap span{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="top"><div class="wrap"><b>NovaTech</b><span>Proposta de site · 24/11/2026</span></div></header>
+
+<main>
+<section class="hero" style="border-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Proposta para o Hellfire Tattoo Club</div>
+    <h1>Um site à altura de<br><i>mais de 30 anos</i> de tatuagem.</h1>
+    <p class="lead">Hoje o seu trabalho está espalhado entre o Instagram e a loja de designs. Esta proposta junta tudo num só lugar, apresenta você e leva quem chega direto pro seu WhatsApp.</p>
+    <div class="meta">
+      <span class="pill"><b>Tatuador desde 1993</b> · estúdio privado em Brasília</span>
+      <span class="pill"><b>5,0</b> no Google · 14 avaliações</span>
+      <span class="pill"><b>5.400+</b> seguidores · @joaquimta2</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two">
+    <div>
+      <div class="num">01 · O que você recebe</div>
+      <h2>Premium, minimalista <i>e direto ao ponto.</i></h2>
+      <p class="lead">Do jeito que você trabalha: seu design ou o do cliente, com hora marcada, para quem é daqui ou de fora.</p>
+      <div class="list">
+        <div class="item"><i>i.</i><div><b>Você e o seu trabalho apresentados</b><span>Sua história desde 1993, os estilos que você faz e o catálogo de designs da sua loja, com link pra compra.</span></div></div>
+        <div class="item"><i>ii.</i><div><b>Pedido direto pro WhatsApp</b><span>O cliente escolhe um design e toca em "Tatuar": a conversa abre no seu WhatsApp já com o nome do desenho.</span></div></div>
+        <div class="item"><i>iii.</i><div><b>Funciona em qualquer dispositivo</b><span>Celular, tablet ou computador: o site se ajusta à tela e funciona do mesmo jeito em todos.</span></div></div>
+        <div class="item"><i>iv.</i><div><b>Valores, contato e duas línguas</b><span>Valor por hora e diária, Instagram, loja e WhatsApp, em português e inglês pra quem vem de fora.</span></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="phone"><iframe src="../hellfire-tattoo/" title="Exemplo do site do Hellfire Tattoo Club" loading="lazy"></iframe></div>
+      <p class="cap">Exemplo real, funcionando. <a href="../hellfire-tattoo/" target="_blank" rel="noopener">Abrir em tela cheia</a></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="num">02 · Como funciona</div>
+    <h2>Do sim <i>ao site no ar.</i></h2>
+    <div class="flow">
+      <div class="step"><em>01</em><b>Você aprova</b><span>Combinamos o que ajustar no exemplo: textos, cores e o que mais você quiser.</span></div>
+      <div class="step"><em>02</em><b>Seus trabalhos entram</b><span>As suas artes e fotos de tatuagens entram no lugar das ilustrações. Só usamos o que você autorizar.</span></div>
+      <div class="step"><em>03</em><b>Site no ar em até 7 dias</b><span>Depois que você confirmar todas as informações, o site é entregue em até 7 dias. Aí é só divulgar o link.</span></div>
+    </div>
+    <p class="note"><svg><use href="#i-info"/></svg><span>As imagens do exemplo são ilustrações. As suas artes originais entram na versão final, com a sua autorização.</span></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="price">
+      <div class="num">03 · Investimento</div>
+      <div class="v"><small>R$</small>499,90</div>
+      <p class="mut">Site completo do Hellfire Tattoo Club</p>
+      <ul>
+        <li>Site de apresentação, com catálogo de designs</li>
+        <li>Pedido de tatuagem direto pro seu WhatsApp</li>
+        <li>Em português e inglês</li>
+        <li>Funciona em qualquer dispositivo: celular, tablet e computador</li>
+        <li>Ajustes de texto e cores antes de publicar</li>
+        <li>Domínio e hospedagem incluídos por 1 ano</li>
+        <li>Suporte e manutenção por nossa conta por 1 ano</li>
+      </ul>
+      <p class="open">Gostou? Responda a nossa mensagem no WhatsApp e a gente começa.</p>
+    </div>
+    <p class="note center"><svg><use href="#i-info"/></svg><span>Entrega em até 7 dias após a confirmação de todas as informações necessárias. A forma de pagamento é combinada direto no WhatsApp.</span></p>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>NovaTech · Proposta para o Hellfire Tattoo Club · <span class="sig">Joaquim</span></span><span>24/11/2026</span></div></footer>
+</body>
+</html>
