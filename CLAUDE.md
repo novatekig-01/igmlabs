@@ -29,6 +29,20 @@ Cada lead tem um único responsável. Um não atende lead de outro.
 3. Ao escolher o próximo lead novo da planilha Kaptar, pegar só leads com Status "Novo" e
    coluna Responsável (Z) vazia, e já marcar o nome da pessoa na coluna Z.
 
+### Trava anti-duplicidade (Isaac, Gouveia e Igor trabalham em sessões separadas ao mesmo tempo)
+- **Reservar antes de trabalhar:** o primeiro passo com qualquer lead é gravar o nome da pessoa na coluna Z
+  do Kaptar. Só depois pesquisar, montar site ou sugerir mensagem.
+- **Confirmar a reserva:** logo depois de gravar, ler a coluna Z de novo. Se apareceu outro nome
+  (outra sessão reservou junto), devolver a minha marcação, avisar e pegar o próximo lead livre.
+- **Lead trazido por print ou nome** (fora da lista): antes de qualquer coisa, procurar o lead no Kaptar
+  (nome, telefone, Instagram) e na aba Geral do CRM. Se tiver outro responsável, parar e avisar:
+  "esse lead é do Gouveia (desde dd/mm), não pode atender". Se não existir, cadastrar no Kaptar já com
+  o nome da pessoa na coluna Z antes de trabalhar.
+- **Nunca** apagar ou trocar o Responsável de um lead de outra pessoa. Transferência só quando o
+  responsável atual pedir; registrar em Notas "dd/mm: transferido de X para Y".
+- Editar só as linhas do próprio lead no CRM e no Kaptar, sempre relendo a linha antes de escrever.
+- Se o responsável ativo da sessão não estiver claro, perguntar quem está falando antes de reservar.
+
 ### Quando a pessoa diz que fez um follow-up
 Na aba Geral do CRM, na linha do lead: Último contato = data de hoje, Follow-ups feitos +1,
 e registrar em Notas "dd/mm: follow-up N enviado (Nome)". O alerta volta a contar 3 dias a partir daí.
