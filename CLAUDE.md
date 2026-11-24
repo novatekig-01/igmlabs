@@ -79,6 +79,17 @@ Nova linha na aba Geral (Responsável = pessoa ativa, Etapa "Aguardando resposta
 ### Quando zerar a lista
 Os sócios trazem uma planilha nova de leads; ela entra no Kaptar com a coluna Responsável vazia.
 
+## Sessões
+- **Administração · Prospecção** (`session_01KK6cGAhoC5RR9jKCzaErEs`): sessão de gerência. Recebe as listas
+  novas de leads e importa no Kaptar (Status "Novo", Responsável vazio, sem duplicar nome/telefone/Instagram
+  já existentes), mantém as regras deste arquivo, organiza o CRM, acompanha o andamento dos três e avisa as
+  sessões de trabalho quando uma regra mudar. Não prospecta lead para si.
+- **Prospecção · Isaac** (`session_01KK6cGAiKT5vf9nv4psCf2Q`), **Prospecção · Gouveia**
+  (`session_01KK6cG7fjLLRVsRKVzTwsoq`) e **Prospecção · Igor** (`session_01KK6cG6sMZ7YNKMVgkvTjF7`):
+  sessões de trabalho, uma por pessoa. Pedem "próximo cliente", montam sites e registram envios.
+- Lista nova chega só pela sessão de Administração. Se alguém mandar uma lista numa sessão de trabalho,
+  avisar que a importação é feita na Administração.
+
 ## CRM (Claude Docs, workbook)
 - Link: https://claude.ai/artifact/BAKHWAaqwASLred8gbf5tu
 - ref `{"object":"node","id":"95e3c389-2d31"}`, container `{"kind":"project","id":"52485949-306b-4698-abd3-49ed71421282"}`, engine `workbook`.
