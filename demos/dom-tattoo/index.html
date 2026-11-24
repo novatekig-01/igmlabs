@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Dom · Tattoo Artist in London</title>
+<meta name="description" content="Dom: Brazilian tattoo artist based in London. Custom tattoos, booked one-to-one on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f2ede3;--paper2:#e8e1d3;--ink:#16181a;--mut:#5d5f60;--line:#d3cab8;
+  --green:#1e3a2b;--green2:#2c5a41;--brass:#b08d57;--brass2:#cfae78;
+  --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.6 "Space Grotesk",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+svg{display:block}
+.wrap{width:min(1160px,100%);margin:0 auto;padding:0 28px}
+.serif{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
+.demo{background:var(--green);color:var(--brass2);text-align:center;font-size:13px;font-weight:600;padding:7px 12px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--green2);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--brass)}
+h2.serif{font-size:clamp(40px,5.6vw,72px);line-height:1;margin:16px 0 18px;letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--green2)}
+.lead{color:var(--mut);font-size:18px;max-width:580px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:700;transition:transform .2s,background .2s}
+.btn svg{width:20px;height:20px}
+.btn-dark{background:var(--green);color:var(--paper)}
+.btn-dark:hover{background:var(--green2);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+section{padding:110px 0}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(242,237,227,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.logo{display:flex;align-items:baseline;gap:8px}
+.logo b{font-family:"DM Serif Display";font-weight:400;font-size:30px;line-height:1}
+.logo span{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.links{display:flex;gap:28px;font-weight:600;font-size:15px}
+.links a{color:var(--mut)}.links a:hover{color:var(--ink)}
+.nav .btn{padding:10px 18px;font-size:14px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);align-items:center;justify-content:center}
+.burger span{width:18px;height:2px;background:var(--ink);position:relative;display:block}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);transition:transform .25s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.nav.open .burger span{background:transparent}
+.nav.open .burger span::before{transform:translateY(6px) rotate(45deg)}
+.nav.open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+.hero{padding:80px 0 100px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:50px;align-items:center}
+.hero h1{font-size:clamp(64px,10vw,140px);line-height:.92;letter-spacing:-.02em;margin:22px 0 26px}
+.hero h1 em{font-style:italic;color:var(--green2)}
+.hero h1 .amp{color:var(--brass)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.route{display:flex;align-items:center;gap:14px;margin-top:40px;font-weight:600;font-size:14px;color:var(--mut);flex-wrap:wrap}
+.route b{color:var(--ink)}
+.route svg{width:120px;height:20px;color:var(--brass)}
+.plate{position:relative;aspect-ratio:4/5;border-radius:200px 200px var(--r) var(--r);background:var(--green);overflow:hidden;box-shadow:0 30px 60px -30px rgba(30,58,43,.6);max-width:420px;width:100%;justify-self:center}
+.plate svg{position:absolute;inset:0;width:100%;height:100%}
+.plate .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 24px;color:var(--paper);background:linear-gradient(transparent,rgba(0,0,0,.45))}
+.plate .cap b{font-family:"DM Serif Display";font-weight:400;font-size:26px;display:block;line-height:1.1}
+.plate .cap small{color:var(--brass2);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.draw path,.draw circle{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 3.5s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* clocks */
+.clocks{background:var(--green);color:var(--paper)}
+.clocks .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:50px;align-items:center}
+.clocks .eyebrow{color:var(--brass2)}
+.clocks h2 em{color:var(--brass2)}
+.clocks .lead{color:#c9d3cc}
+.cl{display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
+.c{text-align:center}
+.c svg{width:170px;height:170px}
+.c b{display:block;margin-top:12px;font-size:15px}
+.c small{color:var(--brass2);font-size:13px}
+
+/* work */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:46px}
+.frame{aspect-ratio:4/5;border-radius:var(--r);border:1.5px dashed var(--line);background:var(--paper2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--mut);text-align:center;padding:20px;transition:border-color .3s,transform .3s}
+.frame:hover{border-color:var(--brass);transform:translateY(-3px)}
+.frame svg{width:46px;height:46px;color:var(--brass)}
+.frame b{color:var(--ink);font-size:15px}
+.frame small{font-size:13px}
+.note{display:flex;gap:10px;align-items:center;margin-top:20px;color:var(--mut);font-size:14px}
+.note svg{width:18px;height:18px;flex:0 0 auto}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px;border-top:1.5px solid var(--ink)}
+.step{padding:26px 22px 0 0}
+.step i{font-style:normal;font-family:"DM Serif Display";font-size:44px;color:var(--brass);display:block;line-height:1}
+.step h3{font-size:19px;margin:12px 0 6px}
+.step p{color:var(--mut);font-size:15px}
+
+/* booking */
+.book{background:var(--paper2);border-top:1px solid var(--line)}
+.book .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.ticket{background:var(--paper);border-radius:22px;box-shadow:0 30px 60px -36px rgba(0,0,0,.35);position:relative;overflow:hidden}
+.ticket .top{background:var(--green);color:var(--paper);padding:20px 28px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.ticket .top b{font-family:"DM Serif Display";font-weight:400;font-size:24px}
+.ticket .top small{color:var(--brass2);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.ticket .body{padding:26px 28px}
+.perf{height:0;border-top:2px dashed var(--line);margin:0 18px;position:relative}
+.perf::before,.perf::after{content:"";position:absolute;top:-13px;width:24px;height:24px;border-radius:50%;background:var(--paper2)}
+.perf::before{left:-30px}.perf::after{right:-30px}
+fieldset{border:0;margin-bottom:22px}
+legend{font-weight:700;margin-bottom:10px;font-size:14px;letter-spacing:.04em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative}
+.chips input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chips span{display:inline-block;padding:9px 15px;border-radius:999px;border:1.5px solid var(--line);font-size:14px;font-weight:600;transition:all .2s;background:#fff8}
+.chips input:checked+span{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chips input:focus-visible+span{outline:2px solid var(--brass);outline-offset:2px}
+.field{display:block;width:100%;background:#fff9;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--ink);font:inherit;font-size:15px}
+.field:focus{outline:none;border-color:var(--green2)}
+textarea.field{min-height:86px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stub{padding:22px 28px 26px}
+.stub pre{font:14px/1.55 "Space Grotesk";white-space:pre-wrap;color:var(--mut);background:#fff8;border-radius:12px;padding:14px 16px;border:1px solid var(--line)}
+.stub .btn{width:100%;justify-content:center;margin-top:16px}
+.aside p{margin-bottom:14px}
+.facts{display:grid;gap:12px;margin-top:26px}
+.facts div{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
+.facts svg{width:22px;height:22px;color:var(--green2);flex:0 0 auto;margin-top:2px}
+.facts small{display:block;color:var(--mut)}
+
+footer{background:var(--ink);color:#b7b3aa;padding:44px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer b{font-family:"DM Serif Display";font-weight:400;font-size:28px;color:var(--paper)}
+footer a{color:var(--paper)}
+.float{position:fixed;right:20px;bottom:20px;z-index:70;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transform:scale(0);transition:transform .3s}
+.float.on{transform:scale(1)}
+.float svg{width:30px;height:30px}
+
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .hero .wrap,.clocks .wrap,.book .wrap{grid-template-columns:1fr}
+  .plate{max-width:360px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:26px}
+}
+@media (max-width:760px){
+  .links{display:none}.burger{display:inline-flex}.nav .btn{display:none}
+  .nav.open .links{display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:var(--paper);padding:20px 16px;gap:18px;border-bottom:1px solid var(--line)}
+  .wrap{padding:0 16px}
+  section{padding:80px 0}
+  .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .c svg{width:130px;height:130px}
+  .ticket .body,.stub{padding-left:20px;padding-right:20px}
+  .ticket .top{padding:18px 20px}
+}
+@media (max-width:480px){
+  .steps{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .frame{padding:12px}.frame small{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .draw path,.draw circle{stroke-dashoffset:0}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4Z"/></g></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16Z"/><path d="M14 6l3 3"/></g></symbol>
+  <symbol id="i-photo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.4"/><path d="M8.5 6l1.3-2h4.4l1.3 2"/></g></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></g></symbol>
+</svg>
+
+<div class="demo">Proposta de site (demonstração) feita pela NovaTech · Website concept for Dom</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo"><b>Dom</b><span>Tattoo · London</span></a>
+    <nav class="links" id="links"><a href="#work">Work</a><a href="#how">How it works</a><a href="#book">Book</a></nav>
+    <a class="btn btn-dark" href="#book"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Tattoo artist · Based in London</span>
+      <h1 class="serif">Brazilian hands<span class="amp">,</span><br><em>London</em> ink.</h1>
+      <p class="lead">Custom tattoos by Dom, a Brazilian artist now working in London. Every piece is designed for you and booked one-to-one, straight on WhatsApp.</p>
+      <div class="cta">
+        <a class="btn btn-dark" href="#book"><svg><use href="#i-wa"/></svg>Request a booking</a>
+        <a class="btn btn-line" href="#work">See the work</a>
+      </div>
+      <div class="route" aria-label="From Brasília to London">
+        <b>Brasília</b>
+        <svg viewBox="0 0 120 20" aria-hidden="true"><path d="M2 14C30 2 90 2 118 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 5"/><path d="M112 9l6 5-7 2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <b>London</b>
+      </div>
+    </div>
+    <div class="plate reveal" aria-hidden="true">
+      <svg class="draw" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+        <g fill="none" stroke="#cfae78" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".9">
+          <circle cx="200" cy="200" r="120"/>
+          <circle cx="200" cy="200" r="96" stroke-dasharray="2 6"/>
+          <path d="M200 80c-40 60-40 180 0 240M200 80c40 60 40 180 0 240M80 200h240M98 140c60 20 144 20 204 0M98 260c60-20 144-20 204 0"/>
+          <path d="M70 300C110 380 290 380 330 300" stroke-dasharray="5 7"/>
+          <circle cx="70" cy="300" r="5" fill="#cfae78"/><circle cx="330" cy="300" r="5" fill="#cfae78"/>
+        </g>
+      </svg>
+      <div class="cap"><small>Now booking</small><b>London &amp; around</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="clocks">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Two time zones</span>
+      <h2 class="serif">Working on <em>London</em> time</h2>
+      <p class="lead">Dom is based in London. Send your idea at any hour, from anywhere: it lands straight in his WhatsApp.</p>
+    </div>
+    <div class="cl reveal">
+      <div class="c"><svg viewBox="0 0 100 100" id="ck1"></svg><b>London</b><small id="t1"></small></div>
+      <div class="c"><svg viewBox="0 0 100 100" id="ck2"></svg><b>Brasília</b><small id="t2"></small></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Selected work</span>
+      <h2 class="serif">The <em>portfolio</em></h2>
+      <p class="lead">A space for Dom's best pieces, healed and fresh, ready to send to anyone who asks “can I see your work?”.</p>
+    </div>
+    <div class="grid">
+      <div class="frame reveal"><svg><use href="#i-photo"/></svg><b>Piece 01</b><small>Photo from Dom's Instagram</small></div>
+      <div class="frame reveal"><svg><use href="#i-photo"/></svg><b>Piece 02</b><small>Photo from Dom's Instagram</small></div>
+      <div class="frame reveal"><svg><use href="#i-photo"/></svg><b>Piece 03</b><small>Photo from Dom's Instagram</small></div>
+      <div class="frame reveal"><svg><use href="#i-photo"/></svg><b>Piece 04</b><small>Photo from Dom's Instagram</small></div>
+      <div class="frame reveal"><svg><use href="#i-photo"/></svg><b>Piece 05</b><small>Photo from Dom's Instagram</small></div>
+      <div class="frame reveal"><svg><use href="#i-photo"/></svg><b>Piece 06</b><small>Photo from Dom's Instagram</small></div>
+    </div>
+    <p class="note reveal"><svg><use href="#i-info"/></svg>Espaços reservados: as fotos reais dos trabalhos entram só com autorização do Dom.</p>
+  </div>
+</section>
+
+<section id="how" style="padding-top:20px">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">How it works</span>
+      <h2 class="serif">From idea <em>to skin</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><i>01</i><h3>Send your idea</h3><p>Fill in the booking card below. It opens WhatsApp with everything ready.</p></div>
+      <div class="step reveal"><i>02</i><h3>Chat with Dom</h3><p>Share references and placement. Dom replies with a quote and dates.</p></div>
+      <div class="step reveal"><i>03</i><h3>Your design</h3><p>The piece is drawn for you and adjusted until it feels right.</p></div>
+      <div class="step reveal"><i>04</i><h3>Tattoo day</h3><p>One-to-one session, plus aftercare advice so it heals well.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="aside reveal">
+      <span class="eyebrow">Booking</span>
+      <h2 class="serif">Get your <em>ticket</em></h2>
+      <p class="lead">Pick the options, add your idea and send. The message goes straight to Dom's WhatsApp.</p>
+      <div class="facts">
+        <div><svg><use href="#i-pin"/></svg><span><b>London, UK</b><small>Exact location shared when your booking is confirmed.</small></span></div>
+        <div><svg><use href="#i-chat"/></svg><span><b>Booking on WhatsApp</b><small>Fast replies, with references and photos in one place.</small></span></div>
+        <div><svg><use href="#i-pen"/></svg><span><b>Custom work</b><small>Bring your idea; the design is made for you.</small></span></div>
+      </div>
+    </div>
+    <form class="ticket reveal" id="f">
+      <div class="top"><b>Booking request</b><small>Dom · Tattoo</small></div>
+      <div class="body">
+        <fieldset><legend>Size</legend><div class="chips">
+          <label><input type="radio" name="size" value="Small (up to 8 cm)" checked><span>Small</span></label>
+          <label><input type="radio" name="size" value="Medium (8–15 cm)"><span>Medium</span></label>
+          <label><input type="radio" name="size" value="Large (15 cm+)"><span>Large</span></label>
+          <label><input type="radio" name="size" value="Sleeve / big project"><span>Sleeve / project</span></label>
+        </div></fieldset>
+        <fieldset><legend>Placement</legend><div class="chips">
+          <label><input type="radio" name="place" value="Forearm" checked><span>Forearm</span></label>
+          <label><input type="radio" name="place" value="Upper arm"><span>Upper arm</span></label>
+          <label><input type="radio" name="place" value="Leg"><span>Leg</span></label>
+          <label><input type="radio" name="place" value="Back"><span>Back</span></label>
+          <label><input type="radio" name="place" value="Chest"><span>Chest</span></label>
+          <label><input type="radio" name="place" value="Other"><span>Other</span></label>
+        </div></fieldset>
+        <fieldset><legend>When would you like it?</legend><div class="chips">
+          <label><input type="radio" name="when" value="As soon as possible" checked><span>ASAP</span></label>
+          <label><input type="radio" name="when" value="Within 1–2 months"><span>1–2 months</span></label>
+          <label><input type="radio" name="when" value="Flexible"><span>Flexible</span></label>
+        </div></fieldset>
+        <fieldset><legend>About you</legend>
+          <div class="two"><input class="field" id="nm" placeholder="Your name" autocomplete="name"><input class="field" id="ct" placeholder="Your city"></div>
+          <textarea class="field" id="idea" placeholder="Describe your idea…" style="margin-top:10px"></textarea>
+        </fieldset>
+      </div>
+      <div class="perf"></div>
+      <div class="stub">
+        <pre id="pv"></pre>
+        <a class="btn btn-dark" id="send" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Send to Dom on WhatsApp</a>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <b>Dom</b>
+  <span>Tattoo artist · London, UK · <a href="https://wa.me/5561982782332" target="_blank" rel="noopener">WhatsApp</a></span>
+</div></footer>
+<a class="float" id="float" href="https://wa.me/5561982782332" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+document.documentElement.classList.add('js');
+var WA='5561982782332';
+
+/* clocks */
+function face(svg){
+  var s='<circle cx="50" cy="50" r="46" fill="none" stroke="#cfae78" stroke-width="1.5"/>';
+  for(var i=0;i<12;i++){s+='<line x1="50" y1="8" x2="50" y2="'+(i%3?12:15)+'" stroke="#f2ede3" stroke-width="'+(i%3?1:2)+'" transform="rotate('+i*30+' 50 50)"/>'}
+  s+='<line class="h" x1="50" y1="50" x2="50" y2="28" stroke="#f2ede3" stroke-width="3" stroke-linecap="round"/><line class="m" x1="50" y1="50" x2="50" y2="16" stroke="#f2ede3" stroke-width="2" stroke-linecap="round"/><line class="s" x1="50" y1="56" x2="50" y2="12" stroke="#cfae78" stroke-width="1"/><circle cx="50" cy="50" r="2.5" fill="#cfae78"/>';
+  svg.innerHTML=s;
+}
+var C=[[document.getElementById('ck1'),'Europe/London',document.getElementById('t1')],[document.getElementById('ck2'),'America/Sao_Paulo',document.getElementById('t2')]];
+C.forEach(function(c){face(c[0])});
+function tick(){
+  var now=new Date();
+  C.forEach(function(c){
+    var p=new Intl.DateTimeFormat('en-GB',{timeZone:c[1],hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).formatToParts(now),v={};
+    p.forEach(function(x){v[x.type]=+x.value});
+    var h=v.hour%12,m=v.minute,s=v.second;
+    c[0].querySelector('.h').setAttribute('transform','rotate('+(h*30+m/2)+' 50 50)');
+    c[0].querySelector('.m').setAttribute('transform','rotate('+(m*6)+' 50 50)');
+    c[0].querySelector('.s').setAttribute('transform','rotate('+(s*6)+' 50 50)');
+    c[2].textContent=(v.hour<10?'0':'')+v.hour+':'+(m<10?'0':'')+m;
+  });
+}
+tick();setInterval(tick,1000);
+
+/* booking */
+var f=document.getElementById('f'),pv=document.getElementById('pv'),send=document.getElementById('send');
+function val(n){var c=f.querySelector('input[name="'+n+'"]:checked');return c?c.value:''}
+function upd(){
+  var nm=document.getElementById('nm').value.trim(),ct=document.getElementById('ct').value.trim(),idea=document.getElementById('idea').value.trim();
+  var msg='Hi Dom! '+(nm?"I'm "+nm+(ct?' from '+ct:'')+'. ':(ct?"I'm from "+ct+'. ':''))+"I'd like to book a tattoo:\n"+
+    '• Size: '+val('size')+'\n• Placement: '+val('place')+'\n• When: '+val('when')+(idea?'\n• Idea: '+idea:'');
+  pv.textContent=msg;send.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+}
+f.addEventListener('input',upd);f.addEventListener('change',upd);upd();
+
+var nav=document.getElementById('nav'),bur=document.getElementById('burger');
+bur.addEventListener('click',function(){var o=nav.classList.toggle('open');bur.setAttribute('aria-expanded',o)});
+document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');bur.setAttribute('aria-expanded',false)})});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+var fl=document.getElementById('float');
+addEventListener('scroll',function(){fl.classList.toggle('on',scrollY>520)},{passive:true});
+</script>
+</body>
+</html>
