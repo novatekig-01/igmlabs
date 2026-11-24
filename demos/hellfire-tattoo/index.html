@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Joaquim · Hellfire Tattoo Club</title>
+<meta name="description" content="Joaquim Bernardes Salles, tatuador desde 1993. Estúdio privado em Brasília-DF. Designs autorais e agendamento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a;--bg2:#111110;--line:#262523;--txt:#f1ede5;--mut:#8f8a82;
+  --red:#c8202b;--red2:#e8333e;--neon:#ff3d6e;
+  --serif:"Cormorant Garamond",Georgia,serif;--sans:Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font:300 16px/1.7 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+svg{display:block}
+.wrap{width:min(1120px,100%);margin:0 auto;padding:0 24px}
+.demo{background:var(--red);color:#fff;text-align:center;font-size:12px;font-weight:500;letter-spacing:.04em;padding:7px 16px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.on{border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:.02em;white-space:nowrap}
+.brand em{font-style:italic;color:var(--red2);font-weight:500}
+.links{display:flex;gap:30px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.links a:hover{color:var(--txt)}
+.right{display:flex;align-items:center;gap:14px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;font-size:11px;letter-spacing:.1em;overflow:hidden}
+.lang button{padding:6px 10px;color:var(--mut)}
+.lang button.on{background:var(--txt);color:var(--bg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:999px;font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn svg{width:17px;height:17px}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red2);transform:translateY(-1px)}
+.btn-line{border:1px solid #3a3835}
+.btn-line:hover{border-color:var(--txt)}
+.nav .btn{padding:10px 18px;font-size:11px}
+
+/* hero */
+.hero{padding:96px 0 110px;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--mut);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--red2)}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(52px,8.4vw,112px);line-height:.92;letter-spacing:-.01em;margin:26px 0 28px}
+h1 i{color:var(--red2)}
+.hero p.sub{font-size:18px;color:#c9c4bb;max-width:480px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.motif{aspect-ratio:4/5;border:1px solid var(--line);border-radius:4px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 42%,#2a0b0e 0,#0d0b0b 62%)}
+.motif svg{position:absolute;inset:0;width:100%;height:100%}
+.motif .tag{position:absolute;left:18px;bottom:16px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.sig{position:absolute;right:18px;bottom:12px;font-family:var(--serif);font-style:italic;font-size:26px;color:var(--neon);text-shadow:0 0 12px rgba(255,61,110,.7)}
+
+/* sections */
+section{padding:110px 0;border-top:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.num{font-size:12px;letter-spacing:.3em;color:var(--red2);text-transform:uppercase}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(40px,5.6vw,68px);line-height:1;margin-top:14px}
+h2 i{color:var(--mut)}
+.lead{color:var(--mut);max-width:440px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.about .txt p{font-size:19px;color:#d6d1c8;margin-bottom:22px}
+.about .txt p:first-child{font-family:var(--serif);font-size:30px;line-height:1.3;color:var(--txt)}
+.facts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.fact{padding:28px 0;border-bottom:1px solid var(--line)}
+.fact:nth-child(odd){padding-right:20px;border-right:1px solid var(--line)}
+.fact:nth-child(even){padding-left:24px}
+.fact b{display:block;font-family:var(--serif);font-weight:500;font-size:46px;line-height:1}
+.fact span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.styles{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.styles span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:#c9c4bb}
+
+/* catalog */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{display:flex;flex-direction:column}
+.art{aspect-ratio:4/5;border-radius:3px;overflow:hidden;position:relative}
+.art svg{width:100%;height:100%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.card:hover .art svg{transform:scale(1.04)}
+.card h3{font-family:var(--serif);font-weight:500;font-size:23px;margin-top:18px;line-height:1.15}
+.card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:14px;color:var(--mut)}
+.card .price{color:var(--txt);font-weight:500}
+.card .acts{display:flex;gap:8px;margin-top:16px}
+.card .acts a{flex:1;text-align:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:11px 8px;border:1px solid var(--line);border-radius:999px;transition:border-color .2s,background .2s}
+.card .acts a:hover{border-color:var(--txt)}
+.card .acts a.w{background:var(--txt);color:var(--bg);border-color:var(--txt)}
+.card .acts a.w:hover{background:#fff}
+.note{display:flex;gap:10px;align-items:flex-start;margin-top:40px;font-size:13px;color:var(--mut);max-width:720px}
+.note svg{width:16px;height:16px;flex:none;margin-top:3px}
+.more{margin-top:28px}
+
+/* rates */
+.rates{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:4px}
+.rate{padding:44px 36px}
+.rate+.rate{border-left:1px solid var(--line)}
+.rate span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.rate b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(44px,5vw,64px);line-height:1;margin:18px 0 10px}
+.rate b small{font-size:.38em;color:var(--mut);margin-left:4px}
+.rate p{font-size:14px;color:var(--mut)}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(30px,4vw,46px);text-align:center;margin-top:72px}
+.quote i{color:var(--red2)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:s}
+.step{border-top:1px solid var(--line);padding-top:26px}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-size:20px;color:var(--red2)}
+.step h3{font-family:var(--serif);font-weight:500;font-size:27px;margin:10px 0 8px}
+.step p{color:var(--mut);font-size:15px}
+
+/* contact */
+.contact{text-align:center}
+.contact h2{font-size:clamp(46px,7vw,92px)}
+.contact .lead{margin:22px auto 40px}
+.contact .cta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.chan{display:grid;grid-template-columns:repeat(3,1fr);margin-top:80px;border-top:1px solid var(--line);text-align:left}
+.chan a,.chan div{padding:28px 0;display:block}
+.chan span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:6px}
+.chan b{font-weight:400;font-size:17px}
+.chan a:hover b{color:var(--red2)}
+footer{border-top:1px solid var(--line);padding:34px 0;font-size:13px;color:var(--mut)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:980px){
+  .links{display:none}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero .wrap,.about{grid-template-columns:1fr;gap:48px}
+  .motif{max-width:440px;width:100%}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .nav .btn{display:none}
+  .hero{padding:64px 0 80px}
+  section{padding:80px 0}
+  .grid{gap:28px 14px}
+  .card h3{font-size:19px}
+  .card .acts{flex-direction:column}
+  .rates{grid-template-columns:1fr}
+  .rate+.rate{border-left:0;border-top:1px solid var(--line)}
+  .rate{padding:32px 24px}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .chan{grid-template-columns:1fr}
+  .chan a,.chan div{padding:20px 0;border-bottom:1px solid var(--line)}
+  .facts .fact b{font-size:38px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
+
+<div class="demo" data-i="demo">Proposta de site (demonstração) feita pela NovaTech para @joaquimta2</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">Joaquim <em>· Hellfire</em></a>
+    <nav class="links">
+      <a href="#sobre" data-i="n1">Sobre</a>
+      <a href="#designs" data-i="n2">Designs</a>
+      <a href="#valores" data-i="n3">Valores</a>
+      <a href="#contato" data-i="n4">Contato</a>
+    </nav>
+    <div class="right">
+      <div class="lang" role="group" aria-label="Idioma">
+        <button class="on" data-l="pt">PT</button><button data-l="en">EN</button>
+      </div>
+      <a class="btn btn-red" href="https://wa.me/5561981757876" target="_blank" rel="noopener" data-wa="geral"><svg><use href="#i-wa"/></svg><span data-i="agendar">Agendar</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="border-top:0">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Hellfire Tattoo Club · Brasília</div>
+      <h1>Joaquim<br>Bernardes <i>Salles</i></h1>
+      <p class="sub" data-i="heroSub">Tatuador desde 1993. Estúdio privado em Brasília, com designs autorais no estilo tradicional e japonês.</p>
+      <div class="cta">
+        <a class="btn btn-red" href="https://wa.me/5561981757876" target="_blank" rel="noopener" data-wa="geral"><svg><use href="#i-wa"/></svg><span data-i="cta1">Agendar no WhatsApp</span></a>
+        <a class="btn btn-line" href="#designs"><span data-i="cta2">Ver designs</span><svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="motif rv" aria-hidden="true">
+      <svg viewBox="0 0 400 500">
+        <circle cx="200" cy="215" r="128" fill="none" stroke="#c8202b" stroke-width="1.2" opacity=".55"/>
+        <circle cx="200" cy="215" r="150" fill="none" stroke="#3a1517" stroke-width="1"/>
+        <g fill="none" stroke="#f1ede5" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M200 120c-22 26-24 58 0 80 24-22 22-54 0-80Z"/>
+          <path d="M200 200c-30-30-74-30-90-8 18 28 56 34 90 8Z"/>
+          <path d="M200 200c30-30 74-30 90-8-18 28-56 34-90 8Z"/>
+          <path d="M200 200c-44-2-80 22-80 52 34 6 64-14 80-52Z"/>
+          <path d="M200 200c44-2 80 22 80 52-34 6-64-14-80-52Z"/>
+          <path d="M200 200c-18 26-20 60 0 86 20-26 18-60 0-86Z"/>
+          <path d="M162 176c-10-20-6-40 10-52M238 176c10-20 6-40-10-52"/>
+          <path d="M200 286c0 40-8 80-30 118M200 330c18-6 34-2 46 12-16 8-32 6-46-12ZM188 370c-20-4-36 2-46 16 16 6 32 2 46-16Z"/>
+        </g>
+        <circle cx="200" cy="200" r="6" fill="#c8202b"/>
+      </svg>
+      <span class="tag" data-i="motifTag">Ilustração de exemplo</span>
+      <span class="sig">Joaquim</span>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap">
+    <div class="head rv">
+      <div><div class="num" data-i="s1n">01 · Sobre</div><h2 data-i="s1h">Mais de três décadas <i>de agulha.</i></h2></div>
+    </div>
+    <div class="about">
+      <div class="txt rv">
+        <p data-i="ab1">Joaquim tatua desde 1993 e atende em estúdio privado, com hora marcada, um cliente por vez.</p>
+        <p data-i="ab2">Cria os próprios designs: águias, ceifadores, gueixas, peônias e pin-ups, com traço firme e cor de verdade. Você pode escolher um desenho dele ou trazer a sua ideia.</p>
+        <div class="styles">
+          <span data-i="st1">Tradicional</span><span data-i="st2">Japonês</span><span>Pin-up</span><span data-i="st4">Florais</span><span data-i="st5">Design autoral</span>
+        </div>
+      </div>
+      <div class="facts rv">
+        <div class="fact"><b>1993</b><span data-i="f1">Tatuando desde</span></div>
+        <div class="fact"><b>5,0</b><span data-i="f2">No Google · 14 avaliações</span></div>
+        <div class="fact"><b>5.400+</b><span data-i="f3">Seguidores no Instagram</span></div>
+        <div class="fact"><b>1:1</b><span data-i="f4">Estúdio privado</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="designs">
+  <div class="wrap">
+    <div class="head rv">
+      <div><div class="num" data-i="s2n">02 · Designs</div><h2 data-i="s2h">Catálogo <i>autoral.</i></h2></div>
+      <p class="lead" data-i="s2l">Designs prontos da loja Joaquim's Tattoo Designs. Compre o arquivo ou tatue o desenho com ele em Brasília.</p>
+    </div>
+    <div class="grid">
+
+      <article class="card rv">
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="g1" cx="50%" cy="42%" r="65%"><stop offset="0" stop-color="#5a0c11"/><stop offset="1" stop-color="#140405"/></radialGradient></defs><rect width="400" height="500" fill="url(#g1)"/>
+<circle cx="200" cy="230" r="120" fill="none" stroke="#e8333e" stroke-width="1" opacity=".5"/>
+<g fill="none" stroke="#f1ede5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M200 300L110 190a128 128 0 0 1 180 0Z"/><path d="M200 300L132 172M200 300L166 160M200 300V156M200 300l34-140M200 300l68-128"/><circle cx="200" cy="300" r="5"/></g>
+<g fill="none" stroke="#e8333e" stroke-width="1.6"><circle cx="274" cy="134" r="14"/><path d="M274 120c6 8 6 20 0 28M260 134c8-6 20-6 28 0"/></g>
+<path d="M200 305v70" stroke="#f1ede5" stroke-width="1.2" opacity=".5"/></svg></div>
+        <h3>Geisha tattoo design</h3>
+        <div class="meta"><span data-i="tJap">Japonês</span><span class="price">US$ 30</span></div>
+        <div class="acts"><a href="https://payhip.com/Joaquimta2" target="_blank" rel="noopener" data-i="buy">Comprar</a><a class="w" href="#" data-design="Geisha tattoo design" data-i="tat">Tatuar</a></div>
+      </article>
+
+      <article class="card rv">
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"><rect width="400" height="500" fill="#4c5352"/>
+<defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4bf2e"/><stop offset="1" stop-color="#e0402f"/></linearGradient></defs>
+<circle cx="200" cy="230" r="112" fill="url(#g2)"/><path d="M80 280h240M92 298h216M110 316h180" stroke="#4c5352" stroke-width="7"/>
+<g fill="none" stroke="#141414" stroke-width="2.2" stroke-linecap="round"><path d="M150 420L238 120"/><path d="M238 120c-40-26-104-24-150 10 48-8 98-4 146 14"/></g>
+<g fill="none" stroke="#f1ede5" stroke-width="1.4" opacity=".75"><path d="M120 420c40-30 120-30 160 0"/></g></svg></div>
+        <h3>Grim reaper tattoo design</h3>
+        <div class="meta"><span data-i="tNeo">Neotradicional</span><span class="price">US$ 25</span></div>
+        <div class="acts"><a href="https://payhip.com/Joaquimta2" target="_blank" rel="noopener" data-i="buy">Comprar</a><a class="w" href="#" data-design="Grim reaper tattoo design" data-i="tat">Tatuar</a></div>
+      </article>
+
+      <article class="card rv">
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"><rect width="400" height="500" fill="#efe9dd"/>
+<g fill="none" stroke="#151515" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M150 230c0-64 100-64 100 0 0 30-12 46-22 52v22h-56v-22c-10-6-22-22-22-52Z"/><circle cx="180" cy="236" r="12"/><circle cx="220" cy="236" r="12"/><path d="M200 252l-6 14h12ZM186 304v-14M200 304v-14M214 304v-14"/></g>
+<g fill="none" stroke="#c8202b" stroke-width="2"><circle cx="296" cy="330" r="16"/><circle cx="296" cy="330" r="34"/><path d="M296 296v68M262 330h68M272 306l48 48M320 306l-48 48"/></g>
+<circle cx="96" cy="150" r="22" fill="#c8202b" opacity=".85"/><circle cx="128" cy="186" r="7" fill="#c8202b" opacity=".85"/></svg></div>
+        <h3>Traditional reaper design</h3>
+        <div class="meta"><span data-i="tTrad">Tradicional</span><span class="price">US$ 30</span></div>
+        <div class="acts"><a href="https://payhip.com/Joaquimta2" target="_blank" rel="noopener" data-i="buy">Comprar</a><a class="w" href="#" data-design="Traditional reaper design" data-i="tat">Tatuar</a></div>
+      </article>
+
+      <article class="card rv">
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="g4" cx="50%" cy="46%" r="62%"><stop offset="0" stop-color="#1d3f86"/><stop offset="1" stop-color="#0b1530"/></radialGradient></defs><rect width="400" height="500" fill="url(#g4)"/>
+<g fill="none" stroke="#f1ede5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M200 250C160 180 100 140 44 132c34 26 60 62 76 104 28 16 56 18 80 14Z"/><path d="M200 250c40-70 100-110 156-118-34 26-60 62-76 104-28 16-56 18-80 14Z"/><path d="M74 150l46 54M100 150l34 60M124 158l26 58M326 150l-46 54M300 150l-34 60M276 158l-26 58"/><path d="M184 250c0 50 6 86 16 108 10-22 16-58 16-108"/><path d="M188 222c4-22 20-22 24 0"/><path d="M186 360l-14 34M214 360l14 34"/></g>
+<path d="M212 214l18 6-16 8Z" fill="#f2b33d"/></svg></div>
+        <h3>Traditional eagle tattoo design</h3>
+        <div class="meta"><span data-i="tTrad">Tradicional</span><span class="price">US$ 25</span></div>
+        <div class="acts"><a href="https://payhip.com/Joaquimta2" target="_blank" rel="noopener" data-i="buy">Comprar</a><a class="w" href="#" data-design="Traditional eagle tattoo design" data-i="tat">Tatuar</a></div>
+      </article>
+
+    </div>
+    <p class="note rv"><svg><use href="#i-info"/></svg><span data-i="note">As imagens são ilustrações de exemplo. As artes originais do Joaquim entram no site com autorização dele. Nomes e preços são os da loja atual.</span></p>
+    <div class="more rv"><a class="btn btn-line" href="https://payhip.com/Joaquimta2" target="_blank" rel="noopener"><span data-i="all">Ver todos na loja</span><svg><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+<section id="valores">
+  <div class="wrap">
+    <div class="head rv">
+      <div><div class="num" data-i="s3n">03 · Valores</div><h2 data-i="s3h">Simples <i>e direto.</i></h2></div>
+      <p class="lead" data-i="s3l">Cobrança por hora ou diária fechada. O orçamento final é combinado pelo WhatsApp.</p>
+    </div>
+    <div class="rates rv">
+      <div class="rate"><span data-i="r1">Por hora</span><b>R$ 650<small>/h</small></b><p data-i="r1p">Sessões no Brasil</p></div>
+      <div class="rate"><span data-i="r2">Por hora · USD</span><b>US$ 150<small>/h</small></b><p data-i="r2p">Para clientes de fora</p></div>
+      <div class="rate"><span data-i="r3">Diária</span><b>US$ 1.250</b><p data-i="r3p">Um dia inteiro de sessão</p></div>
+    </div>
+    <p class="quote rv" data-i="quote">"Meu design <i>ou o seu.</i>"</p>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap">
+    <div class="head rv">
+      <div><div class="num" data-i="s4n">04 · Como funciona</div><h2 data-i="s4h">Do desenho <i>à pele.</i></h2></div>
+    </div>
+    <div class="steps">
+      <div class="step rv"><h3 data-i="p1">Escolha</h3><p data-i="p1t">Um design do catálogo ou a sua própria ideia.</p></div>
+      <div class="step rv"><h3 data-i="p2">Combine</h3><p data-i="p2t">Tamanho, local do corpo, data e valor, direto com o Joaquim no WhatsApp.</p></div>
+      <div class="step rv"><h3 data-i="p3">Tatue</h3><p data-i="p3t">Sessão com hora marcada no estúdio privado, em Brasília.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <div class="wrap">
+    <div class="num rv" data-i="s5n">05 · Contato</div>
+    <h2 class="rv" data-i="s5h">Bora <i>tatuar?</i></h2>
+    <p class="lead rv" data-i="s5l">Mande a sua ideia ou o nome do design. A resposta vem direto do Joaquim.</p>
+    <div class="cta rv">
+      <a class="btn btn-red" href="https://wa.me/5561981757876" target="_blank" rel="noopener" data-wa="geral"><svg><use href="#i-wa"/></svg><span data-i="cta1">Agendar no WhatsApp</span></a>
+    </div>
+    <div class="chan rv">
+      <a href="https://wa.me/5561981757876" target="_blank" rel="noopener" data-wa="geral"><span>WhatsApp</span><b>(61) 98175-7876</b></a>
+      <a href="https://www.instagram.com/joaquimta2/" target="_blank" rel="noopener"><span>Instagram</span><b>@joaquimta2</b></a>
+      <a href="https://payhip.com/Joaquimta2" target="_blank" rel="noopener"><span data-i="loja">Loja de designs</span><b>payhip.com/Joaquimta2</b></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Hellfire Tattoo Club · Joaquim Bernardes Salles · Brasília-DF</span>
+    <span data-i="foot">Demonstração NovaTech</span>
+  </div>
+</footer>
+
+<script>
+const T={
+ en:{demo:"Website proposal (demo) made by NovaTech for @joaquimta2",n1:"About",n2:"Designs",n3:"Rates",n4:"Contact",agendar:"Book",
+  heroSub:"Tattoo artist since 1993. Private studio in Brasília, Brazil, with original designs in traditional and Japanese style.",
+  cta1:"Book on WhatsApp",cta2:"See designs",motifTag:"Sample illustration",
+  s1n:"01 · About",s1h:"Over three decades <i>of needlework.</i>",
+  ab1:"Joaquim has been tattooing since 1993 and works from a private studio, by appointment, one client at a time.",
+  ab2:"He draws his own designs: eagles, reapers, geishas, peonies and pin-ups, with bold lines and real colour. Pick one of his designs or bring your own idea.",
+  st1:"Traditional",st2:"Japanese",st4:"Florals",st5:"Original designs",
+  f1:"Tattooing since",f2:"On Google · 14 reviews",f3:"Instagram followers",f4:"Private studio",
+  s2n:"02 · Designs",s2h:"Original <i>catalogue.</i>",s2l:"Ready-made designs from the Joaquim's Tattoo Designs shop. Buy the file or get it tattooed by him in Brasília.",
+  tJap:"Japanese",tNeo:"Neo-traditional",tTrad:"Traditional",buy:"Buy",tat:"Tattoo it",
+  note:"Images are sample illustrations. Joaquim's original artwork goes on the site with his permission. Names and prices are from his current shop.",all:"See all in the shop",
+  s3n:"03 · Rates",s3h:"Simple <i>and clear.</i>",s3l:"Hourly or a full day rate. The final quote is agreed on WhatsApp.",
+  r1:"Hourly",r1p:"Sessions in Brazil",r2:"Hourly · USD",r2p:"For international clients",r3:"Day rate",r3p:"A full day of tattooing",
+  quote:"\"My design <i>or yours.</i>\"",
+  s4n:"04 · How it works",s4h:"From paper <i>to skin.</i>",p1:"Choose",p1t:"A design from the catalogue or your own idea.",
+  p2:"Agree",p2t:"Size, placement, date and price, straight with Joaquim on WhatsApp.",p3:"Get tattooed",p3t:"Session by appointment at the private studio in Brasília.",
+  s5n:"05 · Contact",s5h:"Let's <i>tattoo?</i>",s5l:"Send your idea or the design name. Joaquim answers himself.",loja:"Design shop",foot:"NovaTech demo"}
+};
+const PT={};
+document.querySelectorAll("[data-i]").forEach(e=>PT[e.dataset.i]=e.innerHTML);
+let lang="pt";
+const msg={pt:{geral:"Olá Joaquim! Vi seu site e quero agendar uma tatuagem.",d:n=>`Olá Joaquim! Quero tatuar o design "${n}" que vi no seu site.`},
+           en:{geral:"Hi Joaquim! I saw your website and would like to book a tattoo.",d:n=>`Hi Joaquim! I'd like to get the "${n}" design tattooed.`}};
+const wa=t=>"https://wa.me/5561981757876?text="+encodeURIComponent(t);
+function setLang(l){
+  lang=l;document.documentElement.lang=l==="en"?"en":"pt-BR";
+  document.querySelectorAll("[data-i]").forEach(e=>{const k=e.dataset.i;e.innerHTML=l==="en"&&T.en[k]?T.en[k]:PT[k]});
+  document.querySelectorAll("[data-l]").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+  document.querySelectorAll("[data-wa]").forEach(a=>a.href=wa(msg[l].geral));
+  document.querySelectorAll("[data-design]").forEach(a=>{a.href=wa(msg[l].d(a.dataset.design));a.target="_blank";a.rel="noopener"});
+  try{localStorage.setItem("hf-lang",l)}catch(e){}
+}
+document.querySelectorAll("[data-l]").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+let saved="pt";try{saved=localStorage.getItem("hf-lang")||"pt"}catch(e){}
+setLang(saved);
+const nav=document.getElementById("nav");
+addEventListener("scroll",()=>nav.classList.toggle("on",scrollY>10),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
