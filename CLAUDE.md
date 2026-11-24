@@ -30,8 +30,15 @@ Cada lead tem um único responsável. Um não atende lead de outro.
    coluna Responsável (Z) vazia, e já marcar o nome da pessoa na coluna Z.
 
 ### Trava anti-duplicidade (Isaac, Gouveia e Igor trabalham em sessões separadas ao mesmo tempo)
+- **Registrar ANTES de entregar o lead no chat ("próximo cliente"):** escolher o lead e, antes de
+  escrever o nome dele na resposta, gravar o responsável nos dois lugares:
+  1. Kaptar: nome da pessoa na coluna Z;
+  2. CRM, aba Geral: nova linha com Lead, Responsável = pessoa, Etapa "A abordar" e em Notas
+     "dd/mm: reservado para Nome".
+  Reler as duas marcações (passo "Confirmar a reserva" abaixo) e só então mostrar o lead para a pessoa.
+  Nunca mostrar um lead "provisório" antes da reserva gravada.
 - **Reservar antes de trabalhar:** o primeiro passo com qualquer lead é gravar o nome da pessoa na coluna Z
-  do Kaptar. Só depois pesquisar, montar site ou sugerir mensagem.
+  do Kaptar (e no CRM). Só depois pesquisar, montar site ou sugerir mensagem.
 - **Confirmar a reserva:** logo depois de gravar, ler a coluna Z de novo. Se apareceu outro nome
   (outra sessão reservou junto), devolver a minha marcação, avisar e pegar o próximo lead livre.
 - **Lead trazido por print ou nome** (fora da lista): antes de qualquer coisa, procurar o lead no Kaptar
