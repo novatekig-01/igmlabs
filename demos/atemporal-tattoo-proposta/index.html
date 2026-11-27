@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1a1714">
+<title>Proposta de site · Atemporal Tattoo</title>
+<meta name="description" content="Proposta de site para o Atemporal Tattoo, do Miguel Souza: apresenta o estúdio old school e leva o cliente direto para o WhatsApp.">
+<meta property="og:title" content="Proposta de site · Atemporal Tattoo">
+<meta property="og:description" content="Proposta de site para o Atemporal Tattoo, do Miguel Souza: apresenta o estúdio old school e leva o cliente direto para o WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=Ultra&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a1714;--ink2:#27211b;--red:#b8321f;--red-d:#8a2416;--mus:#d99a1e;--grn:#2e6150;
+  --paper:#f2e8d5;--paper2:#eadcc1;--cream:#f7efe0;--muted:#5b5246;--line:#d3c3a3;
+  --display:"Ultra","Rockwell Extra Bold",Georgia,serif;
+  --script:"Yellowtail","Brush Script MT",cursive;
+  --sans:"Barlow",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --cond:"Barlow Condensed","Arial Narrow",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;background-image:radial-gradient(rgba(26,23,20,.05) 1px,transparent 1.2px);background-size:14px 14px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.wrap{width:min(1080px,100%);margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;letter-spacing:.005em;text-wrap:balance}
+em{font-family:var(--script);font-style:normal;color:var(--red);font-size:1.18em;letter-spacing:0;line-height:.9}
+.over{display:inline-flex;align-items:center;gap:10px;font-family:var(--cond);font-size:.95rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+.over::before{content:"";width:10px;height:10px;background:var(--mus);border:2px solid var(--ink);transform:rotate(45deg)}
+.top{background:var(--ink);color:var(--paper)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px;gap:12px;font-family:var(--cond);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.95rem}
+.top b{font-family:var(--display);font-weight:400;letter-spacing:.02em;font-size:1.2rem;text-transform:none}
+.sec{padding:clamp(56px,8vw,96px) 0;border-top:2px solid var(--ink)}
+.hero{padding:clamp(56px,9vw,104px) 0 clamp(56px,8vw,90px)}
+h1{font-size:clamp(34px,6.4vw,76px);margin:18px 0 20px}
+h2{font-size:clamp(30px,4.6vw,52px);margin:12px 0 14px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:600px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.pill{border:2px solid var(--ink);border-radius:999px;padding:6px 14px;font-family:var(--cond);font-weight:600;font-size:1rem;letter-spacing:.04em;background:var(--cream);box-shadow:3px 3px 0 var(--ink)}
+.two{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.two>*{min-width:0}
+.list{display:grid;gap:14px;margin-top:30px}
+.item{display:flex;gap:16px;padding:18px;background:var(--cream);border:2px solid var(--ink);border-radius:14px;box-shadow:4px 4px 0 var(--ink)}
+.item i{flex:none;width:36px;height:36px;border-radius:50%;background:var(--mus);border:2px solid var(--ink);display:grid;place-items:center;font-style:normal;font-family:var(--cond);font-weight:700}
+.item b{display:block;font-family:var(--cond);font-weight:700;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.1;margin-bottom:2px}
+.item span{color:var(--muted);font-size:.98rem}
+.phone{width:min(290px,100%);aspect-ratio:9/18.5;margin:0 auto;border-radius:34px;border:8px solid var(--ink);background:#000;overflow:hidden;box-shadow:8px 8px 0 var(--red)}
+.phone iframe{width:390px;height:800px;border:0;transform-origin:0 0;transform:scale(.7231)}
+.cap{text-align:center;margin-top:20px;font-size:.95rem;color:var(--muted)}
+.cap a{color:var(--red);font-weight:600;text-decoration:underline}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.step{background:var(--cream);border:2px solid var(--ink);border-radius:14px;padding:24px;box-shadow:4px 4px 0 var(--ink)}
+.step em{font-size:2rem}
+.step b{display:block;font-family:var(--cond);font-weight:700;font-size:1.4rem;text-transform:uppercase;margin:4px 0 4px;line-height:1.1}
+.step span{color:var(--muted);font-size:.98rem}
+.note{margin-top:22px;font-size:.9rem;color:var(--muted);display:flex;gap:10px}
+.note svg{width:16px;height:16px;flex:none;margin-top:3px}
+.center{justify-content:center;text-align:center}
+.price{background:var(--cream);border:3px solid var(--ink);border-radius:20px;padding:clamp(34px,6vw,60px) clamp(20px,5vw,44px);text-align:center;box-shadow:8px 8px 0 var(--ink)}
+.price .v{font-family:var(--display);font-size:clamp(56px,11vw,112px);line-height:1;margin:14px 0 4px;color:var(--red);text-shadow:3px 3px 0 var(--ink)}
+.price .v small{font-size:.34em;margin-right:8px;color:var(--ink);text-shadow:none}
+.price ul{list-style:none;display:inline-grid;gap:9px;text-align:left;margin:28px 0 30px}
+.price li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+.price li::before{content:"";flex:none;width:11px;height:11px;margin-top:8px;background:var(--mus);border:2px solid var(--ink);transform:rotate(45deg)}
+.open{font-family:var(--script);font-size:clamp(1.6rem,3vw,2.2rem);color:var(--red)}
+footer{background:var(--ink);color:var(--paper);padding:26px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:860px){.two{grid-template-columns:1fr;gap:44px}.flow{grid-template-columns:1fr}}
+@media (max-width:560px){.top .wrap span{display:none}.item{padding:14px}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="top"><div class="wrap"><b>NovaTech</b><span>Proposta de site · 27/11/2026</span></div></header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="over">Proposta para o Atemporal Tattoo</div>
+    <h1>Um site pra <em>tatuagem</em> feita pra durar.</h1>
+    <p class="lead">O traço do Atemporal merece um lugar só dele na internet. Este site apresenta o estúdio, mostra os temas old school e leva quem chega direto pro seu WhatsApp.</p>
+    <div class="meta">
+      <span class="pill">Tatuagem old school</span>
+      <span class="pill">Brasília</span>
+      <span class="pill">@tattoo.atemporal</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap two">
+    <div>
+      <div class="over">O que você recebe</div>
+      <h2>Traço forte, <em>cliente direto.</em></h2>
+      <p class="lead">Do jeito que o estúdio trabalha: o cliente chega com a ideia, e a conversa já chega no seu WhatsApp organizada.</p>
+      <div class="list">
+        <div class="item"><i>1</i><div><b>O estúdio e o seu trabalho apresentados</b><span>Quem é o Atemporal, o traço old school e os temas clássicos, como coração, adaga, âncora e estrela náutica.</span></div></div>
+        <div class="item"><i>2</i><div><b>Pedido direto pro WhatsApp</b><span>O cliente conta a ideia, o lugar do corpo e o tamanho, e a mensagem já abre pronta no seu número.</span></div></div>
+        <div class="item"><i>3</i><div><b>Funciona em qualquer dispositivo</b><span>Celular, tablet ou computador: o site se ajusta ao tamanho da tela e funciona do mesmo jeito em todos.</span></div></div>
+        <div class="item"><i>4</i><div><b>Contato e informações</b><span>Instagram, WhatsApp e tudo que o cliente precisa saber antes de marcar, num lugar só.</span></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="phone"><iframe src="../atemporal-tattoo/" title="Exemplo do site do Atemporal Tattoo" loading="lazy"></iframe></div>
+      <p class="cap">Exemplo real, funcionando. <a href="../atemporal-tattoo/" target="_blank" rel="noopener">Abrir em tela cheia</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="over">Como funciona</div>
+    <h2>Da ideia <em>ao site no ar.</em></h2>
+    <div class="flow">
+      <div class="step"><em>1</em><b>Você aprova</b><span>Combinamos o que ajustar no exemplo: textos, cores e o que mais você quiser.</span></div>
+      <div class="step"><em>2</em><b>Seus trabalhos entram</b><span>As suas fotos e flashes entram no lugar das ilustrações. Só usamos o que você autorizar.</span></div>
+      <div class="step"><em>3</em><b>Site no ar em até 7 dias</b><span>Depois que você confirmar todas as informações, o site é entregue em até 7 dias.</span></div>
+    </div>
+    <p class="note"><svg><use href="#i-info"/></svg><span>As imagens do exemplo são ilustrações. As fotos reais dos seus trabalhos entram na versão final, com a sua autorização.</span></p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="price">
+      <div class="over">Investimento</div>
+      <div class="v"><small>R$</small>499,90</div>
+      <p style="color:var(--muted)">Site completo do Atemporal Tattoo</p>
+      <ul>
+        <li>Site de apresentação do estúdio</li>
+        <li>Pedido de tatuagem direto pro seu WhatsApp</li>
+        <li>Funciona em qualquer dispositivo: celular, tablet e computador</li>
+        <li>Ajustes de texto e cores antes de publicar</li>
+        <li>Domínio e hospedagem incluídos por 1 ano</li>
+        <li>Suporte e manutenção por nossa conta por 1 ano</li>
+      </ul>
+      <p class="open">Gostou? Responda a nossa mensagem no WhatsApp e a gente começa.</p>
+    </div>
+    <p class="note center"><svg><use href="#i-info"/></svg><span>Entrega em até 7 dias após a confirmação de todas as informações necessárias. A forma de pagamento é combinada direto no WhatsApp.</span></p>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>NovaTech · Proposta para o Atemporal Tattoo · Brasília</span><span>27/11/2026</span></div></footer>
+</body>
+</html>
